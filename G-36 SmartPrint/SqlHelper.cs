@@ -12,7 +12,7 @@ namespace G_36_SmartPrint
 {
     public class SqlHelper
     {
-        public static string constring = "Server = localhost;Uid=root;Pwd=1234;Database= assignmentdb";
+        public static string constring = "Server = localhost;Uid=root;Pwd=1234;Database= SmartPantry";
         public static void executeDML(string dml)
         {
             MySqlConnection con = new MySqlConnection(constring);
