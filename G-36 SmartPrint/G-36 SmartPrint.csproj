@@ -107,6 +107,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\EmployeesBL.cs" />
+    <Compile Include="BL\LookupBL.cs" />
+    <Compile Include="BL\UserBL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
