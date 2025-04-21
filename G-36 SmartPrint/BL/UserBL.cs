@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace G_36_SmartPrint.BL
 {
@@ -12,7 +13,7 @@ namespace G_36_SmartPrint.BL
         protected string phoneNumber;
         protected DateTime CreatedDate;
         protected LookupBL Role;
-
+        public List<AddressBL> Addresses { get; set; } = new List<AddressBL>();
         public UserBL() { }
         public UserBL(string username, string passwordHash, string email, string name, string phone_number, DateTime date, LookupBL role)
         {
@@ -45,6 +46,32 @@ namespace G_36_SmartPrint.BL
             CreatedDate = createdDate;
             Role = role;
         }
+        public UserBL(int userID, string userName, string passwordHash, string email, string name, string phoneNumber, DateTime createdDate, LookupBL role, AddressBL address) : this(userID, userName, passwordHash, email, name, phoneNumber, createdDate, role)
+        {
+            Addresses = new List<AddressBL> { address };
+        }
+
+        public UserBL(string userName, string passwordHash, string email, string name, string phoneNumber, DateTime createdDate, LookupBL role, AddressBL address)
+        {
+            UserName = userName;
+            PasswordHash = passwordHash;
+            Email = email;
+            this.name = name;
+            this.phoneNumber = phoneNumber;
+            CreatedDate = createdDate;
+            Role = role;
+            Addresses = new List<AddressBL> { address };
+        }
+
+        public UserBL(int userID, AddressBL address)
+        {
+            UserID = userID;
+            Addresses = new List<AddressBL> { address };
+            // Ensure Role is initialized if required, possibly via a parameter or default value
+        }
+
+
+
         public UserBL(int userID)
         {
             this.UserID = userID;
