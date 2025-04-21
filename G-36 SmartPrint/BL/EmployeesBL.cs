@@ -32,6 +32,9 @@ namespace G_36_SmartPrint.BL
 
         }
 
-        public EmployeesBL()
+        public EmployeesBL(int EmployeeId,LookupBL position,int userID): base(userID) {
+            this.employeeID = EmployeeId;
+            this.Position = position;
+        }
     }
 }
