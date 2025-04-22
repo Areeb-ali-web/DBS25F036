@@ -18,6 +18,8 @@ namespace G_36_SmartPrint.BL
             LookupType = lookupType;
             LookupValue = lookupValue;
         }
+
+        public LookupBL(int lookupID) {  LookupID = lookupID; }
         public LookupBL() { }
 
         public LookupBL(string lookupType,string lookupValue) { this.LookupType= lookupType; this.LookupValue= lookupValue; }
