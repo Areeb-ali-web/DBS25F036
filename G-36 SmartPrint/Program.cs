@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using G_36_SmartPrint.DAL;
+using Org.BouncyCastle.Utilities;
 
 namespace G_36_SmartPrint
 {
@@ -14,9 +16,12 @@ namespace G_36_SmartPrint
         [STAThread]
         static void Main()
         {
+          
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            
+           
         }
     }
 }

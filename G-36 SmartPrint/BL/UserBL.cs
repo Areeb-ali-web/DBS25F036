@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace G_36_SmartPrint.BL
 {
@@ -96,6 +97,15 @@ namespace G_36_SmartPrint.BL
         public void setpassword(string password) { this.PasswordHash = password; }
 
         public void setRole(LookupBL role) { this.Role = role; }
+
+        public int getuserID()
+        {
+            return UserID;
+        }
+
+        public void setuserID(int userID) { this.UserID = userID; }
+        
+
 
 
 

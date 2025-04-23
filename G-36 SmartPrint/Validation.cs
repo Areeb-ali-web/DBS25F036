@@ -34,5 +34,10 @@ namespace G_36_SmartPrint
             return parts.Length >= 2 && parts.All(p => p.Length > 0);
 
         }
+
+
+
+
+
     }
 }

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="G_36_SmartPrint.BL.AddressBL">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAgQAAACIAAAIAAAACCAAAAAAAAACAACAAABAAEA=</HashCode>
+      <FileName>BL\AddressBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="G_36_SmartPrint.BL.EmployeesBL">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAgAAAAAAAAAAAAAgAAAAAAIAAAAAA=</HashCode>
+      <FileName>BL\EmployeesBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="G_36_SmartPrint.BL.LookupBL">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAMEAAAgAAAAAAAAAAAACAQBAAEA=</HashCode>
+      <FileName>BL\LookupBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="G_36_SmartPrint.BL.ProductBL">
+    <Position X="0.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAAQAgAAAAAAAAAAQAAAAEAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>BL\ProductBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="G_36_SmartPrint.BL.UserBL">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACDAAEAQAKABAAgAEAAAAAgAAECEAIgAAwAAwAAABAA=</HashCode>
+      <FileName>BL\UserBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

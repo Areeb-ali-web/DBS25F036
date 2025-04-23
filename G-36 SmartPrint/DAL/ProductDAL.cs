@@ -1,0 +1,224 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using G_36_SmartPrint.BL;
+
+namespace G_36_SmartPrint.DAL
+{
+    internal class ProductDAL
+    {
+        public static List<ProductBL> LoadProducts() 
+        {
+            List<ProductBL> Products = new List<ProductBL>();
+            string query = "SELECT * FROM Products";
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                int ProductID = Convert.ToInt32(dr["Productid"]);
+                string Productname = dr["name"].ToString();
+                string Description = dr["Discription"].ToString();
+                decimal price = Convert.ToDecimal( dr["price"]);
+
+             
+
+                // Assuming 'role' is a string identifier and you can fetch LookupBL from it
+                int quantityinstock = Convert.ToInt32(dr["quantityinstock"]);
+                
+                ProductBL product = new ProductBL(ProductID,Productname,Description,price,quantityinstock);
+                Products.Add(product);
+
+            }
+
+            return Products;
+        }
+        public static int? GetProductIdByName(string productName)
+        {
+            if (string.IsNullOrWhiteSpace(productName))
+                return null;
+
+            string query = $"SELECT ProductID FROM Products WHERE name = '{productName}'";
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dt.Rows[0]["ProductID"]);
+            }
+
+            return null; // Product not found
+        }
+        public static bool UpdateProductStock(string productName, int newStock)
+        {
+            if (string.IsNullOrWhiteSpace(productName))
+            {
+                System.Windows.Forms.MessageBox.Show("Product name is required.");
+                return false;
+            }
+
+            if (newStock < 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Stock quantity cannot be negative.");
+                return false;
+            }
+
+            string query = $"UPDATE Products SET quantityinstock = {newStock} WHERE name = '{productName}'";
+            SqlHelper.executeDML(query);
+            System.Windows.Forms.MessageBox.Show("Product is Updated successfully");
+            return true;
+        }
+
+        public static bool UpdateProductPrice(string productName, decimal newPrice)
+        {
+            if (string.IsNullOrWhiteSpace(productName))
+            {
+                System.Windows.Forms.MessageBox.Show("Product name is required.");
+                return false;
+            }
+
+            if (newPrice < 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Price must be non-negative.");
+                return false;
+            }
+
+            string query = $"UPDATE Products SET price = {newPrice} WHERE name = '{productName}'";
+
+
+              SqlHelper.executeDML(query);
+            System.Windows.Forms.MessageBox.Show("Product is Updated successfully");
+            return true ;
+        }
+
+
+        public static bool UpdateProductStockByID(int productId, int newStock)
+        {
+            if (productId <= 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Product ID.");
+                return false;
+            }
+
+            if (newStock < 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Stock cannot be negative.");
+                return false;
+            }
+
+            string query = $"UPDATE Products SET quantityinstock = {newStock} WHERE productid = {productId}";
+            SqlHelper.executeDML(query);
+            System.Windows.Forms.MessageBox.Show("Product is Updated successfully");
+            return true;
+        }
+        public static bool UpdateProductPriceByID(int productId, decimal newPrice)
+        {
+            if (productId <= 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Product ID.");
+                return false;
+            }
+
+            if (newPrice < 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Price must be non-negative.");
+                return false;
+            }
+
+            string query = $"UPDATE Products SET price = {newPrice} WHERE productid = {productId}";
+            SqlHelper.executeDML(query);
+            System.Windows.Forms.MessageBox.Show("Product is Updated successfully");
+            return true;
+
+        }
+        public static bool DeleteProductByID(int productId)
+        {
+            if (productId <= 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Product ID.");
+                return false;
+            }
+
+            string query = $"DELETE FROM Products WHERE productid = {productId}";
+
+            SqlHelper.executeDML(query);
+            System.Windows.Forms.MessageBox.Show("Product is Deleted");
+            return true;
+        }
+
+        public static bool DeleteProductByName(string productName)
+        {
+            if (string.IsNullOrWhiteSpace(productName))
+            {
+                System.Windows.Forms.MessageBox.Show("Product name cannot be empty.");
+                return false;
+            }
+
+            string query = $"DELETE FROM Products WHERE name = '{productName}'";
+            SqlHelper.executeDML(query);
+            System.Windows.Forms.MessageBox.Show("Product is Deleted");
+            return true;
+        }
+        public static bool IsProductExistByID(int productId)
+        {
+            if (productId <= 0)
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Product ID.");
+                return false;
+            }
+
+            string query = $"SELECT COUNT(*) FROM Products WHERE productid = {productId}";
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            if (dt.Rows.Count > 0 && Convert.ToInt32(dt.Rows[0][0]) > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public static bool IsProductExistByName(string productName)
+        {
+            if (string.IsNullOrWhiteSpace(productName))
+            {
+                System.Windows.Forms.MessageBox.Show("Product name cannot be empty.");
+                return false;
+            }
+
+            string query = $"SELECT COUNT(*) FROM Products WHERE name = '{productName}'";
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            if (dt.Rows.Count > 0 && Convert.ToInt32(dt.Rows[0][0]) > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public static decimal GetProductPriceByName(string productName)
+        {
+            if (string.IsNullOrWhiteSpace(productName))
+            {
+                System.Windows.Forms.MessageBox.Show("Product name cannot be empty.");
+                return -1; // or throw an exception if preferred
+            }
+
+            string query = $"SELECT price FROM Products WHERE name = '{productName}'";
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToDecimal(dt.Rows[0]["price"]);
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Product not found.");
+                return -1; // Sentinel value indicating product not found
+            }
+        }
+
+
+
+    }
+}
