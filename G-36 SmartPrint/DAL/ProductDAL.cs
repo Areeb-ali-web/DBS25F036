@@ -217,6 +217,56 @@ namespace G_36_SmartPrint.DAL
                 return -1; // Sentinel value indicating product not found
             }
         }
+        public static ProductBL GetProductById(int productId)
+        {
+            string query = $"SELECT * FROM Products WHERE Productid = {productId}";
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+                return new ProductBL(
+                    Convert.ToInt32(dr["Productid"]),
+                    dr["name"].ToString(),
+                    dr["Discription"].ToString(),
+                    Convert.ToDecimal(dr["price"]),
+                    Convert.ToInt32(dr["quantityinstock"])
+                );
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Product not found.");
+                return null;
+            }
+        }
+        public static ProductBL GetProductByName(string productName)
+        {
+            if (string.IsNullOrWhiteSpace(productName))
+            {
+                System.Windows.Forms.MessageBox.Show("Product name cannot be empty.");
+                return null;
+            }
+
+            string query = $"SELECT * FROM Products WHERE name = '{productName}'";
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+                return new ProductBL(
+                    Convert.ToInt32(dr["Productid"]),
+                    dr["name"].ToString(),
+                    dr["Discription"].ToString(),
+                    Convert.ToDecimal(dr["price"]),
+                    Convert.ToInt32(dr["quantityinstock"])
+                );
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Product not found.");
+                return null;
+            }
+        }
 
 
 

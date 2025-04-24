@@ -15,6 +15,10 @@ namespace G_36_SmartPrint.BL
         private AddressBL delivery_address;
         private LookupBL orderStatus;
         private decimal totalAmount;
+        protected List<Order_DetailsBL> orderDetails;
+
+
+
 
     }
 }
