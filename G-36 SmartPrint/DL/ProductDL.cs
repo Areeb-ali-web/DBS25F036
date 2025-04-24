@@ -8,7 +8,7 @@ using G_36_SmartPrint.BL;
 
 namespace G_36_SmartPrint.DAL
 {
-    internal class ProductDAL
+    internal class ProductDL
     {
         public static List<ProductBL> LoadProducts() 
         {

@@ -6,7 +6,7 @@ using G_36_SmartPrint.BL;
 
 namespace G_36_SmartPrint.DAL
 {
-    internal class UserDAL
+    internal class UserDL
     {
         public static bool UserSignIN(string username, string password, string email, int role)
         {

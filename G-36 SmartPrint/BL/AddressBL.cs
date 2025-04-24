@@ -12,7 +12,7 @@ namespace G_36_SmartPrint.BL
         
         private string city;
 
-
+        public string state;
         private string postalCode;
 
         private string country;
@@ -45,13 +45,25 @@ namespace G_36_SmartPrint.BL
     
 
         // Constructor
-        public AddressBL( string addressDetail, string city, string state, string postalCode, string country)
+        public AddressBL( string addressDetail, string city, string state, string postalCode,string country)
         {
             this.addressDetail = addressDetail;
             this.city = city;
             this.postalCode = postalCode;
             this.country = country;
             this.addressDetail = addressDetail;
+            this.state = state;
+        }
+
+        public AddressBL(int addressID,string addressDetail, string city, string state, string postalCode, string stat, string country)
+        {
+            this.AddressID = addressID;
+            this.addressDetail = addressDetail;
+            this.city = city;
+            this.postalCode = postalCode;
+            this.country = country;
+            this.addressDetail = addressDetail;
+            state = stat;
         }
 
         // Parameterless constructor for frameworks like Entity Framework or manual population

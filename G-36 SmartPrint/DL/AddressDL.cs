@@ -33,6 +33,8 @@ namespace G_36_SmartPrint.DAL
 
                 if (dr["postalcode"] != DBNull.Value)
                     address.setpostalcode(dr["postalcode"].ToString());
+                if (dr["state"] != DBNull.Value)
+                    address.state=(dr["state"].ToString());
 
                 if (dr["country"] != DBNull.Value)
                     address.setcountry(dr["country"].ToString());
@@ -47,9 +49,7 @@ namespace G_36_SmartPrint.DAL
             // 1. Check if the address already exists for the user
             string checkQuery = $"SELECT COUNT(*) FROM useraddress WHERE userid = {userId} " +
                                 $"AND address_detail = '{address.getaddressDetail()}' " +
-                                $"AND city = '{address.getcity()}' " +
-                                $"AND postalcode = '{address.getpostalcode()}' " +
-                                $"AND country = '{address.getcountry()}'";
+                                $"AND city = '{address.getcity()}' ";
 
             DataTable result = SqlHelper.getDataTable(checkQuery);
 
@@ -61,8 +61,8 @@ namespace G_36_SmartPrint.DAL
             }
 
             // 2. Insert the address if it doesn't exist
-            string insertQuery = $"INSERT INTO useraddress (userid, address_detail, city, postalcode, country) " +
-                                 $"VALUES ({userId}, '{address.getaddressDetail()}', '{address.getcity()}', '{address.getpostalcode()}', '{address.getcountry()}')";
+            string insertQuery = $"INSERT INTO useraddress (userid, address_detail, city,state, postalcode, country) " +
+                                 $"VALUES ({userId}, '{address.getaddressDetail()}', '{address.getcity()}','{address.state}', '{address.getpostalcode()}', '{address.getcountry()}')";
 
             try
             {

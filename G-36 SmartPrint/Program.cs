@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using G_36_SmartPrint.BL;
 using G_36_SmartPrint.DAL;
 using Org.BouncyCastle.Utilities;
 
@@ -16,7 +17,9 @@ namespace G_36_SmartPrint
         [STAThread]
         static void Main()
         {
-          
+            AddressBL adress = new AddressBL("UET new campus gt road lahore","LAhore","Punjab","1111","pakistan");
+            AddressDL.AddAddressIfNotExists(3, adress);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
