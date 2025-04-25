@@ -60,6 +60,14 @@ namespace G_36_SmartPrint.BL
         {
             this.orderStatus = orderStatus;
         }
+        public ProductBL getproduct()
+        {
+            return product;
+        }
+        public int getQuantity()
+        {
+            return quantity;
+        }
         public int getproductId()
         {
             return product.ProductID;
