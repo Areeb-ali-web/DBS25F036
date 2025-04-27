@@ -1,58 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\",
+  "WorkspaceRootPath": "D:\\DBfinal\\DBS25F036\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\ui\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\ui\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\ui\\signup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\signup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\bl\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\ui\\forgotpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\forgotpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\hp\\desktop\\oop week\\g-36 smartprint\\dbs25f036\\g-36 smartprint\\dal\\addressdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\dal\\addressdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\bl\\addressbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\addressbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\bl\\order_detailsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\order_detailsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\bl\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\bl\\customersbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\customersbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\dal\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\dal\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\bl\\feedbackdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\feedbackdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\hp\\desktop\\oop week\\g-36 smartprint\\dbs25f036\\g-36 smartprint\\bl\\order_paymentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\order_paymentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\bl\\productbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\productbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\g-36 smartprint\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|d:\\dbfinal\\dbs25f036\\g-36 smartprint\\dl\\orderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\dl\\orderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,177 +66,190 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Login.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Login.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Login.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T09:44:29.087Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductDAL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\DAL\\ProductDAL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\DAL\\ProductDAL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\DAL\\ProductDAL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\DAL\\ProductDAL.cs",
-              "ViewState": "AgIAAOQAAAAAAAAAAADwvw0BAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Login.Designer.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Login.Designer.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\Login.Designer.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowIYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T15:19:11.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomersBL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\CustomersBL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\CustomersBL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\CustomersBL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\BL\\CustomersBL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T16:34:14.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderBL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\OrderBL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\OrderBL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\OrderBL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\BL\\OrderBL.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowAgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T16:25:51.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Validation.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\Validation.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\Validation.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\Validation.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\Validation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T16:08:22.278Z",
+              "WhenOpened": "2025-04-27T09:01:49.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\Program.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\Program.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\Program.cs*",
-              "RelativeToolTip": "G-36 SmartPrint\\Program.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBMAAABlAAAAAAAAAA==",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\Form1.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\Form1.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\Form1.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\Form1.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwL0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T15:10:31.999Z",
+              "WhenOpened": "2025-04-27T09:09:40.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddressDAL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\DAL\\AddressDAL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\DAL\\AddressDAL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\DAL\\AddressDAL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\DAL\\AddressDAL.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAgwCQAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\Form1.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\Form1.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\Form1.cs [Design]",
+              "RelativeToolTip": "G-36 SmartPrint\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:52:04.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T09:30:44.361Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddressBL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\AddressBL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\AddressBL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\AddressBL.cs*",
-              "RelativeToolTip": "G-36 SmartPrint\\BL\\AddressBL.cs*",
-              "ViewState": "AgIAACUAAAAAAAAAAAAowEMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ForgotPassword.cs [Design]",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\ForgotPassword.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ForgotPassword.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\ForgotPassword.cs [Design]",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ForgotPassword.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T10:13:40.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T09:07:55.612Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Signup.cs [Design]",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Signup.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.cs [Design]",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\Signup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T09:06:00.98Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Order_DetailsBL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\Order_DetailsBL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\Order_DetailsBL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\Order_DetailsBL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\BL\\Order_DetailsBL.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAADwv0AAAAAlAAAAAAAAAA==",
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Login.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Login.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Login.cs [Design]",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T16:40:16.961Z",
+              "WhenOpened": "2025-04-27T08:56:14.103Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Signup.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Signup.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\Signup.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T10:11:34.423Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "FeedbackDL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\FeedbackDL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\FeedbackDL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\FeedbackDL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\BL\\FeedbackDL.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDAAAAAIAAAAAAAAAA==",
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\Form1.Designer.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\Form1.Designer.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\Form1.Designer.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAwwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T06:48:46.916Z",
+              "WhenOpened": "2025-04-27T08:56:48.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Order_paymenTBL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\Order_paymenTBL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\Order_paymenTBL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\Order_paymenTBL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\BL\\Order_paymenTBL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwDAAAAAXAAAAAAAAAA==",
+              "Title": "Signup.Designer.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Signup.Designer.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.Designer.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\Signup.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T07:03:59.28Z",
+              "WhenOpened": "2025-04-27T09:06:25.334Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "UserDAL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\DAL\\UserDAL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\DAL\\UserDAL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\DAL\\UserDAL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\DAL\\UserDAL.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAADwv5UAAAAAAAAAAAAAAA==",
+              "Title": "ForgotPassword.Designer.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\ForgotPassword.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ForgotPassword.Designer.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\ForgotPassword.Designer.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ForgotPassword.Designer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwJ0AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T04:19:35.857Z"
+              "WhenOpened": "2025-04-27T09:08:14.471Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ProductBL.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\ProductBL.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\ProductBL.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\BL\\ProductBL.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\BL\\ProductBL.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAkwEYAAAAAAAAAAAAAAA==",
+              "Title": "ForgotPassword.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\BL\\ForgotPassword.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\ForgotPassword.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\BL\\ForgotPassword.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\BL\\ForgotPassword.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T03:36:50.053Z"
+              "WhenOpened": "2025-04-27T09:16:57.154Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "SqlHelper.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\SqlHelper.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\SqlHelper.cs",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\oop week\\G-36 SmartPrint\\DBS25F036\\G-36 SmartPrint\\SqlHelper.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\SqlHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\Program.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\Program.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\Program.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T16:51:52.387Z"
+              "WhenOpened": "2025-04-27T08:54:12.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrderDL.cs",
+              "DocumentMoniker": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\DL\\OrderDL.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\OrderDL.cs",
+              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\DL\\OrderDL.cs",
+              "RelativeToolTip": "G-36 SmartPrint\\DL\\OrderDL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T08:53:40.14Z",
+              "EditorCaption": ""
             }
           ]
         }

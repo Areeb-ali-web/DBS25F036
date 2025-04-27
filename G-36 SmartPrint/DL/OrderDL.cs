@@ -8,6 +8,6 @@ namespace G_36_SmartPrint.DL
 {
     internal class OrderDL
     {
-        public static 
+        public static int OrderID;
     }
 }
