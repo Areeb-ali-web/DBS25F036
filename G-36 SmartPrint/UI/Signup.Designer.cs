@@ -43,7 +43,7 @@
             // 
             this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.logoPictureBox.Image = global::G_36_SmartPrint.Properties.Resources.sign_up;
-            this.logoPictureBox.Location = new System.Drawing.Point(150, 43);
+            this.logoPictureBox.Location = new System.Drawing.Point(150, 47);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.Size = new System.Drawing.Size(85, 77);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,6 +67,7 @@
             this.TxtNewUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtNewUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtNewUsername.Location = new System.Drawing.Point(100, 167);
+            this.TxtNewUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtNewUsername.Name = "TxtNewUsername";
             this.TxtNewUsername.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtNewUsername.PlaceholderText = "Username";
@@ -91,6 +92,7 @@
             this.TxtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtEmail.Location = new System.Drawing.Point(100, 215);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtEmail.PlaceholderText = "Email";
@@ -115,6 +117,7 @@
             this.TxtPassword.ForeColor = System.Drawing.Color.Blue;
             this.TxtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtPassword.Location = new System.Drawing.Point(100, 314);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.PlaceholderForeColor = System.Drawing.Color.Blue;
@@ -140,6 +143,7 @@
             this.TxtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtName.Location = new System.Drawing.Point(100, 263);
+            this.TxtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtName.Name = "TxtName";
             this.TxtName.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtName.PlaceholderText = "Full Nmae";

@@ -19,7 +19,7 @@ namespace G_36_SmartPrint.UI
 
             ForgotPasswordLink = linkForgot;
         }
-
+       
         private void linkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 

@@ -9,7 +9,7 @@ namespace G_36_SmartPrint.BL
     internal class OrderBL
     {
         private int orderID;
-        
+        private CustomersBL customer;
         private DateTime Order_date;
         private bool DeliveryRequired;
         private AddressBL delivery_address;
@@ -19,10 +19,10 @@ namespace G_36_SmartPrint.BL
         public List<FeedbackDL> feedback;
         
         public OrderBL() { }
-        public OrderBL(int orderID,DateTime orderdate,bool DeliveryRequired,AddressBL delivery_address,decimal totalamount,List<Order_DetailsBL> orderDetails)
+        public OrderBL(int orderID,DateTime orderdate,bool DeliveryRequired,AddressBL delivery_address,decimal totalamount,List<Order_DetailsBL> orderDetails,CustomersBL customer)
         {
             this.orderID = orderID;
-
+            this.customer = customer;
             this.Order_date = orderdate;
             this.DeliveryRequired = DeliveryRequired;
             this.delivery_address = delivery_address;
@@ -31,7 +31,7 @@ namespace G_36_SmartPrint.BL
             this.DeliveryRequired = DeliveryRequired;
         }
 
-        public OrderBL(  DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails)
+        public OrderBL(  CustomersBL customer,DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails)
         {
             this.Order_date = orderdate;
             this.DeliveryRequired = DeliveryRequired;
@@ -39,11 +39,63 @@ namespace G_36_SmartPrint.BL
             this.totalAmount = totalamount;
             this.orderDetails = orderDetails;
             this.DeliveryRequired = DeliveryRequired;
+            this.customer = customer;
+        }
+        public void calculateTotalamount()
+        {
+            foreach (Order_DetailsBL detail in orderDetails)
+            {
+                totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
+            }
         }
 
         public decimal gettotalamount()
         {
             return totalAmount;
+        }
+        public bool getDeliveryRequired()
+        {
+            return DeliveryRequired;
+        }
+        public DateTime getOrderDate()
+        {
+            return Order_date;
+        }
+        public int getOrderID()
+        {
+            return orderID;
+        }
+        public AddressBL getDeliveryAddress()
+        {
+            return delivery_address;
+        }
+        public LookupBL getOrderStatus()
+        {
+            return orderStatus;
+        }
+        public List<Order_DetailsBL> getOrderDetails()
+        {
+            return orderDetails;
+        }   
+        public void setOrderID(int orderID)
+        {
+            this.orderID = orderID;
+        }
+        public void setOrderDate(DateTime orderdate)
+        {
+            this.Order_date = orderdate;
+        }
+        public void setDeliveryRequired(bool deliveryRequired)
+        {
+            this.DeliveryRequired = deliveryRequired;
+        }
+        public void setDeliveryAddress(AddressBL delivery_address)
+        {
+            this.delivery_address = delivery_address;
+        }
+        public void setOrderStatus(LookupBL orderStatus)
+        {
+            this.orderStatus = orderStatus;
         }
 
     }
