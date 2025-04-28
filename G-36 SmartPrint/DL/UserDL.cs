@@ -8,7 +8,7 @@ namespace G_36_SmartPrint.DAL
 {
     internal class UserDL
     {
-        public static bool UserSignIN(string username, string password, string email, int role)
+        public static bool UserSignIN(string username, string password, string email,string name, int role)
         {
             // 1. Validate input
             if (!Validation.IsValidEmail(email))
@@ -40,8 +40,8 @@ namespace G_36_SmartPrint.DAL
             }
 
             // 3. Insert into DB
-            string insertQuery = $"INSERT INTO users (username, passwordhash, email, roleID, createdDate) " +
-                                 $"VALUES ('{username}', '{password}', '{email}', {role}, '{DateTime.Now:yyyy-MM-dd HH:mm:ss}')";
+            string insertQuery = $"INSERT INTO users (username, passwordhash, email, roleID, createdDate,name) " +
+                                 $"VALUES ('{username}', '{password}', '{email}', {role}, '{DateTime.Now:yyyy-MM-dd HH:mm:ss}','{name}')";
 
             try
             {

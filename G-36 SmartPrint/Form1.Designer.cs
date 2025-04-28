@@ -18,16 +18,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.rightPanel = new System.Windows.Forms.Panel();
+            this.login = new G_36_SmartPrint.UI.Login();
+            this.signup = new G_36_SmartPrint.UI.Signup();
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSwitchToLogin = new Guna.UI2.WinForms.Guna2Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.login = new G_36_SmartPrint.UI.Login();
-            this.signup = new G_36_SmartPrint.UI.Signup();
             this.rightPanel.SuspendLayout();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
@@ -42,6 +42,29 @@
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(400, 500);
             this.rightPanel.TabIndex = 1;
+            // 
+            // login
+            // 
+            this.login.BackColor = System.Drawing.Color.White;
+            this.login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login.BackgroundImage")));
+            this.login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.login.Location = new System.Drawing.Point(0, 0);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(400, 500);
+            this.login.TabIndex = 0;
+            this.login.Load += new System.EventHandler(this.login_Load);
+            // 
+            // signup
+            // 
+            this.signup.BackColor = System.Drawing.Color.White;
+            this.signup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signup.BackgroundImage")));
+            this.signup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.signup.Location = new System.Drawing.Point(0, 0);
+            this.signup.Name = "signup";
+            this.signup.Size = new System.Drawing.Size(400, 500);
+            this.signup.TabIndex = 1;
+            this.signup.Visible = false;
             // 
             // slideTimer
             // 
@@ -62,6 +85,28 @@
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(400, 500);
             this.leftPanel.TabIndex = 0;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Purple;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(96, 61);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(431, 47);
+            this.guna2HtmlLabel2.TabIndex = 5;
+            this.guna2HtmlLabel2.Text = "Custom Design and Clothing";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Purple;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(147, 21);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(195, 50);
+            this.guna2HtmlLabel1.TabIndex = 5;
+            this.guna2HtmlLabel1.Text = "Smart Print";
             // 
             // btnSwitchToLogin
             // 
@@ -104,7 +149,7 @@
             this.lblWelcome.ForeColor = System.Drawing.Color.Purple;
             this.lblWelcome.Location = new System.Drawing.Point(88, 127);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(248, 45);
+            this.lblWelcome.Size = new System.Drawing.Size(373, 65);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome Back!";
             // 
@@ -116,53 +161,9 @@
             this.lblMessage.ForeColor = System.Drawing.Color.Purple;
             this.lblMessage.Location = new System.Drawing.Point(100, 208);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(218, 25);
+            this.lblMessage.Size = new System.Drawing.Size(336, 40);
             this.lblMessage.TabIndex = 1;
             this.lblMessage.Text = "Don\'t have an account?";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Purple;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(147, 21);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(133, 34);
-            this.guna2HtmlLabel1.TabIndex = 5;
-            this.guna2HtmlLabel1.Text = "Smart Print";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Purple;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(96, 61);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(285, 32);
-            this.guna2HtmlLabel2.TabIndex = 5;
-            this.guna2HtmlLabel2.Text = "Custom Design and Clothing";
-            // 
-            // login
-            // 
-            this.login.BackColor = System.Drawing.Color.White;
-            this.login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("login.BackgroundImage")));
-            this.login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.login.Location = new System.Drawing.Point(0, 0);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(400, 500);
-            this.login.TabIndex = 0;
-            // 
-            // signup
-            // 
-            this.signup.BackColor = System.Drawing.Color.White;
-            this.signup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signup.BackgroundImage")));
-            this.signup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.signup.Location = new System.Drawing.Point(0, 0);
-            this.signup.Name = "signup";
-            this.signup.Size = new System.Drawing.Size(400, 500);
-            this.signup.TabIndex = 1;
-            this.signup.Visible = false;
             // 
             // Form1
             // 
