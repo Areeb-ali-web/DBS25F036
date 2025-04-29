@@ -54,6 +54,15 @@ namespace G_36_SmartPrint.BL
             this.addressDetail = addressDetail;
             this.state = state;
         }
+        public AddressBL(int addressID, string addressDetail, string city, string state, string postalCode, string country)
+        {
+            AddressID = addressID;
+            this.addressDetail = addressDetail;
+            this.city = city;
+            this.state = state;
+            this.postalCode = postalCode;
+            this.country = country;
+        }
 
         public AddressBL(int addressID,string addressDetail, string city, string state, string postalCode, string stat, string country)
         {

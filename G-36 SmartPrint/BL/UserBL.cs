@@ -90,6 +90,15 @@ namespace G_36_SmartPrint.BL
             this.name = name;
             this.PasswordHash = passwordHash;
         }
+
+        public UserBL(int userid,string username, string email, string name, string phoneNumber)
+        {
+            this.UserID = userid;
+            this.UserName = username;
+            this.Email = email;
+            this.name = name;
+            this.phoneNumber = phoneNumber;
+        }
         public string getphoneNumber() { return phoneNumber; }
         public string getEmail() { return this.Email; }
         public DateTime getCreatedDate() { return CreatedDate; }
