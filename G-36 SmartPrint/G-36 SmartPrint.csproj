@@ -122,6 +122,7 @@
     <Compile Include="BL\Order_DetailsBL.cs" />
     <Compile Include="BL\Order_paymenTBL.cs" />
     <Compile Include="BL\ProductBL.cs" />
+    <Compile Include="BL\SalaryPaymentBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="DL\AddressDL.cs" />
     <Compile Include="DL\OrderDL.cs" />
