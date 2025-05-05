@@ -16,10 +16,10 @@ namespace G_36_SmartPrint.BL
         private LookupBL orderStatus;
         private decimal totalAmount;
         protected List<Order_DetailsBL> orderDetails;
-        public List<FeedbackDL> feedback;
+        public List<FeedbackBL> feedback;
         
         public OrderBL() { }
-        public OrderBL(int orderID,DateTime orderdate,bool DeliveryRequired,AddressBL delivery_address,decimal totalamount,List<Order_DetailsBL> orderDetails,CustomersBL customer)
+        public OrderBL(int orderID, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, CustomersBL customer)
         {
             this.orderID = orderID;
             this.customer = customer;
@@ -29,6 +29,18 @@ namespace G_36_SmartPrint.BL
             this.totalAmount = totalamount;
             this.orderDetails = orderDetails;
             this.DeliveryRequired = DeliveryRequired;
+        }
+        public OrderBL(int orderID, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, CustomersBL customer,List<FeedbackBL> feedbak)
+        {
+            this.orderID = orderID;
+            this.customer = customer;
+            this.Order_date = orderdate;
+            this.DeliveryRequired = DeliveryRequired;
+            this.delivery_address = delivery_address;
+            this.totalAmount = totalamount;
+            this.orderDetails = orderDetails;
+            this.DeliveryRequired = DeliveryRequired;
+            this.feedback = feedbak;
         }
 
         public OrderBL(  CustomersBL customer,DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails)

@@ -104,3 +104,56 @@ C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\obj\Debug
 C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Login.resources
 C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Signup.resources
 C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\bin\Debug\Guna.UI2.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\G-36 SmartPrint.exe.config
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\G-36 SmartPrint.exe
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\G-36 SmartPrint.pdb
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Google.Protobuf.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Guna.UI2.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\MySql.Data.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\MySqlConnector.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Buffers.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.IO.Pipelines.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Memory.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\ZstdSharp.dll
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Google.Protobuf.pdb
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Google.Protobuf.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\MySql.Data.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\MySqlConnector.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Buffers.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.IO.Pipelines.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Memory.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.Form1.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.Properties.Resources.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ForgotPassword.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Login.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Signup.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.csproj.GenerateResource.cache
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 Sma.47F06230.Up2Date
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.exe
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.pdb

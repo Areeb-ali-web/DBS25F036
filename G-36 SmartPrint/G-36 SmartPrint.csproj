@@ -115,8 +115,7 @@
     <Compile Include="BL\AddressBL.cs" />
     <Compile Include="BL\CustomersBL.cs" />
     <Compile Include="BL\EmployeesBL.cs" />
-    <Compile Include="BL\FeedbackDL.cs" />
-    <Compile Include="BL\ForgotPassword.cs" />
+    <Compile Include="BL\FeedbackBL.cs" />
     <Compile Include="BL\LookupBL.cs" />
     <Compile Include="BL\OrderBL.cs" />
     <Compile Include="BL\Order_DetailsBL.cs" />
@@ -125,6 +124,7 @@
     <Compile Include="BL\SalaryPaymentBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="DL\AddressDL.cs" />
+    <Compile Include="DL\FeedbackDL.cs" />
     <Compile Include="DL\OrderDL.cs" />
     <Compile Include="DL\ProductDL.cs" />
     <Compile Include="DL\UserDL.cs" />

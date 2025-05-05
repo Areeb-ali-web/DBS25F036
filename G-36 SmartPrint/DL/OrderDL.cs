@@ -189,6 +189,7 @@ namespace G_36_SmartPrint.DL
 
                 if (orderId != previousOrderId)
                 {
+                    List<FeedbackBL> feedback = FeedbackDL.LoadFeedbackByOrderId(orderId);
                     CustomersBL customer = new CustomersBL(
                         Convert.ToInt32(row["CustomerID"]),
                         row["Username"].ToString(),
@@ -217,7 +218,8 @@ namespace G_36_SmartPrint.DL
                         address,
                         Convert.ToDecimal(row["TotalAmount"]),
                         new List<Order_DetailsBL>(),
-                        customer
+                        customer,
+                        feedback
                     );
 
                     LookupBL orderStatus = new LookupBL(

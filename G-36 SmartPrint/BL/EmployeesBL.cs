@@ -13,7 +13,7 @@ namespace G_36_SmartPrint.BL
         private LookupBL Position;
         private DateTime hiredate;
         private float salary;
-
+        private SalaryPaymentBL salaryPayment;
         public EmployeesBL() { }
         public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary)
         {
@@ -30,6 +30,10 @@ namespace G_36_SmartPrint.BL
             this.hiredate = hiredate;
             this.salary = salary;
 
+        }
+        public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, SalaryPaymentBL salaryPayment) : this(employeeID, position, hiredate, salary)
+        {
+            this.salaryPayment = salaryPayment;
         }
 
         public EmployeesBL(int EmployeeId,LookupBL position,int userID): base(userID) {

@@ -18,8 +18,7 @@ namespace G_36_SmartPrint
         static void Main()
         {
             // AddressDL.AddAddressIfNotExists(3, adress);
-            List<OrderBL> list = new List<OrderBL>();
-            list = OrderDL.LoadAllOrders();
+     
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class FeedbackDL
+    internal class FeedbackBL
     {
         private int feedbackId;
         private int rating;
         private string comment;
         private DateTime feedabckdate;
 
-        public FeedbackDL(int feedbackId, int rating, string comment, DateTime feedabckdate)
+        public FeedbackBL(int feedbackId, int rating, string comment, DateTime feedabckdate)
         {
             this.feedbackId = feedbackId;
             this.rating = rating;
             this.comment = comment;
             this.feedabckdate = feedabckdate;
         }
-        public FeedbackDL() { }
-        public FeedbackDL( int rating, string comment, DateTime feedabckdate)
+        public FeedbackBL() { }
+        public FeedbackBL( int rating, string comment, DateTime feedabckdate)
         {
           
             this.rating = rating;

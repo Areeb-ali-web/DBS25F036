@@ -23,6 +23,24 @@ namespace G_36_SmartPrint
 
 
         }
+        public static DataTable getDataTable(string sql, MySqlParameter[] parameters)
+        {
+            using (MySqlConnection con = new MySqlConnection(constring))
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
+
 
         public static DataTable getDataTable(string sql)
         {
