@@ -15,6 +15,7 @@ namespace G_36_SmartPrint.BL
         {
             this.orders = orders;
         }
+        
         public CustomersBL(int userID, string userName, string passwordHash, string email, string name, string phoneNumber, DateTime createdDate, LookupBL role) : base(userID, userName, passwordHash, email, name, phoneNumber, createdDate, role)
         {
             this.UserID = userID;

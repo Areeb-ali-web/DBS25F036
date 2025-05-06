@@ -42,7 +42,10 @@ namespace G_36_SmartPrint.BL
             this.postalCode = postalCode; 
         }
 
-    
+    public int getAddressID()
+        {
+            return AddressID;
+        }
 
         // Constructor
         public AddressBL( string addressDetail, string city, string state, string postalCode,string country)

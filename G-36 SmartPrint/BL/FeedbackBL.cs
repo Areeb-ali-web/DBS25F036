@@ -45,7 +45,15 @@ namespace G_36_SmartPrint.BL
             this.rating = (int) rating;
 
         }
+        public string description()
+        {
+            return "FeedbackBL{" +
+                "feedbackId=" + feedbackId +
+                ", rating=" + rating +
+                ", comment='" + comment + '\'' +
+                ", feedabckdate=" + feedabckdate +
+                '}';
+        }
 
-        
     }
 }

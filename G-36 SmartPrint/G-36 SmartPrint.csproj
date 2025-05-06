@@ -114,6 +114,8 @@
   <ItemGroup>
     <Compile Include="BL\AddressBL.cs" />
     <Compile Include="BL\CustomersBL.cs" />
+    <Compile Include="BL\DesignBL.cs" />
+    <Compile Include="BL\DesignerBL.cs" />
     <Compile Include="BL\EmployeesBL.cs" />
     <Compile Include="BL\FeedbackBL.cs" />
     <Compile Include="BL\LookupBL.cs" />
@@ -124,8 +126,10 @@
     <Compile Include="BL\SalaryPaymentBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="DL\AddressDL.cs" />
+    <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\FeedbackDL.cs" />
     <Compile Include="DL\OrderDL.cs" />
+    <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ProductDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="Form1.cs">

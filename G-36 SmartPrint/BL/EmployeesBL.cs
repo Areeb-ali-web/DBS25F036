@@ -9,11 +9,11 @@ namespace G_36_SmartPrint.BL
     internal class EmployeesBL : UserBL
 
     {
-        private int employeeID;
-        private LookupBL Position;
-        private DateTime hiredate;
-        private float salary;
-        private SalaryPaymentBL salaryPayment;
+        protected int employeeID;
+        protected LookupBL Position;
+        protected DateTime hiredate;
+        protected float salary;
+        protected List<SalaryPaymentBL> salaryPayment;
         public EmployeesBL() { }
         public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary)
         {
@@ -31,7 +31,12 @@ namespace G_36_SmartPrint.BL
             this.salary = salary;
 
         }
-        public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, SalaryPaymentBL salaryPayment) : this(employeeID, position, hiredate, salary)
+        public virtual string getName()
+        {
+            return name;
+        }
+               
+        public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, List<SalaryPaymentBL> salaryPayment) : this(employeeID, position, hiredate, salary)
         {
             this.salaryPayment = salaryPayment;
         }
@@ -39,6 +44,11 @@ namespace G_36_SmartPrint.BL
         public EmployeesBL(int EmployeeId,LookupBL position,int userID): base(userID) {
             this.employeeID = EmployeeId;
             this.Position = position;
+        }
+
+        public override void setuserID(int userID)
+        {
+            base.setuserID(userID);
         }
     }
 }

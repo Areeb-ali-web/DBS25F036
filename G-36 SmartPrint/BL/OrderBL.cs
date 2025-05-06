@@ -17,7 +17,7 @@ namespace G_36_SmartPrint.BL
         private decimal totalAmount;
         protected List<Order_DetailsBL> orderDetails;
         public List<FeedbackBL> feedback;
-        
+        private string Designdescription;
         public OrderBL() { }
         public OrderBL(int orderID, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, CustomersBL customer)
         {
@@ -43,7 +43,7 @@ namespace G_36_SmartPrint.BL
             this.feedback = feedbak;
         }
 
-        public OrderBL(  CustomersBL customer,DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails)
+        public OrderBL(CustomersBL customer, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails)
         {
             this.Order_date = orderdate;
             this.DeliveryRequired = DeliveryRequired;
@@ -52,6 +52,17 @@ namespace G_36_SmartPrint.BL
             this.orderDetails = orderDetails;
             this.DeliveryRequired = DeliveryRequired;
             this.customer = customer;
+        }
+        public OrderBL(CustomersBL customer, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails,string designdescription)
+        {
+            this.Order_date = orderdate;
+            this.DeliveryRequired = DeliveryRequired;
+            this.delivery_address = delivery_address;
+            this.totalAmount = totalamount;
+            this.orderDetails = orderDetails;
+            this.DeliveryRequired = DeliveryRequired;
+            this.customer = customer;
+            this.Designdescription = designdescription;
         }
         public void calculateTotalamount()
         {
@@ -109,6 +120,25 @@ namespace G_36_SmartPrint.BL
         {
             this.orderStatus = orderStatus;
         }
-
+        public CustomersBL getCustomer()
+        {
+            return customer;
+        }
+        public void setCustomer(CustomersBL customer)
+        {
+            this.customer = customer;
+        }
+        public decimal gettotalAmount()
+        {
+            foreach(Order_DetailsBL detail in orderDetails)
+            {
+                totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
+            }
+            return totalAmount;
+        }
+        public string getDesignDescription()
+        {
+            return Designdescription;
+        }
     }
 }

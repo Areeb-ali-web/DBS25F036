@@ -12,21 +12,21 @@ namespace G_36_SmartPrint.BL
         private ProductBL product;
         private int quantity;
         private LookupBL orderStatus;
-        private string Designdescription;
+       
 
-        public Order_DetailsBL(int orderdetailID, ProductBL product, int quantity, LookupBL orderStatus, string designdescription)
+        public Order_DetailsBL(int orderdetailID, ProductBL product, int quantity, LookupBL orderStatus)
         {
             this.orderdetailID = orderdetailID;
             this.product = product;
             this.quantity = quantity;
             this.orderStatus = orderStatus;
-            Designdescription = designdescription;
+            
         }
-        public Order_DetailsBL(ProductBL product,int quantity, LookupBL orderStatus, string designdescription)
+        public Order_DetailsBL(ProductBL product,int quantity, LookupBL orderStatus)
         {
             this.quantity=quantity;
             this.orderStatus = orderStatus;
-            this.Designdescription = designdescription;
+        
             this.product=product;
         }
 
@@ -34,11 +34,7 @@ namespace G_36_SmartPrint.BL
         {
             return orderdetailID;
         }
-        public string getdesignDescription()
-        {
-            return Designdescription;
-
-        }
+       
 
         public LookupBL getOrderStatus() 
         {
@@ -54,7 +50,7 @@ namespace G_36_SmartPrint.BL
         }
         public void setDEscription(string description)
         {
-            this.Designdescription = description;
+        
         }
         public void setorderStatus(LookupBL orderStatus)
         {

@@ -71,6 +71,7 @@ namespace G_36_SmartPrint.BL
             // Ensure Role is initialized if required, possibly via a parameter or default value
         }
 
+        public int getUserID() { return UserID; }
 
 
         public UserBL(int userID)
@@ -119,7 +120,7 @@ namespace G_36_SmartPrint.BL
             return UserID;
         }
 
-        public void setuserID(int userID) { this.UserID = userID; }
+        public virtual void setuserID(int userID) { this.UserID = userID; }
         
 
 

@@ -38,7 +38,7 @@ namespace G_36_SmartPrint.DL
                     od.OrderDetailID,
                     od.ProductID,
                     od.Quantity,
-                    od.DesignDescription,
+                   o.DesignDescription,
 
                     p.Name AS ProductName,
                     p.Description AS ProductDescription,
@@ -121,12 +121,13 @@ namespace G_36_SmartPrint.DL
                         Convert.ToInt32(row["OrderDetailID"]),
                         product,
                         Convert.ToInt32(row["Quantity"]),
-                        null, // Status of order detail if needed
-                        row["DesignDescription"].ToString()
+                        null// Status of order detail if needed
+                        
                     );
 
                     currentOrder.getOrderDetails().Add(orderDetail);
                 }
+                row["DesignDescription"].ToString();
             }
 
             return orders;
@@ -162,7 +163,7 @@ namespace G_36_SmartPrint.DL
                     od.OrderDetailID,
                     od.ProductID,
                     od.Quantity,
-                    od.DesignDescription,
+                    o.DesignDescription,
 
                     p.Name AS ProductName,
                     p.Description AS ProductDescription,
@@ -246,15 +247,86 @@ namespace G_36_SmartPrint.DL
                         Convert.ToInt32(row["OrderDetailID"]),
                         product,
                         Convert.ToInt32(row["Quantity"]),
-                        null,
-                        row["DesignDescription"].ToString()
+                        null
+                        
                     );
 
                     currentOrder.getOrderDetails().Add(orderDetail);
                 }
+                row["DesignDescription"].ToString();
             }
 
             return orders;
+        }
+
+        public static void ChangeOrderStatusByName(int orderId, string newStatusName)
+        {
+            // Step 1: Get LookupID from LookupTable using status name
+            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{newStatusName}' AND LookupCategory = 'OrderStatus'";
+            DataTable result = SqlHelper.getDataTable(lookupQuery);
+
+            if (result.Rows.Count == 0)
+            {
+                throw new Exception("Invalid order status name provided.");
+            }
+
+            int newStatusId = Convert.ToInt32(result.Rows[0]["LookupID"]);
+
+            // Step 2: Update Orders table
+            string updateQuery = $"UPDATE Orders SET order_StatusID = {newStatusId} WHERE OrderID = {orderId}";
+            SqlHelper.executeDML(updateQuery);
+        }
+        public static void AddOrder(OrderBL order)
+        {
+            using (MySqlConnection con = new MySqlConnection(SqlHelper.constring))
+            {
+                con.Open();
+                MySqlTransaction transaction = con.BeginTransaction();
+
+                try
+                {
+                    // 1. Insert into Orders table
+                    string insertOrderQuery = @"
+                        INSERT INTO Orders (CustomerID, OrderDate, DeliveryRequired, AddressID, TotalAmount, order_StatusID,designdescription)
+                        VALUES (@CustomerID, @OrderDate, @DeliveryRequired, @AddressID, @TotalAmount, @OrderStatusID,@designdescription);
+                        SELECT LAST_INSERT_ID();";
+
+                    MySqlCommand cmd = new MySqlCommand(insertOrderQuery, con, transaction);
+                    cmd.Parameters.AddWithValue("@CustomerID", order.getCustomer().getUserID());
+                    cmd.Parameters.AddWithValue("@OrderDate", order.getOrderDate());
+                    cmd.Parameters.AddWithValue("@DeliveryRequired", order.getDeliveryRequired());
+                    cmd.Parameters.AddWithValue("@AddressID", order.getDeliveryAddress().getAddressID());
+                    cmd.Parameters.AddWithValue("@TotalAmount", order.gettotalamount());
+                    cmd.Parameters.AddWithValue("@OrderStatusID", order.getOrderStatus().getLookupID());
+
+                    int orderId = Convert.ToInt32(cmd.ExecuteScalar());
+                    order.setOrderID(orderId);
+
+                    // 2. Insert each order detail
+                    foreach (Order_DetailsBL detail in order.getOrderDetails())
+                    {
+                        string insertDetailQuery = @"
+                            INSERT INTO OrderDetails (OrderID, ProductID, Quantity)
+                            VALUES (@OrderID, @ProductID, @Quantity);";
+
+                        MySqlCommand detailCmd = new MySqlCommand(insertDetailQuery, con, transaction);
+                        detailCmd.Parameters.AddWithValue("@OrderID", orderId);
+                        detailCmd.Parameters.AddWithValue("@ProductID", detail.getproduct().ProductID);
+                        detailCmd.Parameters.AddWithValue("@Quantity", detail.getQuantity());
+                        
+
+                        detailCmd.ExecuteNonQuery();
+                    }
+                    cmd.Parameters.AddWithValue("@DesignDescription", order.getDesignDescription());
+
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw new Exception("Failed to insert order: " + ex.Message);
+                }
+            }
         }
     }
 }
