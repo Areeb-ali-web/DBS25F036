@@ -22,7 +22,12 @@
             this.signup = new G_36_SmartPrint.UI.Signup();
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.leftPanel = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+=======
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSwitchToLogin = new Guna.UI2.WinForms.Guna2Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -53,7 +58,10 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(400, 500);
             this.login.TabIndex = 0;
+<<<<<<< HEAD
+=======
             this.login.Load += new System.EventHandler(this.login_Load);
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             // 
             // signup
             // 
@@ -75,7 +83,8 @@
             this.leftPanel.BackColor = System.Drawing.Color.Fuchsia;
             this.leftPanel.BackgroundImage = global::G_36_SmartPrint.Properties.Resources.Sign;
             this.leftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.leftPanel.Controls.Add(this.guna2HtmlLabel2);
+            this.leftPanel.Controls.Add(this.label2);
+            this.leftPanel.Controls.Add(this.label1);
             this.leftPanel.Controls.Add(this.guna2HtmlLabel1);
             this.leftPanel.Controls.Add(this.btnSwitchToLogin);
             this.leftPanel.Controls.Add(this.logoPictureBox);
@@ -86,6 +95,31 @@
             this.leftPanel.Size = new System.Drawing.Size(400, 500);
             this.leftPanel.TabIndex = 0;
             // 
+<<<<<<< HEAD
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(113, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(281, 28);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Custom Design and Clothing";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(138, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 41);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Smart Print";
+=======
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
@@ -96,6 +130,7 @@
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(431, 47);
             this.guna2HtmlLabel2.TabIndex = 5;
             this.guna2HtmlLabel2.Text = "Custom Design and Clothing";
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             // 
             // guna2HtmlLabel1
             // 
@@ -104,7 +139,11 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Purple;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(147, 21);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+<<<<<<< HEAD
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(133, 34);
+=======
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(195, 50);
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             this.guna2HtmlLabel1.TabIndex = 5;
             this.guna2HtmlLabel1.Text = "Smart Print";
             // 
@@ -133,10 +172,10 @@
             // logoPictureBox
             // 
             this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.logoPictureBox.Image = global::G_36_SmartPrint.Properties.Resources.Logo;
+            this.logoPictureBox.Image = global::G_36_SmartPrint.Properties.Resources.log_removebg_preview;
             this.logoPictureBox.Location = new System.Drawing.Point(0, 0);
             this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(124, 98);
+            this.logoPictureBox.Size = new System.Drawing.Size(126, 124);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoPictureBox.TabIndex = 3;
             this.logoPictureBox.TabStop = false;
@@ -193,7 +232,8 @@
         private UI.Signup signup;
         private System.Windows.Forms.Timer slideTimer;
         private Guna.UI2.WinForms.Guna2Button btnSwitchToLogin;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

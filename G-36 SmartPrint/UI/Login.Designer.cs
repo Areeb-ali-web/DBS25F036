@@ -28,7 +28,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
+            
+=======
             //
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
