@@ -4,7 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using G_36_SmartPrint.BL;
 
-namespace G_36_SmartPrint.DAL
+namespace G_36_SmartPrint.DL
 {
     internal class UserDL
     {
@@ -104,7 +104,7 @@ namespace G_36_SmartPrint.DAL
                 LookupBL roles = new LookupBL(role); // You may need to change this depending on how LookupBL works
 
                 UserBL user = new UserBL(userID, username, password, email, name, phone_number, createdDate, roles);
-                user.Addresses = AddressDAL.LoaduserAddress(user); 
+                user.Addresses = AddressDL.LoaduserAddress(user); 
                 Users.Add(user);
             }
 
@@ -128,7 +128,7 @@ namespace G_36_SmartPrint.DAL
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error updating password: {ex.Message}");
+                MessageBox.Show($"Error updating password:wrong email or username {ex.Message}");
                 return false;
             }
         }

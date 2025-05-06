@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using G_36_SmartPrint.BL;
-using G_36_SmartPrint.DAL;
+using G_36_SmartPrint.DL;
 
 namespace G_36_SmartPrint.UI
 {

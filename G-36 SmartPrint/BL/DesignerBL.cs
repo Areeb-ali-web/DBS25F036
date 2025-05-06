@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.WebParts;
+using System.Windows.Forms;
+using G_36_SmartPrint.DL;
 
 namespace G_36_SmartPrint.BL
 {
     internal class DesignerBL:EmployeesBL
-    {
-        public int getdesignerId()
+    { 
+       public int getdesignerId()
         {
             return employeeID;
         }
@@ -43,6 +46,20 @@ namespace G_36_SmartPrint.BL
         {
             this.employeeID = EmployeeId;
             this.Position = position;
+        }
+        public DesignerBL(int designerid,string username)
+        {
+            this.employeeID = designerid;
+            this.setname(username);
+        }
+        public override void setuserID(int userID)
+        {
+            base.setuserID(userID);
+        }
+        public override List<EmployeesBL> loademployee()
+        {
+            List<EmployeesBL> employees = EmployeeDL.LoadEmployeesByPosition(4);
+            return employees;
         }
     }
 }

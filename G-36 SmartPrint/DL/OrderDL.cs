@@ -13,46 +13,45 @@ namespace G_36_SmartPrint.DL
             List<OrderBL> orders = new List<OrderBL>();
 
             string query = @"
-                SELECT 
-                    o.OrderID,
-                    o.OrderDate,
-                    o.DeliveryRequired,
-                    o.TotalAmount,
-                    
-                    o.AddressID,
-                    a.Address_Detail,
-                    a.City,
-                    a.State,
-                    a.PostalCode,
-                    a.Country,
+        SELECT 
+            o.OrderID,
+            o.OrderDate,
+            o.DeliveryRequired,
+            o.TotalAmount,
 
-                    o.CustomerID,
-                    u.Username,
-                    u.Email,
-                    u.Name,
-                    u.Phone_number,
+            o.AddressID,
+            a.Address_Detail,
+            a.City,
+            a.State,
+            a.PostalCode,
+            a.Country,
 
-                    s.LookupID AS OrderStatusID,
-                    s.LookupValue AS OrderStatusValue,
+            o.CustomerID,
+            u.Username,
+            u.Email,
+            u.Name,
+            u.Phone_number,
 
-                    od.OrderDetailID,
-                    od.ProductID,
-                    od.Quantity,
-                   o.DesignDescription,
+            s.LookupID AS OrderStatusID,
+            s.LookupValue AS OrderStatusValue,
 
-                    p.Name AS ProductName,
-                    p.Description AS ProductDescription,
-                    p.Price AS ProductPrice,
-                    p.QuantityInStock
+            od.OrderDetailID,
+            od.ProductID,
+            od.Quantity,
+            o.DesignDescription,
 
-                FROM Orders o
-                LEFT JOIN UserAddress a ON o.AddressID = a.AddressID
-                INNER JOIN Users u ON o.CustomerID = u.UserID
-                INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
-                LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
-                LEFT JOIN Products p ON od.ProductID = p.ProductID
+            p.Name AS ProductName,
+            p.Description AS ProductDescription,
+            p.Price AS ProductPrice,
+            p.QuantityInStock
 
-                ORDER BY o.OrderID;";
+        FROM Orders o
+        LEFT JOIN UserAddress a ON o.AddressID = a.AddressID
+        INNER JOIN Users u ON o.CustomerID = u.UserID
+        INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
+        LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
+        LEFT JOIN Products p ON od.ProductID = p.ProductID
+        ORDER BY o.OrderID;";
 
             DataTable dt = SqlHelper.getDataTable(query);
 
@@ -102,11 +101,14 @@ namespace G_36_SmartPrint.DL
                     );
                     currentOrder.setOrderStatus(orderStatus);
 
+                    // Load and set associated designs
+                    List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId);
+                    currentOrder.setDesigns(designs);
+
                     orders.Add(currentOrder);
                     previousOrderId = orderId;
                 }
 
-                // Add OrderDetail if exists
                 if (row["OrderDetailID"] != DBNull.Value)
                 {
                     ProductBL product = new ProductBL(
@@ -121,63 +123,60 @@ namespace G_36_SmartPrint.DL
                         Convert.ToInt32(row["OrderDetailID"]),
                         product,
                         Convert.ToInt32(row["Quantity"]),
-                        null// Status of order detail if needed
-                        
+                        null
                     );
 
                     currentOrder.getOrderDetails().Add(orderDetail);
                 }
-                row["DesignDescription"].ToString();
             }
 
             return orders;
         }
-
         public static List<OrderBL> LoadOrdersByCustomerId(int customerId)
         {
             List<OrderBL> orders = new List<OrderBL>();
 
             string query = $@"
-                SELECT 
-                    o.OrderID,
-                    o.OrderDate,
-                    o.DeliveryRequired,
-                    o.TotalAmount,
-                    
-                    o.AddressID,
-                    a.Address_Detail,
-                    a.City,
-                    a.State,
-                    a.PostalCode,
-                    a.Country,
+        SELECT 
+            o.OrderID,
+            o.OrderDate,
+            o.DeliveryRequired,
+            o.TotalAmount,
 
-                    o.CustomerID,
-                    u.Username,
-                    u.Email,
-                    u.Name,
-                    u.Phone_number,
+            o.AddressID,
+            a.Address_Detail,
+            a.City,
+            a.State,
+            a.PostalCode,
+            a.Country,
 
-                    s.LookupID AS OrderStatusID,
-                    s.LookupValue AS OrderStatusValue,
+            o.CustomerID,
+            u.Username,
+            u.Email,
+            u.Name,
+            u.Phone_number,
 
-                    od.OrderDetailID,
-                    od.ProductID,
-                    od.Quantity,
-                    o.DesignDescription,
+            s.LookupID AS OrderStatusID,
+            s.LookupValue AS OrderStatusValue,
 
-                    p.Name AS ProductName,
-                    p.Description AS ProductDescription,
-                    p.Price AS ProductPrice,
-                    p.QuantityInStock
+            od.OrderDetailID,
+            od.ProductID,
+            od.Quantity,
+            o.DesignDescription,
 
-                FROM Orders o
-                LEFT JOIN UserAddress a ON o.AddressID = a.AddressID
-                INNER JOIN Users u ON o.CustomerID = u.UserID
-                INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
-                LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
-                LEFT JOIN Products p ON od.ProductID = p.ProductID
-                WHERE o.CustomerID = {customerId}
-                ORDER BY o.OrderID;";
+            p.Name AS ProductName,
+            p.Description AS ProductDescription,
+            p.Price AS ProductPrice,
+            p.QuantityInStock
+
+        FROM Orders o
+        LEFT JOIN UserAddress a ON o.AddressID = a.AddressID
+        INNER JOIN Users u ON o.CustomerID = u.UserID
+        INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
+        LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
+        LEFT JOIN Products p ON od.ProductID = p.ProductID
+        WHERE o.CustomerID = {customerId}
+        ORDER BY o.OrderID;";
 
             DataTable dt = SqlHelper.getDataTable(query);
 
@@ -229,6 +228,10 @@ namespace G_36_SmartPrint.DL
                     );
                     currentOrder.setOrderStatus(orderStatus);
 
+                    // Load and set associated designs
+                    List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId);
+                    currentOrder.setDesigns(designs);
+
                     orders.Add(currentOrder);
                     previousOrderId = orderId;
                 }
@@ -248,16 +251,15 @@ namespace G_36_SmartPrint.DL
                         product,
                         Convert.ToInt32(row["Quantity"]),
                         null
-                        
                     );
 
                     currentOrder.getOrderDetails().Add(orderDetail);
                 }
-                row["DesignDescription"].ToString();
             }
 
             return orders;
         }
+
 
         public static void ChangeOrderStatusByName(int orderId, string newStatusName)
         {

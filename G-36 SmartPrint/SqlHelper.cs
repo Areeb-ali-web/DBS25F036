@@ -12,7 +12,7 @@ namespace G_36_SmartPrint
 {
     public class SqlHelper
     {
-        public static string constring = "Server = localhost;Uid=root;Pwd=1234;Database= final";
+        public static string constring = "Server=localhost;Uid=root;Pwd=1234;Database=final";
         public static void executeDML(string dml)
         {
             MySqlConnection con = new MySqlConnection(constring);
@@ -38,6 +38,19 @@ namespace G_36_SmartPrint
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 return dt;
+            }
+        }
+        public static void executeDML(string dml, MySqlParameter[] parameters)
+        {
+            using (MySqlConnection con = new MySqlConnection(constring))
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(dml, con);
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+                cmd.ExecuteNonQuery();
             }
         }
 

@@ -10,9 +10,9 @@ namespace G_36_SmartPrint.DL
 {
     internal class PaymentDL
     {
-        public static List<Order_paymenTBL> LoadAllPayments()
+        public static List<Order_PaymentBL> LoadAllPayments()
         {
-            List<Order_paymenTBL> payments = new List<Order_paymenTBL>();
+            List<Order_PaymentBL> payments = new List<Order_PaymentBL>();
 
             string query = @"
                 SELECT 
@@ -40,7 +40,7 @@ namespace G_36_SmartPrint.DL
                 OrderBL order = new OrderBL();
                 order.setOrderID(orderId);
 
-                Order_paymenTBL payment = new Order_paymenTBL(
+                Order_PaymentBL payment = new Order_PaymentBL(
                     Convert.ToInt32(row["PaymentID"]),
                     Convert.ToDecimal(row["Amount"]),
                     row["PaymentMethod"].ToString(),
@@ -54,7 +54,7 @@ namespace G_36_SmartPrint.DL
 
             return payments;
         }
-        public static bool AddPayment(Order_paymenTBL payment)
+        public static bool AddPayment(Order_PaymentBL payment)
         {
             // Get LookupID for 'Paid' status
             string lookupQuery = "SELECT LookupID FROM LookupTable WHERE LookupValue = 'Paid';";

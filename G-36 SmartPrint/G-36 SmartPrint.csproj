@@ -119,18 +119,21 @@
     <Compile Include="BL\EmployeesBL.cs" />
     <Compile Include="BL\FeedbackBL.cs" />
     <Compile Include="BL\LookupBL.cs" />
+    <Compile Include="BL\ManagerBL.cs" />
     <Compile Include="BL\OrderBL.cs" />
     <Compile Include="BL\Order_DetailsBL.cs" />
-    <Compile Include="BL\Order_paymenTBL.cs" />
+    <Compile Include="BL\Order_PaymentBL.cs" />
     <Compile Include="BL\ProductBL.cs" />
     <Compile Include="BL\SalaryPaymentBL.cs" />
     <Compile Include="BL\UserBL.cs" />
     <Compile Include="DL\AddressDL.cs" />
+    <Compile Include="DL\DesignDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\FeedbackDL.cs" />
     <Compile Include="DL\OrderDL.cs" />
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ProductDL.cs" />
+    <Compile Include="DL\Salary_PaymentDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

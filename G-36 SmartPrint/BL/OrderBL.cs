@@ -18,6 +18,7 @@ namespace G_36_SmartPrint.BL
         protected List<Order_DetailsBL> orderDetails;
         public List<FeedbackBL> feedback;
         private string Designdescription;
+        public List<DesignBL> designs;
         public OrderBL() { }
         public OrderBL(int orderID, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, CustomersBL customer)
         {
@@ -30,6 +31,7 @@ namespace G_36_SmartPrint.BL
             this.orderDetails = orderDetails;
             this.DeliveryRequired = DeliveryRequired;
         }
+
         public OrderBL(int orderID, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, CustomersBL customer,List<FeedbackBL> feedbak)
         {
             this.orderID = orderID;
@@ -53,7 +55,7 @@ namespace G_36_SmartPrint.BL
             this.DeliveryRequired = DeliveryRequired;
             this.customer = customer;
         }
-        public OrderBL(CustomersBL customer, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails,string designdescription)
+        public OrderBL(CustomersBL customer, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, string designdescription)
         {
             this.Order_date = orderdate;
             this.DeliveryRequired = DeliveryRequired;
@@ -63,6 +65,18 @@ namespace G_36_SmartPrint.BL
             this.DeliveryRequired = DeliveryRequired;
             this.customer = customer;
             this.Designdescription = designdescription;
+        }
+        public OrderBL(CustomersBL customer, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, string designdescription,List<DesignBL> designs)
+        {
+            this.Order_date = orderdate;
+            this.DeliveryRequired = DeliveryRequired;
+            this.delivery_address = delivery_address;
+            this.totalAmount = totalamount;
+            this.orderDetails = orderDetails;
+            this.DeliveryRequired = DeliveryRequired;
+            this.customer = customer;
+            this.Designdescription = designdescription;
+            this.designs    = designs;
         }
         public void calculateTotalamount()
         {
@@ -135,6 +149,11 @@ namespace G_36_SmartPrint.BL
                 totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
             }
             return totalAmount;
+        }
+
+        public void setDesigns(List<DesignBL> design)
+        {
+            this.designs= design;
         }
         public string getDesignDescription()
         {

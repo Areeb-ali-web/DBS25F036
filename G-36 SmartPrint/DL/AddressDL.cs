@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using G_36_SmartPrint.BL;
 
-namespace G_36_SmartPrint.DAL
+namespace G_36_SmartPrint.DL
 {
-    internal class AddressDAL
+    internal class AddressDL
     {
         public static List<AddressBL> LoaduserAddress(UserBL user)
         {

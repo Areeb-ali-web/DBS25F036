@@ -7,8 +7,37 @@ using static Guna.UI2.WinForms.Helpers.GraphicsHelper;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class DesignBL:OrderBL
+    internal class DesignBL
     {
+        public string designFile;
+        public DesignerBL designer;
+        public DateTime createddate;
+        public LookupBL approvalstatus;
 
+        public DesignBL(string designFile, DesignerBL designer, DateTime createddate, LookupBL approvalstatus)
+        {
+            this.designFile = designFile;
+            this.designer = designer;
+            this.createddate = createddate;
+            this.approvalstatus = approvalstatus;
+        }
+        public DesignBL(string designFile, DesignerBL designer, DateTime createddate)
+        {
+            this.designFile = designFile;
+            this.designer = designer;
+            this.createddate = createddate;
+        }
+        public DesignBL(string designFile, DesignerBL designer)
+        {
+            this.designFile = designFile;
+            this.designer = designer;
+        }
+        public DesignBL(string designFile, DesignerBL designer, DateTime createddate, LookupBL approvalstatus,int orderid)
+        {
+            this.designFile = designFile;
+            this.designer = designer;
+            this.createddate = createddate;
+            this.approvalstatus = approvalstatus;
+        }
     }
 }

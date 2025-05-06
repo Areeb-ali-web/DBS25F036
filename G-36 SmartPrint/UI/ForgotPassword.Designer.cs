@@ -36,7 +36,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblTitle.Location = new System.Drawing.Point(110, 139);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(190, 32);
+            this.lblTitle.Size = new System.Drawing.Size(280, 48);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Reset Password";
             // 
@@ -79,6 +79,7 @@
             this.BtnReset.Size = new System.Drawing.Size(129, 49);
             this.BtnReset.TabIndex = 6;
             this.BtnReset.Text = "Reset Password";
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // TxtEmail
             // 
@@ -97,6 +98,7 @@
             this.TxtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtEmail.Location = new System.Drawing.Point(100, 226);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtEmail.PlaceholderText = "Email";
@@ -121,6 +123,7 @@
             this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(100, 282);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.guna2TextBox1.PlaceholderText = "Username";
@@ -145,6 +148,7 @@
             this.guna2TextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Location = new System.Drawing.Point(100, 335);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '*';
             this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.Blue;

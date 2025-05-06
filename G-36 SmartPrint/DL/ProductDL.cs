@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using G_36_SmartPrint.BL;
 
-namespace G_36_SmartPrint.DAL
+namespace G_36_SmartPrint.DL
 {
     internal class ProductDL
     {

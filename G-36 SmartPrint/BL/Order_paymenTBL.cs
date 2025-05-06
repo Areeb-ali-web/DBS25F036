@@ -7,7 +7,7 @@ using G_36_SmartPrint.DL;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class Order_paymenTBL:OrderBL
+    internal class Order_PaymentBL:OrderBL
     {
         private OrderBL order;
         private int paymentID;
@@ -17,7 +17,7 @@ namespace G_36_SmartPrint.BL
         private LookupBL payment_status;
         
 
-        public Order_paymenTBL(int paymentID, decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status)
+        public Order_PaymentBL(int paymentID, decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status)
         {
             this.paymentID = paymentID;
             
@@ -26,7 +26,7 @@ namespace G_36_SmartPrint.BL
             this.payment_date = payment_date;
             this.payment_status = payment_status;
         }
-        public Order_paymenTBL(int paymentID, decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status,OrderBL order)
+        public Order_PaymentBL(int paymentID, decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status,OrderBL order)
         {
             this.paymentID = paymentID;
 
@@ -36,14 +36,14 @@ namespace G_36_SmartPrint.BL
             this.payment_status = payment_status;
             this.order = order;
         }
-        public Order_paymenTBL(decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status)
+        public Order_PaymentBL(decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status)
         {
             this.amount = amount;
             this.paymentMethod = paymentMethod;
             this.payment_date = payment_date;
             this.payment_status = payment_status;
         }
-        public Order_paymenTBL(decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status,int orderid)
+        public Order_PaymentBL(decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status,int orderid)
         {
             this.amount = amount;
             this.paymentMethod = paymentMethod;
@@ -51,7 +51,7 @@ namespace G_36_SmartPrint.BL
             this.payment_status = payment_status;
             this.order.setOrderID(orderid);
         }
-        public Order_paymenTBL(decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status,OrderBL Order)
+        public Order_PaymentBL(decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status,OrderBL Order)
         {
             this.amount = amount;
             this.paymentMethod = paymentMethod;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using G_36_SmartPrint.DL;
 
 namespace G_36_SmartPrint.BL
 {
@@ -49,6 +50,12 @@ namespace G_36_SmartPrint.BL
         public override void setuserID(int userID)
         {
             base.setuserID(userID);
+        }
+        public virtual List<EmployeesBL> loademployee()
+        {
+            List<EmployeesBL> employees = EmployeeDL.LoadAllEmployees();
+
+            return employees;
         }
     }
 }
