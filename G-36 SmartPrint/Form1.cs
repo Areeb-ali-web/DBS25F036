@@ -230,5 +230,10 @@ namespace G_36_SmartPrint
             UpdateControlsVisibility();
             UpdateWelcomeText();
         }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

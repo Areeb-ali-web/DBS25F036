@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace G_36_SmartPrint
 {
@@ -18,12 +14,14 @@ namespace G_36_SmartPrint
         }
 
         // Password Validation
+
         public static bool IsValidPassword(string password)
         {
-            // At least 8 characters, one uppercase, one lowercase, one number, one special char
-            string pattern = @"^(?=.*[a-z])(?=.*[A-Z]){8,}$";
+            // Must contain at least one letter and one number
+            string pattern = @"^(?=.*[A-Za-z])(?=.*\d).+$";
             return Regex.IsMatch(password, pattern);
         }
+
 
         // Name Validation: At least 2 words
         public static bool IsValidName(string name)

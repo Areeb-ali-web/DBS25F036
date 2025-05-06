@@ -18,9 +18,9 @@ namespace G_36_SmartPrint
         [STAThread]
         static void Main()
         {
-            AddressBL adress = new AddressBL("UET new campus gt road lahore","LAhore","Punjab","1111","pakistan");
             // AddressDL.AddAddressIfNotExists(3, adress);
-
+            List<OrderBL> list = new List<OrderBL>();
+            list = OrderDL.LoadAllOrders();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CustomerDashboardForm());

@@ -22,8 +22,12 @@
             this.signup = new G_36_SmartPrint.UI.Signup();
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.leftPanel = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+=======
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSwitchToLogin = new Guna.UI2.WinForms.Guna2Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -54,6 +58,10 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(400, 500);
             this.login.TabIndex = 0;
+<<<<<<< HEAD
+=======
+            this.login.Load += new System.EventHandler(this.login_Load);
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             // 
             // signup
             // 
@@ -87,6 +95,7 @@
             this.leftPanel.Size = new System.Drawing.Size(400, 500);
             this.leftPanel.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // label2
             // 
             this.label2.AutoSize = true;
@@ -110,6 +119,18 @@
             this.label1.Size = new System.Drawing.Size(180, 41);
             this.label1.TabIndex = 6;
             this.label1.Text = "Smart Print";
+=======
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Purple;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(96, 61);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(431, 47);
+            this.guna2HtmlLabel2.TabIndex = 5;
+            this.guna2HtmlLabel2.Text = "Custom Design and Clothing";
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             // 
             // guna2HtmlLabel1
             // 
@@ -118,7 +139,11 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Purple;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(147, 21);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+<<<<<<< HEAD
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(133, 34);
+=======
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(195, 50);
+>>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
             this.guna2HtmlLabel1.TabIndex = 5;
             this.guna2HtmlLabel1.Text = "Smart Print";
             // 
@@ -163,7 +188,7 @@
             this.lblWelcome.ForeColor = System.Drawing.Color.Purple;
             this.lblWelcome.Location = new System.Drawing.Point(88, 127);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(248, 45);
+            this.lblWelcome.Size = new System.Drawing.Size(373, 65);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome Back!";
             // 
@@ -175,7 +200,7 @@
             this.lblMessage.ForeColor = System.Drawing.Color.Purple;
             this.lblMessage.Location = new System.Drawing.Point(100, 208);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(218, 25);
+            this.lblMessage.Size = new System.Drawing.Size(336, 40);
             this.lblMessage.TabIndex = 1;
             this.lblMessage.Text = "Don\'t have an account?";
             // 

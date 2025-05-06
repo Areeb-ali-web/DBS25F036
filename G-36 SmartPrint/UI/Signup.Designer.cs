@@ -35,7 +35,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblTitle.Location = new System.Drawing.Point(104, 127);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(189, 32);
+            this.lblTitle.Size = new System.Drawing.Size(276, 48);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Create Account";
             // 
@@ -67,13 +67,14 @@
             this.TxtNewUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtNewUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtNewUsername.Location = new System.Drawing.Point(100, 167);
-            this.TxtNewUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNewUsername.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNewUsername.Name = "TxtNewUsername";
             this.TxtNewUsername.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtNewUsername.PlaceholderText = "Username";
             this.TxtNewUsername.SelectedText = "";
             this.TxtNewUsername.Size = new System.Drawing.Size(200, 36);
             this.TxtNewUsername.TabIndex = 7;
+            this.TxtNewUsername.TextChanged += new System.EventHandler(this.TxtNewUsername_TextChanged);
             // 
             // TxtEmail
             // 
@@ -92,7 +93,7 @@
             this.TxtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtEmail.Location = new System.Drawing.Point(100, 215);
-            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtEmail.PlaceholderText = "Email";
@@ -117,7 +118,7 @@
             this.TxtPassword.ForeColor = System.Drawing.Color.Blue;
             this.TxtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtPassword.Location = new System.Drawing.Point(100, 314);
-            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.PlaceholderForeColor = System.Drawing.Color.Blue;
@@ -143,7 +144,7 @@
             this.TxtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtName.Location = new System.Drawing.Point(100, 263);
-            this.TxtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtName.Margin = new System.Windows.Forms.Padding(4);
             this.TxtName.Name = "TxtName";
             this.TxtName.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtName.PlaceholderText = "Full Nmae";
@@ -168,6 +169,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(123, 45);
             this.guna2Button1.TabIndex = 8;
             this.guna2Button1.Text = "Signup";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Signup
             // 
