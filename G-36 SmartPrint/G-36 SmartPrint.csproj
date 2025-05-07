@@ -118,6 +118,8 @@
     <Compile Include="BL\DesignerBL.cs" />
     <Compile Include="BL\EmployeesBL.cs" />
     <Compile Include="BL\FeedbackBL.cs" />
+    <Compile Include="BL\FinancialReportBL.cs" />
+    <Compile Include="BL\Instructions.cs" />
     <Compile Include="BL\LookupBL.cs" />
     <Compile Include="BL\ManagerBL.cs" />
     <Compile Include="BL\OrderBL.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="DL\DesignDL.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\FeedbackDL.cs" />
+    <Compile Include="DL\InstructionDL.cs" />
     <Compile Include="DL\OrderDL.cs" />
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ProductDL.cs" />

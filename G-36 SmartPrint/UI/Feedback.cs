@@ -18,16 +18,16 @@ namespace G_36_SmartPrint.UI
         private void InitializeFeedbackForm()
         {
             // Set current customer from logged-in user
-            LoginHelpers.currentcustomer = LoginHelpers.currentuser as CustomersBL;
+            LoginHelpers.currentcustomer = new CustomersBL(LoginHelpers.currentuser);
 
-            if (LoginHelpers.currentcustomer == null)
-            {
-                MessageBox.Show("Current user is not a customer.");
-                return;
-            }
+            //if (LoginHelpers.currentcustomer == null)
+            //{
+            //    MessageBox.Show("Current user is not a customer.");
+            //    return;
+            //}
 
             // Load and bind customer details
-            txtCustomerName.Text = LoginHelpers.currentcustomer.getUserName();
+            txtCustomerName.Text = LoginHelpers.currentuser.getUserName();
             txtCustomerName.Enabled = false;
 
             guna2TextBox1.Text = LoginHelpers.currentcustomer.getEmail();
@@ -60,7 +60,7 @@ namespace G_36_SmartPrint.UI
             string comment = txtComments.Text;
             string order = (cbOrder).SelectedValue.ToString();
             int orderID = Convert.ToInt32(order);
-            int rating = Convert.ToInt32(numRating);
+            int rating =(int)numRating.Value;
 
             FeedbackDL.AddFeedback(orderID,customerID,rating,comment);
         }

@@ -39,10 +39,12 @@ namespace G_36_SmartPrint.UI
         }
         private void SelectNextInterface()
         {
-            string role = LoginHelpers.currentuser.getRole().getLookupValue();
-            if (role == "customer")
+            int role = LoginHelpers.currentuser.getRole().getLookupID();
+            if (role == 2)
             {
-                Application.Run(new CustomerDashboardForm());
+                CustomerDashboardForm form = new CustomerDashboardForm();
+                form.Show();
+                this.Hide();
             }
             MessageBox.Show("Login successful but your program has stuck behn chod!");
 
