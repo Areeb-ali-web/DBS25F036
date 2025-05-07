@@ -57,9 +57,9 @@ namespace G_36_SmartPrint.UI
                 dvgOrders.DataSource = dt;
 
                 // Format columns
-                dvgOrders.Columns["OrderID"].HeaderText = "Order ID";
-                dvgOrders.Columns["TotalAmount"].HeaderText = "Total Amount";
-                dvgOrders.Columns["DesignDescription"].HeaderText = "Design Description";
+                //dvgOrders.Columns["OrderID"].HeaderText = "Order ID";
+                //dvgOrders.Columns["TotalAmount"].HeaderText = "Total Amount";
+                //dvgOrders.Columns["DesignDescription"].HeaderText = "Design Description";
 
                 // Hide the DesignFile column (we'll use it but not show it)
                 dvgOrders.Columns["DesignFile"].Visible = false;
