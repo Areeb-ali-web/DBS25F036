@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using G_36_SmartPrint.BL;
 using G_36_SmartPrint.DL;
@@ -21,56 +18,65 @@ namespace G_36_SmartPrint.UI
         public DesignApproval()
         {
             InitializeComponent();
-            LoadFormData();
             ConfigureDataGridView();
+            LoadFormData();
         }
+
+        private void ConfigureDataGridView()
+        {
+            typeof(DataGridView).InvokeMember("DoubleBuffered",
+                System.Reflection.BindingFlags.NonPublic |
+                System.Reflection.BindingFlags.Instance |
+                System.Reflection.BindingFlags.SetProperty,
+                null, dvgOrders, new object[] { true });
+
+            dvgOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dvgOrders.MultiSelect = false;
+            dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
+        }
+
         private void LoadFormData()
         {
             try
             {
-                // Get current customer ID from login helper
                 int customerId = LoginHelpers.currentcustomer.getUserID();
-
-                // Load orders for approval
                 orders = OrderDL.LoadOrdersForApprovalByCustomerId(customerId);
 
-                // Create a DataTable with only the columns we want to display
                 DataTable dt = new DataTable();
                 dt.Columns.Add("OrderID", typeof(int));
                 dt.Columns.Add("TotalAmount", typeof(decimal));
                 dt.Columns.Add("DesignDescription", typeof(string));
-                dt.Columns.Add("DesignFile", typeof(string)); // Hidden column for image path
+                dt.Columns.Add("DesignFile", typeof(string)); // For image loading
 
-                // Populate the DataTable
                 foreach (var order in orders)
                 {
                     string designFile = order.designs?.FirstOrDefault()?.designFile ?? string.Empty;
-                    dt.Rows.Add(
-                        order.getOrderID(),
-                        order.gettotalAmount(),
-                        order.getDesignDescription(),
-                        designFile
-                    );
+                    dt.Rows.Add(order.getOrderID(), order.gettotalAmount(), order.getDesignDescription(), designFile);
                 }
 
-                // Bind to DataGridView
+                // ✅ First bind the DataTable
                 dvgOrders.DataSource = dt;
 
-                // Format columns
-                //dvgOrders.Columns["OrderID"].HeaderText = "Order ID";
-                //dvgOrders.Columns["TotalAmount"].HeaderText = "Total Amount";
-                //dvgOrders.Columns["DesignDescription"].HeaderText = "Design Description";
+                // ✅ Then format the columns safely
+                //if (dvgOrders.Columns["OrderID"] != null)
+                //    dvgOrders.Columns["OrderID"].HeaderText = "Order ID";
 
-                // Hide the DesignFile column (we'll use it but not show it)
-                dvgOrders.Columns["DesignFile"].Visible = false;
+                //if (dvgOrders.Columns["TotalAmount"] != null)
+                //{
+                //    dvgOrders.Columns["TotalAmount"].HeaderText = "Total Amount";
+                //    dvgOrders.Columns["TotalAmount"].DefaultCellStyle.Format = "C2";
+                //}
 
-                // Format currency column
-                dvgOrders.Columns["TotalAmount"].DefaultCellStyle.Format = "C2";
+                //if (dvgOrders.Columns["DesignDescription"] != null)
+                //    dvgOrders.Columns["DesignDescription"].HeaderText = "Design Description";
+
+                //if (dvgOrders.Columns["DesignFile"] != null)
+                    //dvgOrders.Columns["DesignFile"].Visible = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading orders: {ex.Message}", "Error",
-                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -80,28 +86,16 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                // Get the selected row data
-                DataGridViewRow row = dvgOrders.Rows[e.RowIndex];
+                var row = dvgOrders.Rows[e.RowIndex];
                 int orderId = Convert.ToInt32(row.Cells["OrderID"].Value);
-
-                // Find the complete order from our original list
                 currentOrder = orders.FirstOrDefault(o => o.getOrderID() == orderId);
                 if (currentOrder == null) return;
 
-                // Load customer info (from login helper)
                 txtCustomerName.Text = LoginHelpers.currentcustomer.getUserName();
-
-                // Load product info
                 txtProduct.Text = currentOrder.allOrders();
-
-                // Load quantity and total amount
-                int totalQuantity = currentOrder.getOrderDetails()?.Sum(od => od.getQuantity()) ?? 0;
-                txtQuantity.Text = $"Total Items: {totalQuantity}";
-
-                // Load description
+                txtQuantity.Text = $"Total Items: {currentOrder.getOrderDetails()?.Sum(od => od.getQuantity()) ?? 0}";
                 txtDescription.Text = currentOrder.getDesignDescription();
 
-                // Load design image
                 string imagePath = row.Cells["DesignFile"].Value?.ToString();
                 if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                 {
@@ -110,32 +104,14 @@ namespace G_36_SmartPrint.UI
                 else
                 {
                     picDesign.Image = null;
-                    MessageBox.Show("Design image not found", "Warning",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Design image not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading order details: {ex.Message}", "Error",
-                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void ConfigureDataGridView()
-        {
-            // Enable double buffering for better performance
-            typeof(DataGridView).InvokeMember("DoubleBuffered",
-                System.Reflection.BindingFlags.NonPublic |
-                System.Reflection.BindingFlags.Instance |
-                System.Reflection.BindingFlags.SetProperty,
-                null, dvgOrders, new object[] { true });
-
-            // Set selection mode
-            dvgOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dvgOrders.MultiSelect = false;
-
-            // Handle double click event
-            dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
         }
 
         private void btnApprove_Click(object sender, EventArgs e)
@@ -148,10 +124,9 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                // Update order status to approved
                 OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Approved");
                 MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadFormData(); // Refresh the list
+                LoadFormData(); // Refresh list
             }
             catch (Exception ex)
             {
@@ -169,10 +144,9 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                // Update order status to rejected
                 OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Rejected");
                 MessageBox.Show("Order rejected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadFormData(); // Refresh the list
+                LoadFormData(); // Refresh list
             }
             catch (Exception ex)
             {
@@ -180,14 +154,14 @@ namespace G_36_SmartPrint.UI
             }
         }
 
-        private void dvgOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Handle any specific cell content clicks if needed
-        }
-
         private void panelHeader_Paint(object sender, PaintEventArgs e)
         {
-            // Custom painting for header if needed
+            // Optional: custom header styling
+        }
+
+        private void dvgOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Reserved for future enhancements
         }
     }
 }

@@ -262,36 +262,11 @@ namespace G_36_SmartPrint.DL
 
         public static List<OrderBL> LoadOrdersForApprovalByCustomerId(int customerId)
         {
-            string query = @"
-                SELECT 
-                    o.OrderID,
-                    o.CustomerID,
-                    u.Name AS CustomerName,
-                    o.OrderDate,
-                    o.TotalAmount,
-                    o.DesignDescription,
-                    d.DesignID,
-                    d.DesignFile,
-                    d.CreatedDate AS DesignCreatedDate,
-                    lt.LookupID,
-                    lt.LookupValue AS ApprovalStatus
-                FROM 
-                    orders o
-                JOIN 
-                    users u ON o.CustomerID = u.UserID
-                JOIN 
-                    designs d ON o.OrderID = d.OrderID
-                JOIN 
-                    lookuptable lt ON d.ApprovalStatusID = lt.LookupID
-                WHERE 
-                    d.ApprovalStatusID = 26 AND o.CustomerID = @customerId";
+            string query = $" SELECT o.OrderID,o.CustomerID,u.Name AS CustomerName,o.OrderDate, o.TotalAmount,o.DesignDescription,d.DesignID,d.DesignFile, d.CreatedDate AS DesignCreatedDate, lt.LookupID,lt.LookupValue AS ApprovalStatus FROM  orders o JOIN  users u ON o.CustomerID = u.UserID JOIN designs d ON o.OrderID = d.OrderID JOIN lookuptable lt ON d.ApprovalStatusID = lt.LookupID WHERE d.ApprovalStatusID = 26 AND o.CustomerID = {customerId}";
 
-            MySqlParameter[] parameters = new MySqlParameter[]
-            {
-                new MySqlParameter("@customerId", customerId)
-            };
 
-            DataTable dt = SqlHelper.getDataTable(query, parameters);
+
+            DataTable dt = SqlHelper.getDataTable(query);
 
             List<OrderBL> orders = new List<OrderBL>();
 
@@ -331,6 +306,14 @@ namespace G_36_SmartPrint.DL
             }
 
             return orders;
+        }
+        public static DataTable getproductsforApproval(int customerId)
+        {
+            string query = $"SELECTo.OrderID,o.OrderDate,o.TotalAmount,o.DesignDescription,d.DesignFile, lt.LookupValue AS ApprovalStatus  FROM orders o JOIN users u ON o.CustomerID = u.UserID JOIN designs d ON o.OrderID = d.OrderID JOIN lookuptable lt ON d.ApprovalStatusID = lt.LookupID WHERE d.ApprovalStatusID = 26 = {customerId } ";
+
+
+            DataTable dt = SqlHelper.getDataTable(query);
+            return dt;
         }
         public static void ChangeOrderStatusByName(int orderId, string newStatusName)
         {

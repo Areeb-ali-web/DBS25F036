@@ -57,7 +57,14 @@ namespace G_36_SmartPrint.UI
             string password= this.TxtPassword.Text;
             string email = this.guna2TextBox1.Text;
             LoginHelpers.currentuser = UserDL.UserLogin(username, email, password);
-            SelectNextInterface();
+            if (LoginHelpers.currentuser.getRole().getLookupID() != null)
+            {
+                SelectNextInterface();
+            }
+            else
+            {
+                MessageBox.Show("Login failed. Please check your username, email, and password.");
+            }
         }
     }
 }

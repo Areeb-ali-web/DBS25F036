@@ -16,9 +16,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.mainSplitContainer = new System.Windows.Forms.SplitContainer();
@@ -38,7 +35,9 @@
             this.panelButtons = new System.Windows.Forms.Panel();
             this.btnReject = new System.Windows.Forms.Button();
             this.btnApprove = new System.Windows.Forms.Button();
-            this.dvgOrders = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvgOrders = new System.Windows.Forms.DataGridView();
+            this.orderBLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.orderBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).BeginInit();
@@ -53,7 +52,9 @@
             this.panelImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDesign)).BeginInit();
             this.panelButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgOrders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBLBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +100,7 @@
             // mainSplitContainer.Panel2
             // 
             this.mainSplitContainer.Panel2.Controls.Add(this.dvgOrders);
+            this.mainSplitContainer.Panel2.Controls.Add(this.dataGridView1);
             this.mainSplitContainer.Panel2.Padding = new System.Windows.Forms.Padding(26, 0, 26, 14);
             this.mainSplitContainer.Size = new System.Drawing.Size(1260, 677);
             this.mainSplitContainer.SplitterDistance = 538;
@@ -142,7 +144,6 @@
             this.panelForm.Padding = new System.Windows.Forms.Padding(14);
             this.panelForm.Size = new System.Drawing.Size(551, 510);
             this.panelForm.TabIndex = 0;
-            
             // 
             // txtDescription
             // 
@@ -374,61 +375,35 @@
             this.btnApprove.Text = "Approve";
             this.btnApprove.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.orderBLBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // dvgOrders
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(226)))), ((int)(((byte)(218)))));
-            this.dvgOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dvgOrders.AutoGenerateColumns = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dvgOrders.ColumnHeadersHeight = 4;
-            this.dvgOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dvgOrders.DataSource = this.orderBLBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(191)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgOrders.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dvgOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(224)))), ((int)(((byte)(216)))));
-            this.dvgOrders.Location = new System.Drawing.Point(22, 5);
-            this.dvgOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dvgOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgOrders.DataSource = this.orderBLBindingSource1;
+            this.dvgOrders.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvgOrders.Location = new System.Drawing.Point(26, 0);
             this.dvgOrders.Name = "dvgOrders";
-            this.dvgOrders.RowHeadersVisible = false;
             this.dvgOrders.RowHeadersWidth = 62;
-            this.dvgOrders.Size = new System.Drawing.Size(1212, 123);
+            this.dvgOrders.RowTemplate.Height = 28;
+            this.dvgOrders.Size = new System.Drawing.Size(1208, 119);
             this.dvgOrders.TabIndex = 1;
-            this.dvgOrders.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.GreenSea;
-            this.dvgOrders.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(226)))), ((int)(((byte)(218)))));
-            this.dvgOrders.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dvgOrders.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dvgOrders.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dvgOrders.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dvgOrders.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dvgOrders.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(224)))), ((int)(((byte)(216)))));
-            this.dvgOrders.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.dvgOrders.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dvgOrders.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dvgOrders.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dvgOrders.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dvgOrders.ThemeStyle.HeaderStyle.Height = 4;
-            this.dvgOrders.ThemeStyle.ReadOnly = false;
-            this.dvgOrders.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
-            this.dvgOrders.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dvgOrders.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dvgOrders.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dvgOrders.ThemeStyle.RowsStyle.Height = 22;
-            this.dvgOrders.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(191)))), ((int)(((byte)(173)))));
-            this.dvgOrders.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dvgOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgOrders_CellContentClick);
+            //this.dvgOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgOrders_CellContentClick_1);
+            // 
+            // orderBLBindingSource1
+            // 
+            this.orderBLBindingSource1.DataSource = typeof(G_36_SmartPrint.BL.OrderBL);
             // 
             // orderBLBindingSource
             // 
@@ -460,7 +435,9 @@
             this.panelImage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDesign)).EndInit();
             this.panelButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgOrders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBLBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -480,12 +457,14 @@
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Button btnReject;
         private System.Windows.Forms.Button btnApprove;
-        private Guna.UI2.WinForms.Guna2DataGridView dvgOrders;
         private Guna.UI2.WinForms.Guna2TextBox txtCustomerName;
         private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private Guna.UI2.WinForms.Guna2TextBox txtProduct;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
         private System.Windows.Forms.BindingSource orderBLBindingSource;
+        private System.Windows.Forms.DataGridView dvgOrders;
+        private System.Windows.Forms.BindingSource orderBLBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

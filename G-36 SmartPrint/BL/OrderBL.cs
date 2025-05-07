@@ -159,10 +159,10 @@ namespace G_36_SmartPrint.BL
      
         public decimal gettotalAmount()
         {
-            foreach(Order_DetailsBL detail in orderDetails)
-            {
-                totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
-            }
+            //foreach(Order_DetailsBL detail in orderDetails)
+            //{
+            //    totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
+            //}
             return totalAmount;
         }
 
