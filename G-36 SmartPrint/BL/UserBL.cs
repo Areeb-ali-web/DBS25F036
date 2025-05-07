@@ -100,6 +100,7 @@ namespace G_36_SmartPrint.BL
             this.name = name;
             this.phoneNumber = phoneNumber;
         }
+        public string getUserName() { return UserName; }
         public string getphoneNumber() { return phoneNumber; }
         public string getEmail() { return this.Email; }
         public DateTime getCreatedDate() { return CreatedDate; }

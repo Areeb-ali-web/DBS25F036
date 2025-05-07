@@ -159,5 +159,17 @@ namespace G_36_SmartPrint.BL
         {
             return Designdescription;
         }
+
+        public string allOrders()
+        {
+             string productDetails = "";
+
+            foreach(Order_DetailsBL detail in orderDetails)
+            {
+                productDetails += detail.getproduct().getProductName()+",";
+            }
+            productDetails += "----" + totalAmount + "\n";
+            return productDetails;
+        }
     }
 }

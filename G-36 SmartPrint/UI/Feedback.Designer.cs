@@ -61,7 +61,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(380, 27);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(138, 37);
+            this.lblTitle.Size = new System.Drawing.Size(201, 54);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Feedback";
             // 
@@ -76,6 +76,7 @@
             this.panelMain.Padding = new System.Windows.Forms.Padding(20);
             this.panelMain.Size = new System.Drawing.Size(980, 507);
             this.panelMain.TabIndex = 1;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // tableLayoutPanel
             // 
@@ -254,7 +255,8 @@
             this.numRating.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numRating.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
             this.numRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.numRating.Location = new System.Drawing.Point(185, 243);
+            this.numRating.Location = new System.Drawing.Point(186, 245);
+            this.numRating.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numRating.Name = "numRating";
             this.numRating.Size = new System.Drawing.Size(286, 36);
             this.numRating.TabIndex = 11;
@@ -321,6 +323,7 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnClear
             // 
@@ -341,7 +344,7 @@
             // 
             // Feedback
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelMain);

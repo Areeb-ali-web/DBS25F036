@@ -15,7 +15,6 @@ namespace G_36_SmartPrint.UI
 {
     public partial class Login : UserControl
     {
-        UserBL currentuser;
         public LinkLabel ForgotPasswordLink { get; private set; }
         public Login()
         {
@@ -40,19 +39,22 @@ namespace G_36_SmartPrint.UI
         }
         private void SelectNextInterface()
         {
-            string role = currentuser.getRole().getLookupValue();
-            if(role == "customer")
+            string role = LoginHelpers.currentuser.getRole().getLookupValue();
+            if (role == "customer")
             {
                 Application.Run(new CustomerDashboardForm());
             }
+            MessageBox.Show("Login successful but your program has stuck behn chod!");
+
+
         }
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             string username= this.TxtUsername.Text;
             string password= this.TxtPassword.Text;
             string email = this.guna2TextBox1.Text;
-            currentuser = UserDL.UserLogin(username, email, password);
-            
+            LoginHelpers.currentuser = UserDL.UserLogin(username, email, password);
+            SelectNextInterface();
         }
     }
 }

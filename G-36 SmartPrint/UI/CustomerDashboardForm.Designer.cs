@@ -39,7 +39,7 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1200, 113);
+            this.panelHeader.Size = new System.Drawing.Size(1558, 113);
             this.panelHeader.TabIndex = 0;
             // 
             // lblCompanyName
@@ -216,14 +216,15 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(220, 113);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(980, 587);
+            this.panelMain.Size = new System.Drawing.Size(1338, 587);
             this.panelMain.TabIndex = 2;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // CustomerDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.ClientSize = new System.Drawing.Size(1558, 700);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelHeader);
