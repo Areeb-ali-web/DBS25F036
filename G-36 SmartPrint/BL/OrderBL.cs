@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace G_36_SmartPrint.BL
 {
@@ -20,6 +22,17 @@ namespace G_36_SmartPrint.BL
         private string Designdescription;
         public List<DesignBL> designs;
         public OrderBL() { }
+
+        public OrderBL(int orderid,CustomersBL customer,DateTime orderdate,decimal ammount,string description,List<DesignBL> design)
+        {
+            this.orderID = orderid;
+            this.customer = customer;
+            this.Order_date = orderdate;
+            this.totalAmount = ammount;
+            this.Designdescription = description;
+            this.designs = design;
+            
+        }
         public OrderBL(int orderID, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, CustomersBL customer)
         {
             this.orderID = orderID;
@@ -142,6 +155,8 @@ namespace G_36_SmartPrint.BL
         {
             this.customer = customer;
         }
+
+     
         public decimal gettotalAmount()
         {
             foreach(Order_DetailsBL detail in orderDetails)

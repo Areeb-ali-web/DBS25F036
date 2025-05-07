@@ -100,6 +100,11 @@ namespace G_36_SmartPrint.BL
             this.name = name;
             this.phoneNumber = phoneNumber;
         }
+        public UserBL(int userid,string username)
+        {
+            this.UserID = userid;
+            this.UserName = username;
+        }
         public UserBL(UserBL user)
         {
             this.UserID = user.UserID;

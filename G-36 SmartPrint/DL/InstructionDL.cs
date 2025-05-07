@@ -23,8 +23,8 @@ namespace G_36_SmartPrint.DL
                 string instructionText = row["InstructionText"].ToString();
                 DateTime sentDate = Convert.ToDateTime(row["SentDate"]);
 
-                UserBL admin = UserDL.Loaduser(adminId);
-                EmployeesBL employee = EmployeesDL.LoadById(employeeId);
+                UserBL admin = UserDL.LoadUserById(adminId);
+                EmployeesBL employee = EmployeeDL.LoadEmployeeById(employeeId);
 
                 Instructions instruction = new Instructions(instructionId, admin, employee, instructionText, sentDate);
                 instructionList.Add(instruction);
@@ -51,8 +51,8 @@ namespace G_36_SmartPrint.DL
                 string instructionText = row["InstructionText"].ToString();
                 DateTime sentDate = Convert.ToDateTime(row["SentDate"]);
 
-                UserBL admin = UserDL.LoadById(adminId);
-                EmployeesBL employee = EmployeesDL.LoadById(employeeId);
+                UserBL admin = UserDL.LoadUserById(adminId);
+                EmployeesBL employee = EmployeeDL.LoadEmployeeById(employeeId);
 
                 Instructions instruction = new Instructions(instructionId, admin, employee, instructionText, sentDate);
                 instructionList.Add(instruction);
@@ -80,7 +80,7 @@ namespace G_36_SmartPrint.DL
                 DateTime sentDate = Convert.ToDateTime(row["SentDate"]);
 
                 UserBL admin = UserDL.LoadUserById(adminId);
-                EmployeesBL employee = EmployeesDL.LoadById(employeeId);
+                EmployeesBL employee = EmployeeDL.LoadEmployeeById(employeeId);
 
                 Instructions instruction = new Instructions(instructionId, admin, employee, instructionText, sentDate);
                 instructionList.Add(instruction);

@@ -42,6 +42,7 @@ namespace G_36_SmartPrint.UI
             int role = LoginHelpers.currentuser.getRole().getLookupID();
             if (role == 2)
             {
+                LoginHelpers.currentcustomer = new CustomersBL(LoginHelpers.currentuser);
                 CustomerDashboardForm form = new CustomerDashboardForm();
                 form.Show();
                 this.Hide();
