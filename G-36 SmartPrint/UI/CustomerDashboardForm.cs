@@ -90,7 +90,7 @@ namespace G_36_SmartPrint.UI
 
         private void SetActiveButton(Guna2Button activeButton)
         {
-            foreach (Control control in panelNavigation.Controls)
+            foreach (Control control in panelNavigation.Controls) 
             {
                 if (control is Guna2Button button)
                 {

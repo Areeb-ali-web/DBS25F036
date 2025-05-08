@@ -150,6 +150,30 @@
     <Compile Include="UI\AdminDashboardForm.Designer.cs">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ApproveRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ApproveRequest.Designer.cs">
+      <DependentUpon>ApproveRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AssignDeliveryOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AssignDeliveryOrder.Designer.cs">
+      <DependentUpon>AssignDeliveryOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AssignDesignOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AssignDesignOrder.Designer.cs">
+      <DependentUpon>AssignDesignOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CustomerBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,6 +192,18 @@
     <Compile Include="UI\DeliverymanDashboardForm.Designer.cs">
       <DependentUpon>DeliverymanDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\DeliveryViewAssignOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeliveryViewAssignOrders.Designer.cs">
+      <DependentUpon>DeliveryViewAssignOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeliveryViewSalary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeliveryViewSalary.Designer.cs">
+      <DependentUpon>DeliveryViewSalary.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DesignApproval.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +215,18 @@
     </Compile>
     <Compile Include="UI\DesignerDashbordForm.Designer.cs">
       <DependentUpon>DesignerDashbordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DesignerViewAssignOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DesignerViewAssignOrders.Designer.cs">
+      <DependentUpon>DesignerViewAssignOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DesignerViewSalary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DesignerViewSalary.Designer.cs">
+      <DependentUpon>DesignerViewSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Feedback.cs">
       <SubType>UserControl</SubType>
@@ -192,11 +240,53 @@
     <Compile Include="UI\ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\GiveInstructions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\GiveInstructions.Designer.cs">
+      <DependentUpon>GiveInstructions.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageConsumables.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManageConsumables.Designer.cs">
+      <DependentUpon>ManageConsumables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageDeliveryMan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManageDeliveryMan.Designer.cs">
+      <DependentUpon>ManageDeliveryMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageDesign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManageDesign.Designer.cs">
+      <DependentUpon>ManageDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManageDesigner.Designer.cs">
+      <DependentUpon>ManageDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManageManager.Designer.cs">
+      <DependentUpon>ManageManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManageProducts.Designer.cs">
+      <DependentUpon>ManageProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ManagerDashboardForm.cs">
       <SubType>Form</SubType>
@@ -204,17 +294,59 @@
     <Compile Include="UI\ManagerDashboardForm.Designer.cs">
       <DependentUpon>ManagerDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ManagerViewOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManagerViewOrders.Designer.cs">
+      <DependentUpon>ManagerViewOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManagerViewSalary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManagerViewSalary.Designer.cs">
+      <DependentUpon>ManagerViewSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManufactureDesign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ManufactureDesign.Designer.cs">
+      <DependentUpon>ManufactureDesign.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Order.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\RequestDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\RequestDesigner.Designer.cs">
+      <DependentUpon>RequestDesigner.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Signup.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewInstructions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ViewInstructions.Designer.cs">
+      <DependentUpon>ViewInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\designerViewAssignedOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\designerViewAssignedOrders.Designer.cs">
+      <DependentUpon>designerViewAssignedOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewRequestStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ViewRequestStatus.Designer.cs">
+      <DependentUpon>ViewRequestStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -233,6 +365,18 @@
     <EmbeddedResource Include="UI\AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ApproveRequest.resx">
+      <DependentUpon>ApproveRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AssignDeliveryOrder.resx">
+      <DependentUpon>AssignDeliveryOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AssignDesignOrder.resx">
+      <DependentUpon>AssignDesignOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CustomerBoard.resx">
       <DependentUpon>CustomerBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,11 +386,23 @@
     <EmbeddedResource Include="UI\DeliverymanDashboardForm.resx">
       <DependentUpon>DeliverymanDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeliveryViewAssignOrders.resx">
+      <DependentUpon>DeliveryViewAssignOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeliveryViewSalary.resx">
+      <DependentUpon>DeliveryViewSalary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DesignApproval.resx">
       <DependentUpon>DesignApproval.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DesignerDashbordForm.resx">
       <DependentUpon>DesignerDashbordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DesignerViewAssignOrders.resx">
+      <DependentUpon>DesignerViewAssignOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DesignerViewSalary.resx">
+      <DependentUpon>DesignerViewSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
@@ -254,17 +410,59 @@
     <EmbeddedResource Include="UI\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\GiveInstructions.resx">
+      <DependentUpon>GiveInstructions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageConsumables.resx">
+      <DependentUpon>ManageConsumables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageDeliveryMan.resx">
+      <DependentUpon>ManageDeliveryMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageDesign.resx">
+      <DependentUpon>ManageDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageDesigner.resx">
+      <DependentUpon>ManageDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageManager.resx">
+      <DependentUpon>ManageManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageProducts.resx">
+      <DependentUpon>ManageProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ManagerDashboardForm.resx">
       <DependentUpon>ManagerDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManagerViewOrders.resx">
+      <DependentUpon>ManagerViewOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManagerViewSalary.resx">
+      <DependentUpon>ManagerViewSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManufactureDesign.resx">
+      <DependentUpon>ManufactureDesign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\RequestDesigner.resx">
+      <DependentUpon>RequestDesigner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewInstructions.resx">
+      <DependentUpon>ViewInstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\designerViewAssignedOrders.resx">
+      <DependentUpon>designerViewAssignedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewRequestStatus.resx">
+      <DependentUpon>ViewRequestStatus.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />

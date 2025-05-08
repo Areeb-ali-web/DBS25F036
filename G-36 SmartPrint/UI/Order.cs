@@ -16,5 +16,13 @@ namespace G_36_SmartPrint.UI
         {
             InitializeComponent();
         }
+
+        private void btnAddCart_Click(object sender, EventArgs e)
+        {
+            CheckOut checkOutControl = new CheckOut();
+            this.Controls.Add(checkOutControl); 
+            checkOutControl.BringToFront(); 
+            checkOutControl.CenterOnScreen(this);
+        }
     }
 }

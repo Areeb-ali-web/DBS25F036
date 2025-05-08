@@ -65,21 +65,21 @@ namespace G_36_SmartPrint.UI
                     //case "btnDashboard":
                     //    LoadUserControl(new DesignerDashboardControl());
                     //    break;
-                    //case "btnViewAssignOrders":
-                    //    LoadUserControl(new ViewAssignedOrdersControl());
-                    //    break;
-                    //case "btnDesignManagement":
-                    //    LoadUserControl(new ManageDesignsControl());
-                    //    break;
-                    //case "btnCompleteOrder":
-                    //    LoadUserControl(new ManufactureOrderControl());
-                    //    break;
-                    //case "btnRequest":
-                    //    LoadUserControl(new RequestConsumablesControl());
-                    //    break;
-                    //case "btnViewSalary":
-                    //    LoadUserControl(new ViewSalaryControl());
-                    //    break;
+                    case "btnViewAssignOrders":
+                        LoadUserControl(new DesignerViewAssignOrders());
+                        break;
+                    case "btnDesignManagement":
+                        LoadUserControl(new ManageDesign());
+                        break;
+                    case "btnCompleteOrder":
+                        LoadUserControl(new ManufactureDesign());
+                        break;
+                    case "btnRequest":
+                        LoadUserControl(new RequestDesigner());
+                        break;
+                    case "btnViewSalary":
+                        LoadUserControl(new DesignerViewSalary());
+                        break;
                 }
             }
             finally
