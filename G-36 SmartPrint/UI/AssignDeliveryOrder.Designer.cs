@@ -237,7 +237,7 @@
             this.txtTrackingNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTrackingNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTrackingNumber.Location = new System.Drawing.Point(30, 314);
-            this.txtTrackingNumber.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTrackingNumber.Margin = new System.Windows.Forms.Padding(6);
             this.txtTrackingNumber.Name = "txtTrackingNumber";
             this.txtTrackingNumber.PlaceholderText = "";
             this.txtTrackingNumber.SelectedText = "";
@@ -261,7 +261,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Location = new System.Drawing.Point(582, 86);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(6);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "";
