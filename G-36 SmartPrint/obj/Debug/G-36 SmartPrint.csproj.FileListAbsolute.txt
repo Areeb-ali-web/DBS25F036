@@ -170,3 +170,7 @@ C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Numerics.
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 Sma.47F06230.Up2Date
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.AdminDashboardForm.resources
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.DeliverymanDashboardForm.resources
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.DesignerDashbordForm.resources
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ManagerDashboardForm.resources

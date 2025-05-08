@@ -15,9 +15,9 @@
 
         private void InitializeComponent()
         {
-            this.panelHeader = new System.Windows.Forms.Panel();
+            this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -26,14 +26,14 @@
             this.lblRating = new System.Windows.Forms.Label();
             this.lblComments = new System.Windows.Forms.Label();
             this.txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtComments = new Guna.UI2.WinForms.Guna2TextBox();
             this.numRating = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.dtpFeedbackDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cbOrder = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panelButtons = new System.Windows.Forms.Panel();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.panelButtons = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.panelHeader.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.tableLayoutPanel.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,7 +89,7 @@
             this.tableLayoutPanel.Controls.Add(this.lblRating, 0, 4);
             this.tableLayoutPanel.Controls.Add(this.lblComments, 0, 5);
             this.tableLayoutPanel.Controls.Add(this.txtCustomerName, 1, 0);
-            this.tableLayoutPanel.Controls.Add(this.guna2TextBox1, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.txtEmail, 1, 1);
             this.tableLayoutPanel.Controls.Add(this.txtComments, 1, 5);
             this.tableLayoutPanel.Controls.Add(this.numRating, 1, 4);
             this.tableLayoutPanel.Controls.Add(this.dtpFeedbackDate, 1, 3);
@@ -195,32 +195,34 @@
             this.txtCustomerName.Location = new System.Drawing.Point(185, 4);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.PasswordChar = '\0';
             this.txtCustomerName.PlaceholderText = "";
             this.txtCustomerName.SelectedText = "";
             this.txtCustomerName.Size = new System.Drawing.Size(286, 39);
             this.txtCustomerName.TabIndex = 2;
             // 
-            // guna2TextBox1
+            // txtEmail
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(185, 64);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(286, 39);
-            this.guna2TextBox1.TabIndex = 2;
+            this.txtEmail.BorderColor = System.Drawing.Color.Silver;
+            this.txtEmail.BorderRadius = 10;
+            this.txtEmail.BorderThickness = 2;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Location = new System.Drawing.Point(185, 64);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(286, 39);
+            this.txtEmail.TabIndex = 2;
             // 
             // txtComments
             // 
@@ -240,6 +242,7 @@
             this.txtComments.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
+            this.txtComments.PasswordChar = '\0';
             this.txtComments.PlaceholderText = "";
             this.txtComments.SelectedText = "";
             this.txtComments.Size = new System.Drawing.Size(286, 70);
@@ -252,12 +255,15 @@
             this.numRating.BorderRadius = 10;
             this.numRating.BorderThickness = 2;
             this.numRating.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numRating.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
-            this.numRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.numRating.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.numRating.ForeColor = System.Drawing.Color.Blue;
             this.numRating.Location = new System.Drawing.Point(185, 243);
+            this.numRating.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numRating.Name = "numRating";
             this.numRating.Size = new System.Drawing.Size(286, 36);
             this.numRating.TabIndex = 11;
+            this.numRating.UpDownButtonFillColor = System.Drawing.Color.White;
+            this.numRating.UpDownButtonForeColor = System.Drawing.Color.Blue;
             // 
             // dtpFeedbackDate
             // 
@@ -266,8 +272,7 @@
             this.dtpFeedbackDate.BorderThickness = 2;
             this.dtpFeedbackDate.Checked = true;
             this.dtpFeedbackDate.FillColor = System.Drawing.Color.White;
-            this.dtpFeedbackDate.FocusedColor = System.Drawing.Color.White;
-            this.dtpFeedbackDate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.dtpFeedbackDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.dtpFeedbackDate.ForeColor = System.Drawing.Color.Blue;
             this.dtpFeedbackDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpFeedbackDate.Location = new System.Drawing.Point(185, 183);
@@ -309,35 +314,40 @@
             // btnSubmit
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSubmit.BorderRadius = 10;
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSubmit.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Location = new System.Drawing.Point(358, 18);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(120, 40);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.BackColor = System.Drawing.Color.White;
+            this.btnClear.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnClear.BorderRadius = 10;
+            this.btnClear.BorderThickness = 2;
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnClear.FlatAppearance.BorderSize = 2;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClear.FillColor = System.Drawing.Color.White;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnClear.Location = new System.Drawing.Point(158, 18);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 40);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
             // 
             // Feedback
             // 
@@ -360,9 +370,9 @@
 
         }
 
-        private System.Windows.Forms.Panel panelHeader;
+        private Guna.UI2.WinForms.Guna2Panel panelHeader;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Panel panelMain;
+        private Guna.UI2.WinForms.Guna2Panel panelMain;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Label lblCustomerName;
         private System.Windows.Forms.Label lblEmail;
@@ -370,11 +380,11 @@
         private System.Windows.Forms.Label lblFeedbackDate;
         private System.Windows.Forms.Label lblRating;
         private System.Windows.Forms.Label lblComments;
-        private System.Windows.Forms.Panel panelButtons;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnSubmit;
+        private Guna.UI2.WinForms.Guna2Panel panelButtons;
+        private Guna.UI2.WinForms.Guna2Button btnClear;
+        private Guna.UI2.WinForms.Guna2Button btnSubmit;
         private Guna.UI2.WinForms.Guna2TextBox txtCustomerName;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtComments;
         private Guna.UI2.WinForms.Guna2NumericUpDown numRating;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpFeedbackDate;

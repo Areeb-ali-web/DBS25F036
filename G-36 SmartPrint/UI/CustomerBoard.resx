@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblAppreciation.Text" xml:space="preserve">
+    <value>&lt;span style="color:#1E90FF; font-weight:bold;"&gt;We Appreciate You!&lt;/span&gt;&lt;br&gt;DEAR CUSTOMER;&lt;br&gt;&lt;span style="color:#333333"&gt;Thank you for choosing SmartPrint. We're committed to providing you with &lt;br&gt; exceptional serviceand quality products that exceed your expectations.&lt;/span&gt;</value>
+  </data>
+  <data name="lblServices.Text" xml:space="preserve">
+    <value>&lt;span style="color:#1E90FF; font-weight:bold;"&gt;Customer Service&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style="color:#333333"&gt;• Dedicated support team available 9AM-6PM EST&lt;br&gt;• Email: support@smartprint.com&lt;br&gt;• Phone: (800) 555-PRINT&lt;br&gt;• Live chat on our website&lt;/span&gt;</value>
+  </data>
+  <data name="lblDesignProducts.Text" xml:space="preserve">
+    <value>&lt;span style="color:#1E90FF; font-weight:bold;"&gt;Design &amp; Products&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style="color:#333333"&gt;• Premium custom apparel printing&lt;br&gt;• State-of-the-art DTG and screen printing&lt;br&gt;• 100+ high-quality garment options&lt;br&gt;• Eco-friendly materials and processes&lt;br&gt;• Fast 3-5 business day turnaround&lt;/span&gt;</value>
+  </data>
+  <data name="lblCompany.Text" xml:space="preserve">
+    <value>&lt;span style="color:#1E90FF; font-weight:bold;"&gt;Our Company&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style="color:#333333"&gt;Founded in 2010, SmartPrint has grown into a leader in custom apparel.&lt;br&gt;We combine innovative technology with artisan craftsmanship to deliver &lt;br&gt; products you'll love.&lt;/span&gt;</value>
+  </data>
 </root>

@@ -19,13 +19,11 @@ namespace G_36_SmartPrint
         [STAThread]
         static void Main()
         {
+           
 
-            List<OrderBL> order = OrderDL.LoadAllOrders();
-            // AddressDL.AddAddressIfNotExists(3, adress);
-            List<OrderBL> orders = OrderDL.LoadAllOrders();
-            Application.EnableVisualStyles();
+
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new CustomerDashboardForm());
 
 
         }

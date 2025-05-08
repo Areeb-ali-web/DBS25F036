@@ -15,15 +15,16 @@
 
         private void InitializeComponent()
         {
-            this.panelHeader = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerBoard));
+            this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
-            this.panelContent = new System.Windows.Forms.Panel();
-            this.lblAppreciation = new System.Windows.Forms.Label();
-            this.lblCompany = new System.Windows.Forms.Label();
-            this.lblServices = new System.Windows.Forms.Label();
-            this.lblDesign = new System.Windows.Forms.Label();
-            this.panelImage = new System.Windows.Forms.Panel();
+            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblAppreciation = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblServices = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblDesignProducts = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCompany = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panelImage = new Guna.UI2.WinForms.Guna2Panel();
             this.picSideImage = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
@@ -37,7 +38,7 @@
             // 
             // panelHeader
             // 
-            this.panelHeader.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelHeader.BackColor = System.Drawing.Color.Violet;
             this.panelHeader.Controls.Add(this.lblWelcome);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
@@ -49,11 +50,12 @@
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 21F, System.Drawing.FontStyle.Bold);
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
             this.lblWelcome.Location = new System.Drawing.Point(327, 38);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(246, 37);
+            this.lblWelcome.Size = new System.Drawing.Size(254, 38);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "WELCOME {name}";
             // 
@@ -79,69 +81,75 @@
             // panelContent
             // 
             this.panelContent.AutoScroll = true;
+            this.panelContent.BackColor = System.Drawing.Color.White;
+            this.panelContent.BorderRadius = 15;
             this.panelContent.Controls.Add(this.lblAppreciation);
-            this.panelContent.Controls.Add(this.lblCompany);
             this.panelContent.Controls.Add(this.lblServices);
-            this.panelContent.Controls.Add(this.lblDesign);
+            this.panelContent.Controls.Add(this.lblDesignProducts);
+            this.panelContent.Controls.Add(this.lblCompany);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.FillColor = System.Drawing.Color.WhiteSmoke;
             this.panelContent.Location = new System.Drawing.Point(20, 15);
             this.panelContent.Name = "panelContent";
+            this.panelContent.Padding = new System.Windows.Forms.Padding(15);
             this.panelContent.Size = new System.Drawing.Size(554, 454);
             this.panelContent.TabIndex = 0;
             // 
             // lblAppreciation
             // 
+            this.lblAppreciation.BackColor = System.Drawing.Color.Transparent;
             this.lblAppreciation.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblAppreciation.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lblAppreciation.Location = new System.Drawing.Point(0, 90);
-            this.lblAppreciation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
+            this.lblAppreciation.IsSelectionEnabled = false;
+            this.lblAppreciation.Location = new System.Drawing.Point(15, 15);
+            this.lblAppreciation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.lblAppreciation.Name = "lblAppreciation";
-            this.lblAppreciation.Padding = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.lblAppreciation.Size = new System.Drawing.Size(554, 120);
+            this.lblAppreciation.Size = new System.Drawing.Size(498, 82);
             this.lblAppreciation.TabIndex = 0;
-            this.lblAppreciation.Text = "We sincerely appreciate you choosing our services! Your trust means everything to" +
-    " us.";
-            // 
-            // lblCompany
-            // 
-            this.lblCompany.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCompany.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCompany.Location = new System.Drawing.Point(0, 60);
-            this.lblCompany.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(554, 30);
-            this.lblCompany.TabIndex = 1;
-            this.lblCompany.Text = "Our Clothing Company";
+            this.lblAppreciation.Text = resources.GetString("lblAppreciation.Text");
             // 
             // lblServices
             // 
-            this.lblServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblServices.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblServices.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblServices.Location = new System.Drawing.Point(0, 30);
-            this.lblServices.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.lblServices.BackColor = System.Drawing.Color.Transparent;
+            this.lblServices.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblServices.IsSelectionEnabled = false;
+            this.lblServices.Location = new System.Drawing.Point(15, 96);
+            this.lblServices.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.lblServices.Name = "lblServices";
-            this.lblServices.Size = new System.Drawing.Size(554, 30);
-            this.lblServices.TabIndex = 2;
-            this.lblServices.Text = "Customer Services";
+            this.lblServices.Size = new System.Drawing.Size(337, 121);
+            this.lblServices.TabIndex = 1;
+            this.lblServices.Text = resources.GetString("lblServices.Text");
             // 
-            // lblDesign
+            // lblDesignProducts
             // 
-            this.lblDesign.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDesign.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDesign.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblDesign.Location = new System.Drawing.Point(0, 0);
-            this.lblDesign.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.lblDesign.Name = "lblDesign";
-            this.lblDesign.Size = new System.Drawing.Size(554, 30);
-            this.lblDesign.TabIndex = 3;
-            this.lblDesign.Text = "Design Capabilities";
+            this.lblDesignProducts.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesignProducts.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblDesignProducts.IsSelectionEnabled = false;
+            this.lblDesignProducts.Location = new System.Drawing.Point(15, 237);
+            this.lblDesignProducts.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.lblDesignProducts.Name = "lblDesignProducts";
+            this.lblDesignProducts.Size = new System.Drawing.Size(282, 141);
+            this.lblDesignProducts.TabIndex = 2;
+            this.lblDesignProducts.Text = resources.GetString("lblDesignProducts.Text");
+            // 
+            // lblCompany
+            // 
+            this.lblCompany.BackColor = System.Drawing.Color.Transparent;
+            this.lblCompany.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblCompany.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblCompany.IsSelectionEnabled = false;
+            this.lblCompany.Location = new System.Drawing.Point(15, 363);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(480, 101);
+            this.lblCompany.TabIndex = 3;
+            this.lblCompany.Text = resources.GetString("lblCompany.Text");
             // 
             // panelImage
             // 
+            this.panelImage.BorderRadius = 15;
             this.panelImage.Controls.Add(this.picSideImage);
             this.panelImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelImage.FillColor = System.Drawing.Color.WhiteSmoke;
             this.panelImage.Location = new System.Drawing.Point(10, 15);
             this.panelImage.Name = "panelImage";
             this.panelImage.Size = new System.Drawing.Size(366, 454);
@@ -174,21 +182,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
             this.splitContainerMain.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
+            this.panelContent.PerformLayout();
             this.panelImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSideImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        private System.Windows.Forms.Panel panelHeader;
+        private Guna.UI2.WinForms.Guna2Panel panelHeader;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.SplitContainer splitContainerMain;
-        private System.Windows.Forms.Panel panelContent;
-        private System.Windows.Forms.Label lblAppreciation;
-        private System.Windows.Forms.Label lblCompany;
-        private System.Windows.Forms.Label lblServices;
-        private System.Windows.Forms.Label lblDesign;
-        private System.Windows.Forms.Panel panelImage;
+        private Guna.UI2.WinForms.Guna2Panel panelContent;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblAppreciation;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblServices;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDesignProducts;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCompany;
+        private Guna.UI2.WinForms.Guna2Panel panelImage;
         private System.Windows.Forms.PictureBox picSideImage;
     }
 }

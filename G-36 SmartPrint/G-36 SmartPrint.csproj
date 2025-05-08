@@ -144,6 +144,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper.cs" />
+    <Compile Include="UI\AdminDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminDashboardForm.Designer.cs">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CustomerBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,11 +162,23 @@
     <Compile Include="UI\CustomerDashboardForm.Designer.cs">
       <DependentUpon>CustomerDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\DeliverymanDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DeliverymanDashboardForm.Designer.cs">
+      <DependentUpon>DeliverymanDashboardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DesignApproval.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\DesignApproval.Designer.cs">
       <DependentUpon>DesignApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DesignerDashbordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DesignerDashbordForm.Designer.cs">
+      <DependentUpon>DesignerDashbordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Feedback.cs">
       <SubType>UserControl</SubType>
@@ -179,6 +197,12 @@
     </Compile>
     <Compile Include="UI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManagerDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManagerDashboardForm.Designer.cs">
+      <DependentUpon>ManagerDashboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Order.cs">
       <SubType>UserControl</SubType>
@@ -206,14 +230,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\AdminDashboardForm.resx">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CustomerBoard.resx">
       <DependentUpon>CustomerBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CustomerDashboardForm.resx">
       <DependentUpon>CustomerDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeliverymanDashboardForm.resx">
+      <DependentUpon>DeliverymanDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DesignApproval.resx">
       <DependentUpon>DesignApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DesignerDashbordForm.resx">
+      <DependentUpon>DesignerDashbordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
@@ -223,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManagerDashboardForm.resx">
+      <DependentUpon>ManagerDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
