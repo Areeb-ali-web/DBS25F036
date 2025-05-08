@@ -57,8 +57,9 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(750, 60);
+            this.panelHeader.Size = new System.Drawing.Size(1125, 92);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -67,9 +68,10 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblTitle.Location = new System.Drawing.Point(30, 23);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(196, 32);
+            this.lblTitle.Size = new System.Drawing.Size(289, 48);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "CheckOut Order";
             // 
@@ -92,10 +94,11 @@
             this.mainPanel.Controls.Add(this.lblAddress);
             this.mainPanel.Controls.Add(this.lblDesignDescription);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 60);
+            this.mainPanel.Location = new System.Drawing.Point(0, 92);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.mainPanel.Size = new System.Drawing.Size(750, 440);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1125, 677);
             this.mainPanel.TabIndex = 1;
             // 
             // btnBack
@@ -109,9 +112,10 @@
             this.btnBack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(373, 342);
+            this.btnBack.Location = new System.Drawing.Point(560, 526);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(120, 44);
+            this.btnBack.Size = new System.Drawing.Size(180, 68);
             this.btnBack.TabIndex = 15;
             this.btnBack.Text = "Back";
             // 
@@ -126,11 +130,13 @@
             this.btnBuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnBuy.ForeColor = System.Drawing.Color.White;
-            this.btnBuy.Location = new System.Drawing.Point(553, 342);
+            this.btnBuy.Location = new System.Drawing.Point(830, 526);
+            this.btnBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(120, 44);
+            this.btnBuy.Size = new System.Drawing.Size(180, 68);
             this.btnBuy.TabIndex = 14;
             this.btnBuy.Text = "Buy";
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // cmbPaymentMethod
             // 
@@ -153,9 +159,10 @@
             "PayPal",
             "Bank Transfer",
             "Cash on Delivery"});
-            this.cmbPaymentMethod.Location = new System.Drawing.Point(39, 307);
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(58, 472);
+            this.cmbPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPaymentMethod.Name = "cmbPaymentMethod";
-            this.cmbPaymentMethod.Size = new System.Drawing.Size(252, 36);
+            this.cmbPaymentMethod.Size = new System.Drawing.Size(376, 36);
             this.cmbPaymentMethod.TabIndex = 13;
             // 
             // txtPayment
@@ -175,12 +182,13 @@
             this.txtPayment.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtPayment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPayment.Location = new System.Drawing.Point(40, 244);
+            this.txtPayment.Location = new System.Drawing.Point(60, 375);
+            this.txtPayment.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtPayment.Name = "txtPayment";
             this.txtPayment.PlaceholderText = "";
             this.txtPayment.ReadOnly = true;
             this.txtPayment.SelectedText = "";
-            this.txtPayment.Size = new System.Drawing.Size(251, 36);
+            this.txtPayment.Size = new System.Drawing.Size(376, 55);
             this.txtPayment.TabIndex = 12;
             // 
             // txtCity
@@ -200,11 +208,12 @@
             this.txtCity.Font = new System.Drawing.Font("Symbol", 8.25F);
             this.txtCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtCity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCity.Location = new System.Drawing.Point(403, 220);
+            this.txtCity.Location = new System.Drawing.Point(604, 338);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtCity.Name = "txtCity";
             this.txtCity.PlaceholderText = "";
             this.txtCity.SelectedText = "";
-            this.txtCity.Size = new System.Drawing.Size(236, 36);
+            this.txtCity.Size = new System.Drawing.Size(354, 55);
             this.txtCity.TabIndex = 11;
             // 
             // txtState
@@ -222,11 +231,12 @@
             this.txtState.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtState.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtState.Location = new System.Drawing.Point(402, 140);
+            this.txtState.Location = new System.Drawing.Point(603, 215);
+            this.txtState.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtState.Name = "txtState";
             this.txtState.PlaceholderText = "";
             this.txtState.SelectedText = "";
-            this.txtState.Size = new System.Drawing.Size(237, 36);
+            this.txtState.Size = new System.Drawing.Size(356, 55);
             this.txtState.TabIndex = 10;
             // 
             // txtCountry
@@ -244,11 +254,12 @@
             this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtCountry.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCountry.Location = new System.Drawing.Point(403, 68);
+            this.txtCountry.Location = new System.Drawing.Point(604, 105);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.PlaceholderText = "";
             this.txtCountry.SelectedText = "";
-            this.txtCountry.Size = new System.Drawing.Size(236, 36);
+            this.txtCountry.Size = new System.Drawing.Size(354, 55);
             this.txtCountry.TabIndex = 9;
             // 
             // txtAddress
@@ -268,12 +279,13 @@
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(39, 140);
+            this.txtAddress.Location = new System.Drawing.Point(58, 215);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(321, 60);
+            this.txtAddress.Size = new System.Drawing.Size(482, 92);
             this.txtAddress.TabIndex = 8;
             // 
             // txtDesignDescription
@@ -293,12 +305,13 @@
             this.txtDesignDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtDesignDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDesignDescription.Location = new System.Drawing.Point(39, 44);
+            this.txtDesignDescription.Location = new System.Drawing.Point(58, 68);
+            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtDesignDescription.Multiline = true;
             this.txtDesignDescription.Name = "txtDesignDescription";
             this.txtDesignDescription.PlaceholderText = "";
             this.txtDesignDescription.SelectedText = "";
-            this.txtDesignDescription.Size = new System.Drawing.Size(321, 60);
+            this.txtDesignDescription.Size = new System.Drawing.Size(482, 92);
             this.txtDesignDescription.TabIndex = 7;
             // 
             // lblPaymentMethod
@@ -307,9 +320,10 @@
             this.lblPaymentMethod.BackColor = System.Drawing.Color.Transparent;
             this.lblPaymentMethod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblPaymentMethod.Location = new System.Drawing.Point(36, 283);
+            this.lblPaymentMethod.Location = new System.Drawing.Point(54, 435);
+            this.lblPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaymentMethod.Name = "lblPaymentMethod";
-            this.lblPaymentMethod.Size = new System.Drawing.Size(146, 21);
+            this.lblPaymentMethod.Size = new System.Drawing.Size(216, 32);
             this.lblPaymentMethod.TabIndex = 6;
             this.lblPaymentMethod.Text = "Payment Method:";
             // 
@@ -319,9 +333,10 @@
             this.lblPayment.BackColor = System.Drawing.Color.Transparent;
             this.lblPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblPayment.Location = new System.Drawing.Point(35, 220);
+            this.lblPayment.Location = new System.Drawing.Point(52, 338);
+            this.lblPayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPayment.Name = "lblPayment";
-            this.lblPayment.Size = new System.Drawing.Size(82, 21);
+            this.lblPayment.Size = new System.Drawing.Size(120, 32);
             this.lblPayment.TabIndex = 5;
             this.lblPayment.Text = "Payment:";
             // 
@@ -331,9 +346,10 @@
             this.lblCity.BackColor = System.Drawing.Color.Transparent;
             this.lblCity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblCity.Location = new System.Drawing.Point(399, 196);
+            this.lblCity.Location = new System.Drawing.Point(598, 302);
+            this.lblCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(44, 21);
+            this.lblCity.Size = new System.Drawing.Size(65, 32);
             this.lblCity.TabIndex = 4;
             this.lblCity.Text = "City:";
             // 
@@ -343,9 +359,10 @@
             this.lblState.BackColor = System.Drawing.Color.Transparent;
             this.lblState.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblState.Location = new System.Drawing.Point(398, 116);
+            this.lblState.Location = new System.Drawing.Point(597, 178);
+            this.lblState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(53, 21);
+            this.lblState.Size = new System.Drawing.Size(77, 32);
             this.lblState.TabIndex = 3;
             this.lblState.Text = "State:";
             // 
@@ -355,9 +372,10 @@
             this.lblCountry.BackColor = System.Drawing.Color.Transparent;
             this.lblCountry.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblCountry.Location = new System.Drawing.Point(398, 44);
+            this.lblCountry.Location = new System.Drawing.Point(597, 68);
+            this.lblCountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(76, 21);
+            this.lblCountry.Size = new System.Drawing.Size(114, 32);
             this.lblCountry.TabIndex = 2;
             this.lblCountry.Text = "Country:";
             // 
@@ -367,9 +385,10 @@
             this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblAddress.Location = new System.Drawing.Point(35, 116);
+            this.lblAddress.Location = new System.Drawing.Point(52, 178);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(74, 21);
+            this.lblAddress.Size = new System.Drawing.Size(113, 32);
             this.lblAddress.TabIndex = 1;
             this.lblAddress.Text = "Address:";
             // 
@@ -379,21 +398,23 @@
             this.lblDesignDescription.BackColor = System.Drawing.Color.Transparent;
             this.lblDesignDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesignDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDesignDescription.Location = new System.Drawing.Point(35, 20);
+            this.lblDesignDescription.Location = new System.Drawing.Point(52, 31);
+            this.lblDesignDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDesignDescription.Name = "lblDesignDescription";
-            this.lblDesignDescription.Size = new System.Drawing.Size(159, 21);
+            this.lblDesignDescription.Size = new System.Drawing.Size(239, 32);
             this.lblDesignDescription.TabIndex = 0;
             this.lblDesignDescription.Text = "Design Description:";
             // 
             // CheckOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CheckOut";
-            this.Size = new System.Drawing.Size(750, 500);
+            this.Size = new System.Drawing.Size(1125, 769);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);

@@ -25,5 +25,10 @@ namespace G_36_SmartPrint.UI
                 (parent.ClientSize.Width - this.Width) / 2,
                 (parent.ClientSize.Height - this.Height) / 2);
         }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

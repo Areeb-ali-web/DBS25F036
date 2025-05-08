@@ -1,11 +1,16 @@
-﻿using G_36_SmartPrint.BL;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using G_36_SmartPrint.BL;
 
 namespace G_36_SmartPrint.UI
 {
-    internal static class LoginHelpers
+    internal class LoginHelpers
     {
         public static UserBL currentuser;
         public static CustomersBL currentcustomer;
-        public static EmployeesBL currentemployee;
+
     }
 }

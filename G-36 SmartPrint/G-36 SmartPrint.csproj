@@ -252,6 +252,7 @@
     <Compile Include="UI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\LoginHelpers.cs" />
     <Compile Include="UI\ManageConsumables.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -467,6 +468,7 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\G_36_SmartPrint.BL.OrderBL.datasource" />
+    <None Include="Properties\DataSources\G_36_SmartPrint.BL.Order_DetailsBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

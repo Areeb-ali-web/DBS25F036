@@ -9,6 +9,8 @@ namespace G_36_SmartPrint.UI
 {
     public partial class Feedback : UserControl
     {
+       
+
         public Feedback()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace G_36_SmartPrint.UI
             txtCustomerName.Text = LoginHelpers.currentuser.getUserName();
             txtCustomerName.Enabled = false;
 
-            guna2TextBox1.Text = LoginHelpers.currentcustomer.getEmail();
+            txtEmail.Text = LoginHelpers.currentcustomer.getEmail();
             dtpFeedbackDate.Value = DateTime.Now;
 
             // Load orders for this customer
@@ -63,6 +65,11 @@ namespace G_36_SmartPrint.UI
             int rating =(int)numRating.Value;
 
             FeedbackDL.AddFeedback(orderID,customerID,rating,comment);
+        }
+
+        private void btnSubmit_Click_1(object sender, EventArgs e)
+        {
+             
         }
     }
 }

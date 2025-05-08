@@ -54,14 +54,14 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(380, 27);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(138, 37);
+            this.lblTitle.Size = new System.Drawing.Size(201, 54);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Feedback";
             // 
@@ -195,7 +195,6 @@
             this.txtCustomerName.Location = new System.Drawing.Point(185, 4);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.PasswordChar = '\0';
             this.txtCustomerName.PlaceholderText = "";
             this.txtCustomerName.SelectedText = "";
             this.txtCustomerName.Size = new System.Drawing.Size(286, 39);
@@ -218,7 +217,6 @@
             this.txtEmail.Location = new System.Drawing.Point(185, 64);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(286, 39);
@@ -242,7 +240,6 @@
             this.txtComments.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
-            this.txtComments.PasswordChar = '\0';
             this.txtComments.PlaceholderText = "";
             this.txtComments.SelectedText = "";
             this.txtComments.Size = new System.Drawing.Size(286, 70);
@@ -257,7 +254,7 @@
             this.numRating.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numRating.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.numRating.ForeColor = System.Drawing.Color.Blue;
-            this.numRating.Location = new System.Drawing.Point(185, 243);
+            this.numRating.Location = new System.Drawing.Point(185, 244);
             this.numRating.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numRating.Name = "numRating";
             this.numRating.Size = new System.Drawing.Size(286, 36);
@@ -328,6 +325,7 @@
             this.btnSubmit.Size = new System.Drawing.Size(120, 40);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click_1);
             // 
             // btnClear
             // 
@@ -351,7 +349,7 @@
             // 
             // Feedback
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelMain);
