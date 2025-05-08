@@ -16,5 +16,10 @@ namespace G_36_SmartPrint.UI
         {
             InitializeComponent();
         }
+
+        private void txtProductName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

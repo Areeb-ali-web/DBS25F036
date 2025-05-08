@@ -48,9 +48,10 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 15, 20, 15);
-            this.panelHeader.Size = new System.Drawing.Size(800, 80);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 23, 30, 23);
+            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -60,9 +61,10 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblTitle.Location = new System.Drawing.Point(30, 23);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(183, 37);
+            this.lblTitle.Size = new System.Drawing.Size(268, 54);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Salary Status";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -73,10 +75,11 @@
             this.mainPanel.Controls.Add(this.txtManagerName);
             this.mainPanel.Controls.Add(this.lblManagerName);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 80);
+            this.mainPanel.Location = new System.Drawing.Point(0, 123);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.mainPanel.Size = new System.Drawing.Size(800, 520);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
             // 
             // dgvSalaryStatus
@@ -109,12 +112,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSalaryStatus.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSalaryStatus.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSalaryStatus.Location = new System.Drawing.Point(17, 221);
+            this.dgvSalaryStatus.Location = new System.Drawing.Point(26, 340);
+            this.dgvSalaryStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvSalaryStatus.Name = "dgvSalaryStatus";
             this.dgvSalaryStatus.ReadOnly = true;
             this.dgvSalaryStatus.RowHeadersVisible = false;
+            this.dgvSalaryStatus.RowHeadersWidth = 62;
             this.dgvSalaryStatus.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvSalaryStatus.Size = new System.Drawing.Size(760, 220);
+            this.dgvSalaryStatus.Size = new System.Drawing.Size(1140, 338);
             this.dgvSalaryStatus.TabIndex = 2;
             this.dgvSalaryStatus.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSalaryStatus.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -155,13 +160,13 @@
             this.txtManagerName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.txtManagerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtManagerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManagerName.Location = new System.Drawing.Point(24, 145);
-            this.txtManagerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtManagerName.Location = new System.Drawing.Point(36, 223);
+            this.txtManagerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtManagerName.Name = "txtManagerName";
             this.txtManagerName.PlaceholderText = "";
             this.txtManagerName.ReadOnly = true;
             this.txtManagerName.SelectedText = "";
-            this.txtManagerName.Size = new System.Drawing.Size(335, 43);
+            this.txtManagerName.Size = new System.Drawing.Size(502, 66);
             this.txtManagerName.TabIndex = 1;
             // 
             // lblManagerName
@@ -170,22 +175,24 @@
             this.lblManagerName.BackColor = System.Drawing.Color.Transparent;
             this.lblManagerName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblManagerName.Location = new System.Drawing.Point(24, 115);
+            this.lblManagerName.Location = new System.Drawing.Point(36, 177);
+            this.lblManagerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerName.Name = "lblManagerName";
-            this.lblManagerName.Size = new System.Drawing.Size(106, 17);
+            this.lblManagerName.Size = new System.Drawing.Size(163, 28);
             this.lblManagerName.TabIndex = 0;
             this.lblManagerName.Text = "Manager Name:";
             this.lblManagerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ManagerViewSalary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerViewSalary";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(1200, 923);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);

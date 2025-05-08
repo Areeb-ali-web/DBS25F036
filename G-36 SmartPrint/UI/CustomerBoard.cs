@@ -15,11 +15,11 @@ namespace G_36_SmartPrint.UI
         {
             InitializeComponent();
             this.customerId = customerId;
-            LoadCustomerData();
+            LoadCustomerData(LoginHelpers.currentuser.getuserID());
             this.DoubleBuffered = true;
         }
 
-        private void LoadCustomerData()
+        private void LoadCustomerData(int customerid)
         {
             try
             {
@@ -69,5 +69,9 @@ namespace G_36_SmartPrint.UI
             }
         }
 
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

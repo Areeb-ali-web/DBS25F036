@@ -56,9 +56,10 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(20);
-            this.panelHeader.Size = new System.Drawing.Size(800, 80);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -68,9 +69,10 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 20);
+            this.lblTitle.Location = new System.Drawing.Point(30, 31);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(238, 37);
+            this.lblTitle.Size = new System.Drawing.Size(348, 54);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Approve Request";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,10 +91,11 @@
             this.mainPanel.Controls.Add(this.txtName);
             this.mainPanel.Controls.Add(this.lblName);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 80);
+            this.mainPanel.Location = new System.Drawing.Point(0, 123);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            this.mainPanel.Size = new System.Drawing.Size(800, 520);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(45, 31, 45, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
             // 
             // dgvRequests
@@ -124,12 +127,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRequests.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRequests.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvRequests.Location = new System.Drawing.Point(30, 346);
+            this.dgvRequests.Location = new System.Drawing.Point(45, 532);
+            this.dgvRequests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvRequests.Name = "dgvRequests";
             this.dgvRequests.ReadOnly = true;
             this.dgvRequests.RowHeadersVisible = false;
+            this.dgvRequests.RowHeadersWidth = 62;
             this.dgvRequests.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvRequests.Size = new System.Drawing.Size(740, 154);
+            this.dgvRequests.Size = new System.Drawing.Size(1110, 237);
             this.dgvRequests.TabIndex = 10;
             this.dgvRequests.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvRequests.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -164,9 +169,10 @@
             this.btnReject.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnReject.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnReject.ForeColor = System.Drawing.Color.White;
-            this.btnReject.Location = new System.Drawing.Point(627, 267);
+            this.btnReject.Location = new System.Drawing.Point(940, 411);
+            this.btnReject.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReject.Name = "btnReject";
-            this.btnReject.Size = new System.Drawing.Size(120, 36);
+            this.btnReject.Size = new System.Drawing.Size(180, 55);
             this.btnReject.TabIndex = 9;
             this.btnReject.Text = "Reject";
             // 
@@ -181,9 +187,10 @@
             this.btnApprove.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnApprove.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnApprove.ForeColor = System.Drawing.Color.White;
-            this.btnApprove.Location = new System.Drawing.Point(450, 267);
+            this.btnApprove.Location = new System.Drawing.Point(675, 411);
+            this.btnApprove.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(120, 36);
+            this.btnApprove.Size = new System.Drawing.Size(180, 55);
             this.btnApprove.TabIndex = 8;
             this.btnApprove.Text = "Approve";
             // 
@@ -202,13 +209,13 @@
             this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.Location = new System.Drawing.Point(30, 267);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Location = new System.Drawing.Point(45, 411);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.ReadOnly = true;
             this.txtQuantity.SelectedText = "";
-            this.txtQuantity.Size = new System.Drawing.Size(330, 36);
+            this.txtQuantity.Size = new System.Drawing.Size(495, 55);
             this.txtQuantity.TabIndex = 7;
             // 
             // lblQuantity
@@ -217,9 +224,10 @@
             this.lblQuantity.BackColor = System.Drawing.Color.Transparent;
             this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblQuantity.Location = new System.Drawing.Point(27, 233);
+            this.lblQuantity.Location = new System.Drawing.Point(40, 358);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(330, 30);
+            this.lblQuantity.Size = new System.Drawing.Size(495, 46);
             this.lblQuantity.TabIndex = 6;
             this.lblQuantity.Text = "Quantity:";
             this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -240,13 +248,13 @@
             this.txtItemName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtItemName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtItemName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtItemName.Location = new System.Drawing.Point(27, 193);
-            this.txtItemName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtItemName.Location = new System.Drawing.Point(40, 297);
+            this.txtItemName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.PlaceholderText = "";
             this.txtItemName.ReadOnly = true;
             this.txtItemName.SelectedText = "";
-            this.txtItemName.Size = new System.Drawing.Size(330, 36);
+            this.txtItemName.Size = new System.Drawing.Size(495, 55);
             this.txtItemName.TabIndex = 5;
             // 
             // lblItemName
@@ -256,9 +264,10 @@
             this.lblItemName.BackColor = System.Drawing.Color.Transparent;
             this.lblItemName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblItemName.Location = new System.Drawing.Point(30, 159);
+            this.lblItemName.Location = new System.Drawing.Point(45, 245);
+            this.lblItemName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemName.Name = "lblItemName";
-            this.lblItemName.Size = new System.Drawing.Size(330, 30);
+            this.lblItemName.Size = new System.Drawing.Size(495, 46);
             this.lblItemName.TabIndex = 4;
             this.lblItemName.Text = "Item Name:";
             this.lblItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,13 +287,13 @@
             this.txtRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRole.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRole.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRole.Location = new System.Drawing.Point(27, 124);
-            this.txtRole.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRole.Location = new System.Drawing.Point(40, 191);
+            this.txtRole.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtRole.Name = "txtRole";
             this.txtRole.PlaceholderText = "";
             this.txtRole.ReadOnly = true;
             this.txtRole.SelectedText = "";
-            this.txtRole.Size = new System.Drawing.Size(330, 36);
+            this.txtRole.Size = new System.Drawing.Size(495, 55);
             this.txtRole.TabIndex = 3;
             // 
             // lblRole
@@ -293,9 +302,10 @@
             this.lblRole.BackColor = System.Drawing.Color.Transparent;
             this.lblRole.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblRole.Location = new System.Drawing.Point(30, 90);
+            this.lblRole.Location = new System.Drawing.Point(45, 138);
+            this.lblRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(330, 30);
+            this.lblRole.Size = new System.Drawing.Size(495, 46);
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Role:";
             this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,13 +326,13 @@
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(30, 50);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(45, 77);
+            this.txtName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.ReadOnly = true;
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(330, 36);
+            this.txtName.Size = new System.Drawing.Size(495, 55);
             this.txtName.TabIndex = 1;
             // 
             // lblName
@@ -332,21 +342,23 @@
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblName.Location = new System.Drawing.Point(30, 16);
+            this.lblName.Location = new System.Drawing.Point(45, 25);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(330, 30);
+            this.lblName.Size = new System.Drawing.Size(495, 46);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ApproveRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ApproveRequest";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(1200, 923);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);

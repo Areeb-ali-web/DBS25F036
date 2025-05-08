@@ -20,6 +20,8 @@ namespace G_36_SmartPrint.UI
             InitializeComponent();
             ConfigureDataGridView();
             LoadFormData();
+
+            dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
         }
 
         private void ConfigureDataGridView()
@@ -32,7 +34,7 @@ namespace G_36_SmartPrint.UI
 
             dvgOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dvgOrders.MultiSelect = false;
-            dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
+            // dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
         }
 
         private void LoadFormData()
@@ -40,7 +42,9 @@ namespace G_36_SmartPrint.UI
             try
             {
                 int customerId = LoginHelpers.currentcustomer.getUserID();
-                orders = OrderDL.LoadOrdersForApprovalByCustomerId(customerId);
+                List<OrderBL> orders = OrderDL.LoadOrdersForApprovalByCustomerId(customerId);
+                dvgOrders.DataSource = orders;
+
 
                 DataTable dt = new DataTable();
                 dt.Columns.Add("OrderID", typeof(int));
@@ -162,6 +166,11 @@ namespace G_36_SmartPrint.UI
         private void dvgOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Reserved for future enhancements
+        }
+
+        private void dvgOrders_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

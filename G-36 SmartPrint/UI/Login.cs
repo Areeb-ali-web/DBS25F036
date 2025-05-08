@@ -43,6 +43,7 @@ namespace G_36_SmartPrint.UI
             if (role == 2)
             {
                 LoginHelpers.currentcustomer = new CustomersBL(LoginHelpers.currentuser);
+                
                 CustomerDashboardForm form = new CustomerDashboardForm();
                 form.Show();
                 this.Hide();
@@ -57,13 +58,14 @@ namespace G_36_SmartPrint.UI
             string password= this.TxtPassword.Text;
             string email = this.guna2TextBox1.Text;
             LoginHelpers.currentuser = UserDL.UserLogin(username, email, password);
+          
             if (LoginHelpers.currentuser.getRole().getLookupID() != null)
             {
                 SelectNextInterface();
             }
             else
             {
-                MessageBox.Show("Login failed. Please check your username, email, and password.");
+                MessageBox.Show($"Login failed. Please check your username, email, and password.{LoginHelpers.currentuser.getUserName()}");
             }
         }
     }
