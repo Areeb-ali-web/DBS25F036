@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 using G_36_SmartPrint.BL;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace G_36_SmartPrint.DL
 {
@@ -260,7 +260,61 @@ namespace G_36_SmartPrint.DL
             return orders;
         }
 
+        public static List<OrderBL> LoadOrdersForApprovalByCustomerId(int customerId)
+        {
+            string query = $" SELECT o.OrderID,o.CustomerID,u.Name AS CustomerName,o.OrderDate, o.TotalAmount,o.DesignDescription,d.DesignID,d.DesignFile, d.CreatedDate AS DesignCreatedDate, lt.LookupID,lt.LookupValue AS ApprovalStatus FROM  orders o JOIN  users u ON o.CustomerID = u.UserID JOIN designs d ON o.OrderID = d.OrderID JOIN lookuptable lt ON d.ApprovalStatusID = lt.LookupID WHERE d.ApprovalStatusID = 26 AND o.CustomerID = {customerId}";
 
+
+
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            List<OrderBL> orders = new List<OrderBL>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                UserBL customer = new UserBL(
+                    Convert.ToInt32(row["CustomerID"]),
+                    row["CustomerName"].ToString()
+                );
+
+                LookupBL approvalStatus = new LookupBL(
+                    Convert.ToInt32(row["LookupID"]),
+                    row["ApprovalStatus"].ToString()
+                );
+
+                DesignerBL dummyDesigner = new DesignerBL(); // Replace with real logic if needed
+
+                DesignBL design = new DesignBL(
+                    row["DesignFile"].ToString(),
+                    dummyDesigner,
+                    Convert.ToDateTime(row["DesignCreatedDate"]),
+                    approvalStatus
+                );
+
+                List<DesignBL> designs = new List<DesignBL> { design };
+                CustomersBL customersBL = new CustomersBL(customer);
+                OrderBL order = new OrderBL(
+                    Convert.ToInt32(row["OrderID"]),
+                    customersBL,
+                    Convert.ToDateTime(row["OrderDate"]),
+                    Convert.ToDecimal(row["TotalAmount"]),
+                    row["DesignDescription"].ToString(),
+                    designs
+                );
+
+                orders.Add(order);
+            }
+
+            return orders;
+        }
+        public static DataTable getproductsforApproval(int customerId)
+        {
+            string query = $"SELECTo.OrderID,o.OrderDate,o.TotalAmount,o.DesignDescription,d.DesignFile, lt.LookupValue AS ApprovalStatus  FROM orders o JOIN users u ON o.CustomerID = u.UserID JOIN designs d ON o.OrderID = d.OrderID JOIN lookuptable lt ON d.ApprovalStatusID = lt.LookupID WHERE d.ApprovalStatusID = 26 = {customerId } ";
+
+
+            DataTable dt = SqlHelper.getDataTable(query);
+            return dt;
+        }
         public static void ChangeOrderStatusByName(int orderId, string newStatusName)
         {
             // Step 1: Get LookupID from LookupTable using status name
@@ -329,6 +383,7 @@ namespace G_36_SmartPrint.DL
                     throw new Exception("Failed to insert order: " + ex.Message);
                 }
             }
+
         }
     }
 }

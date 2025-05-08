@@ -173,6 +173,56 @@ namespace G_36_SmartPrint.DL
 
             SqlHelper.executeDML(query, parameters);
         }
+        public static EmployeesBL LoadEmployeeById(int employeeID)
+        {
+            string query = @"
+        SELECT 
+            e.employeeID, e.positionID, e.hireDate, e.salary,
+            u.userID, u.username, u.passwordHash, u.email, u.name, u.phone_number, u.creationDate, u.roleID,
+            pos.lookupvalue AS positionName
+        FROM 
+            Employee e
+        INNER JOIN Users u ON e.userID = u.userID
+        INNER JOIN Lookuptable pos ON e.positionID = pos.lookupID
+        WHERE e.employeeID = @employeeID
+        LIMIT 1";
+
+            MySqlParameter[] parameters = new MySqlParameter[]
+            {
+        new MySqlParameter("@employeeID", employeeID)
+            };
+
+            DataTable dt = SqlHelper.getDataTable(query, parameters);
+
+            if (dt.Rows.Count == 1)
+            {
+                DataRow row = dt.Rows[0];
+
+                int userID = Convert.ToInt32(row["userID"]);
+                string username = row["username"].ToString();
+                string passwordHash = row["passwordHash"].ToString();
+                string email = row["email"].ToString();
+                string name = row["name"].ToString();
+                string phoneNumber = row["phone_number"].ToString();
+                DateTime creationDate = Convert.ToDateTime(row["creationDate"]);
+                DateTime hireDate = Convert.ToDateTime(row["hireDate"]);
+                float salary = Convert.ToSingle(row["salary"]);
+
+                int positionID = Convert.ToInt32(row["positionID"]);
+                string positionName = row["positionName"].ToString();
+                LookupBL position = new LookupBL(positionID, positionName);
+
+                int roleID = Convert.ToInt32(row["roleID"]);
+                LookupBL role = new LookupBL(roleID);
+
+                EmployeesBL emp = new EmployeesBL(employeeID, position, hireDate, salary,
+                                                  username, passwordHash, email, name, phoneNumber, creationDate, role);
+                emp.setuserID(userID);
+                return emp;
+            }
+
+            return null; // Employee not found
+        }
         public static void ChangeEmployeeSalary(int employeeID, float newSalary)
         {
             string query = @"

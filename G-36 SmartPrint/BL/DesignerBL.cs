@@ -11,7 +11,8 @@ namespace G_36_SmartPrint.BL
 {
     internal class DesignerBL:EmployeesBL
     { 
-       public int getdesignerId()
+        public DesignerBL() { }
+        public int getdesignerId()
         {
             return employeeID;
         }
