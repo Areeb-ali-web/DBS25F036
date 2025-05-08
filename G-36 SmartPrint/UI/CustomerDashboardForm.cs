@@ -40,7 +40,7 @@ namespace G_36_SmartPrint.UI
         private void InitializeDashboard()
         {
             SetActiveButton(btnDashboard);
-            LoadUserControl(new CustomerBoard(currentCustomerId));
+            LoadUserControl(new CustomerBoard());
         }
 
         private void AssignButtonEvents()
@@ -66,7 +66,7 @@ namespace G_36_SmartPrint.UI
                 switch (clickedButton.Name)
                 {
                     case "btnDashboard":
-                        LoadUserControl(new CustomerBoard(currentCustomerId));
+                        LoadUserControl(new CustomerBoard());
                         break;
                     case "btnOrder":
                         LoadUserControl(new Order());

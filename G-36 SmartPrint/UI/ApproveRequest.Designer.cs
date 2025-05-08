@@ -35,6 +35,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvRequests = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.orderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnReject = new Guna.UI2.WinForms.Guna2Button();
             this.btnApprove = new Guna.UI2.WinForms.Guna2Button();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
@@ -118,6 +119,8 @@
             this.dgvRequests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRequests.ColumnHeadersHeight = 40;
             this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvRequests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.orderID});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -157,6 +160,13 @@
             this.dgvRequests.ThemeStyle.RowsStyle.Height = 22;
             this.dgvRequests.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvRequests.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // orderID
+            // 
+            this.orderID.HeaderText = "Order ID";
+            this.orderID.MinimumWidth = 8;
+            this.orderID.Name = "orderID";
+            this.orderID.ReadOnly = true;
             // 
             // btnReject
             // 
@@ -210,7 +220,7 @@
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.Location = new System.Drawing.Point(45, 411);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(6);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.ReadOnly = true;
@@ -249,7 +259,7 @@
             this.txtItemName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtItemName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtItemName.Location = new System.Drawing.Point(40, 297);
-            this.txtItemName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtItemName.Margin = new System.Windows.Forms.Padding(6);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.PlaceholderText = "";
             this.txtItemName.ReadOnly = true;
@@ -288,7 +298,7 @@
             this.txtRole.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRole.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRole.Location = new System.Drawing.Point(40, 191);
-            this.txtRole.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtRole.Margin = new System.Windows.Forms.Padding(6);
             this.txtRole.Name = "txtRole";
             this.txtRole.PlaceholderText = "";
             this.txtRole.ReadOnly = true;
@@ -327,7 +337,7 @@
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Location = new System.Drawing.Point(45, 77);
-            this.txtName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtName.Margin = new System.Windows.Forms.Padding(6);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.ReadOnly = true;
@@ -383,5 +393,6 @@
         private Guna.UI2.WinForms.Guna2Button btnApprove;
         private Guna.UI2.WinForms.Guna2Button btnReject;
         private Guna.UI2.WinForms.Guna2DataGridView dgvRequests;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderID;
     }
 }

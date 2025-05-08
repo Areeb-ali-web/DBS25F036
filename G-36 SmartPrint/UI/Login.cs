@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using G_36_SmartPrint.BL;
 using G_36_SmartPrint.DL;
@@ -16,16 +8,17 @@ namespace G_36_SmartPrint.UI
     public partial class Login : UserControl
     {
         public LinkLabel ForgotPasswordLink { get; private set; }
+
         public Login()
         {
             InitializeComponent();
-
             ForgotPasswordLink = linkForgot;
         }
-       
+
         private void linkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            // Future implementation for forgot password
+            MessageBox.Show("Password recovery not yet implemented.");
         }
 
         private void TxtUsername_KeyDown(object sender, KeyEventArgs e)
@@ -37,35 +30,56 @@ namespace G_36_SmartPrint.UI
                 e.SuppressKeyPress = true;
             }
         }
+
         private void SelectNextInterface()
         {
+            if (LoginHelpers.currentuser == null || LoginHelpers.currentuser.getRole() == null)
+            {
+                MessageBox.Show("Invalid user role. Cannot proceed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             int role = LoginHelpers.currentuser.getRole().getLookupID();
-            if (role == 2)
+
+            if (role == 2) // Customer
             {
                 LoginHelpers.currentcustomer = new CustomersBL(LoginHelpers.currentuser);
-                
+
+                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
+                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 CustomerDashboardForm form = new CustomerDashboardForm();
                 form.Show();
-                this.Hide();
+                Form parentForm = this.FindForm();
+                if (parentForm != null) parentForm.Hide(); // Hide parent form
             }
-            MessageBox.Show("Login successful but your program has stuck behn chod!");
-
-
+            else
+            {
+                MessageBox.Show("Role not supported yet.");
+            }
         }
+
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            string username= this.TxtUsername.Text;
-            string password= this.TxtPassword.Text;
-            string email = this.guna2TextBox1.Text;
+            string username = TxtUsername.Text.Trim();
+            string password = TxtPassword.Text;
+            string email = guna2TextBox1.Text.Trim();
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Please fill in all login fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             LoginHelpers.currentuser = UserDL.UserLogin(username, email, password);
-          
-            if (LoginHelpers.currentuser.getRole().getLookupID() != null)
+
+            if (LoginHelpers.currentuser != null && LoginHelpers.currentuser.getRole() != null)
             {
                 SelectNextInterface();
             }
             else
             {
-                MessageBox.Show($"Login failed. Please check your username, email, and password.{LoginHelpers.currentuser.getUserName()}");
+                MessageBox.Show("Login failed. Please check your username, email, and password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

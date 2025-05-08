@@ -98,7 +98,10 @@ namespace G_36_SmartPrint.BL
                 totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
             }
         }
-
+        public void setDesignDesctiption(string description)
+        {
+            this.Designdescription = description;
+        }
         public decimal gettotalamount()
         {
             return totalAmount;

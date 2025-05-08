@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -58,9 +58,10 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 15, 20, 15);
-            this.panelHeader.Size = new System.Drawing.Size(800, 80);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 23, 30, 23);
+            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -70,9 +71,10 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblTitle.Location = new System.Drawing.Point(30, 23);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(309, 37);
+            this.lblTitle.Size = new System.Drawing.Size(454, 54);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Assign Delivery Orders";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,10 +95,11 @@
             this.mainPanel.Controls.Add(this.lblOrder);
             this.mainPanel.Controls.Add(this.lblDeliveryMan);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 80);
+            this.mainPanel.Location = new System.Drawing.Point(0, 123);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.mainPanel.Size = new System.Drawing.Size(800, 520);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
             // 
             // dgvDeliveryOrders
@@ -104,37 +107,39 @@
             this.dgvDeliveryOrders.AllowUserToAddRows = false;
             this.dgvDeliveryOrders.AllowUserToDeleteRows = false;
             this.dgvDeliveryOrders.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgvDeliveryOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvDeliveryOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDeliveryOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDeliveryOrders.BackgroundColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDeliveryOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDeliveryOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDeliveryOrders.ColumnHeadersHeight = 40;
             this.dgvDeliveryOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDeliveryOrders.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDeliveryOrders.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDeliveryOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDeliveryOrders.Location = new System.Drawing.Point(62, 347);
+            this.dgvDeliveryOrders.Location = new System.Drawing.Point(93, 534);
+            this.dgvDeliveryOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDeliveryOrders.Name = "dgvDeliveryOrders";
             this.dgvDeliveryOrders.ReadOnly = true;
             this.dgvDeliveryOrders.RowHeadersVisible = false;
+            this.dgvDeliveryOrders.RowHeadersWidth = 62;
             this.dgvDeliveryOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvDeliveryOrders.Size = new System.Drawing.Size(683, 153);
+            this.dgvDeliveryOrders.Size = new System.Drawing.Size(1024, 235);
             this.dgvDeliveryOrders.TabIndex = 14;
             this.dgvDeliveryOrders.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDeliveryOrders.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -169,9 +174,10 @@
             this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(565, 292);
+            this.btnClear.Location = new System.Drawing.Point(848, 449);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(120, 36);
+            this.btnClear.Size = new System.Drawing.Size(180, 55);
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Clear";
             // 
@@ -186,9 +192,10 @@
             this.btnAssign.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.btnAssign.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnAssign.ForeColor = System.Drawing.Color.White;
-            this.btnAssign.Location = new System.Drawing.Point(388, 292);
+            this.btnAssign.Location = new System.Drawing.Point(582, 449);
+            this.btnAssign.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(120, 36);
+            this.btnAssign.Size = new System.Drawing.Size(180, 55);
             this.btnAssign.TabIndex = 11;
             this.btnAssign.Text = "Assign";
             // 
@@ -204,11 +211,12 @@
             this.dtDeliveryDate.FocusedColor = System.Drawing.Color.White;
             this.dtDeliveryDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtDeliveryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDeliveryDate.Location = new System.Drawing.Point(388, 153);
+            this.dtDeliveryDate.Location = new System.Drawing.Point(582, 235);
+            this.dtDeliveryDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtDeliveryDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtDeliveryDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtDeliveryDate.Name = "dtDeliveryDate";
-            this.dtDeliveryDate.Size = new System.Drawing.Size(322, 36);
+            this.dtDeliveryDate.Size = new System.Drawing.Size(483, 55);
             this.dtDeliveryDate.TabIndex = 10;
             this.dtDeliveryDate.Value = new System.DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
@@ -228,12 +236,12 @@
             this.txtTrackingNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTrackingNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTrackingNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTrackingNumber.Location = new System.Drawing.Point(20, 204);
-            this.txtTrackingNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTrackingNumber.Location = new System.Drawing.Point(30, 314);
+            this.txtTrackingNumber.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtTrackingNumber.Name = "txtTrackingNumber";
             this.txtTrackingNumber.PlaceholderText = "";
             this.txtTrackingNumber.SelectedText = "";
-            this.txtTrackingNumber.Size = new System.Drawing.Size(322, 36);
+            this.txtTrackingNumber.Size = new System.Drawing.Size(483, 55);
             this.txtTrackingNumber.TabIndex = 9;
             // 
             // txtAddress
@@ -252,14 +260,14 @@
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(388, 56);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Location = new System.Drawing.Point(582, 86);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.ReadOnly = true;
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(322, 60);
+            this.txtAddress.Size = new System.Drawing.Size(483, 92);
             this.txtAddress.TabIndex = 8;
             // 
             // cmbOrder
@@ -277,9 +285,10 @@
             this.cmbOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbOrder.ItemHeight = 30;
-            this.cmbOrder.Location = new System.Drawing.Point(23, 130);
+            this.cmbOrder.Location = new System.Drawing.Point(34, 200);
+            this.cmbOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbOrder.Name = "cmbOrder";
-            this.cmbOrder.Size = new System.Drawing.Size(322, 36);
+            this.cmbOrder.Size = new System.Drawing.Size(481, 36);
             this.cmbOrder.TabIndex = 7;
             // 
             // cmbDeliveryMan
@@ -297,9 +306,10 @@
             this.cmbDeliveryMan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbDeliveryMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbDeliveryMan.ItemHeight = 30;
-            this.cmbDeliveryMan.Location = new System.Drawing.Point(23, 56);
+            this.cmbDeliveryMan.Location = new System.Drawing.Point(34, 86);
+            this.cmbDeliveryMan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbDeliveryMan.Name = "cmbDeliveryMan";
-            this.cmbDeliveryMan.Size = new System.Drawing.Size(322, 36);
+            this.cmbDeliveryMan.Size = new System.Drawing.Size(481, 36);
             this.cmbDeliveryMan.TabIndex = 6;
             // 
             // lblDeliveryDate
@@ -308,9 +318,10 @@
             this.lblDeliveryDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDeliveryDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeliveryDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDeliveryDate.Location = new System.Drawing.Point(395, 130);
+            this.lblDeliveryDate.Location = new System.Drawing.Point(592, 200);
+            this.lblDeliveryDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeliveryDate.Name = "lblDeliveryDate";
-            this.lblDeliveryDate.Size = new System.Drawing.Size(108, 20);
+            this.lblDeliveryDate.Size = new System.Drawing.Size(160, 30);
             this.lblDeliveryDate.TabIndex = 5;
             this.lblDeliveryDate.Text = "Delivery Date:";
             this.lblDeliveryDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -321,9 +332,10 @@
             this.lblTrackingNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblTrackingNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrackingNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblTrackingNumber.Location = new System.Drawing.Point(24, 179);
+            this.lblTrackingNumber.Location = new System.Drawing.Point(36, 275);
+            this.lblTrackingNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTrackingNumber.Name = "lblTrackingNumber";
-            this.lblTrackingNumber.Size = new System.Drawing.Size(147, 21);
+            this.lblTrackingNumber.Size = new System.Drawing.Size(220, 32);
             this.lblTrackingNumber.TabIndex = 4;
             this.lblTrackingNumber.Text = "Tracking Number:";
             this.lblTrackingNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -334,9 +346,10 @@
             this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblAddress.Location = new System.Drawing.Point(394, 35);
+            this.lblAddress.Location = new System.Drawing.Point(591, 54);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(74, 21);
+            this.lblAddress.Size = new System.Drawing.Size(113, 32);
             this.lblAddress.TabIndex = 3;
             this.lblAddress.Text = "Address:";
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,9 +361,10 @@
             this.lblOrder.BackColor = System.Drawing.Color.Transparent;
             this.lblOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblOrder.Location = new System.Drawing.Point(23, 106);
+            this.lblOrder.Location = new System.Drawing.Point(34, 163);
+            this.lblOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(58, 21);
+            this.lblOrder.Size = new System.Drawing.Size(88, 32);
             this.lblOrder.TabIndex = 2;
             this.lblOrder.Text = "Order:";
             this.lblOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -361,22 +375,24 @@
             this.lblDeliveryMan.BackColor = System.Drawing.Color.Transparent;
             this.lblDeliveryMan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeliveryMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDeliveryMan.Location = new System.Drawing.Point(23, 35);
+            this.lblDeliveryMan.Location = new System.Drawing.Point(34, 54);
+            this.lblDeliveryMan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeliveryMan.Name = "lblDeliveryMan";
-            this.lblDeliveryMan.Size = new System.Drawing.Size(134, 21);
+            this.lblDeliveryMan.Size = new System.Drawing.Size(200, 32);
             this.lblDeliveryMan.TabIndex = 1;
             this.lblDeliveryMan.Text = "DeliveryMan ID:";
             this.lblDeliveryMan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AssignDeliveryOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AssignDeliveryOrder";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(1200, 923);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);

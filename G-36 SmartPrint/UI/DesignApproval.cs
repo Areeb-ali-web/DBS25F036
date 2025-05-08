@@ -26,6 +26,7 @@ namespace G_36_SmartPrint.UI
 
         private void ConfigureDataGridView()
         {
+            // Enable double buffering to reduce flickering
             typeof(DataGridView).InvokeMember("DoubleBuffered",
                 System.Reflection.BindingFlags.NonPublic |
                 System.Reflection.BindingFlags.Instance |
@@ -34,7 +35,62 @@ namespace G_36_SmartPrint.UI
 
             dvgOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dvgOrders.MultiSelect = false;
-            // dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
+            dvgOrders.AutoGenerateColumns = false;
+            dvgOrders.BackgroundColor = Color.SkyBlue;
+
+            // Alternating rows style
+            DataGridViewCellStyle altStyle = new DataGridViewCellStyle
+            {
+                BackColor = Color.FromArgb(185, 226, 218)
+            };
+            dvgOrders.AlternatingRowsDefaultCellStyle = altStyle;
+
+            // Header style
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle
+            {
+                Alignment = DataGridViewContentAlignment.MiddleLeft,
+                BackColor = Color.FromArgb(22, 160, 133),
+                ForeColor = Color.White,
+                Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular),
+                SelectionBackColor = SystemColors.Highlight,
+                SelectionForeColor = SystemColors.HighlightText,
+                WrapMode = DataGridViewTriState.True
+            };
+            dvgOrders.ColumnHeadersDefaultCellStyle = headerStyle;
+            dvgOrders.ColumnHeadersHeight = 4;
+            dvgOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+
+            // Add custom columns
+            dvgOrders.Columns.Clear();
+            dvgOrders.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "OrderID",
+                HeaderText = "Order ID",
+                DataPropertyName = "OrderID",
+                Width = 80
+            });
+            dvgOrders.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "OrderDate",
+                HeaderText = "Order Date",
+                DataPropertyName = "OrderDate",
+                Width = 100
+            });
+            dvgOrders.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "TotalAmount",
+                HeaderText = "Total Amount",
+                DataPropertyName = "TotalAmount",
+                Width = 100,
+                DefaultCellStyle = { Format = "C2" }
+            });
+            dvgOrders.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "DesignDescription",
+                HeaderText = "Design Description",
+                DataPropertyName = "DesignDescription",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            });
         }
 
         private void LoadFormData()
@@ -42,40 +98,23 @@ namespace G_36_SmartPrint.UI
             try
             {
                 int customerId = LoginHelpers.currentcustomer.getUserID();
-                List<OrderBL> orders = OrderDL.LoadOrdersForApprovalByCustomerId(customerId);
-                dvgOrders.DataSource = orders;
+                orders = OrderDL.LoadOrdersForApprovalByCustomerId(customerId);
 
-
-                DataTable dt = new DataTable();
+                var dt = new DataTable();
                 dt.Columns.Add("OrderID", typeof(int));
+                dt.Columns.Add("OrderDate", typeof(DateTime));
                 dt.Columns.Add("TotalAmount", typeof(decimal));
                 dt.Columns.Add("DesignDescription", typeof(string));
-                dt.Columns.Add("DesignFile", typeof(string)); // For image loading
+                dt.Columns.Add("DesignFile", typeof(string)); // For image preview (hidden)
 
                 foreach (var order in orders)
                 {
                     string designFile = order.designs?.FirstOrDefault()?.designFile ?? string.Empty;
-                    dt.Rows.Add(order.getOrderID(), order.gettotalAmount(), order.getDesignDescription(), designFile);
+                    dt.Rows.Add(order.getOrderID(), order.getOrderDate(), order.gettotalAmount(), order.getDesignDescription(),designFile);
                 }
 
-                // ✅ First bind the DataTable
                 dvgOrders.DataSource = dt;
-
-                // ✅ Then format the columns safely
-                //if (dvgOrders.Columns["OrderID"] != null)
-                //    dvgOrders.Columns["OrderID"].HeaderText = "Order ID";
-
-                //if (dvgOrders.Columns["TotalAmount"] != null)
-                //{
-                //    dvgOrders.Columns["TotalAmount"].HeaderText = "Total Amount";
-                //    dvgOrders.Columns["TotalAmount"].DefaultCellStyle.Format = "C2";
-                //}
-
-                //if (dvgOrders.Columns["DesignDescription"] != null)
-                //    dvgOrders.Columns["DesignDescription"].HeaderText = "Design Description";
-
-                //if (dvgOrders.Columns["DesignFile"] != null)
-                    //dvgOrders.Columns["DesignFile"].Visible = false;
+                //dvgOrders.Columns["DesignFile"].Visible = false; // Optional hidden column
             }
             catch (Exception ex)
             {
@@ -93,6 +132,7 @@ namespace G_36_SmartPrint.UI
                 var row = dvgOrders.Rows[e.RowIndex];
                 int orderId = Convert.ToInt32(row.Cells["OrderID"].Value);
                 currentOrder = orders.FirstOrDefault(o => o.getOrderID() == orderId);
+                currentOrder = OrderDL.LoadOrderByOrderId(currentOrder.getOrderID());
                 if (currentOrder == null) return;
 
                 txtCustomerName.Text = LoginHelpers.currentcustomer.getUserName();
@@ -100,7 +140,7 @@ namespace G_36_SmartPrint.UI
                 txtQuantity.Text = $"Total Items: {currentOrder.getOrderDetails()?.Sum(od => od.getQuantity()) ?? 0}";
                 txtDescription.Text = currentOrder.getDesignDescription();
 
-                string imagePath = row.Cells["DesignFile"].Value?.ToString();
+                string imagePath = row.Cells["DesignFile"].ToString();
                 if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                 {
                     picDesign.Image = Image.FromFile(imagePath);
@@ -130,7 +170,7 @@ namespace G_36_SmartPrint.UI
             {
                 OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Approved");
                 MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadFormData(); // Refresh list
+                LoadFormData();
             }
             catch (Exception ex)
             {
@@ -150,7 +190,7 @@ namespace G_36_SmartPrint.UI
             {
                 OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Rejected");
                 MessageBox.Show("Order rejected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadFormData(); // Refresh list
+                LoadFormData();
             }
             catch (Exception ex)
             {
@@ -158,19 +198,10 @@ namespace G_36_SmartPrint.UI
             }
         }
 
-        private void panelHeader_Paint(object sender, PaintEventArgs e)
-        {
-            // Optional: custom header styling
-        }
+        private void panelHeader_Paint(object sender, PaintEventArgs e) { }
 
-        private void dvgOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Reserved for future enhancements
-        }
+        private void dvgOrders_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
-        private void dvgOrders_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        private void panelHeader_Paint_1(object sender, PaintEventArgs e) { }
     }
 }
