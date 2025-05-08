@@ -19,18 +19,22 @@ namespace G_36_SmartPrint.UI
         public Order()
         {
             InitializeComponent();
-            
-        }
-
-        private void btnAddCart_Click(object sender, EventArgs e)
-        {
             CheckOut checkOutControl = new CheckOut();
-            this.Controls.Add(checkOutControl); 
-            checkOutControl.BringToFront(); 
+            this.Controls.Add(checkOutControl);
+            checkOutControl.BringToFront();
             checkOutControl.CenterOnScreen(this);
             cbProduct.DataSource = ProductDL.LoadProducts();
             cbProduct.DisplayMember = "ProductName";
             cbProduct.ValueMember = "ProductID";
+
+
+             // Hide the Product column
+        }
+
+        private void btnAddCart_Click(object sender, EventArgs e)
+        {
+           
+
 
 
             txtCustomerName.Text = LoginHelpers.currentuser.getUserName();
@@ -47,17 +51,8 @@ namespace G_36_SmartPrint.UI
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            guna2DataGridView1.DataSource = oders;
-            guna2DataGridView1.Columns["Product"].HeaderText = "Product Name";
-            guna2DataGridView1.Columns["Product"].DisplayIndex = 0;
-            guna2DataGridView1.Columns["Quantity"].HeaderText = "Quantity";
-            guna2DataGridView1.Columns["Quantity"].DisplayIndex = 1;
-            guna2DataGridView1.Columns["Product"].Width = 200;
-            guna2DataGridView1.Columns["Quantity"].Width = 100;
-            guna2DataGridView1.Columns["Product"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            guna2DataGridView1.Columns["Quantity"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            guna2DataGridView1.Columns["Product"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-          
+
+
         }
     }
 }

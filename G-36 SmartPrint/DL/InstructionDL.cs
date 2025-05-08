@@ -1,107 +1,114 @@
-﻿using System;
+﻿using G_36_SmartPrint.BL;
+using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using G_36_SmartPrint.BL;
-using MySqlConnector;
 
 namespace G_36_SmartPrint.DL
 {
     internal class InstructionDL
     {
-        public static List<Instructions> LoadAllInstructions()
+        // Load all instructions
+        public static List<InstructionBL> LoadAllInstructions()
         {
-            List<Instructions> instructionList = new List<Instructions>();
-            string query = "SELECT * FROM instructions";
+            List<InstructionBL> instructions = new List<InstructionBL>();
+            string query = @"SELECT i.InstructionID, i.AdminID, i.EmployeeID, i.InstructionText, i.SentDate,
+                             u.UserName AS AdminName, e.EmployeeName AS EmployeeName
+                             FROM instructions i
+                             JOIN users u ON i.AdminID = u.UserID
+                             JOIN employees e ON i.EmployeeID = e.EmployeeID";
 
             DataTable dt = SqlHelper.getDataTable(query);
-
             foreach (DataRow row in dt.Rows)
             {
-                int instructionId = Convert.ToInt32(row["InstructionID"]);
-                int adminId = Convert.ToInt32(row["AdminID"]);
-                int employeeId = Convert.ToInt32(row["EmployeeID"]);
-                string instructionText = row["InstructionText"].ToString();
-                DateTime sentDate = Convert.ToDateTime(row["SentDate"]);
-
-                UserBL admin = UserDL.LoadUserById(adminId);
-                EmployeesBL employee = EmployeeDL.LoadEmployeeById(employeeId);
-
-                Instructions instruction = new Instructions(instructionId, admin, employee, instructionText, sentDate);
-                instructionList.Add(instruction);
+                InstructionBL instruction = new InstructionBL(
+                    Convert.ToInt32(row["InstructionID"]),
+                    new UserBL(Convert.ToInt32(row["AdminID"]), row["AdminName"].ToString()),
+                    new EmployeesBL(Convert.ToInt32(row["EmployeeID"]), row["EmployeeName"].ToString()),
+                    row["InstructionText"].ToString(),
+                    Convert.ToDateTime(row["SentDate"])
+                );
+                instructions.Add(instruction);
             }
-
-            return instructionList;
+            return instructions;
         }
-        public static List<Instructions> LoadInstructionsByEmployeeId(int employeeId)
+
+        // Load by AdminID
+        public static List<InstructionBL> LoadInstructionsByAdminId(int adminId)
         {
-            List<Instructions> instructionList = new List<Instructions>();
-            string query = "SELECT * FROM instructions WHERE EmployeeID = @employeeId";
+            string query = @"SELECT i.*, u.UserName AS AdminName, e.EmployeeName AS EmployeeName
+                             FROM instructions i
+                             JOIN users u ON i.AdminID = u.UserID
+                             JOIN employees e ON i.EmployeeID = e.EmployeeID
+                             WHERE i.AdminID = @adminId";
 
-            MySqlParameter[] parameters = new MySqlParameter[]
-            {
-                new MySqlParameter("@employeeId", employeeId)
-            };
+            MySqlParameter[] param = { new MySqlParameter("@adminId", adminId) };
+            DataTable dt = SqlHelper.getDataTable(query, param);
 
-            DataTable dt = SqlHelper.getDataTable(query, parameters);
-
+            List<InstructionBL> instructions = new List<InstructionBL>();
             foreach (DataRow row in dt.Rows)
             {
-                int instructionId = Convert.ToInt32(row["InstructionID"]);
-                int adminId = Convert.ToInt32(row["AdminID"]);
-                string instructionText = row["InstructionText"].ToString();
-                DateTime sentDate = Convert.ToDateTime(row["SentDate"]);
-
-                UserBL admin = UserDL.LoadUserById(adminId);
-                EmployeesBL employee = EmployeeDL.LoadEmployeeById(employeeId);
-
-                Instructions instruction = new Instructions(instructionId, admin, employee, instructionText, sentDate);
-                instructionList.Add(instruction);
+                InstructionBL instruction = new InstructionBL(
+                    Convert.ToInt32(row["InstructionID"]),
+                    new UserBL(Convert.ToInt32(row["AdminID"]), row["AdminName"].ToString()),
+                    new EmployeesBL(Convert.ToInt32(row["EmployeeID"]), row["EmployeeName"].ToString()),
+                    row["InstructionText"].ToString(),
+                    Convert.ToDateTime(row["SentDate"])
+                );
+                instructions.Add(instruction);
             }
-
-            return instructionList;
+            return instructions;
         }
-        public static List<Instructions> LoadInstructionsByAdminId(int adminId)
+
+        // Load by EmployeeID
+        public static List<InstructionBL> LoadInstructionsByEmployeeId(int employeeId)
         {
-            List<Instructions> instructionList = new List<Instructions>();
-            string query = "SELECT * FROM instructions WHERE AdminID = @adminId";
+            string query = @"SELECT i.*, u.UserName AS AdminName, e.EmployeeName AS EmployeeName
+                             FROM instructions i
+                             JOIN users u ON i.AdminID = u.UserID
+                             JOIN employees e ON i.EmployeeID = e.EmployeeID
+                             WHERE i.EmployeeID = @employeeId";
 
-            MySqlParameter[] parameters = new MySqlParameter[]
-            {
-                new MySqlParameter("@adminId", adminId)
-            };
+            MySqlParameter[] param = { new MySqlParameter("@employeeId", employeeId) };
+            DataTable dt = SqlHelper.getDataTable(query, param);
 
-            DataTable dt = SqlHelper.getDataTable(query, parameters);
-
+            List<InstructionBL> instructions = new List<InstructionBL>();
             foreach (DataRow row in dt.Rows)
             {
-                int instructionId = Convert.ToInt32(row["InstructionID"]);
-                int employeeId = Convert.ToInt32(row["EmployeeID"]);
-                string instructionText = row["InstructionText"].ToString();
-                DateTime sentDate = Convert.ToDateTime(row["SentDate"]);
-
-                UserBL admin = UserDL.LoadUserById(adminId);
-                EmployeesBL employee = EmployeeDL.LoadEmployeeById(employeeId);
-
-                Instructions instruction = new Instructions(instructionId, admin, employee, instructionText, sentDate);
-                instructionList.Add(instruction);
+                InstructionBL instruction = new InstructionBL(
+                    Convert.ToInt32(row["InstructionID"]),
+                    new UserBL(Convert.ToInt32(row["AdminID"]), row["AdminName"].ToString()),
+                    new EmployeesBL(Convert.ToInt32(row["EmployeeID"]), row["EmployeeName"].ToString()),
+                    row["InstructionText"].ToString(),
+                    Convert.ToDateTime(row["SentDate"])
+                );
+                instructions.Add(instruction);
             }
-
-            return instructionList;
+            return instructions;
         }
-        public static void InsertInstruction(Instructions instruction)
+
+        // Insert a new instruction
+        public static void InsertInstruction(InstructionBL instruction)
         {
             string query = @"INSERT INTO instructions (AdminID, EmployeeID, InstructionText, SentDate)
-                             VALUES (@adminId, @employeeId, @instructionText, @sentDate)";
+                             VALUES (@adminId, @employeeId, @text, @date)";
 
-            MySqlParameter[] parameters = new MySqlParameter[]
-            {
-                new MySqlParameter("@adminId", instruction.Admin.getuserID()),
-                new MySqlParameter("@employeeId", instruction.Employee.getEmployeeID()),
-                new MySqlParameter("@instructionText", instruction.InstructionText),
-                new MySqlParameter("@sentDate", instruction.SentDate)
+            MySqlParameter[] param = {
+                new MySqlParameter("@adminId", instruction.getAdmin().getUserID()),
+                new MySqlParameter("@employeeId", instruction.getEmployee().getEmployeeID()),
+                new MySqlParameter("@text", instruction.getInstructionText()),
+                new MySqlParameter("@date", instruction.getSentDate())
             };
 
-            SqlHelper.executeDML(query, parameters);
+            SqlHelper.executeDML(query, param);
+        }
+
+        // Delete instruction by InstructionID
+        public static void DeleteInstructionById(int instructionId)
+        {
+            string query = "DELETE FROM instructions WHERE InstructionID = @id";
+            MySqlParameter[] param = { new MySqlParameter("@id", instructionId) };
+            SqlHelper.executeDML(query, param);
         }
     }
 }

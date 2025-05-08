@@ -20,7 +20,7 @@ namespace G_36_SmartPrint.DL
             {
                 int ProductID = Convert.ToInt32(dr["Productid"]);
                 string Productname = dr["name"].ToString();
-                string Description = dr["Discription"].ToString();
+                string Description = dr["Description"].ToString();
                 decimal price = Convert.ToDecimal( dr["price"]);
 
              
