@@ -36,8 +36,8 @@
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvAssignedOrders = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Orderid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DesignDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DesignSatatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelHeader.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssignedOrders)).BeginInit();
@@ -100,8 +100,8 @@
             this.dgvAssignedOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvAssignedOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Orderid,
-            this.CustomerName,
-            this.DesignDescription});
+            this.DesignDescription,
+            this.DesignSatatus});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -150,19 +150,19 @@
             this.Orderid.Name = "Orderid";
             this.Orderid.ReadOnly = true;
             // 
-            // CustomerName
-            // 
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.MinimumWidth = 8;
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            // 
             // DesignDescription
             // 
-            this.DesignDescription.HeaderText = "Column1";
+            this.DesignDescription.HeaderText = "Design Description";
             this.DesignDescription.MinimumWidth = 8;
             this.DesignDescription.Name = "DesignDescription";
             this.DesignDescription.ReadOnly = true;
+            // 
+            // DesignSatatus
+            // 
+            this.DesignSatatus.HeaderText = "Design Status";
+            this.DesignSatatus.MinimumWidth = 8;
+            this.DesignSatatus.Name = "DesignSatatus";
+            this.DesignSatatus.ReadOnly = true;
             // 
             // DesignerViewAssignOrders
             // 
@@ -188,7 +188,7 @@
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
         private Guna.UI2.WinForms.Guna2DataGridView dgvAssignedOrders;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orderid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn DesignDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DesignSatatus;
     }
 }
