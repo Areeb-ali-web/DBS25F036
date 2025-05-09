@@ -22,6 +22,10 @@ namespace G_36_SmartPrint.BL
         private string Designdescription;
         public List<DesignBL> designs;
         public OrderBL() { }
+        public OrderBL(int orderid)
+        {
+            this.orderID = orderid;
+        }
 
         public OrderBL(int orderid,CustomersBL customer,DateTime orderdate,decimal ammount,string description,List<DesignBL> design)
         {

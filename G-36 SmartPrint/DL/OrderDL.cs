@@ -368,12 +368,12 @@ namespace G_36_SmartPrint.DL
                         feedback
                     );
 
-                    currentOrder.setDesignDescription(row["DesignDescription"].ToString());
+                    currentOrder.setDesignDesctiption(row["DesignDescription"].ToString());
                     currentOrder.setOrderStatus(orderStatus);
 
                     // Load only designs made by the specified designer for this order
                     List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId)
-                        .FindAll(d => d.getDesigner() != null && d.getDesigner().getDesignerID() == designerId);
+                        .FindAll(d => d.designer != null && d.designer.getdesignerId() == designerId);
 
                     currentOrder.setDesigns(designs);
 

@@ -37,6 +37,7 @@
             this.dgvAssignedOrders = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Orderid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DesignDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DesignFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DesignSatatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelHeader.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -80,6 +81,7 @@
             this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
             this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // dgvAssignedOrders
             // 
@@ -101,6 +103,7 @@
             this.dgvAssignedOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Orderid,
             this.DesignDescription,
+            this.DesignFile,
             this.DesignSatatus});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -142,6 +145,7 @@
             this.dgvAssignedOrders.ThemeStyle.RowsStyle.Height = 30;
             this.dgvAssignedOrders.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAssignedOrders.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvAssignedOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssignedOrders_CellContentClick);
             // 
             // Orderid
             // 
@@ -156,6 +160,13 @@
             this.DesignDescription.MinimumWidth = 8;
             this.DesignDescription.Name = "DesignDescription";
             this.DesignDescription.ReadOnly = true;
+            // 
+            // DesignFile
+            // 
+            this.DesignFile.HeaderText = "Design File";
+            this.DesignFile.MinimumWidth = 8;
+            this.DesignFile.Name = "DesignFile";
+            this.DesignFile.ReadOnly = true;
             // 
             // DesignSatatus
             // 
@@ -189,6 +200,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvAssignedOrders;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orderid;
         private System.Windows.Forms.DataGridViewTextBoxColumn DesignDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DesignFile;
         private System.Windows.Forms.DataGridViewTextBoxColumn DesignSatatus;
     }
 }
