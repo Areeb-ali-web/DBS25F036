@@ -23,6 +23,11 @@ namespace G_36_SmartPrint.UI
 
             dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Project
 
         private void ConfigureDataGridView()
         {
@@ -168,8 +173,15 @@ namespace G_36_SmartPrint.UI
 
             try
             {
+<<<<<<< HEAD
                 OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Approved");
                 MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+=======
+                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "manufactured");
+                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.getOrderID(),22);
+                MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+>>>>>>> Project
                 LoadFormData();
             }
             catch (Exception ex)
@@ -188,7 +200,12 @@ namespace G_36_SmartPrint.UI
 
             try
             {
+<<<<<<< HEAD
                 OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Rejected");
+=======
+                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "being_designed");
+                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.getOrderID(), 23);
+>>>>>>> Project
                 MessageBox.Show("Order rejected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadFormData();
             }
@@ -203,5 +220,14 @@ namespace G_36_SmartPrint.UI
         private void dvgOrders_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void panelHeader_Paint_1(object sender, PaintEventArgs e) { }
+<<<<<<< HEAD
+=======
+
+        private void btnApprove_Click_1(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
+>>>>>>> Project
     }
 }

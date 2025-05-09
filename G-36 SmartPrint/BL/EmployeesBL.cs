@@ -57,6 +57,10 @@ namespace G_36_SmartPrint.BL
         {
             base.setuserID(userID);
         }
+        public LookupBL GetPosition()
+        {
+            return Position;
+        }
         public virtual List<EmployeesBL> loademployee()
         {
             List<EmployeesBL> employees = EmployeeDL.LoadAllEmployees();
