@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using G_36_SmartPrint.BL;
 using G_36_SmartPrint.DL;
+using Mysqlx.Datatypes;
 
 namespace G_36_SmartPrint.UI
 {
@@ -16,7 +18,52 @@ namespace G_36_SmartPrint.UI
         public ManagerViewOrders()
         {
             InitializeComponent();
-           dgvRequests.DataSource = OrderDL.LoadAllOrders();
+            this.Load += DesignerViewSalary_Load;
+        }
+
+        private void DesignerViewSalary_Load(object sender, EventArgs e)
+        {
+            LoadDesignerSalaries();
+
+        }
+        private void LoadDesignerSalaries()
+        {
+            try
+            {
+                
+                
+
+                
+
+                // ✅ FIX: Confirm method LoadSalariesByEmployeeId exists and returns a list
+                List<OrderBL> orders = OrderDL.LoadAllOrders();
+
+                dgvRequests.Rows.Clear();
+                dgvRequests.Columns.Clear();
+
+                dgvRequests.Columns.Add("OrderID", "Order ID");
+                dgvRequests.Columns.Add("Amount", "Amount");
+                dgvRequests.Columns.Add("DessignDescription", "DesignDescription");
+                dgvRequests.Columns.Add("Products", "Products");
+                dgvRequests.Columns.Add("Status", "Status");
+                dgvRequests.Columns.Add("orderDate", "OrderDate");
+
+                foreach (var order in orders)
+                {
+                    dgvRequests.Rows.Add(
+                        order.getOrderID(),
+                        order.gettotalAmount().ToString("C"), // Currency formatting based on system locale
+                        order.getDesignDescription(),
+                        order.allOrders(),
+                        order.getOrderStatus()?.getLookupValue() ?? "Unknown", // ✅ NULL check
+                        order.getOrderDate().ToString("yyyy-MM-dd")
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading salary data:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)

@@ -19,7 +19,10 @@ namespace G_36_SmartPrint.UI
             InitializeComponent();
             dgvAssignedOrders.Rows.Clear(); // Clear any existing rows
 
+
+
             List<DesignBL> designs = DesignDL.LoadDesignsByDesignerID(LoginHelpers.currentEmployee.getEmployeeID());
+
             foreach(DesignBL db in designs)
             {
                 db.order = OrderDL.LoadOrderByOrderId(db.order.getOrderID());

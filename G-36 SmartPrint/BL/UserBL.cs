@@ -129,7 +129,7 @@ namespace G_36_SmartPrint.BL
 
         public void setemail(string email) { this.Email = email; }
         public void setpassword(string password) { this.PasswordHash = password; }
-
+        public void setUserName(string userName) { this.UserName = userName; }
         public void setRole(LookupBL role) { this.Role = role; }
 
         public int getuserID()

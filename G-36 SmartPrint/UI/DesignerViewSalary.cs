@@ -21,9 +21,9 @@ namespace G_36_SmartPrint.UI
 
         private void LoadDesignerSalaries()
         {
+
             try
             {
-                txtDesignerName.Text = LoginHelpers.currentuser.getUserName();
                 // ✅ FIX: Make sure currentEmployee is not null and getEmployeeID() is accessible
                 if (LoginHelpers.currentEmployee == null)
                 {
@@ -34,7 +34,10 @@ namespace G_36_SmartPrint.UI
                 int designerId = LoginHelpers.currentEmployee.getEmployeeID();
 
                 // ✅ FIX: Confirm method LoadSalariesByEmployeeId exists and returns a list
+           
+
                 List<SalaryPaymentBL> salaries = Salary_PaymentDL.LoadSalariesByEmployeeId(LoginHelpers.currentEmployee.getEmployeeID());
+
 
                 dgvSalaryStatus.Rows.Clear();
                 dgvSalaryStatus.Columns.Clear();
@@ -65,12 +68,19 @@ namespace G_36_SmartPrint.UI
             // You can add header styling here if needed
         }
 
+
         private void txtDesignerName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+
         private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvSalaryStatus_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

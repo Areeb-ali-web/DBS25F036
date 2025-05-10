@@ -16,5 +16,10 @@ namespace G_36_SmartPrint.UI
         {
             InitializeComponent();
         }
+
+        private void dgvAssignedOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

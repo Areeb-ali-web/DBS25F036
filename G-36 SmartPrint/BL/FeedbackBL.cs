@@ -13,6 +13,7 @@ namespace G_36_SmartPrint.BL
         private int rating;
         private string comment;
         private DateTime feedabckdate;
+        public UserBL customer;
 
         public FeedbackBL(int feedbackId, int rating, string comment, DateTime feedabckdate)
         {

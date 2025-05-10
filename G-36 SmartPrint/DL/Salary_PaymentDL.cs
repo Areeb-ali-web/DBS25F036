@@ -35,6 +35,7 @@ namespace G_36_SmartPrint.DL
             string query = @"
                 SELECT 
                     sp.PaymentID,
+                    ep.employeeid,
                     sp.Amount,
                     sp.PaymentDate,
                     l.LookupID AS SalaryStatusID,
@@ -58,6 +59,7 @@ namespace G_36_SmartPrint.DL
                     Convert.ToDateTime(row["PaymentDate"]),
                     status
                 );
+                salary.employee = EmployeeDL.LoadEmployeeById(Convert.ToInt32(row["employeeid"]));
 
                 salaries.Add(salary);
             }

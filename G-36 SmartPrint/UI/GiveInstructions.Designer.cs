@@ -48,9 +48,24 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(800, 76);
+ 
             this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(1200, 117);
+ 
+ 
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1200, 117);
+ 
+ 
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1200, 117);
+ 
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -59,10 +74,31 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
+
+
+ 
+ 
+            this.lblTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(255, 41);
+ 
             this.lblTitle.Location = new System.Drawing.Point(30, 23);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(375, 60);
+ 
+ 
+            this.lblTitle.Location = new System.Drawing.Point(30, 23);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(375, 60);
+ 
+ 
+            this.lblTitle.Location = new System.Drawing.Point(30, 23);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(375, 60);
+ 
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Give Instructions";
             // 
@@ -80,11 +116,34 @@
             this.mainPanel.Controls.Add(this.lblManagerName);
             this.mainPanel.Controls.Add(this.lblAdminName);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+ 
+ 
+ 
+            this.mainPanel.Location = new System.Drawing.Point(0, 76);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
+            this.mainPanel.Size = new System.Drawing.Size(800, 524);
+ 
             this.mainPanel.Location = new System.Drawing.Point(0, 117);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
             this.mainPanel.Size = new System.Drawing.Size(1200, 806);
+ 
+ 
+            this.mainPanel.Location = new System.Drawing.Point(0, 117);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 806);
+ 
+ 
+            this.mainPanel.Location = new System.Drawing.Point(0, 117);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 806);
+ 
             this.mainPanel.TabIndex = 1;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -121,6 +180,15 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInstructions.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvInstructions.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+ 
+ 
+ 
+            this.dgvInstructions.Location = new System.Drawing.Point(23, 315);
+            this.dgvInstructions.Name = "dgvInstructions";
+            this.dgvInstructions.ReadOnly = true;
+            this.dgvInstructions.RowHeadersVisible = false;
+            this.dgvInstructions.Size = new System.Drawing.Size(754, 186);
+ 
             this.dgvInstructions.Location = new System.Drawing.Point(34, 485);
             this.dgvInstructions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvInstructions.Name = "dgvInstructions";
@@ -128,6 +196,25 @@
             this.dgvInstructions.RowHeadersVisible = false;
             this.dgvInstructions.RowHeadersWidth = 62;
             this.dgvInstructions.Size = new System.Drawing.Size(1131, 286);
+ 
+ 
+            this.dgvInstructions.Location = new System.Drawing.Point(34, 485);
+            this.dgvInstructions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvInstructions.Name = "dgvInstructions";
+            this.dgvInstructions.ReadOnly = true;
+            this.dgvInstructions.RowHeadersVisible = false;
+            this.dgvInstructions.RowHeadersWidth = 62;
+            this.dgvInstructions.Size = new System.Drawing.Size(1131, 286);
+ 
+ 
+            this.dgvInstructions.Location = new System.Drawing.Point(34, 485);
+            this.dgvInstructions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvInstructions.Name = "dgvInstructions";
+            this.dgvInstructions.ReadOnly = true;
+            this.dgvInstructions.RowHeadersVisible = false;
+            this.dgvInstructions.RowHeadersWidth = 62;
+            this.dgvInstructions.Size = new System.Drawing.Size(1131, 286);
+ 
             this.dgvInstructions.TabIndex = 10;
             this.dgvInstructions.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvInstructions.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -163,10 +250,30 @@
             this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
+ 
+ 
+ 
+            this.btnClear.Location = new System.Drawing.Point(592, 222);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(120, 36);
+ 
             this.btnClear.Location = new System.Drawing.Point(888, 342);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(180, 55);
+ 
+ 
+            this.btnClear.Location = new System.Drawing.Point(888, 342);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(180, 55);
+ 
+ 
+            this.btnClear.Location = new System.Drawing.Point(888, 342);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(180, 55);
+ 
             this.btnClear.TabIndex = 9;
             this.btnClear.Text = "Clear";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -182,10 +289,30 @@
             this.btnSend.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.btnSend.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnSend.ForeColor = System.Drawing.Color.White;
+ 
+ 
+ 
+            this.btnSend.Location = new System.Drawing.Point(402, 222);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(120, 36);
+ 
             this.btnSend.Location = new System.Drawing.Point(603, 342);
             this.btnSend.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(180, 55);
+ 
+ 
+            this.btnSend.Location = new System.Drawing.Point(603, 342);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(180, 55);
+ 
+ 
+            this.btnSend.Location = new System.Drawing.Point(603, 342);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(180, 55);
+ 
             this.btnSend.TabIndex = 8;
             this.btnSend.Text = "Send";
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -202,12 +329,38 @@
             this.dtpSendDate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpSendDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.dtpSendDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+ 
+ 
+ 
+            this.dtpSendDate.Location = new System.Drawing.Point(23, 222);
+            this.dtpSendDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpSendDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpSendDate.Name = "dtpSendDate";
+            this.dtpSendDate.Size = new System.Drawing.Size(252, 36);
+ 
             this.dtpSendDate.Location = new System.Drawing.Point(34, 342);
             this.dtpSendDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpSendDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpSendDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpSendDate.Name = "dtpSendDate";
             this.dtpSendDate.Size = new System.Drawing.Size(378, 55);
+ 
+ 
+            this.dtpSendDate.Location = new System.Drawing.Point(34, 342);
+            this.dtpSendDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpSendDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpSendDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpSendDate.Name = "dtpSendDate";
+            this.dtpSendDate.Size = new System.Drawing.Size(378, 55);
+ 
+ 
+            this.dtpSendDate.Location = new System.Drawing.Point(34, 342);
+            this.dtpSendDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpSendDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpSendDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpSendDate.Name = "dtpSendDate";
+            this.dtpSendDate.Size = new System.Drawing.Size(378, 55);
+ 
             this.dtpSendDate.TabIndex = 7;
             this.dtpSendDate.Value = new System.DateTime(2023, 11, 15, 0, 0, 0, 0);
             // 
@@ -228,13 +381,40 @@
             this.txtInstructions.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtInstructions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtInstructions.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+ 
+ 
+ 
+            this.txtInstructions.Location = new System.Drawing.Point(402, 58);
+            this.txtInstructions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+ 
             this.txtInstructions.Location = new System.Drawing.Point(603, 89);
             this.txtInstructions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+ 
+ 
+            this.txtInstructions.Location = new System.Drawing.Point(603, 89);
+            this.txtInstructions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+ 
+ 
+            this.txtInstructions.Location = new System.Drawing.Point(603, 89);
+            this.txtInstructions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+ 
             this.txtInstructions.Multiline = true;
             this.txtInstructions.Name = "txtInstructions";
             this.txtInstructions.PlaceholderText = "Instructions";
             this.txtInstructions.SelectedText = "";
+ 
+ 
+ 
+            this.txtInstructions.Size = new System.Drawing.Size(319, 100);
+ 
             this.txtInstructions.Size = new System.Drawing.Size(478, 154);
+ 
+ 
+            this.txtInstructions.Size = new System.Drawing.Size(478, 154);
+ 
+ 
+            this.txtInstructions.Size = new System.Drawing.Size(478, 154);
+ 
             this.txtInstructions.TabIndex = 6;
             // 
             // cmbManagerName
@@ -257,12 +437,33 @@
             "Manager 2",
             "Manager 3",
             "Manager 4"});
+ 
+ 
+ 
+            this.cmbManagerName.Location = new System.Drawing.Point(23, 146);
+ 
+            this.cmbManagerName.Location = new System.Drawing.Point(34, 225);
+            this.cmbManagerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+ 
+            this.cmbManagerName.Name = "cmbManagerName";
+            this.cmbManagerName.Size = new System.Drawing.Size(376, 36);
+            this.cmbManagerName.TabIndex = 5;
+ 
             this.cmbManagerName.Location = new System.Drawing.Point(34, 225);
             this.cmbManagerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbManagerName.Name = "cmbManagerName";
             this.cmbManagerName.Size = new System.Drawing.Size(376, 36);
             this.cmbManagerName.TabIndex = 5;
             this.cmbManagerName.SelectedIndexChanged += new System.EventHandler(this.cmbManagerName_SelectedIndexChanged);
+ 
+ 
+            this.cmbManagerName.Location = new System.Drawing.Point(34, 225);
+            this.cmbManagerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbManagerName.Name = "cmbManagerName";
+            this.cmbManagerName.Size = new System.Drawing.Size(376, 36);
+            this.cmbManagerName.TabIndex = 5;
+            this.cmbManagerName.SelectedIndexChanged += new System.EventHandler(this.cmbManagerName_SelectedIndexChanged);
+ 
             // 
             // txtAdminName
             // 
@@ -281,13 +482,40 @@
             this.txtAdminName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtAdminName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtAdminName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+ 
+ 
+ 
+            this.txtAdminName.Location = new System.Drawing.Point(23, 58);
+            this.txtAdminName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+ 
             this.txtAdminName.Location = new System.Drawing.Point(34, 89);
             this.txtAdminName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+ 
+ 
+            this.txtAdminName.Location = new System.Drawing.Point(34, 89);
+            this.txtAdminName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+ 
+ 
+            this.txtAdminName.Location = new System.Drawing.Point(34, 89);
+            this.txtAdminName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+ 
             this.txtAdminName.Name = "txtAdminName";
             this.txtAdminName.PlaceholderText = "";
             this.txtAdminName.ReadOnly = true;
             this.txtAdminName.SelectedText = "";
+ 
+ 
+ 
+            this.txtAdminName.Size = new System.Drawing.Size(252, 36);
+ 
             this.txtAdminName.Size = new System.Drawing.Size(378, 55);
+ 
+ 
+            this.txtAdminName.Size = new System.Drawing.Size(378, 55);
+ 
+ 
+            this.txtAdminName.Size = new System.Drawing.Size(378, 55);
+ 
             this.txtAdminName.TabIndex = 4;
             // 
             // lblSendDate
@@ -296,10 +524,30 @@
             this.lblSendDate.BackColor = System.Drawing.Color.Transparent;
             this.lblSendDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblSendDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+ 
+ 
+ 
+            this.lblSendDate.Location = new System.Drawing.Point(23, 198);
+            this.lblSendDate.Name = "lblSendDate";
+            this.lblSendDate.Size = new System.Drawing.Size(92, 21);
+ 
             this.lblSendDate.Location = new System.Drawing.Point(34, 305);
             this.lblSendDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSendDate.Name = "lblSendDate";
             this.lblSendDate.Size = new System.Drawing.Size(137, 32);
+ 
+ 
+            this.lblSendDate.Location = new System.Drawing.Point(34, 305);
+            this.lblSendDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSendDate.Name = "lblSendDate";
+            this.lblSendDate.Size = new System.Drawing.Size(137, 32);
+ 
+ 
+            this.lblSendDate.Location = new System.Drawing.Point(34, 305);
+            this.lblSendDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSendDate.Name = "lblSendDate";
+            this.lblSendDate.Size = new System.Drawing.Size(137, 32);
+ 
             this.lblSendDate.TabIndex = 3;
             this.lblSendDate.Text = "Send Date:";
             // 
@@ -309,10 +557,30 @@
             this.lblInstructions.BackColor = System.Drawing.Color.Transparent;
             this.lblInstructions.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblInstructions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+ 
+ 
+ 
+            this.lblInstructions.Location = new System.Drawing.Point(398, 33);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(104, 21);
+ 
             this.lblInstructions.Location = new System.Drawing.Point(597, 51);
             this.lblInstructions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(158, 32);
+ 
+ 
+            this.lblInstructions.Location = new System.Drawing.Point(597, 51);
+            this.lblInstructions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(158, 32);
+ 
+ 
+            this.lblInstructions.Location = new System.Drawing.Point(597, 51);
+            this.lblInstructions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(158, 32);
+ 
             this.lblInstructions.TabIndex = 2;
             this.lblInstructions.Text = "Instructions:";
             // 
@@ -322,10 +590,30 @@
             this.lblManagerName.BackColor = System.Drawing.Color.Transparent;
             this.lblManagerName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblManagerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+ 
+ 
+ 
+            this.lblManagerName.Location = new System.Drawing.Point(23, 109);
+            this.lblManagerName.Name = "lblManagerName";
+            this.lblManagerName.Size = new System.Drawing.Size(132, 21);
+ 
             this.lblManagerName.Location = new System.Drawing.Point(34, 168);
             this.lblManagerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerName.Name = "lblManagerName";
             this.lblManagerName.Size = new System.Drawing.Size(197, 32);
+ 
+ 
+            this.lblManagerName.Location = new System.Drawing.Point(34, 168);
+            this.lblManagerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblManagerName.Name = "lblManagerName";
+            this.lblManagerName.Size = new System.Drawing.Size(197, 32);
+ 
+ 
+            this.lblManagerName.Location = new System.Drawing.Point(34, 168);
+            this.lblManagerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblManagerName.Name = "lblManagerName";
+            this.lblManagerName.Size = new System.Drawing.Size(197, 32);
+ 
             this.lblManagerName.TabIndex = 1;
             this.lblManagerName.Text = "Manager Name:";
             // 
@@ -335,10 +623,30 @@
             this.lblAdminName.BackColor = System.Drawing.Color.Transparent;
             this.lblAdminName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblAdminName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+ 
+ 
+ 
+            this.lblAdminName.Location = new System.Drawing.Point(23, 33);
+            this.lblAdminName.Name = "lblAdminName";
+            this.lblAdminName.Size = new System.Drawing.Size(115, 21);
+ 
             this.lblAdminName.Location = new System.Drawing.Point(34, 51);
             this.lblAdminName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdminName.Name = "lblAdminName";
             this.lblAdminName.Size = new System.Drawing.Size(171, 32);
+ 
+ 
+            this.lblAdminName.Location = new System.Drawing.Point(34, 51);
+            this.lblAdminName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAdminName.Name = "lblAdminName";
+            this.lblAdminName.Size = new System.Drawing.Size(171, 32);
+ 
+ 
+            this.lblAdminName.Location = new System.Drawing.Point(34, 51);
+            this.lblAdminName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAdminName.Name = "lblAdminName";
+            this.lblAdminName.Size = new System.Drawing.Size(171, 32);
+ 
             this.lblAdminName.TabIndex = 0;
             this.lblAdminName.Text = "Admin Name:";
             // 
@@ -365,14 +673,43 @@
             // 
             // GiveInstructions
             // 
+ 
+ 
+ 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+ 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+ 
+ 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+ 
+ 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+ 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
+ 
+ 
+ 
+            this.Name = "GiveInstructions";
+            this.Size = new System.Drawing.Size(800, 600);
+ 
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GiveInstructions";
             this.Size = new System.Drawing.Size(1200, 923);
+ 
+ 
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "GiveInstructions";
+            this.Size = new System.Drawing.Size(1200, 923);
+ 
+ 
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "GiveInstructions";
+            this.Size = new System.Drawing.Size(1200, 923);
+ 
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);
