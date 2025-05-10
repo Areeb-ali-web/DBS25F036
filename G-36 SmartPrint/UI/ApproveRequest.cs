@@ -16,5 +16,15 @@ namespace G_36_SmartPrint.UI
         {
             InitializeComponent();
         }
+
+        private void dgvRequests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

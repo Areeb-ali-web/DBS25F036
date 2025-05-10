@@ -20,10 +20,11 @@ namespace G_36_SmartPrint
         static void Main()
         {
            
+           
 
 
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DesignerDashbordForm());
+            Application.Run(new Form1());
 
 
         }

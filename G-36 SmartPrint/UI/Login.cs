@@ -62,6 +62,52 @@ namespace G_36_SmartPrint.UI
                 if (parentForm != null) parentForm.Hide(); // Hide parent form
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            if (role == 18) // Customer
+            {
+                int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.getuserID());
+                LoginHelpers.currentEmployee = EmployeeDL.LoadEmployeeById(employeeid);
+                if (LoginHelpers.currentEmployee != null) 
+                {
+                    if (LoginHelpers.currentEmployee.getposition().getLookupValue() == "manager")
+                    {
+
+                        ManagerDashboardForm form = new ManagerDashboardForm();
+                        form.Show();
+                    }
+                    else if (LoginHelpers.currentEmployee.getposition().getLookupValue() == "delivery")
+                    {
+
+                        DeliverymanDashboardForm form = new DeliverymanDashboardForm();
+                        form.Show();
+                    }
+                    else if (LoginHelpers.currentEmployee.getposition().getLookupValue() == "designer")
+                    {
+
+                        DesignerDashbordForm form = new DesignerDashbordForm();
+                        form.Show();
+                    }
+
+                }
+
+
+                Form parentForm = this.FindForm();
+                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
+                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (parentForm != null) parentForm.Hide(); // Hide parent form
+            }
+            if(role == 1)
+            {
+                AdminDashboardForm form = new AdminDashboardForm();
+                form.Show();
+                Form parentForm = this.FindForm();
+                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
+                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (parentForm != null) parentForm.Hide();
+
+            }
+>>>>>>> main
             else
             {
                 MessageBox.Show("Role not supported yet.");

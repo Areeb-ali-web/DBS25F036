@@ -48,9 +48,10 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 15, 20, 15);
-            this.panelHeader.Size = new System.Drawing.Size(800, 80);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 23, 30, 23);
+            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -60,9 +61,10 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblTitle.Location = new System.Drawing.Point(30, 23);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(183, 37);
+            this.lblTitle.Size = new System.Drawing.Size(268, 54);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Salary Status";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -73,10 +75,11 @@
             this.mainPanel.Controls.Add(this.txtDeliveryManName);
             this.mainPanel.Controls.Add(this.lblDeliveryManName);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 80);
+            this.mainPanel.Location = new System.Drawing.Point(0, 123);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.mainPanel.Size = new System.Drawing.Size(800, 520);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
             // 
             // dgvSalaryStatus
@@ -109,12 +112,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSalaryStatus.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSalaryStatus.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSalaryStatus.Location = new System.Drawing.Point(17, 221);
+            this.dgvSalaryStatus.Location = new System.Drawing.Point(26, 340);
+            this.dgvSalaryStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvSalaryStatus.Name = "dgvSalaryStatus";
             this.dgvSalaryStatus.ReadOnly = true;
             this.dgvSalaryStatus.RowHeadersVisible = false;
+            this.dgvSalaryStatus.RowHeadersWidth = 62;
             this.dgvSalaryStatus.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvSalaryStatus.Size = new System.Drawing.Size(760, 220);
+            this.dgvSalaryStatus.Size = new System.Drawing.Size(1140, 338);
             this.dgvSalaryStatus.TabIndex = 2;
             this.dgvSalaryStatus.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSalaryStatus.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -137,6 +142,7 @@
             this.dgvSalaryStatus.ThemeStyle.RowsStyle.Height = 22;
             this.dgvSalaryStatus.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSalaryStatus.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvSalaryStatus.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalaryStatus_CellContentClick);
             // 
             // txtDeliveryManName
             // 
@@ -155,13 +161,13 @@
             this.txtDeliveryManName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.txtDeliveryManName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtDeliveryManName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeliveryManName.Location = new System.Drawing.Point(24, 145);
-            this.txtDeliveryManName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDeliveryManName.Location = new System.Drawing.Point(36, 223);
+            this.txtDeliveryManName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtDeliveryManName.Name = "txtDeliveryManName";
             this.txtDeliveryManName.PlaceholderText = "";
             this.txtDeliveryManName.ReadOnly = true;
             this.txtDeliveryManName.SelectedText = "";
-            this.txtDeliveryManName.Size = new System.Drawing.Size(335, 43);
+            this.txtDeliveryManName.Size = new System.Drawing.Size(502, 66);
             this.txtDeliveryManName.TabIndex = 1;
             // 
             // lblDeliveryManName
@@ -170,22 +176,24 @@
             this.lblDeliveryManName.BackColor = System.Drawing.Color.Transparent;
             this.lblDeliveryManName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeliveryManName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDeliveryManName.Location = new System.Drawing.Point(24, 115);
+            this.lblDeliveryManName.Location = new System.Drawing.Point(36, 177);
+            this.lblDeliveryManName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeliveryManName.Name = "lblDeliveryManName";
-            this.lblDeliveryManName.Size = new System.Drawing.Size(135, 17);
+            this.lblDeliveryManName.Size = new System.Drawing.Size(207, 28);
             this.lblDeliveryManName.TabIndex = 0;
             this.lblDeliveryManName.Text = "Delivery Man Name:";
             this.lblDeliveryManName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DeliveryViewSalary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DeliveryViewSalary";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(1200, 923);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);

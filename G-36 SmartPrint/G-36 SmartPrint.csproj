@@ -236,11 +236,23 @@
     <Compile Include="UI\Feedback.Designer.cs">
       <DependentUpon>Feedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FinancialReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\FinancialReport.Designer.cs">
+      <DependentUpon>FinancialReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ForgotPassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GenerateReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\GenerateReports.Designer.cs">
+      <DependentUpon>GenerateReports.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\GiveInstructions.cs">
       <SubType>UserControl</SubType>
@@ -321,17 +333,41 @@
     <Compile Include="UI\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\OrdersDelivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\OrdersDelivery.Designer.cs">
+      <DependentUpon>OrdersDelivery.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\RequestDesigner.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\RequestDesigner.Designer.cs">
       <DependentUpon>RequestDesigner.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\SalaryPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SalaryPayment.Designer.cs">
+      <DependentUpon>SalaryPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Signup.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewFeedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ViewFeedback.Designer.cs">
+      <DependentUpon>ViewFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewFinancialReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ViewFinancialReport.Designer.cs">
+      <DependentUpon>ViewFinancialReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ViewInstructions.cs">
       <SubType>UserControl</SubType>
@@ -410,6 +446,9 @@
     <EmbeddedResource Include="UI\Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FinancialReport.resx">
+      <DependentUpon>FinancialReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,11 +491,23 @@
     <EmbeddedResource Include="UI\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrdersDelivery.resx">
+      <DependentUpon>OrdersDelivery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\RequestDesigner.resx">
       <DependentUpon>RequestDesigner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\SalaryPayment.resx">
+      <DependentUpon>SalaryPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewFeedback.resx">
+      <DependentUpon>ViewFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewFinancialReport.resx">
+      <DependentUpon>ViewFinancialReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ViewInstructions.resx">
       <DependentUpon>ViewInstructions.cs</DependentUpon>

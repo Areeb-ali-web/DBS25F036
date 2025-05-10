@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,6 +38,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 >>>>>>> Project
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+>>>>>>> main
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -89,10 +95,14 @@
             this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
             //this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
 =======
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
 >>>>>>> Project
+=======
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+>>>>>>> main
             // 
             // dgvSalaryStatus
             // 
@@ -100,16 +110,22 @@
             this.dgvSalaryStatus.AllowUserToDeleteRows = false;
             this.dgvSalaryStatus.AllowUserToResizeRows = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             this.dgvSalaryStatus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
 =======
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvSalaryStatus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 >>>>>>> Project
+=======
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvSalaryStatus.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+>>>>>>> main
             this.dgvSalaryStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSalaryStatus.BackgroundColor = System.Drawing.Color.SkyBlue;
+<<<<<<< HEAD
 <<<<<<< HEAD
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -140,6 +156,18 @@
             this.dgvSalaryStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSalaryStatus.ColumnHeadersHeight = 40;
             this.dgvSalaryStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+=======
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSalaryStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSalaryStatus.ColumnHeadersHeight = 40;
+            this.dgvSalaryStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+>>>>>>> main
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -148,7 +176,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSalaryStatus.DefaultCellStyle = dataGridViewCellStyle3;
+<<<<<<< HEAD
 >>>>>>> Project
+=======
+>>>>>>> main
             this.dgvSalaryStatus.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSalaryStatus.Location = new System.Drawing.Point(26, 340);
             this.dgvSalaryStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -205,6 +236,7 @@
             this.txtDesignerName.SelectedText = "";
             this.txtDesignerName.Size = new System.Drawing.Size(502, 66);
             this.txtDesignerName.TabIndex = 1;
+            this.txtDesignerName.TextChanged += new System.EventHandler(this.txtDesignerName_TextChanged);
             // 
             // lblDesignerName
             // 

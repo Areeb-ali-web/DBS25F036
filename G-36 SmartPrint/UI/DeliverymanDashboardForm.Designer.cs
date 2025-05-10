@@ -20,9 +20,7 @@
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelNavigation = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCompleteOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewSalary = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRequest = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelivery = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewAssignOrders = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
@@ -70,9 +68,7 @@
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.DodgerBlue;
             this.panelNavigation.Controls.Add(this.btnLogout);
-            this.panelNavigation.Controls.Add(this.btnCompleteOrder);
             this.panelNavigation.Controls.Add(this.btnViewSalary);
-            this.panelNavigation.Controls.Add(this.btnRequest);
             this.panelNavigation.Controls.Add(this.btnDelivery);
             this.panelNavigation.Controls.Add(this.btnViewAssignOrders);
             this.panelNavigation.Controls.Add(this.btnDashboard);
@@ -96,20 +92,6 @@
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "Logout";
             // 
-            // btnCompleteOrder
-            // 
-            this.btnCompleteOrder.Animated = true;
-            this.btnCompleteOrder.BorderRadius = 3;
-            this.btnCompleteOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCompleteOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnCompleteOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCompleteOrder.ForeColor = System.Drawing.Color.White;
-            this.btnCompleteOrder.Location = new System.Drawing.Point(0, 192);
-            this.btnCompleteOrder.Name = "btnCompleteOrder";
-            this.btnCompleteOrder.Size = new System.Drawing.Size(220, 57);
-            this.btnCompleteOrder.TabIndex = 0;
-            this.btnCompleteOrder.Text = "Manufacture Order";
-            // 
             // btnViewSalary
             // 
             this.btnViewSalary.Animated = true;
@@ -118,25 +100,11 @@
             this.btnViewSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnViewSalary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnViewSalary.ForeColor = System.Drawing.Color.White;
-            this.btnViewSalary.Location = new System.Drawing.Point(0, 318);
+            this.btnViewSalary.Location = new System.Drawing.Point(0, 192);
             this.btnViewSalary.Name = "btnViewSalary";
             this.btnViewSalary.Size = new System.Drawing.Size(220, 57);
             this.btnViewSalary.TabIndex = 0;
             this.btnViewSalary.Text = "View Salary";
-            // 
-            // btnRequest
-            // 
-            this.btnRequest.Animated = true;
-            this.btnRequest.BorderRadius = 3;
-            this.btnRequest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRequest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnRequest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRequest.ForeColor = System.Drawing.Color.White;
-            this.btnRequest.Location = new System.Drawing.Point(0, 255);
-            this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(220, 57);
-            this.btnRequest.TabIndex = 0;
-            this.btnRequest.Text = "Request Consumables";
             // 
             // btnDelivery
             // 
@@ -219,8 +187,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnViewAssignOrders;
         private Guna.UI2.WinForms.Guna2Button btnDelivery;
-        private Guna.UI2.WinForms.Guna2Button btnCompleteOrder;
-        private Guna.UI2.WinForms.Guna2Button btnRequest;
         private Guna.UI2.WinForms.Guna2Button btnViewSalary;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
     }

@@ -20,10 +20,14 @@ namespace G_36_SmartPrint.UI
             dgvAssignedOrders.Rows.Clear(); // Clear any existing rows
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             List<DesignBL> designs = DesignDL.LoadDesignsByDesignerID(4);
 =======
             List<DesignBL> designs = DesignDL.LoadDesignsByDesignerID(LoginHelpers.currentEmployee.getUserID());
 >>>>>>> Project
+=======
+            List<DesignBL> designs = DesignDL.LoadDesignsByDesignerID(LoginHelpers.currentEmployee.getEmployeeID());
+>>>>>>> main
             foreach(DesignBL db in designs)
             {
                 db.order = OrderDL.LoadOrderByOrderId(db.order.getOrderID());

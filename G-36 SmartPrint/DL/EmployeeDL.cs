@@ -18,7 +18,7 @@ namespace G_36_SmartPrint.DL
             string query = @"
                 SELECT 
                     e.employeeID, e.positionID, e.hireDate, e.salary,
-                    u.userID, u.username, u.passwordHash, u.email, u.name, u.phone_number, u.creationDate, u.roleID,
+                    u.userID, u.username, u.passwordHash, u.email, u.name, u.phone_number, u.roleID,
                     pos.lookupvalue AS positionName
                 FROM 
                     Employee e
@@ -36,7 +36,7 @@ namespace G_36_SmartPrint.DL
                 string email = row["email"].ToString();
                 string name = row["name"].ToString();
                 string phoneNumber = row["phone_number"].ToString();
-                DateTime creationDate = Convert.ToDateTime(row["creationDate"]);
+                
                 DateTime hireDate = Convert.ToDateTime(row["hireDate"]);
                 float salary = Convert.ToSingle(row["salary"]);
 
@@ -48,7 +48,7 @@ namespace G_36_SmartPrint.DL
                 LookupBL role = new LookupBL(roleID); // You can also fetch role name if needed
 
                 EmployeesBL emp = new EmployeesBL(employeeID, position, hireDate, salary,
-                                                  username, passwordHash, email, name, phoneNumber, creationDate, role);
+                                                  username, passwordHash, email, name, phoneNumber, role);
 
                 emp.setuserID(userID); // If needed to set userID manually
                 employees.Add(emp);
@@ -64,7 +64,7 @@ namespace G_36_SmartPrint.DL
             string query = @"
                 SELECT 
                     e.employeeID, e.positionID, e.hireDate, e.salary,
-                    u.userID, u.username, u.passwordHash, u.email, u.name, u.phone_number, u.creationDate, u.roleID,
+                    u.userID, u.username, u.passwordHash, u.email, u.name, u.phone_number, u.roleID,
                     pos.lookupvalue AS positionName
                 FROM 
                     Employee e
@@ -88,7 +88,7 @@ namespace G_36_SmartPrint.DL
                 string email = row["email"].ToString();
                 string name = row["name"].ToString();
                 string phoneNumber = row["phone_number"].ToString();
-                DateTime creationDate = Convert.ToDateTime(row["creationDate"]);
+               
                 DateTime hireDate = Convert.ToDateTime(row["hireDate"]);
                 float salary = Convert.ToSingle(row["salary"]);
 
@@ -99,7 +99,7 @@ namespace G_36_SmartPrint.DL
                 LookupBL role = new LookupBL(roleID);
 
                 EmployeesBL emp = new EmployeesBL(employeeID, position, hireDate, salary,
-                                                  username, passwordHash, email, name, phoneNumber, creationDate, role);
+                                                  username, passwordHash, email, name, phoneNumber, role);
                 emp.setuserID(userID);
                 employees.Add(emp);
             }
@@ -178,7 +178,7 @@ namespace G_36_SmartPrint.DL
             string query = @"
         SELECT 
             e.employeeID, e.positionID, e.hireDate, e.salary,
-            u.userID, u.username, u.passwordHash, u.email, u.name, u.phone_number, u.creationDate, u.roleID,
+            u.userID, u.username, u.passwordHash, u.email, u.name, u.phone_number, u.roleID,
             pos.lookupvalue AS positionName
         FROM 
             Employee e
@@ -204,7 +204,6 @@ namespace G_36_SmartPrint.DL
                 string email = row["email"].ToString();
                 string name = row["name"].ToString();
                 string phoneNumber = row["phone_number"].ToString();
-                DateTime creationDate = Convert.ToDateTime(row["creationDate"]);
                 DateTime hireDate = Convert.ToDateTime(row["hireDate"]);
                 float salary = Convert.ToSingle(row["salary"]);
 
@@ -216,7 +215,7 @@ namespace G_36_SmartPrint.DL
                 LookupBL role = new LookupBL(roleID);
 
                 EmployeesBL emp = new EmployeesBL(employeeID, position, hireDate, salary,
-                                                  username, passwordHash, email, name, phoneNumber, creationDate, role);
+                                                  username, passwordHash, email, name, phoneNumber, role);
                 emp.setuserID(userID);
                 return emp;
             }
