@@ -7,16 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 using G_36_SmartPrint.BL;
 using G_36_SmartPrint.DL;
->>>>>>> Project
-=======
-using G_36_SmartPrint.BL;
-using G_36_SmartPrint.DL;
->>>>>>> main
+
+
 
 namespace G_36_SmartPrint.UI
 {
@@ -25,9 +20,7 @@ namespace G_36_SmartPrint.UI
         public GiveInstructions()
         {
             InitializeComponent();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
             List<EmployeesBL> list = EmployeeDL.LoadEmployeesByPosition(3);
             cmbManagerName.Items.Clear();
             cmbManagerName.DataSource = list;
@@ -40,8 +33,6 @@ namespace G_36_SmartPrint.UI
         private void cmbManagerName_SelectedIndexChanged(object sender, EventArgs e)
         {
 
->>>>>>> Project
-=======
             this.Load += GiveInstructions_Load;
         }
 
@@ -149,7 +140,7 @@ namespace G_36_SmartPrint.UI
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
             // Optional custom paint logic
->>>>>>> main
+
         }
     }
 }

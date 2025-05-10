@@ -227,3 +227,8 @@ D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.OrdersDelivery
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.SalaryPayment.resources
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewFeedback.resources
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewFinancialReport.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.FinancialReport.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.OrdersDelivery.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.SalaryPayment.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewFeedback.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewFinancialReport.resources

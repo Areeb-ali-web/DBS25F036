@@ -37,12 +37,12 @@ namespace G_36_SmartPrint.UI
         {
             if (LoginHelpers.currentuser == null || LoginHelpers.currentuser.getRole() == null)
             {
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
+
+
+
                 Application.Run(new CustomerDashboardForm());
-=======
->>>>>>> Project
+
+
                 MessageBox.Show("Invalid user role. Cannot proceed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -61,14 +61,14 @@ namespace G_36_SmartPrint.UI
                 Form parentForm = this.FindForm();
                 if (parentForm != null) parentForm.Hide(); // Hide parent form
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
             if (role == 18) // Customer
             {
                 int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.getuserID());
                 LoginHelpers.currentEmployee = EmployeeDL.LoadEmployeeById(employeeid);
-                if (LoginHelpers.currentEmployee != null) 
+                if (LoginHelpers.currentEmployee != null)
                 {
                     if (LoginHelpers.currentEmployee.getposition().getLookupValue() == "manager")
                     {
@@ -97,7 +97,7 @@ namespace G_36_SmartPrint.UI
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (parentForm != null) parentForm.Hide(); // Hide parent form
             }
-            if(role == 1)
+            if (role == 1)
             {
                 AdminDashboardForm form = new AdminDashboardForm();
                 form.Show();
@@ -107,45 +107,47 @@ namespace G_36_SmartPrint.UI
                 if (parentForm != null) parentForm.Hide();
 
             }
->>>>>>> main
-            else
-            {
-                MessageBox.Show("Role not supported yet.");
-=======
-            if(role == 19)
-            {
-                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
-            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.getuserID());
 
-                LoginHelpers.currentEmployee = EmployeeDL.LoadEmployeeById(employeeid);
-                if (LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "manager")
-                { 
-                    ManagerDashboardForm form = new ManagerDashboardForm();
-                    form.Show();
-                    Form parentForm = this.FindForm();
-                    if (parentForm != null) parentForm.Hide();
-                }
-                else if(LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "designer")
-                {
-                    DesignerDashbordForm form = new DesignerDashbordForm();
-                    form.Show();
-                    Form parentForm = this.FindForm();
-                    if (parentForm != null) parentForm.Hide();
-                }
-                else if(LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "Delivery")
-                {
-                    DeliverymanDashboardForm form = new DeliverymanDashboardForm();
-                    form.Show();
-                    Form parentForm = this.FindForm();
-                    if (parentForm != null) parentForm.Hide();
-                }
-            }
+
             else
             {
                 MessageBox.Show("Role not supported yet.");
->>>>>>> Stashed changes
->>>>>>> Project
+
+                if (role == 19)
+                {
+                    MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
+                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.getuserID());
+
+                    LoginHelpers.currentEmployee = EmployeeDL.LoadEmployeeById(employeeid);
+                    if (LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "manager")
+                    {
+                        ManagerDashboardForm form = new ManagerDashboardForm();
+                        form.Show();
+                        Form parentForm = this.FindForm();
+                        if (parentForm != null) parentForm.Hide();
+                    }
+                    else if (LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "designer")
+                    {
+                        DesignerDashbordForm form = new DesignerDashbordForm();
+                        form.Show();
+                        Form parentForm = this.FindForm();
+                        if (parentForm != null) parentForm.Hide();
+                    }
+                    else if (LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "Delivery")
+                    {
+                        DeliverymanDashboardForm form = new DeliverymanDashboardForm();
+                        form.Show();
+                        Form parentForm = this.FindForm();
+                        if (parentForm != null) parentForm.Hide();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Role not supported yet.");
+
+
+                }
             }
         }
 
