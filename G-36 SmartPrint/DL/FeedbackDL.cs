@@ -145,7 +145,7 @@ namespace G_36_SmartPrint.DL
             List<FeedbackBL> feedbackList = new List<FeedbackBL>();
 
             string query = @"
-                SELECT FeedbackID, Rating, Comment, FeedbackDate
+                SELECT FeedbackID, Rating, Comment, FeedbackDate,customerid
                 FROM Feedback
                 ORDER BY FeedbackDate DESC";
 
@@ -154,11 +154,13 @@ namespace G_36_SmartPrint.DL
             foreach (DataRow row in dt.Rows)
             {
                 int feedbackId = Convert.ToInt32(row["FeedbackID"]);
+                int userId = Convert.ToInt32(row["customerID"]);
                 int rating = Convert.ToInt32(row["Rating"]);
                 string comment = row["Comment"] == DBNull.Value ? "" : row["Comment"].ToString();
                 DateTime feedbackDate = Convert.ToDateTime(row["FeedbackDate"]);
 
                 FeedbackBL feedback = new FeedbackBL(feedbackId, rating, comment, feedbackDate);
+                feedback.customer = UserDL.LoadUserById(userId);
                 feedbackList.Add(feedback);
             }
 

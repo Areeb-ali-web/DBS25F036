@@ -80,7 +80,9 @@ namespace G_36_SmartPrint.UI
 
         }
 
+        private void dgvSalaryStatus_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
+        }
     }
 }

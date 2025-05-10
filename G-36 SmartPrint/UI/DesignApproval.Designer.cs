@@ -435,6 +435,7 @@
             this.dvgOrders.ThemeStyle.RowsStyle.Height = 22;
             this.dvgOrders.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(191)))), ((int)(((byte)(173)))));
             this.dvgOrders.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dvgOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgOrders_CellContentClick_1);
             // 
             // orderID
             // 

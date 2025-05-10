@@ -62,6 +62,16 @@ namespace G_36_SmartPrint.BL
         {
             return Position;
         }
+        public string userName
+        {
+            get { return getUserName(); }
+            set { setUserName(value); }
+        }
+        public int Employeeid  // 👈 Must match casing exactly
+        {
+            get { return employeeID; }
+            set { employeeID = value; }
+        }
         public virtual List<EmployeesBL> loademployee()
         {
             List<EmployeesBL> employees = EmployeeDL.LoadAllEmployees();

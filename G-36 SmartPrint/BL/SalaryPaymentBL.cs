@@ -8,6 +8,7 @@ namespace G_36_SmartPrint.BL
 {
     internal class SalaryPaymentBL
     {
+        public EmployeesBL employee;
         private int paymentid;
         private Decimal amount;
         private DateTime paymentdate;

@@ -221,5 +221,9 @@ namespace G_36_SmartPrint.UI
 
         }
 
+        private void dvgOrders_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

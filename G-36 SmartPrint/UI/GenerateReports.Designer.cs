@@ -1,4 +1,6 @@
-﻿namespace G_36_SmartPrint.UI
+﻿using Microsoft.Reporting.WinForms;
+
+namespace G_36_SmartPrint.UI
 {
     partial class GenerateReports
     {
