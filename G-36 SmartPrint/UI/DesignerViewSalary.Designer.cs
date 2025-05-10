@@ -96,6 +96,7 @@
             this.mainPanel.TabIndex = 1;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
 =======
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
@@ -103,6 +104,9 @@
 =======
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
 >>>>>>> main
+=======
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+>>>>>>> Project
             // 
             // dgvSalaryStatus
             // 
