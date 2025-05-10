@@ -9,6 +9,7 @@ namespace G_36_SmartPrint.BL
 {
     internal class DesignBL
     {
+        public OrderBL order;
         public string designFile;
         public DesignerBL designer;
         public DateTime createddate;
@@ -38,6 +39,7 @@ namespace G_36_SmartPrint.BL
             this.designer = designer;
             this.createddate = createddate;
             this.approvalstatus = approvalstatus;
+            this.order= new OrderBL(orderid);
         }
     }
 }

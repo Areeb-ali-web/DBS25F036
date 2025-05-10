@@ -46,6 +46,7 @@
             this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 25, 20, 20);
             this.panelHeader.Size = new System.Drawing.Size(984, 100);
             this.panelHeader.TabIndex = 0;
+            this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
             // 
             // lblWelcome
             // 
@@ -55,9 +56,10 @@
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
             this.lblWelcome.Location = new System.Drawing.Point(327, 38);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(254, 38);
+            this.lblWelcome.Size = new System.Drawing.Size(381, 57);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "WELCOME {name}";
+            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
             // 
             // splitContainerMain
             // 
@@ -104,7 +106,7 @@
             this.lblAppreciation.Location = new System.Drawing.Point(15, 15);
             this.lblAppreciation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.lblAppreciation.Name = "lblAppreciation";
-            this.lblAppreciation.Size = new System.Drawing.Size(498, 82);
+            this.lblAppreciation.Size = new System.Drawing.Size(766, 126);
             this.lblAppreciation.TabIndex = 0;
             this.lblAppreciation.Text = resources.GetString("lblAppreciation.Text");
             // 
@@ -116,7 +118,7 @@
             this.lblServices.Location = new System.Drawing.Point(15, 96);
             this.lblServices.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.lblServices.Name = "lblServices";
-            this.lblServices.Size = new System.Drawing.Size(337, 121);
+            this.lblServices.Size = new System.Drawing.Size(515, 187);
             this.lblServices.TabIndex = 1;
             this.lblServices.Text = resources.GetString("lblServices.Text");
             // 
@@ -128,7 +130,7 @@
             this.lblDesignProducts.Location = new System.Drawing.Point(15, 237);
             this.lblDesignProducts.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.lblDesignProducts.Name = "lblDesignProducts";
-            this.lblDesignProducts.Size = new System.Drawing.Size(282, 141);
+            this.lblDesignProducts.Size = new System.Drawing.Size(433, 218);
             this.lblDesignProducts.TabIndex = 2;
             this.lblDesignProducts.Text = resources.GetString("lblDesignProducts.Text");
             // 
@@ -138,9 +140,9 @@
             this.lblCompany.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblCompany.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.lblCompany.IsSelectionEnabled = false;
-            this.lblCompany.Location = new System.Drawing.Point(15, 363);
+            this.lblCompany.Location = new System.Drawing.Point(15, 440);
             this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(480, 101);
+            this.lblCompany.Size = new System.Drawing.Size(739, 156);
             this.lblCompany.TabIndex = 3;
             this.lblCompany.Text = resources.GetString("lblCompany.Text");
             // 
@@ -167,7 +169,7 @@
             // 
             // CustomerBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.splitContainerMain);

@@ -64,6 +64,47 @@ namespace G_36_SmartPrint.DL
 
             return salaries;
         }
+        public static List<SalaryPaymentBL> LoadSalariesByEmployeeId(int employeeId)
+        {
+            List<SalaryPaymentBL> salaries = new List<SalaryPaymentBL>();
+
+            string query = @"
+        SELECT 
+            sp.PaymentID,
+            sp.Amount,
+            sp.PaymentDate,
+            l.LookupID AS SalaryStatusID,
+            l.LookupValue AS SalaryStatusValue
+        FROM salarypayment sp
+        INNER JOIN Lookuptable l ON sp.Salary_StatusID = l.LookupID
+        WHERE  sp.EmployeeID = @EmployeeID";
+
+            MySqlParameter[] parameters = new MySqlParameter[]
+            {
+        new MySqlParameter("@EmployeeID", employeeId)
+            };
+
+            DataTable dt = SqlHelper.getDataTable(query, parameters);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                LookupBL status = new LookupBL(
+                    Convert.ToInt32(row["SalaryStatusID"]),
+                    row["SalaryStatusValue"].ToString()
+                );
+
+                SalaryPaymentBL salary = new SalaryPaymentBL(
+                    Convert.ToInt32(row["PaymentID"]),
+                    Convert.ToDecimal(row["Amount"]),
+                    Convert.ToDateTime(row["PaymentDate"]),
+                    status
+                );
+
+                salaries.Add(salary);
+            }
+
+            return salaries;
+        }
         public static void PayAllSalaries()
         {
             string updateQuery = @"

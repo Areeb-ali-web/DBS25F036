@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using G_36_SmartPrint.BL;
 using MySqlConnector;
 
+
 namespace G_36_SmartPrint.DL
 {
     internal class DesignDL
@@ -62,6 +63,59 @@ namespace G_36_SmartPrint.DL
 
             return designs;
         }
+        public static List<DesignBL> LoadDesignsByDesignerID(int designerID)
+        {
+            List<DesignBL> designs = new List<DesignBL>();
+
+            string query = @"
+                SELECT 
+                    d.DesignID,
+                    o.DesignDescription,
+                    lt.LookupValue AS DesignStatus,
+                    d.CreatedDate,
+                    u.Name AS DesignerName,
+                    d.DesignFile,
+                    d.OrderID,
+                    lt.LookupID
+                FROM 
+                    designs d
+                JOIN 
+                    orders o ON d.OrderID = o.OrderID
+                JOIN 
+                    lookuptable lt ON d.ApprovalStatusID = lt.LookupID
+                JOIN 
+                    users u ON (SELECT UserID FROM employee WHERE EmployeeID = d.DesignerID) = u.UserID
+                WHERE 
+                    d.DesignerID = @DesignerID
+                ORDER BY 
+                    d.CreatedDate DESC;
+            ";
+
+            MySqlParameter[] parameters = new MySqlParameter[]
+            {
+                new MySqlParameter("@DesignerID", designerID)
+            };
+
+            DataTable dt = SqlHelper.getDataTable(query, parameters);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string file = row["DesignFile"].ToString();
+                string designerName = row["DesignerName"].ToString();
+                DateTime created = Convert.ToDateTime(row["CreatedDate"]);
+                string statusValue = row["DesignStatus"].ToString();
+                int statusID = Convert.ToInt32(row["LookupID"]);
+
+                DesignerBL designer = new DesignerBL(designerID, designerName);
+                LookupBL status = new LookupBL(statusID, statusValue);
+
+                DesignBL design = new DesignBL(file, designer, created, status, Convert.ToInt32(row["OrderID"]));
+                designs.Add(design);
+            }
+
+            return designs;
+        }
+
         public static void UpdateDesignApprovalStatusByOrderId(int orderId, int newApprovalStatusId)
         {
             string query = "UPDATE design SET approvalstatus = @status WHERE orderid = @orderId";

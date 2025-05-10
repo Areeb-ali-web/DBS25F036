@@ -21,20 +21,19 @@ namespace G_36_SmartPrint.UI
 
         private void LoadDesignerSalaries()
         {
-            txtDesignerName.Text = LoginHelpers.currentuser.getUserName();
             try
             {
                 // ✅ FIX: Make sure currentEmployee is not null and getEmployeeID() is accessible
-                if (LoginHelpers.currentEmployee == null)
-                {
-                    MessageBox.Show("No designer is currently logged in.");
-                    return;
-                }
+                //if (LoginHelpers.currentEmployee == null)
+                //{
+                //    MessageBox.Show("No designer is currently logged in.");
+                //    return;
+                //}
 
-                int designerId = LoginHelpers.currentEmployee.getEmployeeID();
+                //int designerId = LoginHelpers.currentEmployee.getEmployeeID();
 
                 // ✅ FIX: Confirm method LoadSalariesByEmployeeId exists and returns a list
-                List<SalaryPaymentBL> salaries = Salary_PaymentDL.LoadSalariesByEmployeeId(designerId);
+                List<SalaryPaymentBL> salaries = Salary_PaymentDL.LoadSalariesByEmployeeId(2);
 
                 dgvSalaryStatus.Rows.Clear();
                 dgvSalaryStatus.Columns.Clear();
@@ -63,11 +62,6 @@ namespace G_36_SmartPrint.UI
         private void panelHeader_Paint(object sender, PaintEventArgs e)
         {
             // You can add header styling here if needed
-        }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -40,7 +40,7 @@ namespace G_36_SmartPrint.UI
         private void InitializeDashboard()
         {
             SetActiveButton(btnDashboard);
-            LoadUserControl(new CustomerBoard(currentCustomerId));
+            LoadUserControl(new CustomerBoard());
         }
 
         private void AssignButtonEvents()
@@ -66,7 +66,7 @@ namespace G_36_SmartPrint.UI
                 switch (clickedButton.Name)
                 {
                     case "btnDashboard":
-                        LoadUserControl(new CustomerBoard(currentCustomerId));
+                        LoadUserControl(new CustomerBoard());
                         break;
                     case "btnOrder":
                         LoadUserControl(new Order());
@@ -90,7 +90,7 @@ namespace G_36_SmartPrint.UI
 
         private void SetActiveButton(Guna2Button activeButton)
         {
-            foreach (Control control in panelNavigation.Controls)
+            foreach (Control control in panelNavigation.Controls) 
             {
                 if (control is Guna2Button button)
                 {
@@ -139,6 +139,11 @@ namespace G_36_SmartPrint.UI
             {
                 lblCompanyName.Font = new Font("Segoe UI", 26F, FontStyle.Bold);
             }
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

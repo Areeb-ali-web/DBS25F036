@@ -132,6 +132,35 @@ namespace G_36_SmartPrint.DL
                 return false;
             }
         }
+        public static UserBL LoadUserById(int userId)
+        {
+            string query = $"SELECT * FROM users WHERE userid = {userId}";
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            if (dt.Rows.Count == 1)
+            {
+                DataRow dr = dt.Rows[0];
+
+                string username = dr["username"].ToString();
+                string password = dr["passwordhash"].ToString();
+                string email = dr["email"].ToString();
+                string name = dr["name"].ToString();
+                string phone_number = dr["phone_number"].ToString();
+                DateTime createdDate = Convert.ToDateTime(dr["createdDate"]);
+                int roleID = Convert.ToInt32(dr["roleID"]);
+                LookupBL role = new LookupBL(roleID);
+
+                UserBL user = new UserBL(userId, username, password, email, name, phone_number, createdDate, role);
+                user.Addresses = AddressDL.LoaduserAddress(user); // Assuming this loads user addresses if applicable
+
+                return user;
+            }
+            else
+            {
+                MessageBox.Show("User not found.");
+                return null;
+            }
+        }
 
         public static UserBL UserLogin(string username, string email, string password)
         {

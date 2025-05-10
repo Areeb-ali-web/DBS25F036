@@ -23,7 +23,7 @@ namespace G_36_SmartPrint
 
 
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerDashboardForm());
+            Application.Run(new DesignerDashbordForm());
 
 
         }

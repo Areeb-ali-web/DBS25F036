@@ -15,6 +15,7 @@ namespace G_36_SmartPrint.BL
         protected DateTime hiredate;
         protected float salary;
         protected List<SalaryPaymentBL> salaryPayment;
+
         public EmployeesBL() { }
         public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary)
         {
@@ -22,6 +23,11 @@ namespace G_36_SmartPrint.BL
             Position = position;
             this.hiredate = hiredate;
             this.salary = salary;
+        }
+        public EmployeesBL(int employeeID,string Employeename)
+        {
+            this.UserName = Employeename;
+            this.employeeID = employeeID;
         }
         public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, string username, string passwordHash, string email, string name, string phone_number, DateTime date, LookupBL role) : base(username, passwordHash, email, name, phone_number, date, role)
         {
@@ -36,7 +42,7 @@ namespace G_36_SmartPrint.BL
         {
             return name;
         }
-               
+               public int getEmployeeID() { return employeeID; }
         public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, List<SalaryPaymentBL> salaryPayment) : this(employeeID, position, hiredate, salary)
         {
             this.salaryPayment = salaryPayment;

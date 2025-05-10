@@ -12,7 +12,7 @@ namespace G_36_SmartPrint.BL
         private ProductBL product;
         private int quantity;
         private LookupBL orderStatus;
-       
+     
 
         public Order_DetailsBL(int orderdetailID, ProductBL product, int quantity, LookupBL orderStatus)
         {
@@ -21,6 +21,11 @@ namespace G_36_SmartPrint.BL
             this.quantity = quantity;
             this.orderStatus = orderStatus;
             
+        }
+        public Order_DetailsBL(ProductBL product, int quantity)
+        {
+            this.product = product;
+            this.quantity = quantity;
         }
         public Order_DetailsBL(ProductBL product,int quantity, LookupBL orderStatus)
         {

@@ -25,6 +25,7 @@
             this.TxtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.cbRole = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -33,9 +34,9 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTitle.Location = new System.Drawing.Point(104, 127);
+            this.lblTitle.Location = new System.Drawing.Point(101, 110);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(276, 48);
+            this.lblTitle.Size = new System.Drawing.Size(189, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Create Account";
             // 
@@ -43,7 +44,7 @@
             // 
             this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.logoPictureBox.Image = global::G_36_SmartPrint.Properties.Resources.sign_up;
-            this.logoPictureBox.Location = new System.Drawing.Point(150, 47);
+            this.logoPictureBox.Location = new System.Drawing.Point(150, 30);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.Size = new System.Drawing.Size(85, 77);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,8 +67,8 @@
             this.TxtNewUsername.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.TxtNewUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtNewUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtNewUsername.Location = new System.Drawing.Point(100, 167);
-            this.TxtNewUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtNewUsername.Location = new System.Drawing.Point(100, 146);
+            this.TxtNewUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtNewUsername.Name = "TxtNewUsername";
             this.TxtNewUsername.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtNewUsername.PlaceholderText = "Username";
@@ -92,8 +93,8 @@
             this.TxtEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.TxtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtEmail.Location = new System.Drawing.Point(100, 215);
-            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtEmail.Location = new System.Drawing.Point(100, 199);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtEmail.PlaceholderText = "Email";
@@ -117,8 +118,8 @@
             this.TxtPassword.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.TxtPassword.ForeColor = System.Drawing.Color.Blue;
             this.TxtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtPassword.Location = new System.Drawing.Point(100, 314);
-            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtPassword.Location = new System.Drawing.Point(100, 287);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.PlaceholderForeColor = System.Drawing.Color.Blue;
@@ -143,8 +144,8 @@
             this.TxtName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.TxtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.TxtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtName.Location = new System.Drawing.Point(100, 263);
-            this.TxtName.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtName.Location = new System.Drawing.Point(100, 243);
+            this.TxtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtName.Name = "TxtName";
             this.TxtName.PlaceholderForeColor = System.Drawing.Color.Blue;
             this.TxtName.PlaceholderText = "Full Nmae";
@@ -164,18 +165,37 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(140, 402);
+            this.guna2Button1.Location = new System.Drawing.Point(136, 393);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(123, 45);
             this.guna2Button1.TabIndex = 8;
             this.guna2Button1.Text = "Signup";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // cbRole
+            // 
+            this.cbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cbRole.BorderColor = System.Drawing.Color.Blue;
+            this.cbRole.BorderRadius = 15;
+            this.cbRole.BorderThickness = 2;
+            this.cbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbRole.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbRole.ForeColor = System.Drawing.Color.Blue;
+            this.cbRole.ItemHeight = 30;
+            this.cbRole.Location = new System.Drawing.Point(100, 340);
+            this.cbRole.Name = "cbRole";
+            this.cbRole.Size = new System.Drawing.Size(200, 36);
+            this.cbRole.TabIndex = 9;
+            // 
             // Signup
             // 
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::G_36_SmartPrint.Properties.Resources._3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.cbRole);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.TxtPassword);
             this.Controls.Add(this.TxtName);
@@ -196,5 +216,6 @@
         private Guna.UI2.WinForms.Guna2TextBox TxtPassword;
         private Guna.UI2.WinForms.Guna2TextBox TxtName;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbRole;
     }
 }

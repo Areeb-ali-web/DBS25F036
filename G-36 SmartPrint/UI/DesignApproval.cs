@@ -1,23 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using G_36_SmartPrint.BL;
+using G_36_SmartPrint.DL;
 
 namespace G_36_SmartPrint.UI
 {
     public partial class DesignApproval : UserControl
     {
+        private List<OrderBL> orders;
+        private OrderBL currentOrder;
+
         public DesignApproval()
         {
             InitializeComponent();
+            ConfigureDataGridView();
+            LoadFormData();
+
+            dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
         }
-<<<<<<< Updated upstream
-=======
 
         private void ConfigureDataGridView()
         {
@@ -163,10 +168,8 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "manufactured");
-                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.getOrderID(),22);
+                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Approved");
                 MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 LoadFormData();
             }
             catch (Exception ex)
@@ -185,8 +188,7 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "being_designed");
-                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.getOrderID(), 23);
+                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Rejected");
                 MessageBox.Show("Order rejected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadFormData();
             }
@@ -201,11 +203,5 @@ namespace G_36_SmartPrint.UI
         private void dvgOrders_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void panelHeader_Paint_1(object sender, PaintEventArgs e) { }
-
-        private void btnApprove_Click_1(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> Stashed changes
     }
 }

@@ -27,6 +27,12 @@ namespace G_36_SmartPrint.BL
             CreatedDate = createdDate;
             Role = role;
         }
+
+        public CustomersBL(UserBL user) : base(user)
+        {
+
+        }
+
         public CustomersBL(int userid,string username,string email,string naem,string phoneNumber):base(userid,username,email,naem,phoneNumber)        {
             this.UserID = userid;
             this.UserName = username;
