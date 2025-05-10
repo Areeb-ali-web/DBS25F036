@@ -132,6 +132,279 @@ namespace G_36_SmartPrint.DL
 
             return orders;
         }
+
+        public static List<OrderBL> LoadOrdersByStatus(string statusName)
+        {
+            List<OrderBL> orders = new List<OrderBL>();
+
+            // Step 1: Get LookupID for the given status name
+            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{statusName}' AND LookupCategory = 'OrderStatus'";
+            DataTable statusResult = SqlHelper.getDataTable(lookupQuery);
+
+            if (statusResult.Rows.Count == 0)
+                throw new Exception("Invalid order status name.");
+
+            int statusId = Convert.ToInt32(statusResult.Rows[0]["LookupID"]);
+
+            // Step 2: Load orders with the given status
+            string query = $@"
+        SELECT 
+            o.OrderID,
+            o.OrderDate,
+            o.DeliveryRequired,
+            o.TotalAmount,
+            o.DesignDescription,
+
+            o.AddressID,
+            a.Address_Detail,
+            a.City,
+            a.State,
+            a.PostalCode,
+            a.Country,
+
+            o.CustomerID,
+            u.Username,
+            u.Email,
+            u.Name,
+            u.Phone_number,
+
+            s.LookupID AS OrderStatusID,
+            s.LookupValue AS OrderStatusValue,
+
+            od.OrderDetailID,
+            od.ProductID,
+            od.Quantity,
+
+            p.Name AS ProductName,
+            p.Description AS ProductDescription,
+            p.Price AS ProductPrice,
+            p.QuantityInStock
+
+        FROM Orders o
+        LEFT JOIN UserAddress a ON o.AddressID = a.AddressID
+        INNER JOIN Users u ON o.CustomerID = u.UserID
+        INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
+        LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
+        LEFT JOIN Products p ON od.ProductID = p.ProductID
+        WHERE o.order_StatusID = {statusId}
+        ORDER BY o.OrderID;";
+
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            OrderBL currentOrder = null;
+            int previousOrderId = -1;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                int orderId = Convert.ToInt32(row["OrderID"]);
+
+                if (orderId != previousOrderId)
+                {
+                    CustomersBL customer = new CustomersBL(
+                        Convert.ToInt32(row["CustomerID"]),
+                        row["Username"].ToString(),
+                        row["Email"].ToString(),
+                        row["Name"].ToString(),
+                        row["Phone_number"].ToString()
+                    );
+
+                    AddressBL address = null;
+                    if (row["AddressID"] != DBNull.Value)
+                    {
+                        address = new AddressBL(
+                            Convert.ToInt32(row["AddressID"]),
+                            row["Address_Detail"].ToString(),
+                            row["City"].ToString(),
+                            row["State"].ToString(),
+                            row["PostalCode"].ToString(),
+                            row["Country"].ToString()
+                        );
+                    }
+
+                    LookupBL orderStatus = new LookupBL(
+                        Convert.ToInt32(row["OrderStatusID"]),
+                        row["OrderStatusValue"].ToString()
+                    );
+
+                    List<FeedbackBL> feedback = FeedbackDL.LoadFeedbackByOrderId(orderId);
+
+                    currentOrder = new OrderBL(
+                        orderId,
+                        Convert.ToDateTime(row["OrderDate"]),
+                        Convert.ToBoolean(row["DeliveryRequired"]),
+                        address,
+                        Convert.ToDecimal(row["TotalAmount"]),
+                        new List<Order_DetailsBL>(),
+                        customer,
+                        feedback
+                    );
+                    currentOrder.setDesignDesctiption(row["DesignDescription"].ToString());
+                    currentOrder.setOrderStatus(orderStatus);
+
+                    List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId);
+                    currentOrder.setDesigns(designs);
+
+                    orders.Add(currentOrder);
+                    previousOrderId = orderId;
+                }
+
+                if (row["OrderDetailID"] != DBNull.Value)
+                {
+                    ProductBL product = new ProductBL(
+                        Convert.ToInt32(row["ProductID"]),
+                        row["ProductName"].ToString(),
+                        row["ProductDescription"].ToString(),
+                        Convert.ToDecimal(row["ProductPrice"]),
+                        Convert.ToInt32(row["QuantityInStock"])
+                    );
+
+                    Order_DetailsBL orderDetail = new Order_DetailsBL(
+                        Convert.ToInt32(row["OrderDetailID"]),
+                        product,
+                        Convert.ToInt32(row["Quantity"]),
+                        null
+                    );
+
+                    currentOrder.getOrderDetails().Add(orderDetail);
+                }
+            }
+
+            return orders;
+        }
+        public static List<OrderBL> LoadOrdersByDesignerId(int designerId)
+        {
+            List<OrderBL> orders = new List<OrderBL>();
+
+            string query = $@"
+        SELECT 
+            o.OrderID,
+            o.OrderDate,
+            o.DeliveryRequired,
+            o.TotalAmount,
+            o.DesignDescription,
+
+            o.AddressID,
+            a.Address_Detail,
+            a.City,
+            a.State,
+            a.PostalCode,
+            a.Country,
+
+            o.CustomerID,
+            u.Username,
+            u.Email,
+            u.Name,
+            u.Phone_number,
+
+            s.LookupID AS OrderStatusID,
+            s.LookupValue AS OrderStatusValue,
+
+            od.OrderDetailID,
+            od.ProductID,
+            od.Quantity,
+
+            p.Name AS ProductName,
+            p.Description AS ProductDescription,
+            p.Price AS ProductPrice,
+            p.QuantityInStock
+
+        FROM Orders o
+        LEFT JOIN UserAddress a ON o.AddressID = a.AddressID
+        INNER JOIN Users u ON o.CustomerID = u.UserID
+        INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
+        LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
+        LEFT JOIN Products p ON od.ProductID = p.ProductID
+        INNER JOIN Designs d ON o.OrderID = d.OrderID
+        WHERE d.DesignerID = {designerId}
+        ORDER BY o.OrderID;";
+
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            OrderBL currentOrder = null;
+            int previousOrderId = -1;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                int orderId = Convert.ToInt32(row["OrderID"]);
+
+                if (orderId != previousOrderId)
+                {
+                    CustomersBL customer = new CustomersBL(
+                        Convert.ToInt32(row["CustomerID"]),
+                        row["Username"].ToString(),
+                        row["Email"].ToString(),
+                        row["Name"].ToString(),
+                        row["Phone_number"].ToString()
+                    );
+
+                    AddressBL address = null;
+                    if (row["AddressID"] != DBNull.Value)
+                    {
+                        address = new AddressBL(
+                            Convert.ToInt32(row["AddressID"]),
+                            row["Address_Detail"].ToString(),
+                            row["City"].ToString(),
+                            row["State"].ToString(),
+                            row["PostalCode"].ToString(),
+                            row["Country"].ToString()
+                        );
+                    }
+
+                    LookupBL orderStatus = new LookupBL(
+                        Convert.ToInt32(row["OrderStatusID"]),
+                        row["OrderStatusValue"].ToString()
+                    );
+
+                    List<FeedbackBL> feedback = FeedbackDL.LoadFeedbackByOrderId(orderId);
+
+                    currentOrder = new OrderBL(
+                        orderId,
+                        Convert.ToDateTime(row["OrderDate"]),
+                        Convert.ToBoolean(row["DeliveryRequired"]),
+                        address,
+                        Convert.ToDecimal(row["TotalAmount"]),
+                        new List<Order_DetailsBL>(),
+                        customer,
+                        feedback
+                    );
+
+                    currentOrder.setDesignDesctiption(row["DesignDescription"].ToString());
+                    currentOrder.setOrderStatus(orderStatus);
+
+                    // Load only designs made by the specified designer for this order
+                    List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId)
+                        .FindAll(d => d.designer != null && d.designer.getdesignerId() == designerId);
+
+                    currentOrder.setDesigns(designs);
+
+                    orders.Add(currentOrder);
+                    previousOrderId = orderId;
+                }
+
+                if (row["OrderDetailID"] != DBNull.Value)
+                {
+                    ProductBL product = new ProductBL(
+                        Convert.ToInt32(row["ProductID"]),
+                        row["ProductName"].ToString(),
+                        row["ProductDescription"].ToString(),
+                        Convert.ToDecimal(row["ProductPrice"]),
+                        Convert.ToInt32(row["QuantityInStock"])
+                    );
+
+                    Order_DetailsBL orderDetail = new Order_DetailsBL(
+                        Convert.ToInt32(row["OrderDetailID"]),
+                        product,
+                        Convert.ToInt32(row["Quantity"]),
+                        null
+                    );
+
+                    currentOrder.getOrderDetails().Add(orderDetail);
+                }
+            }
+
+            return orders;
+        }
+
         public static List<OrderBL> LoadOrdersByCustomerId(int customerId)
         {
             List<OrderBL> orders = new List<OrderBL>();
@@ -332,6 +605,129 @@ namespace G_36_SmartPrint.DL
             string updateQuery = $"UPDATE Orders SET order_StatusID = {newStatusId} WHERE OrderID = {orderId}";
             SqlHelper.executeDML(updateQuery);
         }
+        public static OrderBL LoadOrderByOrderId(int orderId)
+        {
+            string query = $@"
+        SELECT 
+            o.OrderID,
+            o.OrderDate,
+            o.DeliveryRequired,
+            o.TotalAmount,
+            o.DesignDescription,
+
+            o.AddressID,
+            a.Address_Detail,
+            a.City,
+            a.State,
+            a.PostalCode,
+            a.Country,
+
+            o.CustomerID,
+            u.Username,
+            u.Email,
+            u.Name,
+            u.Phone_number,
+
+            s.LookupID AS OrderStatusID,
+            s.LookupValue AS OrderStatusValue,
+
+            od.OrderDetailID,
+            od.ProductID,
+            od.Quantity,
+
+            p.Name AS ProductName,
+            p.Description AS ProductDescription,
+            p.Price AS ProductPrice,
+            p.QuantityInStock
+
+        FROM Orders o
+        LEFT JOIN UserAddress a ON o.AddressID = a.AddressID
+        INNER JOIN Users u ON o.CustomerID = u.UserID
+        INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
+        LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
+        LEFT JOIN Products p ON od.ProductID = p.ProductID
+        WHERE o.OrderID = {orderId};";
+
+            DataTable dt = SqlHelper.getDataTable(query);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            OrderBL order = null;
+            foreach (DataRow row in dt.Rows)
+            {
+                if (order == null)
+                {
+                    CustomersBL customer = new CustomersBL(
+                        Convert.ToInt32(row["CustomerID"]),
+                        row["Username"].ToString(),
+                        row["Email"].ToString(),
+                        row["Name"].ToString(),
+                        row["Phone_number"].ToString()
+                    );
+
+                    AddressBL address = null;
+                    if (row["AddressID"] != DBNull.Value)
+                    {
+                        address = new AddressBL(
+                            Convert.ToInt32(row["AddressID"]),
+                            row["Address_Detail"].ToString(),
+                            row["City"].ToString(),
+                            row["State"].ToString(),
+                            row["PostalCode"].ToString(),
+                            row["Country"].ToString()
+                        );
+                    }
+
+                    LookupBL orderStatus = new LookupBL(
+                        Convert.ToInt32(row["OrderStatusID"]),
+                        row["OrderStatusValue"].ToString()
+                    );
+
+                    List<FeedbackBL> feedback = FeedbackDL.LoadFeedbackByOrderId(orderId);
+                    List<Order_DetailsBL> details = new List<Order_DetailsBL>();
+
+                    order = new OrderBL(
+                        orderId,
+                        Convert.ToDateTime(row["OrderDate"]),
+                        Convert.ToBoolean(row["DeliveryRequired"]),
+                        address,
+                        Convert.ToDecimal(row["TotalAmount"]),
+                        details,
+                        customer,
+                        feedback
+                    );
+                    order.setDesignDesctiption(row["DesignDescription"].ToString());
+                    order.setOrderStatus(orderStatus);
+
+                    List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId);
+                    order.setDesigns(designs);
+                }
+
+                if (row["OrderDetailID"] != DBNull.Value)
+                {
+                    ProductBL product = new ProductBL(
+                        Convert.ToInt32(row["ProductID"]),
+                        row["ProductName"].ToString(),
+                        row["ProductDescription"].ToString(),
+                        Convert.ToDecimal(row["ProductPrice"]),
+                        Convert.ToInt32(row["QuantityInStock"])
+                    );
+
+                    Order_DetailsBL orderDetail = new Order_DetailsBL(
+                        Convert.ToInt32(row["OrderDetailID"]),
+                        product,
+                        Convert.ToInt32(row["Quantity"]),
+                        null
+                    );
+
+                    order.getOrderDetails().Add(orderDetail);
+                }
+            }
+
+            return order;
+        }
+
         public static void AddOrder(OrderBL order)
         {
             using (MySqlConnection con = new MySqlConnection(SqlHelper.constring))

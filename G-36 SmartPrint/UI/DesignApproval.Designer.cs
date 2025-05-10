@@ -15,7 +15,6 @@
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,7 +38,11 @@
             this.btnReject = new Guna.UI2.WinForms.Guna2Button();
             this.btnApprove = new Guna.UI2.WinForms.Guna2Button();
             this.dvgOrders = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.orderBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DesignDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.designfile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).BeginInit();
             this.mainSplitContainer.Panel1.SuspendLayout();
@@ -54,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picDesign)).BeginInit();
             this.panelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgOrders)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -65,9 +67,10 @@
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(14);
             this.panelHeader.Size = new System.Drawing.Size(1260, 106);
             this.panelHeader.TabIndex = 0;
+            this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint_1);
             // 
             // lblTitle
             // 
@@ -140,7 +143,7 @@
             this.panelForm.Location = new System.Drawing.Point(0, 0);
             this.panelForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.panelForm.Padding = new System.Windows.Forms.Padding(14);
             this.panelForm.Size = new System.Drawing.Size(551, 510);
             this.panelForm.TabIndex = 0;
             // 
@@ -162,7 +165,7 @@
             this.txtDescription.ForeColor = System.Drawing.Color.Blue;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.Location = new System.Drawing.Point(24, 359);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(6);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceholderText = "";
@@ -188,7 +191,7 @@
             this.txtQuantity.ForeColor = System.Drawing.Color.Blue;
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.Location = new System.Drawing.Point(24, 234);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(6);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
@@ -213,7 +216,7 @@
             this.txtProduct.ForeColor = System.Drawing.Color.Blue;
             this.txtProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProduct.Location = new System.Drawing.Point(20, 131);
-            this.txtProduct.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProduct.Margin = new System.Windows.Forms.Padding(6);
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.PlaceholderText = "";
             this.txtProduct.SelectedText = "";
@@ -238,7 +241,7 @@
             this.txtCustomerName.ForeColor = System.Drawing.Color.Blue;
             this.txtCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCustomerName.Location = new System.Drawing.Point(20, 37);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.PlaceholderText = "";
             this.txtCustomerName.SelectedText = "";
@@ -375,8 +378,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(226)))), ((int)(((byte)(218)))));
             this.dvgOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dvgOrders.AutoGenerateColumns = false;
-            this.dvgOrders.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dvgOrders.BackgroundColor = System.Drawing.Color.DarkCyan;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,7 +389,12 @@
             this.dvgOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgOrders.ColumnHeadersHeight = 4;
             this.dvgOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dvgOrders.DataSource = this.orderBLBindingSource;
+            this.dvgOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.orderID,
+            this.orderdate,
+            this.TotalAmount,
+            this.DesignDescription,
+            this.designfile});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,7 +404,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dvgOrders.DefaultCellStyle = dataGridViewCellStyle3;
             this.dvgOrders.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(224)))), ((int)(((byte)(216)))));
+            this.dvgOrders.GridColor = System.Drawing.Color.DarkGray;
             this.dvgOrders.Location = new System.Drawing.Point(26, 0);
             this.dvgOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dvgOrders.Name = "dvgOrders";
@@ -411,8 +418,8 @@
             this.dvgOrders.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dvgOrders.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dvgOrders.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dvgOrders.ThemeStyle.BackColor = System.Drawing.Color.SkyBlue;
-            this.dvgOrders.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(224)))), ((int)(((byte)(216)))));
+            this.dvgOrders.ThemeStyle.BackColor = System.Drawing.Color.DarkCyan;
+            this.dvgOrders.ThemeStyle.GridColor = System.Drawing.Color.DarkGray;
             this.dvgOrders.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.dvgOrders.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dvgOrders.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -427,11 +434,36 @@
             this.dvgOrders.ThemeStyle.RowsStyle.Height = 22;
             this.dvgOrders.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(191)))), ((int)(((byte)(173)))));
             this.dvgOrders.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dvgOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgOrders_CellContentClick_1);
             // 
-            // orderBLBindingSource
+            // orderID
             // 
-            this.orderBLBindingSource.DataSource = typeof(G_36_SmartPrint.BL.OrderBL);
+            this.orderID.HeaderText = "Order id";
+            this.orderID.MinimumWidth = 8;
+            this.orderID.Name = "orderID";
+            // 
+            // orderdate
+            // 
+            this.orderdate.HeaderText = "Order Date";
+            this.orderdate.MinimumWidth = 8;
+            this.orderdate.Name = "orderdate";
+            // 
+            // TotalAmount
+            // 
+            this.TotalAmount.HeaderText = "Total Amount";
+            this.TotalAmount.MinimumWidth = 8;
+            this.TotalAmount.Name = "TotalAmount";
+            // 
+            // DesignDescription
+            // 
+            this.DesignDescription.HeaderText = "Design Description";
+            this.DesignDescription.MinimumWidth = 8;
+            this.DesignDescription.Name = "DesignDescription";
+            // 
+            // designfile
+            // 
+            this.designfile.HeaderText = "Design File";
+            this.designfile.MinimumWidth = 8;
+            this.designfile.Name = "designfile";
             // 
             // DesignApproval
             // 
@@ -460,7 +492,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picDesign)).EndInit();
             this.panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgOrders)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,6 +516,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtProduct;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
-        private System.Windows.Forms.BindingSource orderBLBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DesignDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn designfile;
     }
 }

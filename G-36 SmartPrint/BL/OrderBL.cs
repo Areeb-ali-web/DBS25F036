@@ -22,6 +22,10 @@ namespace G_36_SmartPrint.BL
         private string Designdescription;
         public List<DesignBL> designs;
         public OrderBL() { }
+        public OrderBL(int orderid)
+        {
+            this.orderID = orderid;
+        }
 
         public OrderBL(int orderid,CustomersBL customer,DateTime orderdate,decimal ammount,string description,List<DesignBL> design)
         {
@@ -98,7 +102,10 @@ namespace G_36_SmartPrint.BL
                 totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
             }
         }
-
+        public void setDesignDesctiption(string description)
+        {
+            this.Designdescription = description;
+        }
         public decimal gettotalamount()
         {
             return totalAmount;
