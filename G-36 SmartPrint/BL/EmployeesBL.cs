@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using G_36_SmartPrint.DL;
+using Org.BouncyCastle.Asn1.Cmp;
 
 namespace G_36_SmartPrint.BL
 {
@@ -29,7 +30,7 @@ namespace G_36_SmartPrint.BL
             this.UserName = Employeename;
             this.employeeID = employeeID;
         }
-        public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, string username, string passwordHash, string email, string name, string phone_number, DateTime date, LookupBL role) : base(username, passwordHash, email, name, phone_number, date, role)
+        public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, string username, string passwordHash, string email, string name, string phone_number, LookupBL role) : base(username, passwordHash, email, name, phone_number, role)
         {
 
             this.employeeID = employeeID;
@@ -62,6 +63,10 @@ namespace G_36_SmartPrint.BL
             List<EmployeesBL> employees = EmployeeDL.LoadAllEmployees();
 
             return employees;
+        }
+        public LookupBL getposition()
+        {
+            return Position;
         }
     }
 }

@@ -16,14 +16,14 @@ namespace G_36_SmartPrint.BL
         protected LookupBL Role;
         public List<AddressBL> Addresses { get; set; } = new List<AddressBL>();
         public UserBL() { }
-        public UserBL(string username, string passwordHash, string email, string name, string phone_number, DateTime date, LookupBL role)
+        public UserBL(string username, string passwordHash, string email, string name, string phone_number, LookupBL role)
         {
             this.name = name;
             this.phoneNumber = phone_number;
             this.UserName = username;
             this.PasswordHash = passwordHash;
             this.Email = email;
-            this.CreatedDate = date;
+          
             this.Role = role;
 
         }
