@@ -42,8 +42,6 @@ namespace G_36_SmartPrint.UI
             btnDashboard.Click += NavigationButton_Click;
             btnViewAssignOrders.Click += NavigationButton_Click;
             btnDelivery.Click += NavigationButton_Click;
-            btnCompleteOrder.Click += NavigationButton_Click;
-            btnRequest.Click += NavigationButton_Click;
             btnViewSalary.Click += NavigationButton_Click;
             btnLogout.Click += btnLogout_Click;
         }
@@ -64,10 +62,10 @@ namespace G_36_SmartPrint.UI
                         // LoadUserControl(new DeliverymanDashboardControl());
                         break;
                     case "btnViewAssignOrders":
-                        // LoadUserControl(new ViewAssignedOrdersControl());
+                        LoadUserControl(new DeliveryViewAssignOrders());
                         break;
                     case "btnDelivery":
-                        // LoadUserControl(new DeliverOrdersControl());
+                        LoadUserControl(new OrdersDelivery());
                         break;
                     case "btnCompleteOrder":
                         // LoadUserControl(new ManufactureOrderControl());
@@ -76,7 +74,7 @@ namespace G_36_SmartPrint.UI
                         // LoadUserControl(new RequestConsumablesControl());
                         break;
                     case "btnViewSalary":
-                        // LoadUserControl(new ViewSalaryControl());
+                        LoadUserControl(new DeliveryViewSalary());
                         break;
                 }
             }

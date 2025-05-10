@@ -222,3 +222,8 @@ C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewInstructions.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.designerViewAssignedOrders.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewRequestStatus.resources
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.FinancialReport.resources
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.OrdersDelivery.resources
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.SalaryPayment.resources
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewFeedback.resources
+D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewFinancialReport.resources

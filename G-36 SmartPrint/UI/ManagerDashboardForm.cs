@@ -10,16 +10,13 @@ namespace G_36_SmartPrint.UI
         public ManagerDashboardForm()
         {
             InitializeComponent();
-
-            // Enable double buffering
+            
             this.DoubleBuffered = true;
             SetDoubleBuffered(panelMain);
 
             InitializeDashboard();
             AssignButtonEvents();
         }
-
-        // Helper method to enable double buffering for controls
         private static void SetDoubleBuffered(Control control)
         {
             if (SystemInformation.TerminalServerSession)
@@ -44,7 +41,11 @@ namespace G_36_SmartPrint.UI
             btnDashboard.Click += NavigationButton_Click;
             btnViewOrders.Click += NavigationButton_Click;
             btnAssignDesigningOrder.Click += NavigationButton_Click;
+            btnAssignDeliveryOrders.Click += NavigationButton_Click;
+            btnManageFinancial.Click += NavigationButton_Click;
+            btnManageConsumable.Click += NavigationButton_Click;
             btnRequest.Click += NavigationButton_Click;
+            btnViewInstructions.Click += NavigationButton_Click;
             btnViewSalary.Click += NavigationButton_Click;
             btnLogout.Click += btnLogout_Click;
         }
@@ -65,16 +66,28 @@ namespace G_36_SmartPrint.UI
                         // LoadUserControl(new ManagerDashboardControl());
                         break;
                     case "btnViewOrders":
-                        // LoadUserControl(new ViewOrdersControl());
+                         LoadUserControl(new ManagerViewOrders());
                         break;
                     case "btnAssignDesigningOrder":
-                        // LoadUserControl(new AssignDesigningOrderControl());
+                        LoadUserControl(new AssignDesignOrder());
+                        break;
+                    case "btnAssignDeliveryOrders":
+                        LoadUserControl(new AssignDeliveryOrder());
+                        break;
+                    case "btnManageFinancial":
+                        LoadUserControl(new FinancialReport());
+                        break;
+                    case "btnManageConsumable":
+                        LoadUserControl(new ManageConsumables());
                         break;
                     case "btnRequest":
-                        // LoadUserControl(new RequestConsumablesControl());
+                        LoadUserControl(new ApproveRequest());
+                        break;
+                    case "btnViewInstructions":
+                        LoadUserControl(new ViewInstructions());
                         break;
                     case "btnViewSalary":
-                        // LoadUserControl(new ViewSalaryControl());
+                        LoadUserControl(new DesignerViewSalary());
                         break;
                 }
             }
