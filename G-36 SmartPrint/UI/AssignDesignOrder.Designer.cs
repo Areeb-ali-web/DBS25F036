@@ -54,10 +54,9 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 23, 30, 23);
-            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 15, 20, 15);
+            this.panelHeader.Size = new System.Drawing.Size(800, 80);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -67,10 +66,9 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(30, 23);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(20, 15);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(533, 60);
+            this.lblTitle.Size = new System.Drawing.Size(365, 41);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Assign Designing Orders";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -87,11 +85,10 @@
             this.mainPanel.Controls.Add(this.lblOrder);
             this.mainPanel.Controls.Add(this.lblDesigner);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 123);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.mainPanel.Location = new System.Drawing.Point(0, 80);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
-            this.mainPanel.Size = new System.Drawing.Size(1200, 800);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.mainPanel.Size = new System.Drawing.Size(800, 520);
             this.mainPanel.TabIndex = 1;
             // 
             // dgvDesignOrders
@@ -124,14 +121,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDesignOrders.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDesignOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDesignOrders.Location = new System.Drawing.Point(30, 472);
-            this.dgvDesignOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvDesignOrders.Location = new System.Drawing.Point(20, 307);
             this.dgvDesignOrders.Name = "dgvDesignOrders";
             this.dgvDesignOrders.ReadOnly = true;
             this.dgvDesignOrders.RowHeadersVisible = false;
             this.dgvDesignOrders.RowHeadersWidth = 62;
             this.dgvDesignOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvDesignOrders.Size = new System.Drawing.Size(1140, 297);
+            this.dgvDesignOrders.Size = new System.Drawing.Size(760, 193);
             this.dgvDesignOrders.TabIndex = 9;
             this.dgvDesignOrders.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDesignOrders.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -166,10 +162,9 @@
             this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(940, 383);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClear.Location = new System.Drawing.Point(627, 249);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(180, 55);
+            this.btnClear.Size = new System.Drawing.Size(120, 36);
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             // 
@@ -184,10 +179,9 @@
             this.btnAssign.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.btnAssign.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnAssign.ForeColor = System.Drawing.Color.White;
-            this.btnAssign.Location = new System.Drawing.Point(648, 383);
-            this.btnAssign.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAssign.Location = new System.Drawing.Point(432, 249);
             this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(180, 55);
+            this.btnAssign.Size = new System.Drawing.Size(120, 36);
             this.btnAssign.TabIndex = 6;
             this.btnAssign.Text = "Assign";
             // 
@@ -208,14 +202,14 @@
             this.txtDesignDescription.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtDesignDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtDesignDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDesignDescription.Location = new System.Drawing.Point(30, 318);
-            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignDescription.Location = new System.Drawing.Point(20, 207);
+            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDesignDescription.Multiline = true;
             this.txtDesignDescription.Name = "txtDesignDescription";
             this.txtDesignDescription.PlaceholderText = "";
             this.txtDesignDescription.ReadOnly = true;
             this.txtDesignDescription.SelectedText = "";
-            this.txtDesignDescription.Size = new System.Drawing.Size(454, 120);
+            this.txtDesignDescription.Size = new System.Drawing.Size(303, 78);
             this.txtDesignDescription.TabIndex = 5;
             // 
             // cmbOrder
@@ -233,10 +227,9 @@
             this.cmbOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.cmbOrder.ItemHeight = 30;
-            this.cmbOrder.Location = new System.Drawing.Point(30, 197);
-            this.cmbOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbOrder.Location = new System.Drawing.Point(20, 128);
             this.cmbOrder.Name = "cmbOrder";
-            this.cmbOrder.Size = new System.Drawing.Size(452, 36);
+            this.cmbOrder.Size = new System.Drawing.Size(303, 36);
             this.cmbOrder.TabIndex = 4;
             // 
             // cmbDesigner
@@ -254,10 +247,9 @@
             this.cmbDesigner.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cmbDesigner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.cmbDesigner.ItemHeight = 30;
-            this.cmbDesigner.Location = new System.Drawing.Point(30, 77);
-            this.cmbDesigner.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbDesigner.Location = new System.Drawing.Point(20, 50);
             this.cmbDesigner.Name = "cmbDesigner";
-            this.cmbDesigner.Size = new System.Drawing.Size(452, 36);
+            this.cmbDesigner.Size = new System.Drawing.Size(303, 36);
             this.cmbDesigner.TabIndex = 3;
             // 
             // lblDesignDescription
@@ -266,10 +258,9 @@
             this.lblDesignDescription.BackColor = System.Drawing.Color.Transparent;
             this.lblDesignDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesignDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDesignDescription.Location = new System.Drawing.Point(32, 272);
-            this.lblDesignDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDesignDescription.Location = new System.Drawing.Point(21, 177);
             this.lblDesignDescription.Name = "lblDesignDescription";
-            this.lblDesignDescription.Size = new System.Drawing.Size(239, 32);
+            this.lblDesignDescription.Size = new System.Drawing.Size(159, 21);
             this.lblDesignDescription.TabIndex = 2;
             this.lblDesignDescription.Text = "Design Description:";
             this.lblDesignDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -280,10 +271,9 @@
             this.lblOrder.BackColor = System.Drawing.Color.Transparent;
             this.lblOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblOrder.Location = new System.Drawing.Point(34, 166);
-            this.lblOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOrder.Location = new System.Drawing.Point(23, 108);
             this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(88, 32);
+            this.lblOrder.Size = new System.Drawing.Size(58, 21);
             this.lblOrder.TabIndex = 1;
             this.lblOrder.Text = "Order:";
             this.lblOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,24 +284,22 @@
             this.lblDesigner.BackColor = System.Drawing.Color.Transparent;
             this.lblDesigner.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesigner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDesigner.Location = new System.Drawing.Point(32, 31);
-            this.lblDesigner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDesigner.Location = new System.Drawing.Point(21, 20);
             this.lblDesigner.Name = "lblDesigner";
-            this.lblDesigner.Size = new System.Drawing.Size(197, 32);
+            this.lblDesigner.Size = new System.Drawing.Size(132, 21);
             this.lblDesigner.TabIndex = 0;
             this.lblDesigner.Text = "Designer Name:";
             this.lblDesigner.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AssignDesignOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AssignDesignOrder";
-            this.Size = new System.Drawing.Size(1200, 923);
+            this.Size = new System.Drawing.Size(800, 600);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);

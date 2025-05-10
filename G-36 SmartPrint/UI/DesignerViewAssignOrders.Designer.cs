@@ -50,10 +50,9 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
-            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(20);
+            this.panelHeader.Size = new System.Drawing.Size(800, 80);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -63,10 +62,9 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(30, 31);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(20, 20);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(332, 54);
+            this.lblTitle.Size = new System.Drawing.Size(226, 37);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Assigned Orders";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,11 +73,10 @@
             // 
             this.mainPanel.Controls.Add(this.dgvAssignedOrders);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 123);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.mainPanel.Location = new System.Drawing.Point(0, 80);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
-            this.mainPanel.Size = new System.Drawing.Size(1200, 800);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
+            this.mainPanel.Size = new System.Drawing.Size(800, 520);
             this.mainPanel.TabIndex = 1;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -114,15 +111,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAssignedOrders.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAssignedOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAssignedOrders.Location = new System.Drawing.Point(60, 274);
-            this.dgvAssignedOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvAssignedOrders.Location = new System.Drawing.Point(40, 178);
             this.dgvAssignedOrders.Name = "dgvAssignedOrders";
             this.dgvAssignedOrders.ReadOnly = true;
             this.dgvAssignedOrders.RowHeadersVisible = false;
             this.dgvAssignedOrders.RowHeadersWidth = 62;
             this.dgvAssignedOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAssignedOrders.RowTemplate.Height = 30;
-            this.dgvAssignedOrders.Size = new System.Drawing.Size(1084, 381);
+            this.dgvAssignedOrders.Size = new System.Drawing.Size(723, 248);
             this.dgvAssignedOrders.TabIndex = 0;
             this.dgvAssignedOrders.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvAssignedOrders.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -177,13 +173,12 @@
             // 
             // DesignerViewAssignOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DesignerViewAssignOrders";
-            this.Size = new System.Drawing.Size(1200, 923);
+            this.Size = new System.Drawing.Size(800, 600);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);
