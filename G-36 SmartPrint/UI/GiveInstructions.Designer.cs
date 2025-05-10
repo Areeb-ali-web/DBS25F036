@@ -262,6 +262,7 @@
             this.cmbManagerName.Name = "cmbManagerName";
             this.cmbManagerName.Size = new System.Drawing.Size(376, 36);
             this.cmbManagerName.TabIndex = 5;
+            this.cmbManagerName.SelectedIndexChanged += new System.EventHandler(this.cmbManagerName_SelectedIndexChanged);
             // 
             // txtAdminName
             // 

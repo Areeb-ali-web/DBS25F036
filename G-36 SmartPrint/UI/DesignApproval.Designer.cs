@@ -373,6 +373,7 @@
             this.btnApprove.Size = new System.Drawing.Size(194, 54);
             this.btnApprove.TabIndex = 0;
             this.btnApprove.Text = "Approve";
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click_1);
             // 
             // dvgOrders
             // 
