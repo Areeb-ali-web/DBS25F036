@@ -26,7 +26,11 @@ namespace G_36_SmartPrint.BL
         {
             this.orderID = orderid;
         }
-
+        public int OrderID
+        {
+            get { return this.orderID; }
+            set { this.orderID = value; }
+        }
         public OrderBL(int orderid,CustomersBL customer,DateTime orderdate,decimal ammount,string description,List<DesignBL> design)
         {
             this.orderID = orderid;

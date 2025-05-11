@@ -115,7 +115,24 @@ namespace G_36_SmartPrint.DL
 
             return designs;
         }
+        public static void InsertDesign(int orderId, int designerId)
+        {
+            string query = @"
+        INSERT INTO designs (DesignFile, CreatedDate, OrderID, ApprovalStatusID, DesignerID)
+        VALUES (@DesignFile, @CreatedDate, @OrderID, @ApprovalStatusID, @DesignerID);
+    ";
 
+            MySqlParameter[] parameters = new MySqlParameter[]
+            {
+        new MySqlParameter("@DesignFile", ""), // initially empty
+        new MySqlParameter("@CreatedDate", DateTime.Now),
+        new MySqlParameter("@OrderID", orderId),
+        new MySqlParameter("@ApprovalStatusID", 26), // default status ID
+        new MySqlParameter("@DesignerID", designerId)
+            };
+
+            SqlHelper.executeDML(query, parameters);
+        }
         public static void UpdateDesignApprovalStatusByOrderId(int orderId, int newApprovalStatusId)
         {
             string query = "UPDATE design SET approvalstatus = @status WHERE orderid = @orderId";
@@ -128,5 +145,6 @@ namespace G_36_SmartPrint.DL
 
             SqlHelper.executeDML(query, parameters);
         }
+
     }
 }

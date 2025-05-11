@@ -196,7 +196,7 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Rejected");
+                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "being_designed");
 
                 OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "being_designed");
                 DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.getOrderID(), 23);

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -38,11 +38,11 @@
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnAssign = new Guna.UI2.WinForms.Guna2Button();
             this.txtDesignDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbOrder = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmbDesigner = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblDesignDescription = new System.Windows.Forms.Label();
             this.lblOrder = new System.Windows.Forms.Label();
             this.lblDesigner = new System.Windows.Forms.Label();
+            this.cmbOrder = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbDesigner = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelHeader.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDesignOrders)).BeginInit();
@@ -100,30 +100,30 @@
             this.dgvDesignOrders.AllowUserToAddRows = false;
             this.dgvDesignOrders.AllowUserToDeleteRows = false;
             this.dgvDesignOrders.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvDesignOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvDesignOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDesignOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDesignOrders.BackgroundColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDesignOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDesignOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDesignOrders.ColumnHeadersHeight = 40;
             this.dgvDesignOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDesignOrders.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDesignOrders.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDesignOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDesignOrders.Location = new System.Drawing.Point(30, 472);
             this.dgvDesignOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -192,6 +192,7 @@
             this.btnAssign.Size = new System.Drawing.Size(180, 55);
             this.btnAssign.TabIndex = 6;
             this.btnAssign.Text = "Assign";
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // txtDesignDescription
             // 
@@ -211,7 +212,7 @@
             this.txtDesignDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtDesignDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignDescription.Location = new System.Drawing.Point(30, 318);
-            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignDescription.Multiline = true;
             this.txtDesignDescription.Name = "txtDesignDescription";
             this.txtDesignDescription.PlaceholderText = "";
@@ -219,48 +220,6 @@
             this.txtDesignDescription.SelectedText = "";
             this.txtDesignDescription.Size = new System.Drawing.Size(454, 120);
             this.txtDesignDescription.TabIndex = 5;
-            // 
-            // cmbOrder
-            // 
-            this.cmbOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbOrder.BackColor = System.Drawing.Color.Transparent;
-            this.cmbOrder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.cmbOrder.BorderRadius = 5;
-            this.cmbOrder.BorderThickness = 2;
-            this.cmbOrder.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbOrder.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbOrder.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmbOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.cmbOrder.ItemHeight = 30;
-            this.cmbOrder.Location = new System.Drawing.Point(30, 197);
-            this.cmbOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbOrder.Name = "cmbOrder";
-            this.cmbOrder.Size = new System.Drawing.Size(452, 36);
-            this.cmbOrder.TabIndex = 4;
-            // 
-            // cmbDesigner
-            // 
-            this.cmbDesigner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbDesigner.BackColor = System.Drawing.Color.Transparent;
-            this.cmbDesigner.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.cmbDesigner.BorderRadius = 5;
-            this.cmbDesigner.BorderThickness = 2;
-            this.cmbDesigner.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbDesigner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDesigner.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbDesigner.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbDesigner.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.cmbDesigner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.cmbDesigner.ItemHeight = 30;
-            this.cmbDesigner.Location = new System.Drawing.Point(30, 77);
-            this.cmbDesigner.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbDesigner.Name = "cmbDesigner";
-            this.cmbDesigner.Size = new System.Drawing.Size(452, 36);
-            this.cmbDesigner.TabIndex = 3;
             // 
             // lblDesignDescription
             // 
@@ -304,6 +263,48 @@
             this.lblDesigner.Text = "Designer Name:";
             this.lblDesigner.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cmbOrder
+            // 
+            this.cmbOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbOrder.BackColor = System.Drawing.Color.Transparent;
+            this.cmbOrder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cmbOrder.BorderRadius = 5;
+            this.cmbOrder.BorderThickness = 2;
+            this.cmbOrder.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOrder.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbOrder.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.cmbOrder.ItemHeight = 30;
+            this.cmbOrder.Location = new System.Drawing.Point(30, 197);
+            this.cmbOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbOrder.Name = "cmbOrder";
+            this.cmbOrder.Size = new System.Drawing.Size(452, 36);
+            this.cmbOrder.TabIndex = 4;
+            // 
+            // cmbDesigner
+            // 
+            this.cmbDesigner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbDesigner.BackColor = System.Drawing.Color.Transparent;
+            this.cmbDesigner.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cmbDesigner.BorderRadius = 5;
+            this.cmbDesigner.BorderThickness = 2;
+            this.cmbDesigner.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDesigner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDesigner.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbDesigner.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbDesigner.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.cmbDesigner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.cmbDesigner.ItemHeight = 30;
+            this.cmbDesigner.Location = new System.Drawing.Point(30, 77);
+            this.cmbDesigner.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbDesigner.Name = "cmbDesigner";
+            this.cmbDesigner.Size = new System.Drawing.Size(452, 36);
+            this.cmbDesigner.TabIndex = 3;
+            // 
             // AssignDesignOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -332,10 +333,10 @@
         private Guna.UI2.WinForms.Guna2Button btnClear;
         private Guna.UI2.WinForms.Guna2Button btnAssign;
         private Guna.UI2.WinForms.Guna2TextBox txtDesignDescription;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbOrder;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbDesigner;
         private System.Windows.Forms.Label lblDesignDescription;
         private System.Windows.Forms.Label lblOrder;
         private System.Windows.Forms.Label lblDesigner;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbOrder;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbDesigner;
     }
 }

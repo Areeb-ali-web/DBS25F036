@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using G_36_SmartPrint.BL;
 using G_36_SmartPrint.DL;
@@ -17,28 +13,37 @@ namespace G_36_SmartPrint.UI
         public AssignDesignOrder()
         {
             InitializeComponent();
-            List<EmployeesBL> list = EmployeeDL.LoadEmployeesByPosition(4);
-            cmbDesigner.Items.Clear();
+            LoadDesigners();
+            LoadOrders();
+        }
+
+        private void LoadDesigners()
+        {
+            List<EmployeesBL> list = EmployeeDL.LoadEmployeesByPosition(4); // 4 = Designer
             cmbDesigner.DataSource = list;
             cmbDesigner.DisplayMember = "userName";
-            cmbDesigner.SelectedIndex = 0;
             cmbDesigner.ValueMember = "Employeeid";
+            if (list.Count > 0) cmbDesigner.SelectedIndex = 0;
         }
+
+        private void LoadOrders()
+        {
+            List<OrderBL> orders = OrderDL.LoadOrdersByStatus("manufactured");
+            cmbOrder.DataSource = orders;
+            cmbOrder.DisplayMember = "OrderID";
+            cmbOrder.ValueMember = "OrderID";
+            if (orders.Count > 0) cmbOrder.SelectedIndex = 0;
+        }
+
         private void DesignerViewSalary_Load(object sender, EventArgs e)
         {
-            LoadDesignerSalaries();
-
+            LoadDesignOrders();
         }
-        private void LoadDesignerSalaries()
+
+        private void LoadDesignOrders()
         {
             try
             {
-
-
-
-
-
-                // ✅ FIX: Confirm method LoadSalariesByEmployeeId exists and returns a list
                 List<OrderBL> orders = OrderDL.LoadOrdersByStatus("pending");
 
                 dgvDesignOrders.Rows.Clear();
@@ -46,29 +51,59 @@ namespace G_36_SmartPrint.UI
 
                 dgvDesignOrders.Columns.Add("OrderID", "Order ID");
                 dgvDesignOrders.Columns.Add("Amount", "Amount");
-                dgvDesignOrders.Columns.Add("DessignDescription", "DesignDescription");
+                dgvDesignOrders.Columns.Add("DessignDescription", "Design Description");
                 dgvDesignOrders.Columns.Add("Products", "Products");
                 dgvDesignOrders.Columns.Add("Status", "Status");
-                dgvDesignOrders.Columns.Add("orderDate", "OrderDate");
+                dgvDesignOrders.Columns.Add("OrderDate", "Order Date");
 
                 foreach (var order in orders)
                 {
                     dgvDesignOrders.Rows.Add(
                         order.getOrderID(),
-                        order.gettotalAmount().ToString("C"), // Currency formatting based on system locale
+                        order.gettotalAmount().ToString("C"),
                         order.getDesignDescription(),
                         order.allOrders(),
-                        order.getOrderStatus()?.getLookupValue() ?? "Unknown", // ✅ NULL check
+                        order.getOrderStatus()?.getLookupValue() ?? "Unknown",
                         order.getOrderDate().ToString("yyyy-MM-dd")
                     );
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading salary data:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading order data:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void cmbOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbOrder.SelectedItem is OrderBL selectedOrder)
+            {
+                txtDesignDescription.Text = selectedOrder.getDesignDescription();
+            }
+        }
+
+        private void btnAssign_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbDesigner.SelectedItem is EmployeesBL designer && cmbOrder.SelectedItem is OrderBL order)
+                {
+                    // Call InsertDesign from DesignDL
+                    DesignDL.InsertDesign(order.getOrderID(), designer.getEmployeeID());
+
+                    MessageBox.Show("Design task assigned successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDesignOrders(); // Refresh table
+                }
+                else
+                {
+                    MessageBox.Show("Please select both a designer and an order.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error assigning design:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void dgvDesignOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -78,5 +113,7 @@ namespace G_36_SmartPrint.UI
         {
 
         }
+
+
     }
 }
