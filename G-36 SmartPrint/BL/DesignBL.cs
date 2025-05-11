@@ -9,6 +9,7 @@ namespace G_36_SmartPrint.BL
 {
     internal class DesignBL
     {
+        public int designid;
         public OrderBL order;
         public string designFile;
         public DesignerBL designer;

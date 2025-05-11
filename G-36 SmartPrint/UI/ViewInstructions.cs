@@ -82,5 +82,10 @@ namespace G_36_SmartPrint.UI
         {
 
         }
+
+        private void dgvRequests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

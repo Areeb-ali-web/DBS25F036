@@ -21,5 +21,15 @@ namespace G_36_SmartPrint.UI
         {
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

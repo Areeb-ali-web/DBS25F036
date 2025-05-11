@@ -96,6 +96,7 @@
             this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
             this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // dgvConsumables
             // 

@@ -69,5 +69,10 @@ namespace G_36_SmartPrint.UI
         {
 
         }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

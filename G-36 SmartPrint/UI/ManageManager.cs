@@ -21,5 +21,10 @@ namespace G_36_SmartPrint.UI
         {
 
         }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

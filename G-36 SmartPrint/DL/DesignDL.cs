@@ -12,12 +12,40 @@ namespace G_36_SmartPrint.DL
 {
     internal class DesignDL
     {
+
+        public static bool UpdateDesignFile(int orderId, int designId, string newDesignFile)
+        {
+            string query = @"
+        UPDATE designs 
+        SET DesignFile = @DesignFile 
+        WHERE OrderID = @OrderID AND DesignID = @DesignID;
+    ";
+
+            MySqlParameter[] parameters = new MySqlParameter[]
+            {
+        new MySqlParameter("@DesignFile", newDesignFile),
+        new MySqlParameter("@OrderID", orderId),
+        new MySqlParameter("@DesignID", designId)
+            };
+
+            using (MySqlConnection con = new MySqlConnection(SqlHelper.constring))
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddRange(parameters);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
+
         public static List<DesignBL> LoadDesignsByOrderId(int orderId)
         {
             List<DesignBL> designs = new List<DesignBL>();
 
             string query = $@"
-                SELECT 
+                SELECT
+                    d.designid,
                     d.DesignFile,
                     d.CreatedDate,
                     d.OrderID,
@@ -57,6 +85,7 @@ namespace G_36_SmartPrint.DL
                     approvalStatus,
                     Convert.ToInt32(row["OrderID"])
                 );
+                design.designid = Convert.ToInt32(row["DesignID"]);
 
                 designs.Add(design);
             }
@@ -110,6 +139,7 @@ namespace G_36_SmartPrint.DL
                 LookupBL status = new LookupBL(statusID, statusValue);
 
                 DesignBL design = new DesignBL(file, designer, created, status, Convert.ToInt32(row["OrderID"]));
+                design.designid = Convert.ToInt32(row["DesignID"]);
                 designs.Add(design);
             }
 

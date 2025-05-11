@@ -38,11 +38,11 @@
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnAssign = new Guna.UI2.WinForms.Guna2Button();
             this.txtDesignDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbOrder = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbDesigner = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblDesignDescription = new System.Windows.Forms.Label();
             this.lblOrder = new System.Windows.Forms.Label();
             this.lblDesigner = new System.Windows.Forms.Label();
-            this.cmbOrder = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmbDesigner = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelHeader.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDesignOrders)).BeginInit();
@@ -221,48 +221,6 @@
             this.txtDesignDescription.Size = new System.Drawing.Size(454, 120);
             this.txtDesignDescription.TabIndex = 5;
             // 
-            // lblDesignDescription
-            // 
-            this.lblDesignDescription.AutoSize = true;
-            this.lblDesignDescription.BackColor = System.Drawing.Color.Transparent;
-            this.lblDesignDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesignDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDesignDescription.Location = new System.Drawing.Point(32, 272);
-            this.lblDesignDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDesignDescription.Name = "lblDesignDescription";
-            this.lblDesignDescription.Size = new System.Drawing.Size(239, 32);
-            this.lblDesignDescription.TabIndex = 2;
-            this.lblDesignDescription.Text = "Design Description:";
-            this.lblDesignDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblOrder
-            // 
-            this.lblOrder.AutoSize = true;
-            this.lblOrder.BackColor = System.Drawing.Color.Transparent;
-            this.lblOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblOrder.Location = new System.Drawing.Point(34, 166);
-            this.lblOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(88, 32);
-            this.lblOrder.TabIndex = 1;
-            this.lblOrder.Text = "Order:";
-            this.lblOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDesigner
-            // 
-            this.lblDesigner.AutoSize = true;
-            this.lblDesigner.BackColor = System.Drawing.Color.Transparent;
-            this.lblDesigner.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesigner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDesigner.Location = new System.Drawing.Point(32, 31);
-            this.lblDesigner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDesigner.Name = "lblDesigner";
-            this.lblDesigner.Size = new System.Drawing.Size(197, 32);
-            this.lblDesigner.TabIndex = 0;
-            this.lblDesigner.Text = "Designer Name:";
-            this.lblDesigner.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // cmbOrder
             // 
             this.cmbOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -304,6 +262,48 @@
             this.cmbDesigner.Name = "cmbDesigner";
             this.cmbDesigner.Size = new System.Drawing.Size(452, 36);
             this.cmbDesigner.TabIndex = 3;
+            // 
+            // lblDesignDescription
+            // 
+            this.lblDesignDescription.AutoSize = true;
+            this.lblDesignDescription.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesignDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesignDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lblDesignDescription.Location = new System.Drawing.Point(32, 272);
+            this.lblDesignDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDesignDescription.Name = "lblDesignDescription";
+            this.lblDesignDescription.Size = new System.Drawing.Size(239, 32);
+            this.lblDesignDescription.TabIndex = 2;
+            this.lblDesignDescription.Text = "Design Description:";
+            this.lblDesignDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblOrder
+            // 
+            this.lblOrder.AutoSize = true;
+            this.lblOrder.BackColor = System.Drawing.Color.Transparent;
+            this.lblOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lblOrder.Location = new System.Drawing.Point(34, 166);
+            this.lblOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOrder.Name = "lblOrder";
+            this.lblOrder.Size = new System.Drawing.Size(88, 32);
+            this.lblOrder.TabIndex = 1;
+            this.lblOrder.Text = "Order:";
+            this.lblOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDesigner
+            // 
+            this.lblDesigner.AutoSize = true;
+            this.lblDesigner.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesigner.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesigner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lblDesigner.Location = new System.Drawing.Point(32, 31);
+            this.lblDesigner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDesigner.Name = "lblDesigner";
+            this.lblDesigner.Size = new System.Drawing.Size(197, 32);
+            this.lblDesigner.TabIndex = 0;
+            this.lblDesigner.Text = "Designer Name:";
+            this.lblDesigner.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AssignDesignOrder
             // 

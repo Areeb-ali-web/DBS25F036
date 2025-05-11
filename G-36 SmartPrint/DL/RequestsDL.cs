@@ -64,6 +64,24 @@ namespace G_36_SmartPrint.DL
             return requests;
 
         }
+        public static void AddRequest(int requestedItemId, int employeeId, int quantity)
+        {
+            if (quantity <= 0)
+                throw new ArgumentException("Quantity must be greater than zero.");
+
+            string query = @"
+        INSERT INTO requests (Requested_item_Id, EmployeeID, Quantity, Request_StatusID)
+        VALUES (@RequestedItemId, @EmployeeID, @Quantity, 28);";
+
+            MySqlParameter[] parameters = new MySqlParameter[]
+            {
+        new MySqlParameter("@RequestedItemId", requestedItemId),
+        new MySqlParameter("@EmployeeID", employeeId),
+        new MySqlParameter("@Quantity", quantity)
+            };
+
+            SqlHelper.executeDML(query, parameters);
+        }
 
         public static void ChangeApprovalStatusToApproved(int requestId)
         {

@@ -173,5 +173,10 @@ namespace G_36_SmartPrint.UI
         {
             Salary_PaymentDL.PayAllSalaries();
         }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
