@@ -28,7 +28,12 @@ namespace G_36_SmartPrint.BL
         {
             return price;
         }
-
+        public string ProductName
+        {
+            get { return name; }
+            set { name = value; }
+            }
+ 
         public int getStocks()
         {
             return quantityInStock; 
