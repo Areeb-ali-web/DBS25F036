@@ -229,6 +229,7 @@
             this.btnAdd.Size = new System.Drawing.Size(180, 55);
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblAddress
             // 
@@ -372,7 +373,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Location = new System.Drawing.Point(45, 385);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(6);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "";
@@ -396,7 +397,7 @@
             this.txtSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSalary.Location = new System.Drawing.Point(660, 385);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(6);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.PlaceholderText = "";
             this.txtSalary.SelectedText = "";
@@ -420,7 +421,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.Location = new System.Drawing.Point(45, 145);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(6);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.SelectedText = "";
@@ -472,7 +473,7 @@
             this.txtCNIC.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCNIC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCNIC.Location = new System.Drawing.Point(660, 46);
-            this.txtCNIC.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCNIC.Margin = new System.Windows.Forms.Padding(6);
             this.txtCNIC.Name = "txtCNIC";
             this.txtCNIC.PlaceholderText = "";
             this.txtCNIC.SelectedText = "";
