@@ -31,8 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.txtitem_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvRequests = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -45,38 +43,13 @@
             this.lblItemName = new System.Windows.Forms.Label();
             this.txtDesignerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDesignerName = new System.Windows.Forms.Label();
-            this.panelHeader.SuspendLayout();
+            this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            this.panelHeader.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panelHeader.Controls.Add(this.lblTitle);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
-            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
-            this.panelHeader.TabIndex = 0;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(30, 31);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(354, 54);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Request Designer";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mainPanel
             // 
@@ -97,8 +70,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Padding = new System.Windows.Forms.Padding(45, 31, 45, 31);
             this.mainPanel.Size = new System.Drawing.Size(1200, 800);
-            this.mainPanel.TabIndex = 1;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            this.mainPanel.TabIndex = 3;
             // 
             // txtitem_name
             // 
@@ -184,7 +156,6 @@
             this.dgvRequests.ThemeStyle.RowsStyle.Height = 22;
             this.dgvRequests.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvRequests.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRequests_CellContentClick);
             // 
             // btnCancel
             // 
@@ -203,6 +174,7 @@
             this.btnCancel.Size = new System.Drawing.Size(180, 55);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -221,7 +193,6 @@
             this.btnSubmit.Size = new System.Drawing.Size(180, 55);
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // dtpRequestDate
             // 
@@ -345,6 +316,33 @@
             this.lblDesignerName.Text = "Designer Name:";
             this.lblDesignerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panelHeader.Controls.Add(this.lblTitle);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
+            this.panelHeader.TabIndex = 2;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(30, 31);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(354, 54);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Request Designer";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // RequestDesigner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -354,30 +352,30 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RequestDesigner";
             this.Size = new System.Drawing.Size(1200, 923);
-            this.panelHeader.ResumeLayout(false);
-            this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel panelHeader;
-        private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
-        private Guna.UI2.WinForms.Guna2TextBox txtDesignerName;
-        private System.Windows.Forms.Label lblDesignerName;
-        private System.Windows.Forms.Label lblItemName;
-        private Guna.UI2.WinForms.Guna2NumericUpDown numQuantity;
-        private System.Windows.Forms.Label lblQuantity;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpRequestDate;
-        private System.Windows.Forms.Label lblRequestDate;
-        private Guna.UI2.WinForms.Guna2Button btnSubmit;
+        private Guna.UI2.WinForms.Guna2TextBox txtitem_name;
         private Guna.UI2.WinForms.Guna2DataGridView dgvRequests;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private Guna.UI2.WinForms.Guna2TextBox txtitem_name;
+        private Guna.UI2.WinForms.Guna2Button btnSubmit;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpRequestDate;
+        private System.Windows.Forms.Label lblRequestDate;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numQuantity;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label lblItemName;
+        private Guna.UI2.WinForms.Guna2TextBox txtDesignerName;
+        private System.Windows.Forms.Label lblDesignerName;
+        private Guna.UI2.WinForms.Guna2Panel panelHeader;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

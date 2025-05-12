@@ -46,9 +46,9 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                int adminId = LoginHelpers.currentEmployee.getuserID(); // Assuming this gets UserID of admin
+                int adminId = LoginHelpers.currentuser.getuserID(); // Assuming this gets UserID of admin
                 List<InstructionBL> instructions = InstructionDL.LoadInstructionsByAdminId(adminId);
-
+                txtAdminName.Text = LoginHelpers.currentuser.getUserName();
                 dgvInstructions.Rows.Clear();
                 dgvInstructions.Columns.Clear();
 

@@ -11,14 +11,14 @@ namespace G_36_SmartPrint.BL
     {
         public int ProductID { get; set; }
 
-        private string name;
+        public string name { get; private set; }
         
     
         public string Description { get; set; }
 
-        private decimal price;
+        public decimal price;
  
-        private int quantityInStock;
+        public int quantityInStock;
 
         public  string getProductName()
         {

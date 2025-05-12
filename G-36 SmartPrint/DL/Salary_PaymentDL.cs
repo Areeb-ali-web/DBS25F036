@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using G_36_SmartPrint.BL;
 using MySqlConnector;
 
@@ -34,15 +31,15 @@ namespace G_36_SmartPrint.DL
 
             string query = @"
                 SELECT 
-                    sp.PaymentID,
-                    ep.employeeid,
-                    sp.Amount,
-                    sp.PaymentDate,
-                    l.LookupID AS SalaryStatusID,
-                    l.LookupValue AS SalaryStatusValue
-                FROM salarypayment sp
-                INNER JOIN Lookuptable l ON sp.Salary_StatusID = l.LookupID
-                WHERE l.LookupCategory = 'SalaryStatus'";
+     sp.PaymentID,
+     sp.employeeid,
+     sp.Amount,
+     sp.PaymentDate,
+     l.LookupID AS SalaryStatusID,
+     l.LookupValue AS SalaryStatusValue
+ FROM salarypayment sp
+ INNER JOIN Lookuptable l ON sp.Salary_StatusID = l.LookupID
+ WHERE sp.Salary_StatusID = 25";
 
             DataTable dt = SqlHelper.getDataTable(query);
 

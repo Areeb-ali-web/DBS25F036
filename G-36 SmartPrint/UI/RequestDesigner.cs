@@ -22,7 +22,6 @@ namespace G_36_SmartPrint.UI
             InitializeComponent();
             this.Load += RequestDesigner_Load;
         }
-
         private void RequestDesigner_Load(object sender, EventArgs e)
         {
             txtDesignerName.Text = LoginHelpers.currentuser.getUserName();
@@ -146,6 +145,11 @@ namespace G_36_SmartPrint.UI
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
             // Optional: handle if needed
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

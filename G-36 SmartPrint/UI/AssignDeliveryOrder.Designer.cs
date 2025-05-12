@@ -1,4 +1,5 @@
-﻿namespace G_36_SmartPrint.UI
+﻿
+namespace G_36_SmartPrint.UI
 {
     partial class AssignDeliveryOrder
     {

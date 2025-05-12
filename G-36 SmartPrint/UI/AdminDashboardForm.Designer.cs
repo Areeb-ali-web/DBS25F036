@@ -53,7 +53,7 @@
             this.lblCompanyName.ForeColor = System.Drawing.Color.White;
             this.lblCompanyName.Location = new System.Drawing.Point(271, 41);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(726, 43);
+            this.lblCompanyName.Size = new System.Drawing.Size(1101, 63);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = "SMART PRINT: Custom Design and Clothing";
             // 
@@ -227,6 +227,7 @@
             this.btnDashboard.Size = new System.Drawing.Size(220, 50);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // panelMain
             // 
@@ -239,7 +240,7 @@
             // 
             // AdminDashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 700);
             this.Controls.Add(this.panelMain);

@@ -11,13 +11,20 @@ namespace G_36_SmartPrint.BL
     internal class EmployeesBL : UserBL
 
     {
-        protected int employeeID;
+        public int employeeID;
         protected LookupBL Position;
         protected DateTime hiredate;
         protected float salary;
         protected List<SalaryPaymentBL> salaryPayment;
 
         public EmployeesBL() { }
+
+        public string name
+        {
+            get { return getUserName(); }
+            set { userName = value; }
+        }
+
         public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary)
         {
             this.employeeID = employeeID;

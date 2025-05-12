@@ -250,12 +250,6 @@
     <Compile Include="UI\DesignerViewAssignOrders.Designer.cs">
       <DependentUpon>DesignerViewAssignOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\DesignerViewSalary.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\DesignerViewSalary.Designer.cs">
-      <DependentUpon>DesignerViewSalary.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Feedback.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -465,9 +459,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DesignerViewAssignOrders.resx">
       <DependentUpon>DesignerViewAssignOrders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\DesignerViewSalary.resx">
-      <DependentUpon>DesignerViewSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>

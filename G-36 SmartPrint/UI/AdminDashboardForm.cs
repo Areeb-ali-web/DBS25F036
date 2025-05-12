@@ -151,5 +151,10 @@ namespace G_36_SmartPrint.UI
                 lblCompanyName.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             }
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

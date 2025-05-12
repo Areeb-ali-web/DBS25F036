@@ -235,5 +235,10 @@ namespace G_36_SmartPrint
         {
 
         }
+
+        private void login_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

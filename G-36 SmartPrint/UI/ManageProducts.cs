@@ -22,6 +22,23 @@ namespace G_36_SmartPrint.UI
             LoadProducts();
             ConfigureDataGridView();
             ClearFields();
+            // Add double-click event handler
+            dgvProducts.CellDoubleClick += DgvProducts_CellDoubleClick;
+        }
+
+        private void DgvProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Ignore header clicks and out-of-range clicks
+            if (e.RowIndex < 0 || e.RowIndex >= dgvProducts.Rows.Count)
+                return;
+
+            // Get the selected product
+            currentProduct = (ProductBL)dgvProducts.Rows[e.RowIndex].DataBoundItem;
+            DisplayProductDetails(currentProduct);
+
+            // Optional: Highlight the selected row
+            dgvProducts.ClearSelection();
+            dgvProducts.Rows[e.RowIndex].Selected = true;
         }
 
         private void LoadProducts()
@@ -52,7 +69,8 @@ namespace G_36_SmartPrint.UI
                 Name = "colId",
                 HeaderText = "ID",
                 DataPropertyName = "ProductID",
-                Width = 80
+                Width = 80,
+                Visible = false // Hide the ID column as requested
             });
 
             dgvProducts.Columns.Add(new DataGridViewTextBoxColumn()
@@ -84,7 +102,11 @@ namespace G_36_SmartPrint.UI
                 Name = "colPrice",
                 HeaderText = "Price",
                 DataPropertyName = "Price",
-                Width = 100
+                Width = 100,
+                DefaultCellStyle = new DataGridViewCellStyle()
+                {
+                    Format = "C2" // Format as currency
+                }
             });
 
             dgvProducts.Columns.Add(new DataGridViewTextBoxColumn()
@@ -94,11 +116,19 @@ namespace G_36_SmartPrint.UI
                 DataPropertyName = "QuantityInStock",
                 Width = 100
             });
+
+            // Make the grid look better
+            dgvProducts.RowHeadersVisible = false;
+            dgvProducts.AllowUserToAddRows = false;
+            dgvProducts.ReadOnly = true;
+            dgvProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvProducts.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void RefreshDataGridView()
         {
             dgvProducts.DataSource = null;
+            productsList = ProductDL.LoadProducts();
             dgvProducts.DataSource = productsList;
         }
 
@@ -110,53 +140,30 @@ namespace G_36_SmartPrint.UI
             nudQuantity.Value = nudQuantity.Minimum;
             txtPrice.Text = "";
             currentProduct = null;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtProductName.Text))
-                {
-                    MessageBox.Show("Product name is required", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (!ValidateInputs())
                     return;
-                }
-
-                if (cmbFabricType.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Please select a fabric type", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (string.IsNullOrWhiteSpace(txtDescription.Text))
-                {
-                    MessageBox.Show("Description is required", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (!decimal.TryParse(txtPrice.Text, out decimal price) || price <= 0)
-                {
-                    MessageBox.Show("Please enter a valid positive price", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
 
                 // Create new product
                 var newProduct = new ProductBL(
                     txtProductName.Text,
-                    cmbFabricType.SelectedItem + ": " + txtDescription.Text, // Combine fabric type and description
-                    price,
+                    cmbFabricType.SelectedItem + ": " + txtDescription.Text,
+                    decimal.Parse(txtPrice.Text),
                     (int)nudQuantity.Value
                 );
 
-                // Add to database (you'll need to implement ProductDL.AddProduct)
-                // ProductDL.AddProduct(newProduct);
+                // Add to database
+                ProductDL.AddProduct(newProduct);
+                newProduct.ProductID = 00;
 
-                // For now, just add to our list
-                newProduct.ProductID = productsList.Count + 1;
+                // Add to our list
                 productsList.Add(newProduct);
 
                 RefreshDataGridView();
@@ -172,6 +179,39 @@ namespace G_36_SmartPrint.UI
             }
         }
 
+        private bool ValidateInputs()
+        {
+            if (string.IsNullOrWhiteSpace(txtProductName.Text))
+            {
+                MessageBox.Show("Product name is required", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (cmbFabricType.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a fabric type", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtDescription.Text))
+            {
+                MessageBox.Show("Description is required", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!decimal.TryParse(txtPrice.Text, out decimal price) || price <= 0)
+            {
+                MessageBox.Show("Please enter a valid positive price", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (currentProduct == null)
@@ -183,43 +223,19 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                if (string.IsNullOrWhiteSpace(txtProductName.Text))
-                {
-                    MessageBox.Show("Product name is required", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (!ValidateInputs())
                     return;
-                }
-
-                if (cmbFabricType.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Please select a fabric type", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (string.IsNullOrWhiteSpace(txtDescription.Text))
-                {
-                    MessageBox.Show("Description is required", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                if (!decimal.TryParse(txtPrice.Text, out decimal price) || price <= 0)
-                {
-                    MessageBox.Show("Please enter a valid positive price", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
 
                 // Update product
                 currentProduct.setname(txtProductName.Text);
                 currentProduct.Description = cmbFabricType.SelectedItem + ": " + txtDescription.Text;
-                currentProduct.setprice(price);
+                currentProduct.setprice(decimal.Parse(txtPrice.Text));
                 currentProduct.setQuantity((int)nudQuantity.Value);
 
                 // Update in database
-                ProductDL.UpdateProductPriceByID(currentProduct.ProductID, price);
-                ProductDL.UpdateProductStockByID(currentProduct.ProductID, (int)nudQuantity.Value);
+                ProductDL.UpdateProductPrice(currentProduct.ProductName,currentProduct.price);
+                ProductDL.UpdateProductStock(currentProduct.ProductName,currentProduct.quantityInStock);
+                
 
                 RefreshDataGridView();
                 ClearFields();
@@ -250,8 +266,12 @@ namespace G_36_SmartPrint.UI
             {
                 try
                 {
-                    // Instead of deleting, set quantity to 0 (soft delete)
-                    ProductDL.UpdateProductStockByID(currentProduct.ProductID, 0);
+                    // Delete from database
+                    if (ProductDL.DeleteProduct(currentProduct.ProductID))
+                    {
+                        RefreshDataGridView();
+                        ClearFields();
+                    }
 
                     // Remove from our list
                     productsList.Remove(currentProduct);
@@ -259,13 +279,17 @@ namespace G_36_SmartPrint.UI
                     RefreshDataGridView();
                     ClearFields();
 
-                    MessageBox.Show("Product quantity set to 0 (marked as deleted)", "Success",
+                    MessageBox.Show("Product deleted successfully", "Success",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error deleting product: {ex.Message}", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show($"Error deleting product: {ex.Message}", "Error",
+                    //    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    productsList.Remove(currentProduct);
+
+                    RefreshDataGridView();
+                    ClearFields();
                 }
             }
         }
@@ -276,6 +300,8 @@ namespace G_36_SmartPrint.UI
             {
                 currentProduct = (ProductBL)dgvProducts.SelectedRows[0].DataBoundItem;
                 DisplayProductDetails(currentProduct);
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
             }
         }
 
@@ -296,19 +322,13 @@ namespace G_36_SmartPrint.UI
                 txtDescription.Text = product.Description;
             }
 
-            txtPrice.Text = product.getPrice().ToString();
+            txtPrice.Text = product.getPrice().ToString("0.00");
             nudQuantity.Value = product.getStocks();
         }
-        private void txtProductName_TextChanged(object sender, EventArgs e)
+
+        private void btnClear_Click(object sender, EventArgs e)
         {
-
+            ClearFields();
         }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-   
-        
     }
 }

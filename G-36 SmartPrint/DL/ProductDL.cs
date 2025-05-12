@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using G_36_SmartPrint.BL;
+using MySqlConnector;
 
 namespace G_36_SmartPrint.DL
 {
@@ -217,6 +218,7 @@ namespace G_36_SmartPrint.DL
                 return -1; // Sentinel value indicating product not found
             }
         }
+
         public static ProductBL GetProductById(int productId)
         {
             string query = $"SELECT * FROM Products WHERE Productid = {productId}";
@@ -237,6 +239,18 @@ namespace G_36_SmartPrint.DL
             {
                 System.Windows.Forms.MessageBox.Show("Product not found.");
                 return null;
+            }
+        }
+        public static bool DeleteProduct(int productId)
+        {
+            string query = $"delete from products where ProductID ={productId}";
+            try
+            {
+                SqlHelper.executeDML(query);
+                return true;
+            }
+            catch { 
+                return false;
             }
         }
         public static ProductBL GetProductByName(string productName)
@@ -268,7 +282,37 @@ namespace G_36_SmartPrint.DL
             }
         }
 
+        public static void AddProduct(ProductBL product)
+        {
+            try
+            {
+                // Parameterized query to prevent SQL injection
+                string query = @"
+            INSERT INTO Products (name, Description, price, quantityinstock)
+            VALUES (@Name, @Description, @Price, @Quantity);
+            SELECT LAST_INSERT_ID();"; // Get the auto-generated ID
 
+                // Create parameters
+                MySqlParameter[] parameters = new MySqlParameter[]
+                {
+            new MySqlParameter("@Name", product.getProductName()),
+            new MySqlParameter("@Description", product.Description),
+            new MySqlParameter("@Price", product.getPrice()),
+            new MySqlParameter("@Quantity", product.getStocks())
+                };
+
+                // Execute the query and get the new ID
+              SqlHelper.executeDML(query, parameters);
+
+                
+            }
+            catch (Exception ex)
+            {
+                // Log the error (you might want to implement proper logging)
+                System.Windows.Forms.MessageBox.Show($"Error adding product: {ex.Message}");
+               
+            }
+        }
 
     }
 }

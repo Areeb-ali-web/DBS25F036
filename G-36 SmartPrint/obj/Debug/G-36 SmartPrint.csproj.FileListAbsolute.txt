@@ -99,19 +99,11 @@ D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.Form1.resources
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ForgotPassword.resources
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Login.resources
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Signup.resources
-<<<<<<< HEAD
-D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.CustomerBoard.resources
-D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.CustomerDashboardForm.resources
-D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Order.resources
-D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.DesignApproval.resources
-D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Feedback.resources
-=======
 C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.Form1.resources
 C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ForgotPassword.resources
 C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Login.resources
 C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Signup.resources
 C:\Users\hp\Desktop\oop week\G-36 SmartPrint\DBS25F036\G-36 SmartPrint\bin\Debug\Guna.UI2.dll
->>>>>>> 99832090bcfaab0232d7475d3ad14fa87eb5dbad
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.Form1.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.Properties.Resources.resources
@@ -206,7 +198,6 @@ C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.DeliveryViewSalary.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.DesignerDashbordForm.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.DesignerViewAssignOrders.resources
-C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.DesignerViewSalary.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.GiveInstructions.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ManageConsumables.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ManageDeliveryMan.resources

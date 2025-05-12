@@ -86,9 +86,9 @@ namespace G_36_SmartPrint.UI
                     case "btnViewInstructions":
                         LoadUserControl(new ViewInstructions());
                         break;
-                    case "btnViewSalary":
-                        LoadUserControl(new DesignerViewSalary());
-                        break;
+                    //case "btnViewSalary":
+                    //    LoadUserControl(new DesignerViewSalary());
+                    //    break;
                 }
             }
             finally

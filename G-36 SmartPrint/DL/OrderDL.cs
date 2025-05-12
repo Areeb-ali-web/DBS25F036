@@ -138,7 +138,7 @@ namespace G_36_SmartPrint.DL
             List<OrderBL> orders = new List<OrderBL>();
 
             // Step 1: Get LookupID for the given status name
-            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{statusName}' AND LookupCategory = 'OrderStatus'";
+            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{statusName}' AND lookupType = 'OrderStatus'";
             DataTable statusResult = SqlHelper.getDataTable(lookupQuery);
 
             if (statusResult.Rows.Count == 0)
@@ -591,7 +591,7 @@ namespace G_36_SmartPrint.DL
         public static void ChangeOrderStatusByName(int orderId, string newStatusName)
         {
             // Step 1: Get LookupID from LookupTable using status name
-            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{newStatusName}' AND LookupCategory = 'OrderStatus'";
+            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{newStatusName}' AND lookupType = 'OrderStatus'";
             DataTable result = SqlHelper.getDataTable(lookupQuery);
 
             if (result.Rows.Count == 0)

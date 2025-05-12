@@ -30,13 +30,13 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                if (LoginHelpers.currentEmployee == null)
-                {
-                    MessageBox.Show("No employee is currently logged in.");
-                    return;
-                }
+                //if (LoginHelpers.currentEmployee == null)
+                //{
+                //    MessageBox.Show("No employee is currently logged in.");
+                //    return;
+                //}
 
-                List<SalaryPaymentBL> salaries = Salary_PaymentDL.LoadSalariesByEmployeeId(LoginHelpers.currentEmployee.getEmployeeID());
+                List<SalaryPaymentBL> salaries = Salary_PaymentDL.LoadAllSalaryPayments();
 
                 dgvPaymentHistory.Rows.Clear();
                 dgvPaymentHistory.Columns.Clear();
@@ -47,6 +47,7 @@ namespace G_36_SmartPrint.UI
                 dgvPaymentHistory.Columns.Add("Amount", "Amount");
                 dgvPaymentHistory.Columns.Add("PaymentDate", "Payment Date");
                 dgvPaymentHistory.Columns.Add("Status", "Status");
+                dgvPaymentHistory.Columns.Add("employeeid", "employee id");
 
                 // Populate rows
                 foreach (var salary in salaries)
@@ -56,7 +57,8 @@ namespace G_36_SmartPrint.UI
                         salary.employee?.getUserName() ?? "N/A",
                         salary.getAmount().ToString("C"),
                         salary.getPaymentdate().ToString("yyyy-MM-dd"),
-                        salary.getSalary_status()?.getLookupValue() ?? "Unknown"
+                        salary.getSalary_status()?.getLookupValue() ?? "Unknown",
+                        salary.employee.Employeeid
                     );
                 }
 
@@ -90,7 +92,7 @@ namespace G_36_SmartPrint.UI
 
                 // Store selected payment and employee IDs
                 _selectedPaymentId = Convert.ToInt32(row.Cells["SalaryID"].Value);
-                _selectedEmployeeId = LoginHelpers.currentEmployee.getEmployeeID();
+                _selectedEmployeeId = Convert.ToInt32(row.Cells["employeeid"].Value);
 
                 // Update textboxes
                 txtEmployee.Text = row.Cells["EmployeeNAME"].Value?.ToString() ?? "";
