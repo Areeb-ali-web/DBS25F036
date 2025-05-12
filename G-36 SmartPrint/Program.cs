@@ -23,7 +23,7 @@ namespace G_36_SmartPrint
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new AdminDashboardForm());
         }
     }
 }
