@@ -1,0 +1,73 @@
+# Ignore Visual Studio temporary files, build results, and user-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uilds/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# Rider project files
+.idea/
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# Backup & temporary files
+*.bak
+*.tmp
+*.temp
+*.old
+
+# Resharper and CodeRush files
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# Other IDE/tool folders
+*.dbmdl
+*.vssscc
+*.vspscc
+
+# Test results
+TestResults/
+*.trx
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Publish folder
+publish/
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# File-based DBs
+*.mdf
+*.ldf
+*.sqlite
+
+# Ignore logs
+*.log
+
+# Ignore images/output from design work (optional)
+*.png
+*.jpg
+*.psd
+*.ai
