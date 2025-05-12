@@ -20,8 +20,9 @@ namespace G_36_SmartPrint.UI
         private void InitializeForm()
         {
             // Set current designer ID (you would get this from login or other context)
-            currentDesignerId = LoginHelpers.currentEmployee.getEmployeeID(); // Example ID, replace with actual logic
-            
+            //currentDesignerId = LoginHelpers.currentEmployee.getEmployeeID(); // Example ID, replace with actual logic
+            currentDesignerId = 2;
+
             LoadDesigns();
             ConfigureDataGridView();
             ClearFields();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Web.UI.Design.WebControls;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 
@@ -65,9 +66,9 @@ namespace G_36_SmartPrint.UI
                     //case "btnDashboard":
                     //    LoadUserControl(new DesignerDashboardControl());
                     //    break;
-                    //case "btnViewAssignOrders":
-                    //    LoadUserControl(new DesignerViewAssignOrders());
-                    //    //break;
+                    case "btnViewAssignOrders":
+                        LoadUserControl(new designerViewAssignedOrders());
+                        break;
                     case "btnDesignManagement":
                         LoadUserControl(new ManageDesign());
                         break;
@@ -75,10 +76,10 @@ namespace G_36_SmartPrint.UI
                         LoadUserControl(new ManufactureDesign());
                         break;
                     case "btnRequest":
-                        //LoadUserControl(new DesignerViewSalary());
+                        LoadUserControl(new RequestDesigner());
                         break;
                     case "btnViewSalary":
-                        //LoadUserControl(new DesignerViewSalary());
+                        LoadUserControl(new DeliveryViewSalary());
                         break;
                 }
             }

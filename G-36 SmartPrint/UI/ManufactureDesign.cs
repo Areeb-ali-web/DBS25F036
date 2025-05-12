@@ -32,7 +32,7 @@ namespace G_36_SmartPrint.UI
             try
             {
                 // Load orders with approved designs
-                approvedOrders = OrderDL.LoadOrdersByStatus("Approved");
+                approvedOrders = OrderDL.LoadOrdersByDesignerId(LoginHelpers.currentEmployee.employeeID);
                 RefreshDataGridView();
             }
             catch (Exception ex)

@@ -85,6 +85,7 @@
             this.dgvAssignedOrders.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvAssignedOrders.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAssignedOrders.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
@@ -103,7 +104,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAssignedOrders.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAssignedOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvAssignedOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvAssignedOrders.Location = new System.Drawing.Point(60, 274);
             this.dgvAssignedOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvAssignedOrders.Name = "dgvAssignedOrders";
@@ -119,8 +120,8 @@
             this.dgvAssignedOrders.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvAssignedOrders.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvAssignedOrders.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvAssignedOrders.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAssignedOrders.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvAssignedOrders.ThemeStyle.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvAssignedOrders.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvAssignedOrders.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgvAssignedOrders.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvAssignedOrders.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
@@ -135,7 +136,6 @@
             this.dgvAssignedOrders.ThemeStyle.RowsStyle.Height = 30;
             this.dgvAssignedOrders.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAssignedOrders.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvAssignedOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssignedOrders_CellContentClick);
             // 
             // designerViewAssignedOrders
             // 

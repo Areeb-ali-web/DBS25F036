@@ -20,7 +20,7 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                assignedOrders = OrderDL.LoadOrdersByStatus("Assigned");
+                assignedOrders = OrderDL.LoadOrdersByStatus("manufactured");
 
                 dgvAssignedOrders.Rows.Clear();
                 dgvAssignedOrders.Columns.Clear();

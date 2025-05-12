@@ -59,6 +59,7 @@
             this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 23, 30, 23);
             this.panelHeader.Size = new System.Drawing.Size(1200, 123);
             this.panelHeader.TabIndex = 0;
+            this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
             // 
             // lblTitle
             // 

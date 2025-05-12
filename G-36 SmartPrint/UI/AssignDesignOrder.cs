@@ -114,6 +114,9 @@ namespace G_36_SmartPrint.UI
 
         }
 
+        private void panelHeader_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

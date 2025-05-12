@@ -171,6 +171,7 @@
             this.btnManageSalary.Size = new System.Drawing.Size(220, 57);
             this.btnManageSalary.TabIndex = 0;
             this.btnManageSalary.Text = "Manage Salary";
+            this.btnManageSalary.Click += new System.EventHandler(this.btnManageSalary_Click);
             // 
             // btnProducts
             // 

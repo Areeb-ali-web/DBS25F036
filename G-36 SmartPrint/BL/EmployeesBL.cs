@@ -46,6 +46,17 @@ namespace G_36_SmartPrint.BL
             this.salary = salary;
 
         }
+        public EmployeesBL(EmployeesBL employeesBL)
+        {
+            this.employeeID= employeesBL.employeeID;
+            this.PasswordHash = employeesBL.PasswordHash;
+            this.Email = employeesBL.Email;
+            this.hiredate= employeesBL.hiredate;
+            this.phoneNumber = employeesBL.phoneNumber;
+                this.Addresses = employeesBL.Addresses;
+             this.salary= employeesBL.salary;
+            this.UserName= employeesBL.UserName;
+        }
         public virtual string getName()
         {
             return name;

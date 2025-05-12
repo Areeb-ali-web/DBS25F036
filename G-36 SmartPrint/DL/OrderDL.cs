@@ -138,13 +138,13 @@ namespace G_36_SmartPrint.DL
             List<OrderBL> orders = new List<OrderBL>();
 
             // Step 1: Get LookupID for the given status name
-            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{statusName}' AND lookupType = 'OrderStatus'";
-            DataTable statusResult = SqlHelper.getDataTable(lookupQuery);
+            //string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{statusName}' AND lookupType = 'OrderStatus'";
+            //DataTable statusResult = SqlHelper.getDataTable(lookupQuery);
 
-            if (statusResult.Rows.Count == 0)
-                throw new Exception("Invalid order status name.");
+            //if (statusResult.Rows.Count == 0)
+            //    throw new Exception("Invalid order status name.");
 
-            int statusId = Convert.ToInt32(statusResult.Rows[0]["LookupID"]);
+            //int statusId = Convert.ToInt32(statusResult.Rows[0]["LookupID"]);
 
             // Step 2: Load orders with the given status
             string query = $@"
@@ -186,7 +186,7 @@ namespace G_36_SmartPrint.DL
         INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
         LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
         LEFT JOIN Products p ON od.ProductID = p.ProductID
-        WHERE o.order_StatusID = {statusId}
+        WHERE o.order_StatusID = 11
         ORDER BY o.OrderID;";
 
             DataTable dt = SqlHelper.getDataTable(query);

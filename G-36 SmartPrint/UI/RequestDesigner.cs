@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using G_36_SmartPrint.BL;
 using G_36_SmartPrint.DL;
@@ -22,11 +17,46 @@ namespace G_36_SmartPrint.UI
             InitializeComponent();
             this.Load += RequestDesigner_Load;
         }
+
         private void RequestDesigner_Load(object sender, EventArgs e)
         {
             txtDesignerName.Text = LoginHelpers.currentuser.getUserName();
             ConfigureDataGridView();
             LoadConsumables();
+
+            // Wire up event handler
+            dgvRequests.CellDoubleClick += dgvRequests_CellDoubleClick;
+        }
+
+        private void ConfigureDataGridView()
+        {
+            dgvRequests.AutoGenerateColumns = false;
+            dgvRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRequests.Columns.Clear();
+
+            dgvRequests.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colId",
+                HeaderText = "ID",
+                DataPropertyName = "Item_id",
+                Width = 100
+            });
+
+            dgvRequests.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colName",
+                HeaderText = "Item Name",
+                DataPropertyName = "Item_name",
+                Width = 300
+            });
+
+            dgvRequests.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colStock",
+                HeaderText = "Current Stock",
+                DataPropertyName = "currentstock",
+                Width = 150
+            });
         }
 
         private void LoadConsumables()
@@ -43,39 +73,6 @@ namespace G_36_SmartPrint.UI
             }
         }
 
-        private void ConfigureDataGridView()
-        {
-            dgvRequests.AutoGenerateColumns = false;
-            dgvRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            if (dgvRequests.Columns.Count == 0)
-            {
-                dgvRequests.Columns.Add(new DataGridViewTextBoxColumn()
-                {
-                    Name = "colId",
-                    HeaderText = "ID",
-                    DataPropertyName = "Item_id",
-                    Width = 100
-                });
-
-                dgvRequests.Columns.Add(new DataGridViewTextBoxColumn()
-                {
-                    Name = "colName",
-                    HeaderText = "Item Name",
-                    DataPropertyName = "Item_name",
-                    Width = 300
-                });
-
-                dgvRequests.Columns.Add(new DataGridViewTextBoxColumn()
-                {
-                    Name = "colStock",
-                    HeaderText = "Current Stock",
-                    DataPropertyName = "currentstock",
-                    Width = 150
-                });
-            }
-        }
-
         private void RefreshDataGridView()
         {
             dgvRequests.DataSource = null;
@@ -89,11 +86,8 @@ namespace G_36_SmartPrint.UI
             {
                 DataGridViewRow selectedRow = dgvRequests.Rows[e.RowIndex];
 
-                string itemName = selectedRow.Cells["colName"].Value?.ToString();
-                txtitem_name.Text = itemName;
-
-                string item = selectedRow.Cells["colId"].Value?.ToString();
-                itemid = Convert.ToInt32(item);
+                txtitem_name.Text = selectedRow.Cells["colName"].Value?.ToString();
+                itemid = Convert.ToInt32(selectedRow.Cells["colId"].Value);
             }
         }
 
@@ -122,12 +116,11 @@ namespace G_36_SmartPrint.UI
                 MessageBox.Show("Request submitted successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Clear fields
+                // Reset fields
                 txtitem_name.Clear();
                 numQuantity.Value = 1;
                 itemid = 0;
 
-                // Reload the grid
                 RefreshDataGridView();
             }
             catch (Exception ex)
@@ -137,19 +130,11 @@ namespace G_36_SmartPrint.UI
             }
         }
 
-        private void dgvRequests_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Optional: handle if needed
-        }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-            // Optional: handle if needed
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            txtitem_name.Clear();
+            numQuantity.Value = 1;
+            itemid = 0;
         }
     }
 }

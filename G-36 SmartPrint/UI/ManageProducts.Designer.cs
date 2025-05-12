@@ -17,9 +17,9 @@
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -28,7 +28,6 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbFabricType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -37,10 +36,10 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblFabricType = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
+            this.nudQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelHeader.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -69,12 +68,12 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.nudQuantity);
             this.mainPanel.Controls.Add(this.dgvProducts);
             this.mainPanel.Controls.Add(this.btnDelete);
             this.mainPanel.Controls.Add(this.btnUpdate);
             this.mainPanel.Controls.Add(this.btnAdd);
             this.mainPanel.Controls.Add(this.txtPrice);
-            this.mainPanel.Controls.Add(this.nudQuantity);
             this.mainPanel.Controls.Add(this.txtDescription);
             this.mainPanel.Controls.Add(this.cmbFabricType);
             this.mainPanel.Controls.Add(this.txtProductName);
@@ -90,36 +89,35 @@
             this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
             this.mainPanel.Size = new System.Drawing.Size(1200, 806);
             this.mainPanel.TabIndex = 1;
-            //this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // dgvProducts
             // 
             this.dgvProducts.AllowUserToAddRows = false;
             this.dgvProducts.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProducts.BackgroundColor = System.Drawing.Color.SkyBlue;
             this.dgvProducts.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProducts.Location = new System.Drawing.Point(78, 534);
             this.dgvProducts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -168,7 +166,7 @@
             this.btnDelete.Size = new System.Drawing.Size(180, 55);
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Delete";
-            //this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // btnUpdate
             // 
@@ -187,7 +185,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(180, 55);
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Update";
-            //this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnAdd
             // 
@@ -206,7 +204,7 @@
             this.btnAdd.Size = new System.Drawing.Size(180, 55);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
-            //this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // txtPrice
             // 
@@ -232,39 +230,6 @@
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(414, 55);
             this.txtPrice.TabIndex = 9;
-            // 
-            // nudQuantity
-            // 
-            this.nudQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.nudQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.nudQuantity.BorderRadius = 5;
-            this.nudQuantity.BorderThickness = 2;
-            this.nudQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nudQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nudQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nudQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.nudQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.nudQuantity.Location = new System.Drawing.Point(608, 108);
-            this.nudQuantity.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.nudQuantity.Minimum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(414, 55);
-            this.nudQuantity.TabIndex = 8;
-            this.nudQuantity.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.nudQuantity.UpDownButtonForeColor = System.Drawing.Color.White;
-            this.nudQuantity.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
             // 
             // txtDescription
             // 
@@ -346,7 +311,6 @@
             this.txtProductName.SelectedText = "";
             this.txtProductName.Size = new System.Drawing.Size(444, 55);
             this.txtProductName.TabIndex = 5;
-            //this.txtProductName.TextChanged += new System.EventHandler(this.txtProductName_TextChanged);
             // 
             // lblPrice
             // 
@@ -413,6 +377,31 @@
             this.lblProductName.TabIndex = 0;
             this.lblProductName.Text = "Product Name:";
             // 
+            // nudQuantity
+            // 
+            this.nudQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.nudQuantity.BorderRadius = 5;
+            this.nudQuantity.BorderThickness = 2;
+            this.nudQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudQuantity.DefaultText = "";
+            this.nudQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.nudQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.nudQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nudQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nudQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.nudQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.nudQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nudQuantity.Location = new System.Drawing.Point(608, 104);
+            this.nudQuantity.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.PlaceholderText = "";
+            this.nudQuantity.SelectedText = "";
+            this.nudQuantity.Size = new System.Drawing.Size(414, 55);
+            this.nudQuantity.TabIndex = 14;
+            // 
             // ManageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -428,7 +417,6 @@
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -446,11 +434,11 @@
         private Guna.UI2.WinForms.Guna2TextBox txtProductName;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFabricType;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudQuantity;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2DataGridView dgvProducts;
+        private Guna.UI2.WinForms.Guna2TextBox nudQuantity;
     }
 }

@@ -59,6 +59,7 @@ namespace G_36_SmartPrint.UI
 
         private void btnApprove_Click(object sender, EventArgs e)
         {
+            
             if (dgvRequests.SelectedRows.Count > 0)
             {
                 int rowIndex = dgvRequests.SelectedRows[0].Index;

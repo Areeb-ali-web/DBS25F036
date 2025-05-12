@@ -156,5 +156,10 @@ namespace G_36_SmartPrint.UI
         {
 
         }
+
+        private void btnManageSalary_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

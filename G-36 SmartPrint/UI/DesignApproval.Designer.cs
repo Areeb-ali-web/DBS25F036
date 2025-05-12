@@ -38,11 +38,6 @@
             this.btnReject = new Guna.UI2.WinForms.Guna2Button();
             this.btnApprove = new Guna.UI2.WinForms.Guna2Button();
             this.dvgOrders = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.orderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DesignDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.designfile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).BeginInit();
             this.mainSplitContainer.Panel1.SuspendLayout();
@@ -307,6 +302,7 @@
             this.panelImage.Name = "panelImage";
             this.panelImage.Size = new System.Drawing.Size(623, 510);
             this.panelImage.TabIndex = 0;
+            this.panelImage.Paint += new System.Windows.Forms.PaintEventHandler(this.panelImage_Paint);
             // 
             // picDesign
             // 
@@ -315,10 +311,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picDesign.BackColor = System.Drawing.Color.WhiteSmoke;
             this.picDesign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picDesign.Location = new System.Drawing.Point(42, 58);
+            this.picDesign.Location = new System.Drawing.Point(42, 64);
             this.picDesign.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picDesign.Name = "picDesign";
-            this.picDesign.Size = new System.Drawing.Size(517, 361);
+            this.picDesign.Size = new System.Drawing.Size(475, 174);
             this.picDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDesign.TabIndex = 1;
             this.picDesign.TabStop = false;
@@ -353,7 +349,7 @@
             this.btnReject.FillColor = System.Drawing.Color.IndianRed;
             this.btnReject.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnReject.ForeColor = System.Drawing.Color.White;
-            this.btnReject.Location = new System.Drawing.Point(59, 0);
+            this.btnReject.Location = new System.Drawing.Point(70, 5);
             this.btnReject.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(194, 54);
@@ -390,12 +386,6 @@
             this.dvgOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgOrders.ColumnHeadersHeight = 4;
             this.dvgOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dvgOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.orderID,
-            this.orderdate,
-            this.TotalAmount,
-            this.DesignDescription,
-            this.designfile});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -436,36 +426,6 @@
             this.dvgOrders.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(191)))), ((int)(((byte)(173)))));
             this.dvgOrders.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dvgOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgOrders_CellContentClick_1);
-            // 
-            // orderID
-            // 
-            this.orderID.HeaderText = "Order id";
-            this.orderID.MinimumWidth = 8;
-            this.orderID.Name = "orderID";
-            // 
-            // orderdate
-            // 
-            this.orderdate.HeaderText = "Order Date";
-            this.orderdate.MinimumWidth = 8;
-            this.orderdate.Name = "orderdate";
-            // 
-            // TotalAmount
-            // 
-            this.TotalAmount.HeaderText = "Total Amount";
-            this.TotalAmount.MinimumWidth = 8;
-            this.TotalAmount.Name = "TotalAmount";
-            // 
-            // DesignDescription
-            // 
-            this.DesignDescription.HeaderText = "Design Description";
-            this.DesignDescription.MinimumWidth = 8;
-            this.DesignDescription.Name = "DesignDescription";
-            // 
-            // designfile
-            // 
-            this.designfile.HeaderText = "Design File";
-            this.designfile.MinimumWidth = 8;
-            this.designfile.Name = "designfile";
             // 
             // DesignApproval
             // 
@@ -518,10 +478,5 @@
         private Guna.UI2.WinForms.Guna2TextBox txtProduct;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DesignDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn designfile;
     }
 }

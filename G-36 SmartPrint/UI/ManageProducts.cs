@@ -1,8 +1,8 @@
-﻿using G_36_SmartPrint.BL;
-using G_36_SmartPrint.DL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using G_36_SmartPrint.BL;
+using G_36_SmartPrint.DL;
 
 namespace G_36_SmartPrint.UI
 {
@@ -24,6 +24,7 @@ namespace G_36_SmartPrint.UI
             ClearFields();
             // Add double-click event handler
             dgvProducts.CellDoubleClick += DgvProducts_CellDoubleClick;
+
         }
 
         private void DgvProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -39,6 +40,8 @@ namespace G_36_SmartPrint.UI
             // Optional: Highlight the selected row
             dgvProducts.ClearSelection();
             dgvProducts.Rows[e.RowIndex].Selected = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
         }
 
         private void LoadProducts()
@@ -137,7 +140,7 @@ namespace G_36_SmartPrint.UI
             txtProductName.Text = "";
             cmbFabricType.SelectedIndex = -1;
             txtDescription.Text = "";
-            nudQuantity.Value = nudQuantity.Minimum;
+            nudQuantity.Text = "";
             txtPrice.Text = "";
             currentProduct = null;
             btnUpdate.Enabled = false;
@@ -156,7 +159,7 @@ namespace G_36_SmartPrint.UI
                     txtProductName.Text,
                     cmbFabricType.SelectedItem + ": " + txtDescription.Text,
                     decimal.Parse(txtPrice.Text),
-                    (int)nudQuantity.Value
+                    int.Parse(nudQuantity.Text)
                 );
 
                 // Add to database
@@ -230,12 +233,13 @@ namespace G_36_SmartPrint.UI
                 currentProduct.setname(txtProductName.Text);
                 currentProduct.Description = cmbFabricType.SelectedItem + ": " + txtDescription.Text;
                 currentProduct.setprice(decimal.Parse(txtPrice.Text));
-                currentProduct.setQuantity((int)nudQuantity.Value);
+                int quantity = int.Parse(nudQuantity.Text.ToString());
+                currentProduct.setQuantity(quantity);
 
                 // Update in database
-                ProductDL.UpdateProductPrice(currentProduct.ProductName,currentProduct.price);
-                ProductDL.UpdateProductStock(currentProduct.ProductName,currentProduct.quantityInStock);
-                
+                ProductDL.UpdateProductPrice(currentProduct.ProductName, currentProduct.price);
+                ProductDL.UpdateProductStock(currentProduct.ProductName, currentProduct.quantityInStock);
+
 
                 RefreshDataGridView();
                 ClearFields();
@@ -303,6 +307,7 @@ namespace G_36_SmartPrint.UI
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;
             }
+
         }
 
         private void DisplayProductDetails(ProductBL product)
@@ -323,12 +328,131 @@ namespace G_36_SmartPrint.UI
             }
 
             txtPrice.Text = product.getPrice().ToString("0.00");
-            nudQuantity.Value = product.getStocks();
+            nudQuantity.Text = product.getStocks().ToString();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearFields();
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            if (currentProduct == null)
+            {
+                MessageBox.Show("Please select a product to update", "Warning",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                if (!ValidateInputs())
+                    return;
+
+                // Update product
+                currentProduct.setname(txtProductName.Text);
+                currentProduct.Description = cmbFabricType.SelectedItem + ": " + txtDescription.Text;
+                currentProduct.setprice(decimal.Parse(txtPrice.Text));
+                int quantity = int.Parse(nudQuantity.Text.ToString());
+                currentProduct.setQuantity(quantity);
+
+                // Update in database
+                ProductDL.UpdateProductPrice(currentProduct.ProductName, currentProduct.price);
+                ProductDL.UpdateProductStock(currentProduct.ProductName, currentProduct.quantityInStock);
+
+
+                RefreshDataGridView();
+                ClearFields();
+
+                MessageBox.Show("Product updated successfully", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating product: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (currentProduct == null)
+            {
+                MessageBox.Show("Please select a product to delete", "Warning",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var result = MessageBox.Show("Are you sure you want to delete this product?",
+                "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    // Delete from database
+                    if (ProductDL.DeleteProduct(currentProduct.ProductID))
+                    {
+                        RefreshDataGridView();
+                        ClearFields();
+                    }
+
+                    // Remove from our list
+                    productsList.Remove(currentProduct);
+
+                    RefreshDataGridView();
+                    ClearFields();
+
+                    MessageBox.Show("Product deleted successfully", "Success",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show($"Error deleting product: {ex.Message}", "Error",
+                    //    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    productsList.Remove(currentProduct);
+
+                    RefreshDataGridView();
+                    ClearFields();
+                }
+            }
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!ValidateInputs())
+                    return;
+
+                // Create new product
+                var newProduct = new ProductBL(
+                    txtProductName.Text,
+                    cmbFabricType.SelectedItem + ": " + txtDescription.Text,
+                    decimal.Parse(txtPrice.Text),
+                    int.Parse(nudQuantity.Text)
+                );
+
+                // Add to database
+                ProductDL.AddProduct(newProduct);
+                newProduct.ProductID = 00;
+
+                // Add to our list
+                productsList.Add(newProduct);
+
+                RefreshDataGridView();
+                ClearFields();
+
+                MessageBox.Show("Product added successfully", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding product: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

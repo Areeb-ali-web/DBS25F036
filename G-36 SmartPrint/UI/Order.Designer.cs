@@ -21,6 +21,7 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelForm = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.dgvCart = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddCart = new Guna.UI2.WinForms.Guna2Button();
@@ -32,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblProduct = new System.Windows.Forms.Label();
             this.lblCustomerName = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panelHeader.SuspendLayout();
             this.panelForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -81,6 +81,25 @@
             this.panelForm.Padding = new System.Windows.Forms.Padding(30);
             this.panelForm.Size = new System.Drawing.Size(980, 507);
             this.panelForm.TabIndex = 1;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 8;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2Button1.FocusedColor = System.Drawing.Color.Red;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(430, 273);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(153, 45);
+            this.guna2Button1.TabIndex = 20;
+            this.guna2Button1.Text = "Check Out";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // dgvCart
             // 
@@ -164,9 +183,9 @@
             this.btnAddCart.FocusedColor = System.Drawing.Color.Red;
             this.btnAddCart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddCart.Location = new System.Drawing.Point(248, 273);
+            this.btnAddCart.Location = new System.Drawing.Point(216, 273);
             this.btnAddCart.Name = "btnAddCart";
-            this.btnAddCart.Size = new System.Drawing.Size(153, 45);
+            this.btnAddCart.Size = new System.Drawing.Size(176, 45);
             this.btnAddCart.TabIndex = 18;
             this.btnAddCart.Text = "Add To Cart";
             this.btnAddCart.Click += new System.EventHandler(this.btnAddCart_Click);
@@ -301,24 +320,6 @@
             this.lblCustomerName.Size = new System.Drawing.Size(193, 32);
             this.lblCustomerName.TabIndex = 1;
             this.lblCustomerName.Text = "Customer Name:";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2Button1.FocusedColor = System.Drawing.Color.Red;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(430, 273);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(153, 45);
-            this.guna2Button1.TabIndex = 20;
-            this.guna2Button1.Text = "Add To Cart";
             // 
             // Order
             // 
