@@ -9,9 +9,9 @@ namespace G_36_SmartPrint.DL
     internal class ConsumeableInventoryDL
     {
         // Load all items
-        public static List<ConsumeableInventoryBL> LoadAllItems()
+        public static List<ConsumableInventoryBL> LoadAllItems()
         {
-            List<ConsumeableInventoryBL> items = new List<ConsumeableInventoryBL>();
+            List<ConsumableInventoryBL> items = new List<ConsumableInventoryBL>();
             string query = "SELECT Item_ID, Item_name, CurrentStock FROM consumableinventory";
 
             DataTable dt = SqlHelper.getDataTable(query);
@@ -22,14 +22,14 @@ namespace G_36_SmartPrint.DL
                 string name = row["Item_name"].ToString();
                 int stock = Convert.ToInt32(row["CurrentStock"]);
 
-                items.Add(new ConsumeableInventoryBL(id, name, stock));
+                items.Add(new ConsumableInventoryBL(id, name, stock));
             }
 
             return items;
         }
 
         // Load item by ID
-        public static ConsumeableInventoryBL LoadItemById(int itemId)
+        public static ConsumableInventoryBL LoadItemById(int itemId)
         {
             string query = "SELECT Item_ID, Item_name, CurrentStock FROM consumableinventory WHERE Item_ID = @ItemID";
             MySqlParameter[] parameters = {
@@ -40,7 +40,7 @@ namespace G_36_SmartPrint.DL
             if (dt.Rows.Count == 1)
             {
                 DataRow row = dt.Rows[0];
-                return new ConsumeableInventoryBL(
+                return new ConsumableInventoryBL(
                     Convert.ToInt32(row["Item_ID"]),
                     row["Item_name"].ToString(),
                     Convert.ToInt32(row["CurrentStock"])

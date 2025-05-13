@@ -53,7 +53,7 @@ namespace G_36_SmartPrint.UI
                                       new string('☆', 5 - feedback.getRating());
 
                     dgvFeedback.Rows.Add(
-                        feedback.customer.getUserName(),
+                        feedback.customer.UserName,
                         ratingStars,
                         feedback.getComment(),
                         feedback.getFeedabckdate().ToString("yyyy-MM-dd HH:mm")

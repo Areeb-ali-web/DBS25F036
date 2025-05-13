@@ -32,7 +32,7 @@ namespace G_36_SmartPrint.UI
             try
             {
                 // Load orders with approved designs
-                approvedOrders = OrderDL.LoadOrdersByDesignerId(LoginHelpers.currentEmployee.employeeID);
+                approvedOrders = OrderDL.LoadOrdersByDesignerId(LoginHelpers.currentEmployee.EmployeeID);
                 RefreshDataGridView();
             }
             catch (Exception ex)
@@ -95,7 +95,7 @@ namespace G_36_SmartPrint.UI
                 displayList.Add(new
                 {
                     OrderID = order.OrderID,
-                    CustomerName = order.getCustomer().getUserName(),
+                    CustomerName = order.getCustomer().UserName,
                     OrderDate = order.getOrderDate().ToString("yyyy-MM-dd"),
                     DesignDescription = order.getDesignDescription()
                 });
@@ -210,8 +210,8 @@ namespace G_36_SmartPrint.UI
                     // Update UI with order/design details
                     txtOrderId.Text = currentOrder.OrderID.ToString();
                     txtDesignDescription.Text = currentOrder.getDesignDescription();
-                    txtDesignerName.Text = currentDesign.designer?.getUserName() ?? "Unknown Designer";
-                    txtCustomerName.Text = currentOrder.getCustomer().getUserName();
+                    txtDesignerName.Text = currentDesign.designer?.UserName ?? "Saad Designer";
+                    txtCustomerName.Text = currentOrder.getCustomer().UserName;
                     dtpCreatedDate.Value = currentDesign.createddate;
 
                     // Load design image

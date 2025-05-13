@@ -8,13 +8,56 @@ namespace G_36_SmartPrint.UI
 {
     public partial class ManageConsumables : UserControl
     {
-        private List<ConsumeableInventoryBL> consumablesList;
+        private List<ConsumableInventoryBL> consumablesList;
 
         public ManageConsumables()
         {
             InitializeComponent();
-            LoadConsumables();
+            InitializeUIEvents();
             ConfigureDataGridView();
+            LoadConsumables();
+        }
+
+        private void InitializeUIEvents()
+        {
+            dgvConsumables.CellDoubleClick += dgvConsumables_CellDoubleClick;
+            btnAdd.Click += btnAdd_Click;
+            btnUpdate.Click += btnUpdate_Click;
+            btnDelete.Click += btnDelete_Click;
+        }
+
+        private void ConfigureDataGridView()
+        {
+            dgvConsumables.AutoGenerateColumns = false;
+            dgvConsumables.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvConsumables.MultiSelect = false;
+            dgvConsumables.AllowUserToAddRows = false;
+
+            dgvConsumables.Columns.Clear();
+
+            dgvConsumables.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colId",
+                HeaderText = "ID",
+                DataPropertyName = "ItemId",
+                Width = 100
+            });
+
+            dgvConsumables.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colName",
+                HeaderText = "Item Name",
+                DataPropertyName = "ItemName",
+                Width = 300
+            });
+
+            dgvConsumables.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colStock",
+                HeaderText = "Current Stock",
+                DataPropertyName = "CurrentStock",
+                Width = 150
+            });
         }
 
         private void LoadConsumables()
@@ -31,40 +74,6 @@ namespace G_36_SmartPrint.UI
             }
         }
 
-        private void ConfigureDataGridView()
-        {
-            dgvConsumables.AutoGenerateColumns = false;
-            dgvConsumables.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            // Add columns if not already added in designer
-            if (dgvConsumables.Columns.Count == 0)
-            {
-                dgvConsumables.Columns.Add(new DataGridViewTextBoxColumn()
-                {
-                    Name = "colId",
-                    HeaderText = "ID",
-                    DataPropertyName = "Item_id",
-                    Width = 100
-                });
-
-                dgvConsumables.Columns.Add(new DataGridViewTextBoxColumn()
-                {
-                    Name = "colName",
-                    HeaderText = "Item Name",
-                    DataPropertyName = "Item_name",
-                    Width = 300
-                });
-
-                dgvConsumables.Columns.Add(new DataGridViewTextBoxColumn()
-                {
-                    Name = "colStock",
-                    HeaderText = "Current Stock",
-                    DataPropertyName = "currentstock",
-                    Width = 150
-                });
-            }
-        }
-
         private void RefreshDataGridView()
         {
             dgvConsumables.DataSource = null;
@@ -74,8 +83,8 @@ namespace G_36_SmartPrint.UI
 
         private void ClearFields()
         {
-            txtConsumableId.Text = "";
-            txtItemName.Text = "";
+            txtConsumableId.Text = string.Empty;
+            txtItemName.Text = string.Empty;
             numQuantity.Value = numQuantity.Minimum;
         }
 
@@ -87,7 +96,7 @@ namespace G_36_SmartPrint.UI
                 int quantity = (int)numQuantity.Value;
 
                 ConsumeableInventoryDL.AddItem(itemName, quantity);
-                LoadConsumables(); // Refresh the list
+                LoadConsumables();
 
                 MessageBox.Show("Item added successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -99,7 +108,7 @@ namespace G_36_SmartPrint.UI
             }
             catch (InvalidOperationException ex)
             {
-                MessageBox.Show(ex.Message, "Operation Error",
+                MessageBox.Show(ex.Message, "Duplicate Item",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
@@ -111,28 +120,21 @@ namespace G_36_SmartPrint.UI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtConsumableId.Text))
+            if (!int.TryParse(txtConsumableId.Text, out int itemId))
             {
-                MessageBox.Show("Please select an item to update", "Warning",
+                MessageBox.Show("Please select an item to update.", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                int itemId = int.Parse(txtConsumableId.Text);
                 int newStock = (int)numQuantity.Value;
-
                 ConsumeableInventoryDL.UpdateStock(itemId, newStock);
-                LoadConsumables(); // Refresh the list
+                LoadConsumables();
 
                 MessageBox.Show("Stock updated successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "Validation Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -143,9 +145,9 @@ namespace G_36_SmartPrint.UI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtConsumableId.Text))
+            if (!int.TryParse(txtConsumableId.Text, out int itemId))
             {
-                MessageBox.Show("Please select an item to delete", "Warning",
+                MessageBox.Show("Please select an item to delete.", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -157,15 +159,13 @@ namespace G_36_SmartPrint.UI
             {
                 try
                 {
-                    int itemId = int.Parse(txtConsumableId.Text);
-
-                    // You would need to add a DeleteItem method to your DL class
+                    // Implement this method in DL if not already done
                     // ConsumeableInventoryDL.DeleteItem(itemId);
-                    // For now, we'll just show a message
-                    MessageBox.Show("Delete functionality would be implemented here",
-                        "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    LoadConsumables(); // Refresh the list
+                    MessageBox.Show("Delete functionality placeholder.", "Info",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LoadConsumables();
                 }
                 catch (Exception ex)
                 {
@@ -177,18 +177,37 @@ namespace G_36_SmartPrint.UI
 
         private void dgvConsumables_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Ensure header row wasn't clicked
+            if (e.RowIndex >= 0 && dgvConsumables.Rows.Count > e.RowIndex)
             {
-                DataGridViewRow row = dgvConsumables.Rows[e.RowIndex];
-                txtConsumableId.Text = row.Cells["colId"].Value.ToString();
-                txtItemName.Text = row.Cells["colName"].Value.ToString();
-                numQuantity.Value = Convert.ToInt32(row.Cells["colStock"].Value);
+                var row = dgvConsumables.Rows[e.RowIndex];
+
+                txtConsumableId.Text = row.Cells["colId"].Value?.ToString() ?? string.Empty;
+                txtItemName.Text = row.Cells["colName"].Value?.ToString() ?? string.Empty;
+
+                if (int.TryParse(row.Cells["colStock"].Value?.ToString(), out int stock))
+                {
+                    numQuantity.Value = stock;
+                }
+                else
+                {
+                    numQuantity.Value = numQuantity.Minimum;
+                }
             }
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
-            // Optional: Add any custom painting code here
+            // Optional custom painting code
+        }
+
+        private void txtItemName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

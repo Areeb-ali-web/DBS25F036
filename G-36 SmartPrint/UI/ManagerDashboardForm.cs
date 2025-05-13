@@ -41,7 +41,7 @@ namespace G_36_SmartPrint.UI
             btnDashboard.Click += NavigationButton_Click;
             btnViewOrders.Click += NavigationButton_Click;
             btnAssignDesigningOrder.Click += NavigationButton_Click;
-            btnAssignDeliveryOrders.Click += NavigationButton_Click;
+           
             btnManageFinancial.Click += NavigationButton_Click;
             btnManageConsumable.Click += NavigationButton_Click;
             btnRequest.Click += NavigationButton_Click;
@@ -71,9 +71,9 @@ namespace G_36_SmartPrint.UI
                     case "btnAssignDesigningOrder":
                         LoadUserControl(new AssignDesignOrder());
                         break;
-                    case "btnAssignDeliveryOrders":
-                        LoadUserControl(new AssignDeliveryOrder());
-                        break;
+                    //case "btnAssignDeliveryOrders":
+                    //    LoadUserControl(new AssignDeliveryOrder());
+                    //    break;
                     case "btnManageFinancial":
                         LoadUserControl(new FinancialReport());
                         break;
@@ -86,9 +86,9 @@ namespace G_36_SmartPrint.UI
                     case "btnViewInstructions":
                         LoadUserControl(new ViewInstructions());
                         break;
-                    //case "btnViewSalary":
-                    //    LoadUserControl(new DesignerViewSalary());
-                    //    break;
+                    case "btnViewSalary":
+                        LoadUserControl(new ManagerViewSalary());
+                        break;
                 }
             }
             finally
@@ -147,6 +147,16 @@ namespace G_36_SmartPrint.UI
             {
                 lblCompanyName.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             }
+        }
+
+        private void btnAssignDeliveryOrders_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewSalary_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

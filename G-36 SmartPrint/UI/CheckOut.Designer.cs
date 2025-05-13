@@ -118,6 +118,7 @@
             this.btnBack.Size = new System.Drawing.Size(180, 68);
             this.btnBack.TabIndex = 15;
             this.btnBack.Text = "Back";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnBuy
             // 
@@ -209,7 +210,7 @@
             this.txtCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtCity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCity.Location = new System.Drawing.Point(604, 338);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(6);
             this.txtCity.Name = "txtCity";
             this.txtCity.PlaceholderText = "";
             this.txtCity.SelectedText = "";

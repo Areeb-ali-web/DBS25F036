@@ -21,6 +21,7 @@
             this.panelNavigation = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelivery = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewFeedback = new Guna.UI2.WinForms.Guna2Button();
             this.btnFinancal = new Guna.UI2.WinForms.Guna2Button();
             this.btnInstuctions = new Guna.UI2.WinForms.Guna2Button();
@@ -43,7 +44,7 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1200, 113);
+            this.panelHeader.Size = new System.Drawing.Size(1240, 113);
             this.panelHeader.TabIndex = 0;
             // 
             // lblCompanyName
@@ -74,6 +75,7 @@
             this.panelNavigation.BackColor = System.Drawing.Color.DodgerBlue;
             this.panelNavigation.Controls.Add(this.btnLogout);
             this.panelNavigation.Controls.Add(this.btnDelivery);
+            this.panelNavigation.Controls.Add(this.btnReport);
             this.panelNavigation.Controls.Add(this.btnViewFeedback);
             this.panelNavigation.Controls.Add(this.btnFinancal);
             this.panelNavigation.Controls.Add(this.btnInstuctions);
@@ -115,6 +117,20 @@
             this.btnDelivery.Size = new System.Drawing.Size(220, 46);
             this.btnDelivery.TabIndex = 0;
             this.btnDelivery.Text = "Manage Delivery";
+            // 
+            // btnReport
+            // 
+            this.btnReport.Animated = true;
+            this.btnReport.BorderRadius = 3;
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Location = new System.Drawing.Point(-3, 475);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(220, 46);
+            this.btnReport.TabIndex = 0;
+            this.btnReport.Text = "Generate Report";
             // 
             // btnViewFeedback
             // 
@@ -214,6 +230,7 @@
             this.btnManager.Size = new System.Drawing.Size(220, 43);
             this.btnManager.TabIndex = 0;
             this.btnManager.Text = "Manage Managers";
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
             // btnDashboard
             // 
@@ -236,14 +253,14 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(220, 113);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(980, 587);
+            this.panelMain.Size = new System.Drawing.Size(1020, 587);
             this.panelMain.TabIndex = 2;
             // 
             // AdminDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.ClientSize = new System.Drawing.Size(1240, 700);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelHeader);
@@ -276,5 +293,6 @@
         private Guna.UI2.WinForms.Guna2Button btnManageSalary;
         private Guna.UI2.WinForms.Guna2Button btnFinancal;
         private Guna.UI2.WinForms.Guna2Button btnViewFeedback;
+        private Guna.UI2.WinForms.Guna2Button btnReport;
     }
 }

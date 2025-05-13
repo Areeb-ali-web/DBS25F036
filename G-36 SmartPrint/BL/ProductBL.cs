@@ -1,75 +1,126 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Permissions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace G_36_SmartPrint.BL
 {
     internal class ProductBL
     {
-        public int ProductID { get; set; }
+        public int ProductID { get; private set; }
 
-        public string name { get; private set; }
-        
-    
-        public string Description { get; set; }
+        private string _productName;
+        private string _description;
+        private decimal _price;
+        private int _quantityInStock;
 
-        public decimal price;
- 
-        public int quantityInStock;
-
-        public  string getProductName()
-        {
-            return name;
-        }
-        public decimal getPrice()
-        {
-            return price;
-        }
+        // Properties with encapsulation
         public string ProductName
         {
-            get { return name; }
-            set { name = value; }
+            get => _productName;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Product name cannot be empty.");
+                _productName = value.Trim();
             }
- 
-        public int getStocks()
-        {
-            return quantityInStock; 
         }
 
-        public void setname(string name)
+        public string Description
         {
-            this.name = name;
-        }
-        public void setprice(decimal price)
-        {
-            this.price = price;
+            get => _description;
+            set => _description = value?.Trim() ?? string.Empty;
         }
 
-        public void setQuantity(int quantity)
+        public decimal Price
         {
-            quantityInStock= quantity;
+            get => _price;
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Price cannot be negative.");
+                _price = value;
+            }
         }
-        // Optional: Constructor
+
+        public int QuantityInStock
+        {
+            get => _quantityInStock;
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Stock quantity cannot be negative.");
+                _quantityInStock = value;
+            }
+        }
+
+        // Constructors
+        public ProductBL() { }
+
         public ProductBL(string name, string description, decimal price, int quantityInStock)
         {
-            this.name = name;
-            this.price = price;
-            this.quantityInStock = quantityInStock; 
-            this.Description = description;
-        }
-
-        public ProductBL(int productID, string name, string description, decimal price, int quantityInStock)
-        {
-            ProductID = productID;
-            this.name = name;
+            ProductName = name;
             Description = description;
-            this.price = price;
-            this.quantityInStock = quantityInStock;
+            Price = price;
+            QuantityInStock = quantityInStock;
         }
 
-        public ProductBL() { } // Parameterless constructor if needed
+        public ProductBL(int productId, string name, string description, decimal price, int quantityInStock)
+            : this(name, description, price, quantityInStock)
+        {
+            ProductID = productId;
+        }
+
+        // Validation method
+        public bool IsValid(out string message)
+        {
+            if (string.IsNullOrWhiteSpace(ProductName))
+            {
+                message = "Product name is required.";
+                return false;
+            }
+
+            if (Price < 0)
+            {
+                message = "Price must be non-negative.";
+                return false;
+            }
+
+            if (QuantityInStock < 0)
+            {
+                message = "Stock quantity cannot be negative.";
+                return false;
+            }
+
+            message = string.Empty;
+            return true;
+        }
+
+        // Utility methods
+        public bool IsInStock()
+        {
+            return QuantityInStock > 0;
+        }
+
+        public void ReduceStock(int quantity)
+        {
+            if (quantity <= 0)
+                throw new ArgumentException("Quantity must be greater than zero.");
+
+            if (quantity > QuantityInStock)
+                throw new InvalidOperationException("Not enough stock available.");
+
+            QuantityInStock -= quantity;
+        }
+
+        public void IncreaseStock(int quantity)
+        {
+            if (quantity <= 0)
+                throw new ArgumentException("Quantity must be greater than zero.");
+
+            QuantityInStock += quantity;
+        }
+
+        public override string ToString()
+        {
+            return $"{ProductName} - {Description} (${Price}) - Stock: {QuantityInStock}";
+        }
     }
 }

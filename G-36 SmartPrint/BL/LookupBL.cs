@@ -1,16 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace G_36_SmartPrint.BL
 {
     internal class LookupBL
     {
-        private int LookupID;
-        private string LookupType;
-        private string LookupValue;
+        // Properties with encapsulation
+        public int LookupID { get; private set; }
+        public string LookupType { get; private set; }
+        public string LookupValue { get; private set; }
+
+        // Constructors
+
+        public LookupBL() { }
+
+        public LookupBL(int lookupID)
+        {
+            LookupID = lookupID;
+        }
+
+        public LookupBL(int lookupID, string lookupValue)
+        {
+            LookupID = lookupID;
+            LookupValue = lookupValue;
+        }
+
+        public LookupBL(string lookupType, string lookupValue)
+        {
+            LookupType = lookupType;
+            LookupValue = lookupValue;
+        }
 
         public LookupBL(int lookupID, string lookupType, string lookupValue)
         {
@@ -18,22 +36,21 @@ namespace G_36_SmartPrint.BL
             LookupType = lookupType;
             LookupValue = lookupValue;
         }
-        public LookupBL(int id, string lookupValue)
+
+        // Public Methods to update properties if needed
+        public void SetLookupID(int id)
         {
-            LookupID= id;
-            LookupValue = lookupValue;
+            LookupID = id;
         }
-        public LookupBL(int lookupID) {  LookupID = lookupID; }
-        public LookupBL() { }
 
-        public LookupBL(string lookupType,string lookupValue) { this.LookupType= lookupType; this.LookupValue= lookupValue; }
+        public void SetLookupType(string type)
+        {
+            LookupType = type;
+        }
 
-        public void setLookupId(int lookupID) { this.LookupID = lookupID; }
-        public void setLookupType(string type) {  this.LookupType = type; }
-        public void setLookupValue(string value) { this.LookupValue = value; }
-
-        public int getLookupID() { return LookupID; }
-        public string getLookupType() { return LookupType; }
-        public string getLookupValue() { return LookupValue; }
+        public void SetLookupValue(string value)
+        {
+            LookupValue = value;
+        }
     }
 }

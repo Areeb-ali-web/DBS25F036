@@ -103,7 +103,7 @@ namespace G_36_SmartPrint.BL
         {
             foreach (Order_DetailsBL detail in orderDetails)
             {
-                totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
+                totalAmount += detail.getproduct().Price * detail.getQuantity();
             }
         }
         public void setDesignDesctiption(string description)
@@ -125,6 +125,10 @@ namespace G_36_SmartPrint.BL
         public int getOrderID()
         {
             return orderID;
+        }
+        public void setOrderDetail(List<Order_DetailsBL> detail)
+        {
+            this.orderDetails = detail;
         }
         public AddressBL getDeliveryAddress()
         {
@@ -192,7 +196,7 @@ namespace G_36_SmartPrint.BL
 
             foreach(Order_DetailsBL detail in orderDetails)
             {
-                productDetails += detail.getproduct().getProductName()+",";
+                productDetails += detail.getproduct().ProductName+",";
             }
             productDetails += "----" + totalAmount + "\n";
             return productDetails;

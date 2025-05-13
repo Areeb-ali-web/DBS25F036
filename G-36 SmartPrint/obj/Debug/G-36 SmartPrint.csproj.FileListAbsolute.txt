@@ -256,7 +256,6 @@ C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.Properties.Resources.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.AdminDashboardForm.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ApproveRequest.resources
-C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.AssignDeliveryOrder.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.AssignDesignOrder.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.CheckOut.resources
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.CustomerBoard.resources
@@ -297,3 +296,4 @@ C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 Sma.47F06230.Up2Date
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.exe
 C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G-36 SmartPrint.pdb
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Check.resources

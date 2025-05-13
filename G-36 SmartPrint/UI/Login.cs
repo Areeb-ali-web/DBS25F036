@@ -35,7 +35,7 @@ namespace G_36_SmartPrint.UI
 
         private void SelectNextInterface()
         {
-            if (LoginHelpers.currentuser == null || LoginHelpers.currentuser.getRole() == null)
+            if (LoginHelpers.currentuser == null || LoginHelpers.currentuser.Role == null)
             {
 
 
@@ -47,13 +47,13 @@ namespace G_36_SmartPrint.UI
                 return;
             }
 
-            int role = LoginHelpers.currentuser.getRole().getLookupID();
+            int role = LoginHelpers.currentuser.Role.LookupID;
 
             if (role == 2) // Customer
             {
                 LoginHelpers.currentcustomer = new CustomersBL(LoginHelpers.currentuser);
 
-                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
+                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.UserName}\nUserID: {LoginHelpers.currentuser.UserID}",
                                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 CustomerDashboardForm form = new CustomerDashboardForm();
@@ -66,23 +66,23 @@ namespace G_36_SmartPrint.UI
 
             if (role == 18) // Customer
             {
-                int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.getuserID());
+                int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.UserID);
                 LoginHelpers.currentEmployee = EmployeeDL.LoadEmployeeById(employeeid);
                 if (LoginHelpers.currentEmployee != null)
                 {
-                    if (LoginHelpers.currentEmployee.getposition().getLookupValue() == "manager")
+                    if (LoginHelpers.currentEmployee.Position.LookupValue    == "manager")
                     {
 
                         ManagerDashboardForm form = new ManagerDashboardForm();
                         form.Show();
                     }
-                    else if (LoginHelpers.currentEmployee.getposition().getLookupValue() == "delivery")
+                    else if (LoginHelpers.currentEmployee.Position.LookupValue == "delivery")
                     {
 
                         DeliverymanDashboardForm form = new DeliverymanDashboardForm();
                         form.Show();
                     }
-                    else if (LoginHelpers.currentEmployee.getposition().getLookupValue() == "designer")
+                    else if (LoginHelpers.currentEmployee.Position.LookupValue == "designer")
                     {
 
                         DesignerDashbordForm form = new DesignerDashbordForm();
@@ -93,7 +93,7 @@ namespace G_36_SmartPrint.UI
 
 
                 Form parentForm = this.FindForm();
-                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
+                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.UserName}\nUserID: {LoginHelpers.currentuser.UserID}",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (parentForm != null) parentForm.Hide(); // Hide parent form
             }
@@ -102,7 +102,7 @@ namespace G_36_SmartPrint.UI
                 AdminDashboardForm form = new AdminDashboardForm();
                 form.Show();
                 Form parentForm = this.FindForm();
-                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
+                MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.UserName}\nUserID: {LoginHelpers.currentuser.UserID}",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (parentForm != null) parentForm.Hide();
 
@@ -115,26 +115,26 @@ namespace G_36_SmartPrint.UI
 
                 if (role == 19)
                 {
-                    MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.getUserName()}\nUserID: {LoginHelpers.currentuser.getUserID()}",
+                    MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.UserName}\nUserID: {LoginHelpers.currentuser.UserID}",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.getuserID());
+                    int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.UserID);
 
                     LoginHelpers.currentEmployee = EmployeeDL.LoadEmployeeById(employeeid);
-                    if (LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "manager")
+                    if (LoginHelpers.currentEmployee.Position.LookupValue == "manager")
                     {
                         ManagerDashboardForm form = new ManagerDashboardForm();
                         form.Show();
                         Form parentForm = this.FindForm();
                         if (parentForm != null) parentForm.Hide();
                     }
-                    else if (LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "designer")
+                    else if (LoginHelpers.currentEmployee.Position.LookupValue == "designer")
                     {
                         DesignerDashbordForm form = new DesignerDashbordForm();
                         form.Show();
                         Form parentForm = this.FindForm();
                         if (parentForm != null) parentForm.Hide();
                     }
-                    else if (LoginHelpers.currentEmployee.GetPosition().getLookupValue() == "Delivery")
+                    else if (LoginHelpers.currentEmployee.Position.LookupValue == "Delivery")
                     {
                         DeliverymanDashboardForm form = new DeliverymanDashboardForm();
                         form.Show();
@@ -165,7 +165,7 @@ namespace G_36_SmartPrint.UI
 
             LoginHelpers.currentuser = UserDL.UserLogin(username, email, password);
 
-            if (LoginHelpers.currentuser != null && LoginHelpers.currentuser.getRole() != null)
+            if (LoginHelpers.currentuser != null && LoginHelpers.currentuser.Role != null)
             {
                 SelectNextInterface();
             }

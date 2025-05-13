@@ -63,7 +63,7 @@ namespace G_36_SmartPrint.UI
                         order.gettotalAmount().ToString("C"),
                         order.getDesignDescription(),
                         order.allOrders(),
-                        order.getOrderStatus()?.getLookupValue() ?? "Unknown",
+                        order.getOrderStatus()?.LookupValue?? "Unknown",
                         order.getOrderDate().ToString("yyyy-MM-dd")
                     );
                 }
@@ -89,7 +89,7 @@ namespace G_36_SmartPrint.UI
                 if (cmbDesigner.SelectedItem is EmployeesBL designer && cmbOrder.SelectedItem is OrderBL order)
                 {
                     // Call InsertDesign from DesignDL
-                    DesignDL.InsertDesign(order.getOrderID(), designer.getEmployeeID());
+                    DesignDL.InsertDesign(order.getOrderID(), designer.EmployeeID);
 
                     MessageBox.Show("Design task assigned successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDesignOrders(); // Refresh table

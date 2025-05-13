@@ -38,7 +38,7 @@ namespace G_36_SmartPrint.DL
             {
                 EmployeesBL employee = EmployeeDL.LoadEmployeeById(Convert.ToInt32(row["EmployeeID"]));
 
-                ConsumeableInventoryBL item = new ConsumeableInventoryBL(
+                ConsumableInventoryBL item = new ConsumableInventoryBL(
                     Convert.ToInt32(row["Item_ID"]),
                     row["Item_name"].ToString(),
                     Convert.ToInt32(row["CurrentStock"])
@@ -63,6 +63,11 @@ namespace G_36_SmartPrint.DL
 
             return requests;
 
+        }
+        public static void DeleteRequest(int id)
+        {
+            string query = $"delete * from requests where requestID = {id}";
+            SqlHelper.executeDML(query);
         }
         public static void AddRequest(int requestedItemId, int employeeId, int quantity)
         {

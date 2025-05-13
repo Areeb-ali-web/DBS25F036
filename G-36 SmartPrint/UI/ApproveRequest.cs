@@ -16,6 +16,9 @@ namespace G_36_SmartPrint.UI
         {
             InitializeComponent();
             LoadRequestData();
+            dgvRequests.CellDoubleClick += dgvRequests_CellDoubleClick;
+            btnApprove.Click += btnApprove_Click;
+            btnReject.Click += btnReject_Click;
         }
 
         private void LoadRequestData()
@@ -35,11 +38,11 @@ namespace G_36_SmartPrint.UI
             {
                 dgvRequests.Rows.Add(
                     req.reqquestid,
-                    req.employees.getUserName(),
-                    req.employees.getposition().getLookupValue(),
-                    req.requested_item.getItemname(),
+                    req.employees.UserName,
+                    req.employees.Position.LookupValue,
+                    req.requested_item.ItemName,
                     req.quantity,
-                    req.approvalstatus.getLookupValue()
+                    req.approvalstatus.LookupValue
                 );
             }
         }
@@ -50,9 +53,9 @@ namespace G_36_SmartPrint.UI
             {
                 var selectedRequest = requestList[e.RowIndex];
 
-                txtName.Text = selectedRequest.employees.getUserName();
-                txtRole.Text = selectedRequest.employees.GetPosition().getLookupValue();
-                txtItemName.Text = selectedRequest.requested_item.getItemname();
+                txtName.Text = selectedRequest.employees.UserName;
+                txtRole.Text = selectedRequest.employees.Position.LookupValue;
+                txtItemName.Text = selectedRequest.requested_item.ItemName;
                 txtQuantity.Text = selectedRequest.quantity.ToString();
             }
         }
@@ -82,6 +85,7 @@ namespace G_36_SmartPrint.UI
 
         private void btnReject_Click(object sender, EventArgs e)
         {
+
             // Implement similar to approve but with rejected status id
         }
         private void dgvRequests_CellContentClick(object sender, DataGridViewCellEventArgs e)

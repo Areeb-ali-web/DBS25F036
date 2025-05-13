@@ -17,18 +17,17 @@
         {
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblCompanyName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelNavigation = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnView = new Guna.UI2.WinForms.Guna2Button();
             this.btnFeedback = new Guna.UI2.WinForms.Guna2Button();
             this.btnApprove = new Guna.UI2.WinForms.Guna2Button();
             this.btnOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelHeader.SuspendLayout();
-            this.panelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.panelNavigation.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -49,15 +48,26 @@
             this.lblCompanyName.ForeColor = System.Drawing.Color.White;
             this.lblCompanyName.Location = new System.Drawing.Point(230, 33);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(777, 80);
+            this.lblCompanyName.Size = new System.Drawing.Size(1275, 72);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = "SMART PRINT: Custom Design and Clothing";
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Image = global::G_36_SmartPrint.Properties.Resources.log_removebg_preview;
+            this.picLogo.ImageRotate = 0F;
+            this.picLogo.Location = new System.Drawing.Point(0, -23);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(265, 164);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // panelNavigation
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.DodgerBlue;
             this.panelNavigation.Controls.Add(this.btnLogout);
-            this.panelNavigation.Controls.Add(this.btnView);
             this.panelNavigation.Controls.Add(this.btnFeedback);
             this.panelNavigation.Controls.Add(this.btnApprove);
             this.panelNavigation.Controls.Add(this.btnOrder);
@@ -83,21 +93,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnView
-            // 
-            this.btnView.Animated = true;
-            this.btnView.BorderRadius = 3;
-            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnView.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(0, 192);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(220, 57);
-            this.btnView.TabIndex = 0;
-            this.btnView.Text = "View Order Status";
-            this.btnView.Click += new System.EventHandler(this.NavigationButton_Click);
-            // 
             // btnFeedback
             // 
             this.btnFeedback.Animated = true;
@@ -106,7 +101,7 @@
             this.btnFeedback.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnFeedback.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnFeedback.ForeColor = System.Drawing.Color.White;
-            this.btnFeedback.Location = new System.Drawing.Point(0, 255);
+            this.btnFeedback.Location = new System.Drawing.Point(0, 192);
             this.btnFeedback.Name = "btnFeedback";
             this.btnFeedback.Size = new System.Drawing.Size(220, 57);
             this.btnFeedback.TabIndex = 0;
@@ -168,21 +163,9 @@
             this.panelMain.TabIndex = 2;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
-            // picLogo
-            // 
-            this.picLogo.BackColor = System.Drawing.Color.Transparent;
-            this.picLogo.Image = global::G_36_SmartPrint.Properties.Resources.log_removebg_preview;
-            this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(0, -23);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(265, 164);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
             // CustomerDashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1558, 700);
             this.Controls.Add(this.panelMain);
@@ -196,8 +179,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            this.panelNavigation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.panelNavigation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -212,6 +195,5 @@
         private Guna.UI2.WinForms.Guna2Button btnOrder;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnFeedback;
-        private Guna.UI2.WinForms.Guna2Button btnView;
     }
 }

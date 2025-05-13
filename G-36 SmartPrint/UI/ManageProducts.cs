@@ -164,7 +164,7 @@ namespace G_36_SmartPrint.UI
 
                 // Add to database
                 ProductDL.AddProduct(newProduct);
-                newProduct.ProductID = 00;
+                newProduct = ProductDL.GetProductByName(txtProductName.Text);
 
                 // Add to our list
                 productsList.Add(newProduct);
@@ -230,15 +230,15 @@ namespace G_36_SmartPrint.UI
                     return;
 
                 // Update product
-                currentProduct.setname(txtProductName.Text);
+                currentProduct.ProductName = txtProductName.Text;
                 currentProduct.Description = cmbFabricType.SelectedItem + ": " + txtDescription.Text;
-                currentProduct.setprice(decimal.Parse(txtPrice.Text));
+                currentProduct.Price=(decimal.Parse(txtPrice.Text));
                 int quantity = int.Parse(nudQuantity.Text.ToString());
-                currentProduct.setQuantity(quantity);
+                currentProduct.QuantityInStock=(quantity);
 
                 // Update in database
-                ProductDL.UpdateProductPrice(currentProduct.ProductName, currentProduct.price);
-                ProductDL.UpdateProductStock(currentProduct.ProductName, currentProduct.quantityInStock);
+                ProductDL.UpdateProductPrice(currentProduct.ProductName, currentProduct.Price);
+                ProductDL.UpdateProductStock(currentProduct.ProductName, currentProduct.QuantityInStock);
 
 
                 RefreshDataGridView();
@@ -271,7 +271,7 @@ namespace G_36_SmartPrint.UI
                 try
                 {
                     // Delete from database
-                    if (ProductDL.DeleteProduct(currentProduct.ProductID))
+                    if (ProductDL.DeleteProductByID(currentProduct.ProductID))
                     {
                         RefreshDataGridView();
                         ClearFields();
@@ -312,7 +312,7 @@ namespace G_36_SmartPrint.UI
 
         private void DisplayProductDetails(ProductBL product)
         {
-            txtProductName.Text = product.getProductName();
+            txtProductName.Text = product.ProductName;
 
             // Extract fabric type from description (format: "FabricType: Description")
             var descriptionParts = product.Description.Split(new[] { ": " }, 2, StringSplitOptions.None);
@@ -327,8 +327,8 @@ namespace G_36_SmartPrint.UI
                 txtDescription.Text = product.Description;
             }
 
-            txtPrice.Text = product.getPrice().ToString("0.00");
-            nudQuantity.Text = product.getStocks().ToString();
+            txtPrice.Text = product.Price.ToString();
+            nudQuantity.Text = product.QuantityInStock.ToString();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -351,15 +351,15 @@ namespace G_36_SmartPrint.UI
                     return;
 
                 // Update product
-                currentProduct.setname(txtProductName.Text);
+                currentProduct.ProductName=(txtProductName.Text);
                 currentProduct.Description = cmbFabricType.SelectedItem + ": " + txtDescription.Text;
-                currentProduct.setprice(decimal.Parse(txtPrice.Text));
+                currentProduct.Price =(decimal.Parse(txtPrice.Text));
                 int quantity = int.Parse(nudQuantity.Text.ToString());
-                currentProduct.setQuantity(quantity);
+                currentProduct.QuantityInStock=(quantity);
 
                 // Update in database
-                ProductDL.UpdateProductPrice(currentProduct.ProductName, currentProduct.price);
-                ProductDL.UpdateProductStock(currentProduct.ProductName, currentProduct.quantityInStock);
+                ProductDL.UpdateProductPrice(currentProduct.ProductName, currentProduct.Price);
+                ProductDL.UpdateProductStock(currentProduct.ProductName, currentProduct.QuantityInStock);
 
 
                 RefreshDataGridView();
@@ -392,7 +392,7 @@ namespace G_36_SmartPrint.UI
                 try
                 {
                     // Delete from database
-                    if (ProductDL.DeleteProduct(currentProduct.ProductID))
+                    if (ProductDL.DeleteProductByID(currentProduct.ProductID))
                     {
                         RefreshDataGridView();
                         ClearFields();
@@ -436,7 +436,7 @@ namespace G_36_SmartPrint.UI
 
                 // Add to database
                 ProductDL.AddProduct(newProduct);
-                newProduct.ProductID = 00;
+                newProduct = ProductDL.GetProductByName(newProduct.ProductName);
 
                 // Add to our list
                 productsList.Add(newProduct);

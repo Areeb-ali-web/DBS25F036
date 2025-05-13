@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using G_36_SmartPrint.BL;
+using G_36_SmartPrint.DL;
+using Org.BouncyCastle.Bcpg;
 
 namespace G_36_SmartPrint.UI
 {
@@ -15,7 +18,8 @@ namespace G_36_SmartPrint.UI
         public CheckOut()
         {
             InitializeComponent();
-            
+            txtPayment.Text = "50000";
+            btnBuy.Click += btnBuy_Click;
         }
 
        
@@ -28,6 +32,37 @@ namespace G_36_SmartPrint.UI
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
+            try
+            {
+               int userid = LoginHelpers.currentuser.UserID;
+                string addressdetail = txtAddress.Text;
+                string state = txtState.Text;
+                string country = txtCountry.Text;
+                string postalcode = "5200";
+                string city = txtCity.Text; 
+                AddressBL addressBL = new AddressBL(addressdetail,city,state,postalcode,country);
+                AddressDL.AddAddressIfNotExists(userid,addressBL);
+                int addressid = AddressDL.GetAddressIdFromAddress(addressBL);
+                addressBL.AddressID = addressid;
+                string designdescription =txtDesignDescription.Text;
+                LoginHelpers.order.setDesignDesctiption(designdescription);
+                LoginHelpers.order.setDeliveryAddress(addressBL);
+                OrderDL.AddOrder(LoginHelpers.order);
+
+                //Order_PaymentBL op = new
+
+
+            }
+            catch 
+            {
+
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
 
         }
     }

@@ -9,7 +9,7 @@ namespace G_36_SmartPrint.UI
 {
     public partial class RequestDesigner : UserControl
     {
-        private List<ConsumeableInventoryBL> consumablesList;
+        private List<ConsumableInventoryBL> consumablesList;
         private int itemid;
 
         public RequestDesigner()
@@ -20,7 +20,7 @@ namespace G_36_SmartPrint.UI
 
         private void RequestDesigner_Load(object sender, EventArgs e)
         {
-            txtDesignerName.Text = LoginHelpers.currentuser.getUserName();
+            txtDesignerName.Text = LoginHelpers.currentuser.UserName;
             ConfigureDataGridView();
             LoadConsumables();
 
@@ -111,7 +111,7 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                RequestsDL.AddRequest(itemid, LoginHelpers.currentEmployee.Employeeid, quantity);
+                RequestsDL.AddRequest(itemid, LoginHelpers.currentEmployee.EmployeeID, quantity);
 
                 MessageBox.Show("Request submitted successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

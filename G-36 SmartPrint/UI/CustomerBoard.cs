@@ -18,7 +18,7 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                string customerName = LoginHelpers.currentuser?.getUserName() ?? "Customer";
+                string customerName = LoginHelpers.currentuser?.UserName ?? "Customer";
 
                 // Set the welcome message
                 lblWelcome.Text = $"WELCOME {customerName.ToUpper()}!";

@@ -108,8 +108,8 @@ namespace G_36_SmartPrint.DL
                              VALUES (@adminId, @employeeId, @text, @date)";
 
             MySqlParameter[] param = {
-                new MySqlParameter("@adminId", instruction.getAdmin().getUserID()),
-                new MySqlParameter("@employeeId", instruction.getEmployee().getEmployeeID()),
+                new MySqlParameter("@adminId", instruction.getAdmin().UserID),
+                new MySqlParameter("@employeeId", instruction.getEmployee().EmployeeID),
                 new MySqlParameter("@text", instruction.getInstructionText()),
                 new MySqlParameter("@date", instruction.getSentDate())
             };

@@ -26,7 +26,6 @@
             this.btnRequest = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewInstructions = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewSalary = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAssignDeliveryOrders = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewOrders = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
@@ -53,7 +52,7 @@
             this.lblCompanyName.ForeColor = System.Drawing.Color.White;
             this.lblCompanyName.Location = new System.Drawing.Point(271, 41);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(726, 43);
+            this.lblCompanyName.Size = new System.Drawing.Size(1101, 63);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = "SMART PRINT: Custom Design and Clothing";
             // 
@@ -79,7 +78,6 @@
             this.panelNavigation.Controls.Add(this.btnRequest);
             this.panelNavigation.Controls.Add(this.btnViewInstructions);
             this.panelNavigation.Controls.Add(this.btnViewSalary);
-            this.panelNavigation.Controls.Add(this.btnAssignDeliveryOrders);
             this.panelNavigation.Controls.Add(this.btnViewOrders);
             this.panelNavigation.Controls.Add(this.btnDashboard);
             this.panelNavigation.Dock = System.Windows.Forms.DockStyle.Left;
@@ -124,7 +122,7 @@
             this.btnManageFinancial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnManageFinancial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnManageFinancial.ForeColor = System.Drawing.Color.White;
-            this.btnManageFinancial.Location = new System.Drawing.Point(0, 229);
+            this.btnManageFinancial.Location = new System.Drawing.Point(-3, 170);
             this.btnManageFinancial.Name = "btnManageFinancial";
             this.btnManageFinancial.Size = new System.Drawing.Size(220, 47);
             this.btnManageFinancial.TabIndex = 0;
@@ -138,7 +136,7 @@
             this.btnManageConsumable.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnManageConsumable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnManageConsumable.ForeColor = System.Drawing.Color.White;
-            this.btnManageConsumable.Location = new System.Drawing.Point(0, 282);
+            this.btnManageConsumable.Location = new System.Drawing.Point(3, 223);
             this.btnManageConsumable.Name = "btnManageConsumable";
             this.btnManageConsumable.Size = new System.Drawing.Size(220, 53);
             this.btnManageConsumable.TabIndex = 0;
@@ -152,7 +150,7 @@
             this.btnRequest.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnRequest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnRequest.ForeColor = System.Drawing.Color.White;
-            this.btnRequest.Location = new System.Drawing.Point(0, 341);
+            this.btnRequest.Location = new System.Drawing.Point(3, 282);
             this.btnRequest.Name = "btnRequest";
             this.btnRequest.Size = new System.Drawing.Size(220, 54);
             this.btnRequest.TabIndex = 0;
@@ -166,7 +164,7 @@
             this.btnViewInstructions.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnViewInstructions.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnViewInstructions.ForeColor = System.Drawing.Color.White;
-            this.btnViewInstructions.Location = new System.Drawing.Point(0, 401);
+            this.btnViewInstructions.Location = new System.Drawing.Point(0, 342);
             this.btnViewInstructions.Name = "btnViewInstructions";
             this.btnViewInstructions.Size = new System.Drawing.Size(220, 48);
             this.btnViewInstructions.TabIndex = 0;
@@ -180,25 +178,12 @@
             this.btnViewSalary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnViewSalary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnViewSalary.ForeColor = System.Drawing.Color.White;
-            this.btnViewSalary.Location = new System.Drawing.Point(0, 455);
+            this.btnViewSalary.Location = new System.Drawing.Point(3, 405);
             this.btnViewSalary.Name = "btnViewSalary";
             this.btnViewSalary.Size = new System.Drawing.Size(220, 52);
             this.btnViewSalary.TabIndex = 0;
             this.btnViewSalary.Text = "View Salary";
-            // 
-            // btnAssignDeliveryOrders
-            // 
-            this.btnAssignDeliveryOrders.Animated = true;
-            this.btnAssignDeliveryOrders.BorderRadius = 3;
-            this.btnAssignDeliveryOrders.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAssignDeliveryOrders.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnAssignDeliveryOrders.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAssignDeliveryOrders.ForeColor = System.Drawing.Color.White;
-            this.btnAssignDeliveryOrders.Location = new System.Drawing.Point(0, 170);
-            this.btnAssignDeliveryOrders.Name = "btnAssignDeliveryOrders";
-            this.btnAssignDeliveryOrders.Size = new System.Drawing.Size(220, 53);
-            this.btnAssignDeliveryOrders.TabIndex = 0;
-            this.btnAssignDeliveryOrders.Text = "Assign Delivery Order";
+            this.btnViewSalary.Click += new System.EventHandler(this.btnViewSalary_Click);
             // 
             // btnViewOrders
             // 
@@ -239,7 +224,7 @@
             // 
             // ManagerDashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 700);
             this.Controls.Add(this.panelMain);
@@ -267,7 +252,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnViewOrders;
         private Guna.UI2.WinForms.Guna2Button btnAssignDesigningOrder;
-        private Guna.UI2.WinForms.Guna2Button btnAssignDeliveryOrders;
         private Guna.UI2.WinForms.Guna2Button btnViewSalary;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnManageFinancial;

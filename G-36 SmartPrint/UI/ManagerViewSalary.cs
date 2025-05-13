@@ -28,18 +28,18 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                txtManagerName.Text = LoginHelpers.currentuser.getUserName();
-                // ✅ FIX: Make sure currentEmployee is not null and getEmployeeID() is accessible
+                txtManagerName.Text = LoginHelpers.currentuser.UserName;
+                // ✅ FIX: Make sure currentEmployee is not null and EmployeeID is accessible
                 if (LoginHelpers.currentEmployee == null)
                 {
                     MessageBox.Show("No designer is currently logged in.");
                     return;
                 }
 
-                int designerId = LoginHelpers.currentEmployee.getEmployeeID();
+                int designerId = LoginHelpers.currentEmployee.EmployeeID;
 
                 // ✅ FIX: Confirm method LoadSalariesByEmployeeId exists and returns a list
-                List<SalaryPaymentBL> salaries = Salary_PaymentDL.LoadSalariesByEmployeeId(LoginHelpers.currentEmployee.getEmployeeID());
+                List<SalaryPaymentBL> salaries = Salary_PaymentDL.LoadSalariesByEmployeeId(LoginHelpers.currentEmployee.EmployeeID);
 
                 dgvSalaryStatus.Rows.Clear();
                 dgvSalaryStatus.Columns.Clear();
@@ -55,7 +55,7 @@ namespace G_36_SmartPrint.UI
                         salary.getPaymentid(),
                         salary.getAmount().ToString("C"), // Currency formatting based on system locale
                         salary.getPaymentdate().ToString("yyyy-MM-dd"),
-                        salary.getSalary_status()?.getLookupValue() ?? "Unknown" // ✅ NULL check
+                        salary.getSalary_status()?.LookupValue ?? "Unknown" // ✅ NULL check
                     );
                 }
             }

@@ -42,7 +42,7 @@ namespace G_36_SmartPrint.UI
                     return;
                 }
 
-                int designerID = LoginHelpers.currentEmployee.employeeID;
+                int designerID = LoginHelpers.currentEmployee.EmployeeID;
                 var designs = DesignDL.LoadDesignsByDesignerID(designerID);
 
                 // Clear existing data
@@ -63,7 +63,7 @@ namespace G_36_SmartPrint.UI
                     // Null checks for all properties
                     int orderId = design.order?.OrderID ?? 0;
                     string description = design.order?.getDesignDescription() ?? "N/A";
-                    string status = design.approvalstatus?.getLookupValue() ?? "Unknown";
+                    string status = design.approvalstatus?.LookupValue ?? "waiting";
 
                     dgvAssignedOrders.Rows.Add(orderId, description, status);
                 }

@@ -74,7 +74,7 @@ namespace G_36_SmartPrint.BL
 
         public override string ToString()
         {
-            return $"InstructionID: {instructionId}, Admin: {admin?.getUserName()}, Employee: {employee?.getUserName()}, Text: {instructionText}, SentDate: {sentDate}";
+            return $"InstructionID: {instructionId}, Admin: {admin?.UserName}, Employee: {employee?.UserName}, Text: {instructionText}, SentDate: {sentDate}";
         }
     }
 }

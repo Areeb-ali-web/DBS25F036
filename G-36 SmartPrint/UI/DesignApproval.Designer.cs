@@ -63,7 +63,7 @@
             this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Padding = new System.Windows.Forms.Padding(14);
-            this.panelHeader.Size = new System.Drawing.Size(1260, 106);
+            this.panelHeader.Size = new System.Drawing.Size(1100, 106);
             this.panelHeader.TabIndex = 0;
             this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint_1);
             // 
@@ -98,7 +98,7 @@
             // 
             this.mainSplitContainer.Panel2.Controls.Add(this.dvgOrders);
             this.mainSplitContainer.Panel2.Padding = new System.Windows.Forms.Padding(26, 0, 26, 14);
-            this.mainSplitContainer.Size = new System.Drawing.Size(1260, 677);
+            this.mainSplitContainer.Size = new System.Drawing.Size(1100, 677);
             this.mainSplitContainer.SplitterDistance = 538;
             this.mainSplitContainer.SplitterWidth = 6;
             this.mainSplitContainer.TabIndex = 1;
@@ -119,8 +119,8 @@
             // 
             this.designSplitContainer.Panel2.Controls.Add(this.panelImage);
             this.designSplitContainer.Panel2.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
-            this.designSplitContainer.Size = new System.Drawing.Size(1208, 510);
-            this.designSplitContainer.SplitterDistance = 565;
+            this.designSplitContainer.Size = new System.Drawing.Size(1048, 510);
+            this.designSplitContainer.SplitterDistance = 490;
             this.designSplitContainer.SplitterWidth = 6;
             this.designSplitContainer.TabIndex = 0;
             // 
@@ -139,7 +139,7 @@
             this.panelForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelForm.Name = "panelForm";
             this.panelForm.Padding = new System.Windows.Forms.Padding(14);
-            this.panelForm.Size = new System.Drawing.Size(551, 510);
+            this.panelForm.Size = new System.Drawing.Size(476, 510);
             this.panelForm.TabIndex = 0;
             // 
             // txtDescription
@@ -165,7 +165,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceholderText = "";
             this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(434, 131);
+            this.txtDescription.Size = new System.Drawing.Size(359, 131);
             this.txtDescription.TabIndex = 6;
             // 
             // txtQuantity
@@ -190,7 +190,7 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
-            this.txtQuantity.Size = new System.Drawing.Size(434, 54);
+            this.txtQuantity.Size = new System.Drawing.Size(359, 54);
             this.txtQuantity.TabIndex = 6;
             // 
             // txtProduct
@@ -215,7 +215,7 @@
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.PlaceholderText = "";
             this.txtProduct.SelectedText = "";
-            this.txtProduct.Size = new System.Drawing.Size(434, 54);
+            this.txtProduct.Size = new System.Drawing.Size(359, 54);
             this.txtProduct.TabIndex = 6;
             // 
             // txtCustomerName
@@ -240,7 +240,7 @@
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.PlaceholderText = "";
             this.txtCustomerName.SelectedText = "";
-            this.txtCustomerName.Size = new System.Drawing.Size(434, 54);
+            this.txtCustomerName.Size = new System.Drawing.Size(359, 54);
             this.txtCustomerName.TabIndex = 6;
             // 
             // lblDescription
@@ -300,7 +300,7 @@
             this.panelImage.Location = new System.Drawing.Point(14, 0);
             this.panelImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelImage.Name = "panelImage";
-            this.panelImage.Size = new System.Drawing.Size(623, 510);
+            this.panelImage.Size = new System.Drawing.Size(538, 510);
             this.panelImage.TabIndex = 0;
             this.panelImage.Paint += new System.Windows.Forms.PaintEventHandler(this.panelImage_Paint);
             // 
@@ -314,7 +314,7 @@
             this.picDesign.Location = new System.Drawing.Point(42, 64);
             this.picDesign.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picDesign.Name = "picDesign";
-            this.picDesign.Size = new System.Drawing.Size(475, 174);
+            this.picDesign.Size = new System.Drawing.Size(390, 174);
             this.picDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDesign.TabIndex = 1;
             this.picDesign.TabStop = false;
@@ -339,7 +339,7 @@
             this.panelButtons.Location = new System.Drawing.Point(0, 456);
             this.panelButtons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(623, 54);
+            this.panelButtons.Size = new System.Drawing.Size(538, 54);
             this.panelButtons.TabIndex = 2;
             // 
             // btnReject
@@ -349,10 +349,10 @@
             this.btnReject.FillColor = System.Drawing.Color.IndianRed;
             this.btnReject.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnReject.ForeColor = System.Drawing.Color.White;
-            this.btnReject.Location = new System.Drawing.Point(70, 5);
+            this.btnReject.Location = new System.Drawing.Point(4, 0);
             this.btnReject.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReject.Name = "btnReject";
-            this.btnReject.Size = new System.Drawing.Size(194, 54);
+            this.btnReject.Size = new System.Drawing.Size(144, 54);
             this.btnReject.TabIndex = 1;
             this.btnReject.Text = "Reject";
             // 
@@ -363,10 +363,10 @@
             this.btnApprove.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnApprove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnApprove.ForeColor = System.Drawing.Color.White;
-            this.btnApprove.Location = new System.Drawing.Point(351, 0);
+            this.btnApprove.Location = new System.Drawing.Point(171, 0);
             this.btnApprove.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(194, 54);
+            this.btnApprove.Size = new System.Drawing.Size(143, 54);
             this.btnApprove.TabIndex = 0;
             this.btnApprove.Text = "Approve";
             this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click_1);
@@ -401,7 +401,7 @@
             this.dvgOrders.Name = "dvgOrders";
             this.dvgOrders.RowHeadersVisible = false;
             this.dvgOrders.RowHeadersWidth = 62;
-            this.dvgOrders.Size = new System.Drawing.Size(1208, 119);
+            this.dvgOrders.Size = new System.Drawing.Size(1048, 119);
             this.dvgOrders.TabIndex = 1;
             this.dvgOrders.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.GreenSea;
             this.dvgOrders.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(226)))), ((int)(((byte)(218)))));
@@ -436,7 +436,7 @@
             this.Controls.Add(this.panelHeader);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DesignApproval";
-            this.Size = new System.Drawing.Size(1260, 783);
+            this.Size = new System.Drawing.Size(1100, 783);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainSplitContainer.Panel1.ResumeLayout(false);

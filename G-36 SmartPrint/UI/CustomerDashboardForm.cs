@@ -49,7 +49,6 @@ namespace G_36_SmartPrint.UI
             btnOrder.Click += NavigationButton_Click;
             btnApprove.Click += NavigationButton_Click;
             btnFeedback.Click += NavigationButton_Click;
-            btnView.Click += NavigationButton_Click;
             btnLogout.Click += btnLogout_Click;
         }
 

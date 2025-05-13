@@ -161,5 +161,10 @@ namespace G_36_SmartPrint.UI
         {
 
         }
+
+        private void btnManager_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

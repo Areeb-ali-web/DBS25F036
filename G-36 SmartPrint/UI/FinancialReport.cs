@@ -21,10 +21,10 @@ namespace G_36_SmartPrint.UI
         private void InitializeForm()
         {
             // Set current manager (you might want to get this from login context)
-            currentManager = ManagerBL.getManagerByID(1); // Replace with actual manager ID
+            currentManager = ManagerBL.GetManagerByID(1); // Replace with actual manager ID
 
             // Configure form
-            txtManagerName.Text = currentManager?.getUserName() ?? "N/A";
+            txtManagerName.Text = currentManager?.UserName ?? "N/A";
             txtManagerName.ReadOnly = true;
             dtpReportDate.Value = DateTime.Now;
 
@@ -33,6 +33,7 @@ namespace G_36_SmartPrint.UI
             btnSubmit.Click += BtnSubmit_Click;
             btnUpdate.Click += BtnUpdate_Click;
             btnClear.Click += BtnClear_Click;
+
 
             // Load data
             LoadFinancialReports();
@@ -103,7 +104,7 @@ namespace G_36_SmartPrint.UI
         {
             if (report == null) return;
 
-            txtManagerName.Text = report.Manager?.getUserName() ?? "N/A";
+            txtManagerName.Text = report.Manager?.UserName ?? "N/A";
             dtpReportDate.Value = report.Date;
             txtTotalRevenue.Text = report.totalRevinue.ToString("0.00");
             txtTotalExpenses.Text = report.totalexpenses.ToString("0.00");
@@ -256,6 +257,11 @@ namespace G_36_SmartPrint.UI
 
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvFinancialData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -39,11 +39,11 @@ namespace G_36_SmartPrint.UI
             {
                 dgvRequests.Rows.Add(
                     req.reqquestid,
-                    req.employees.getUserName(),
-                    req.employees.getposition().getLookupValue(),
-                    req.requested_item.getItemname(),
+                    req.employees.UserName,
+                    req.employees.Position.LookupValue,
+                    req.requested_item.ItemName,
                     req.quantity,
-                    req.approvalstatus.getLookupValue()
+                    req.approvalstatus.LookupValue
                 );
             }
         }

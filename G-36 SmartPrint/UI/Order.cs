@@ -15,11 +15,10 @@ namespace G_36_SmartPrint.UI
             InitializeComponent();
 
             // Initialize controls
-            CheckOut checkOutControl = new CheckOut();
-            this.Controls.Add(checkOutControl);
-            checkOutControl.BringToFront();
-            checkOutControl.CenterOnScreen(this);
-
+            //Order OrderControl = new Order();
+            //this.Controls.Add(OrderControl);
+            //OrderControl.BringToFront();
+            txtCustomerName.Text = LoginHelpers.currentuser.UserName;
             // Load products
             cbProduct.DataSource = ProductDL.LoadProducts();
             cbProduct.DisplayMember = "ProductName";
@@ -48,7 +47,14 @@ namespace G_36_SmartPrint.UI
                 Name = "Quantity",
                 HeaderText = "Quantity",
                 DataPropertyName = "Quantity",
-                Width = 100
+                Width = 50
+            });
+            dgvCart.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "Description",
+                HeaderText = "Description",
+                DataPropertyName = "Description",
+                Width = 150
             });
         }
 
@@ -56,7 +62,7 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                txtCustomerName.Text = LoginHelpers.currentuser.getUserName();
+                txtCustomerName.Text = LoginHelpers.currentuser.UserName;
 
                 string quantityText = txtQuantity.Text.Trim();
                 if (!int.TryParse(quantityText, out int quantity) || quantity <= 0)
@@ -88,16 +94,35 @@ namespace G_36_SmartPrint.UI
                 displayList.Add(new
                 {
                     ProductName = order.getproduct().ProductName,
-                    Quantity = order.getQuantity()
+                    Quantity = order.getQuantity(),
+                    Description = order.getproduct().Description
                 });
             }
 
             dgvCart.DataSource = displayList;
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        
+
+        private void btnClear_Click(object sender, EventArgs e)
         {
-           
+            orders.Clear();
+            RefreshCart();
+        }
+
+        private void panelForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            Check checkOut = new Check();
+            checkOut.Show();
+            OrderBL order = new OrderBL() { };
+            order.setOrderDetail(orders);
+            LoginHelpers.currentcustomer.GetOrders().Add(order);
+            LoginHelpers.order = order;
         }
     }
 }

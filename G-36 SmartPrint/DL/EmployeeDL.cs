@@ -50,7 +50,7 @@ namespace G_36_SmartPrint.DL
                 EmployeesBL emp = new EmployeesBL(employeeID, position, hireDate, salary,
                                                   username, passwordHash, email, name, phoneNumber, role);
 
-                emp.setuserID(userID); // If needed to set userID manually
+                emp.SetUserID(userID); // If needed to set userID manually
                 employees.Add(emp);
             }
 
@@ -100,7 +100,7 @@ namespace G_36_SmartPrint.DL
 
                 EmployeesBL emp = new EmployeesBL(employeeID, position, hireDate, salary,
                                                   username, passwordHash, email, name, phoneNumber, role);
-                emp.setuserID(userID);
+                emp.SetUserID( userID);
                 employees.Add(emp);
             }
 
@@ -216,7 +216,7 @@ namespace G_36_SmartPrint.DL
 
                 EmployeesBL emp = new EmployeesBL(employeeID, position, hireDate, salary,
                                                   username, passwordHash, email, name, phoneNumber, role);
-                emp.setuserID(userID);
+                emp.SetUserID(userID);
                 return emp;
             }
 

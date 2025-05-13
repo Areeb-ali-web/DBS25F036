@@ -46,9 +46,9 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                int adminId = LoginHelpers.currentuser.getuserID(); // Assuming this gets UserID of admin
+                int adminId = LoginHelpers.currentuser.UserID; // Assuming this gets UserID of admin
                 List<InstructionBL> instructions = InstructionDL.LoadInstructionsByAdminId(adminId);
-                txtAdminName.Text = LoginHelpers.currentuser.getUserName();
+                txtAdminName.Text = LoginHelpers.currentuser.UserName;
                 dgvInstructions.Rows.Clear();
                 dgvInstructions.Columns.Clear();
 
@@ -61,7 +61,7 @@ namespace G_36_SmartPrint.UI
                 {
                     dgvInstructions.Rows.Add(
                         instruction.getInstructionId(),
-                        instruction.getEmployee()?.getName() ?? "Unknown",
+                        instruction.getEmployee()?.Name ?? "Khalid",
                         instruction.getInstructionText(),
                         instruction.getSentDate().ToString("yyyy-MM-dd")
                     );
@@ -100,7 +100,7 @@ namespace G_36_SmartPrint.UI
                     return;
                 }
 
-                int adminId = LoginHelpers.currentuser.getuserID(); // Admin userID
+                int adminId = LoginHelpers.currentuser.UserID; // Admin userID
                 EmployeesBL selectedEmployee = (EmployeesBL)cmbManagerName.SelectedItem;
                 string instructionText = txtInstructions.Text.Trim();
                 DateTime sentDate = DateTime.Now;

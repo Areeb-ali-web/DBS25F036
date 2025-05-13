@@ -1,148 +1,180 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 
 namespace G_36_SmartPrint.BL
 {
     internal class UserBL
     {
-        protected int UserID;
-        protected string UserName;
-        protected string PasswordHash;
-        protected string Email;
-        protected string name;
-        protected string phoneNumber;
-        protected DateTime CreatedDate;
-        protected LookupBL Role;
-        public List<AddressBL> Addresses { get; set; } = new List<AddressBL>();
-        public UserBL() { }
-        public UserBL(string username, string passwordHash, string email, string name, string phone_number, LookupBL role)
-        {
-            this.name = name;
-            this.phoneNumber = phone_number;
-            this.UserName = username;
-            this.PasswordHash = passwordHash;
-            this.Email = email;
-          
-            this.Role = role;
+        // Fields - Private to ensure encapsulation
+        private int userID;
+        private string userName;
+        private string passwordHash;
+        private string email;
+        private string name;
+        private string phoneNumber;
+        private DateTime createdDate;
+        private LookupBL role;
+        private string v;
 
-        }
-        public UserBL(int userID, string userName, string passwordHash, string email, LookupBL role)
+        // Addresses
+        public List<AddressBL> Addresses { get; set; } = new List<AddressBL>();
+
+        // Constructors
+        public UserBL() { }
+
+        public UserBL(int userID)
         {
-            UserID = userID;
+            this.userID = userID;
+        }
+        public UserBL(string username,string password,string email,string name)
+        {
+            this.userName = username;
+            this.passwordHash = password;
+            this.email = email;
+            this.name = name;
+            this.phoneNumber = name;
+            this.createdDate = DateTime.Now;
+                
+        }
+        public UserBL(string userName, string passwordHash, string email, string name, string phoneNumber, LookupBL role)
+        {
             UserName = userName;
             PasswordHash = passwordHash;
             Email = email;
-
+            Name = name;
+            PhoneNumber = phoneNumber;
             Role = role;
+            CreatedDate = DateTime.Now;
         }
+
         public UserBL(int userID, string userName, string passwordHash, string email, string name, string phoneNumber, DateTime createdDate, LookupBL role)
         {
             UserID = userID;
             UserName = userName;
             PasswordHash = passwordHash;
             Email = email;
-            this.name = name;
-            this.phoneNumber = phoneNumber;
+            Name = name;
+            PhoneNumber = phoneNumber;
             CreatedDate = createdDate;
             Role = role;
         }
-        public UserBL(int userID, string userName, string passwordHash, string email, string name, string phoneNumber, DateTime createdDate, LookupBL role, AddressBL address) : this(userID, userName, passwordHash, email, name, phoneNumber, createdDate, role)
-        {
-            Addresses = new List<AddressBL> { address };
-        }
 
-        public UserBL(string userName, string passwordHash, string email, string name, string phoneNumber, DateTime createdDate, LookupBL role, AddressBL address)
-        {
-            UserName = userName;
-            PasswordHash = passwordHash;
-            Email = email;
-            this.name = name;
-            this.phoneNumber = phoneNumber;
-            CreatedDate = createdDate;
-            Role = role;
-            Addresses = new List<AddressBL> { address };
-        }
-
-        public UserBL(int userID, AddressBL address)
-        {
-            UserID = userID;
-            Addresses = new List<AddressBL> { address };
-            // Ensure Role is initialized if required, possibly via a parameter or default value
-        }
-
-        public int getUserID() { return UserID; }
-
-
-        public UserBL(int userID)
-        {
-            this.UserID = userID;
-        }
-        public UserBL(String username, string passwordHash, string email)
-        {
-            this.Email = email;
-            this.UserName = username;
-            this.PasswordHash = passwordHash;
-        }
-        public UserBL(String username, string passwordHash, string email,string name)
-        {
-            this.Email = email;
-            this.UserName = username;
-            this.name = name;
-            this.PasswordHash = passwordHash;
-        }
-
-        public UserBL(int userid,string username, string email, string name, string phoneNumber)
-        {
-            this.UserID = userid;
-            this.UserName = username;
-            this.Email = email;
-            this.name = name;
-            this.phoneNumber = phoneNumber;
-        }
-        public UserBL(int userid,string username)
-        {
-            this.UserID = userid;
-            this.UserName = username;
-        }
         public UserBL(UserBL user)
         {
-            this.UserID = user.UserID;
-            this.UserName = user.UserName;
-            this.Email = user.Email;
-            this.Addresses = user.Addresses;
-            this.PasswordHash = user.PasswordHash;
-            this.Email = user.Email;
-            this.CreatedDate = user.CreatedDate;
-            this.Role = user.Role;
+            UserID = user.UserID;
+            UserName = user.UserName;
+            PasswordHash = user.PasswordHash;
+            Email = user.Email;
+            Name = user.Name;
+            PhoneNumber = user.PhoneNumber;
+            CreatedDate = user.CreatedDate;
+            Role = user.Role;
+            Addresses = new List<AddressBL>(user.Addresses);
         }
-        public string getUserName() { return UserName; }
-        public string getphoneNumber() { return phoneNumber; }
-        public string getEmail() { return this.Email; }
-        public DateTime getCreatedDate() { return CreatedDate; }
-        public LookupBL getRole() { return Role; }
-        public string getname() { return name; }
 
-        public string getPasswordHash() { return PasswordHash; }
-
-        public void setname(string name) { this.name = name; }
-
-        public void setemail(string email) { this.Email = email; }
-        public void setpassword(string password) { this.PasswordHash = password; }
-        public void setUserName(string userName) { this.UserName = userName; }
-        public void setRole(LookupBL role) { this.Role = role; }
-
-        public int getuserID()
+        public UserBL(int userID, string username, string email, string name, string phoneNumber) : this(userID)
         {
-            return UserID;
         }
 
-        public virtual void setuserID(int userID) { this.UserID = userID; }
-        
+        public UserBL(int userID, string v) : this(userID)
+        {
+            this.v = v;
+        }
 
+        // Properties with basic validation
+        public int UserID
+        {
+            get => userID;
+            protected set
+            {
+                if (value < 0)
+                    throw new ArgumentException("UserID must be positive.");
+                userID = value;
+            }
+        }
 
+        public string UserName
+        {
+            get => userName;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Username cannot be empty.");
+                userName = value;
+            }
+        }
 
+        public string PasswordHash
+        {
+            get => passwordHash;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Password hash cannot be empty.");
+                passwordHash = value;
+            }
+        }
 
+        public string Email
+        {
+            get => email;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value) || !value.Contains("@"))
+                    throw new ArgumentException("Invalid email address.");
+                email = value;
+            }
+        }
 
+        public string Name
+        {
+            get => name;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Name cannot be empty.");
+                name = value;
+            }
+        }
+
+        public string PhoneNumber
+        {
+            get => phoneNumber;
+            set
+            {
+                //if (string.IsNullOrWhiteSpace(value))
+                //    throw new ArgumentException("Phone number cannot be empty.");
+                phoneNumber = value;
+            }
+        }
+
+        public DateTime CreatedDate
+        {
+            get => createdDate;
+            set => createdDate = value;
+        }
+
+        public LookupBL Role
+        {
+            get => role;
+            set => role = value ?? throw new ArgumentNullException(nameof(Role), "Role cannot be null.");
+        }
+
+        // 🔁 POLYMORPHIC METHODS
+        public virtual string GetUserType()
+        {
+            return "User";
+        }
+
+        public virtual List<OrderBL> GetOrders()
+        {
+            return null; // Default for generic users
+        }
+
+        // Allows derived classes to override this
+        public virtual void SetUserID(int id)
+        {
+            UserID = id;
+        }
     }
 }

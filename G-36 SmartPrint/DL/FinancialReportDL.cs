@@ -18,7 +18,7 @@ namespace G_36_SmartPrint.DL
 
             var parameters = new MySqlConnector.MySqlParameter[]
             {
-                new MySqlConnector.MySqlParameter("@managerid", report.Manager.getEmployeeID()),
+                new MySqlConnector.MySqlParameter("@managerid", report.Manager.EmployeeID),
                 new MySqlConnector.MySqlParameter("@date", report.Date),
                 new MySqlConnector.MySqlParameter("@TotalRevenue", report.totalRevinue),
                 new MySqlConnector.MySqlParameter("@totalexpenses", report.totalexpenses),
@@ -53,7 +53,7 @@ namespace G_36_SmartPrint.DL
                 decimal expenses = Convert.ToDecimal(row["totalexpenses"]);
                 decimal profit = Convert.ToDecimal(row["netprofit"]);
 
-                ManagerBL manager = ManagerBL.getManagerByID(managerId);
+                ManagerBL manager = ManagerBL.GetManagerByID(managerId);
                 if (manager != null)
                 {
                     FinancialReportBL report = new FinancialReportBL(id, manager, date, revenue, expenses, profit);
@@ -78,7 +78,7 @@ namespace G_36_SmartPrint.DL
             decimal expenses = Convert.ToDecimal(row["totalexpenses"]);
             decimal profit = Convert.ToDecimal(row["netprofit"]);
 
-            ManagerBL manager = ManagerBL.getManagerByID(managerId);
+            ManagerBL manager = ManagerBL.GetManagerByID(managerId);
             if (manager != null)
             {
                 return new FinancialReportBL(reportId, manager, date, revenue, expenses, profit);
@@ -93,7 +93,7 @@ namespace G_36_SmartPrint.DL
             string query = $"SELECT * FROM financialReport WHERE managerid = {managerId}";
             DataTable dt = SqlHelper.getDataTable(query);
 
-            ManagerBL manager = ManagerBL.getManagerByID(managerId);
+            ManagerBL manager = ManagerBL.GetManagerByID(managerId);
             if (manager == null)
                 return reports;
 

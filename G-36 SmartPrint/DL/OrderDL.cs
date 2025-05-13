@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using G_36_SmartPrint.BL;
 using MySqlConnector;
+using G_36_SmartPrint.UI;
 
 namespace G_36_SmartPrint.DL
 {
@@ -373,7 +374,7 @@ namespace G_36_SmartPrint.DL
 
                     // Load only designs made by the specified designer for this order
                     List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId)
-                        .FindAll(d => d.designer != null && d.designer.getdesignerId() == designerId);
+                        .FindAll(d => d.designer != null && d.designer.EmployeeID == designerId);
 
                     currentOrder.setDesigns(designs);
 
@@ -582,7 +583,7 @@ namespace G_36_SmartPrint.DL
         }
         public static DataTable getproductsforApproval(int customerId)
         {
-            string query = $"SELECTo.OrderID,o.OrderDate,o.TotalAmount,o.DesignDescription,d.DesignFile, lt.LookupValue AS ApprovalStatus  FROM orders o JOIN users u ON o.CustomerID = u.UserID JOIN designs d ON o.OrderID = d.OrderID JOIN lookuptable lt ON d.ApprovalStatusID = lt.LookupID WHERE d.ApprovalStatusID = 26 = {customerId } ";
+            string query = $"SELECTo.OrderID,o.OrderDate,o.TotalAmount,o.DesignDescription,d.DesignFile, lt.LookupValue AS ApprovalStatus  FROM orders o JOIN users u ON o.CustomerID = u.UserID JOIN designs d ON o.OrderID = d.OrderID JOIN lookuptable lt ON d.ApprovalStatusID = lt.LookupID WHERE d.ApprovalStatusID = 26 = {customerId} ";
 
 
             DataTable dt = SqlHelper.getDataTable(query);
@@ -735,21 +736,22 @@ namespace G_36_SmartPrint.DL
                 con.Open();
                 MySqlTransaction transaction = con.BeginTransaction();
 
-                try
-                {
+       
                     // 1. Insert into Orders table
                     string insertOrderQuery = @"
-                        INSERT INTO Orders (CustomerID, OrderDate, DeliveryRequired, AddressID, TotalAmount, order_StatusID,designdescription)
-                        VALUES (@CustomerID, @OrderDate, @DeliveryRequired, @AddressID, @TotalAmount, @OrderStatusID,@designdescription);
-                        SELECT LAST_INSERT_ID();";
+                INSERT INTO Orders 
+                (CustomerID, DeliveryRequired, AddressID, TotalAmount, order_StatusID, designdescription)
+                VALUES 
+                (@CustomerID, @DeliveryRequired, @AddressID, @TotalAmount, @OrderStatusID, @DesignDescription);
+                SELECT LAST_INSERT_ID();";
 
                     MySqlCommand cmd = new MySqlCommand(insertOrderQuery, con, transaction);
-                    cmd.Parameters.AddWithValue("@CustomerID", order.getCustomer().getUserID());
-                    cmd.Parameters.AddWithValue("@OrderDate", order.getOrderDate());
-                    cmd.Parameters.AddWithValue("@DeliveryRequired", order.getDeliveryRequired());
-                    cmd.Parameters.AddWithValue("@AddressID", order.getDeliveryAddress().getAddressID());
-                    cmd.Parameters.AddWithValue("@TotalAmount", order.gettotalamount());
-                    cmd.Parameters.AddWithValue("@OrderStatusID", order.getOrderStatus().getLookupID());
+                    cmd.Parameters.AddWithValue("@CustomerID", LoginHelpers.currentcustomer.UserID);
+                    cmd.Parameters.AddWithValue("@DeliveryRequired", 1); // assuming always true
+                    cmd.Parameters.AddWithValue("@AddressID", order.getDeliveryAddress().AddressID);
+                    cmd.Parameters.AddWithValue("@TotalAmount", 0000); // Use actual amount
+                    cmd.Parameters.AddWithValue("@OrderStatusID", 7); // default status
+                    cmd.Parameters.AddWithValue("@DesignDescription", order.getDesignDescription());
 
                     int orderId = Convert.ToInt32(cmd.ExecuteScalar());
                     order.setOrderID(orderId);
@@ -758,28 +760,29 @@ namespace G_36_SmartPrint.DL
                     foreach (Order_DetailsBL detail in order.getOrderDetails())
                     {
                         string insertDetailQuery = @"
-                            INSERT INTO OrderDetails (OrderID, ProductID, Quantity)
-                            VALUES (@OrderID, @ProductID, @Quantity);";
+                    INSERT INTO OrderDetails (OrderID, ProductID, Quantity)
+                    VALUES (@OrderID, @ProductID, @Quantity);";
 
                         MySqlCommand detailCmd = new MySqlCommand(insertDetailQuery, con, transaction);
                         detailCmd.Parameters.AddWithValue("@OrderID", orderId);
                         detailCmd.Parameters.AddWithValue("@ProductID", detail.getproduct().ProductID);
                         detailCmd.Parameters.AddWithValue("@Quantity", detail.getQuantity());
-                        
 
                         detailCmd.ExecuteNonQuery();
                     }
-                    cmd.Parameters.AddWithValue("@DesignDescription", order.getDesignDescription());
 
+                    // 3. Commit the transaction
                     transaction.Commit();
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    throw new Exception("Failed to insert order: " + ex.Message);
-                }
+                //}
+                //catch (Exception ex)
+                //{
+                //    // 4. Rollback if anything fails
+                //    transaction.Rollback();
+                //    throw new Exception("Failed to insert order: " + ex.Message);
+                //}
             }
-
         }
+
+
     }
 }

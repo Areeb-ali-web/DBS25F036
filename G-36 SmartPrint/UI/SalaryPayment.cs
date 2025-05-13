@@ -54,11 +54,11 @@ namespace G_36_SmartPrint.UI
                 {
                     dgvPaymentHistory.Rows.Add(
                         salary.getPaymentid(),
-                        salary.employee?.getUserName() ?? "N/A",
+                        salary.employee?.UserName ?? "N/A",
                         salary.getAmount().ToString("C"),
                         salary.getPaymentdate().ToString("yyyy-MM-dd"),
-                        salary.getSalary_status()?.getLookupValue() ?? "Unknown",
-                        salary.employee.Employeeid
+                        salary.getSalary_status()?.LookupValue?? "unpaid",
+                        salary.employee.EmployeeID
                     );
                 }
 

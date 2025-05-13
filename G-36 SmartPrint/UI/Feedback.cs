@@ -29,17 +29,17 @@ namespace G_36_SmartPrint.UI
             //}
 
             // Load and bind customer details
-            txtCustomerName.Text = LoginHelpers.currentuser.getUserName();
+            txtCustomerName.Text = LoginHelpers.currentuser.UserName;
             txtCustomerName.Enabled = false;
 
-            txtEmail.Text = LoginHelpers.currentcustomer.getEmail();
+            txtEmail.Text = LoginHelpers.currentcustomer.Email;
             dtpFeedbackDate.Value = DateTime.Now;
 
             // Load orders for this customer
-            LoginHelpers.currentcustomer.orders = OrderDL.LoadOrdersByCustomerId(LoginHelpers.currentcustomer.getUserID());
+            LoginHelpers.currentcustomer.setOrders(OrderDL.LoadOrdersByCustomerId(LoginHelpers.currentcustomer.UserID));
 
             // Bind orders to combobox
-            var orderDisplayList = LoginHelpers.currentcustomer.orders.Select(o => new
+            var orderDisplayList = LoginHelpers.currentcustomer.GetOrders().Select(o => new
             {
                 OrderID = o.getOrderID(),
                 Display = $"Order #{o.getOrderID()} - {o.getOrderDate():yyyy-MM-dd} - Total: {o.gettotalamount():C}"
@@ -57,7 +57,7 @@ namespace G_36_SmartPrint.UI
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            int customerID=LoginHelpers.currentcustomer.getUserID();
+            int customerID=LoginHelpers.currentcustomer.UserID;
             DateTime feedbackdate = DateTime.Now;
             string comment = txtComments.Text;
             string order = (cbOrder).SelectedValue.ToString();

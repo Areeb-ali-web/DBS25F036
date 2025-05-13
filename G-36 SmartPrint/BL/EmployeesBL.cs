@@ -1,104 +1,122 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using G_36_SmartPrint.DL;
-using Org.BouncyCastle.Asn1.Cmp;
+using G_36_SmartPrint.UI;
+using Mysqlx.Datatypes;
+using static Guna.UI2.WinForms.Helpers.GraphicsHelper;
 
 namespace G_36_SmartPrint.BL
 {
     internal class EmployeesBL : UserBL
-
     {
-        public int employeeID;
-        protected LookupBL Position;
-        protected DateTime hiredate;
-        protected float salary;
-        protected List<SalaryPaymentBL> salaryPayment;
+        // Private Fields
+        private int employeeID;
+        private LookupBL position;
+        private DateTime hireDate;
+        private float salary;
+        private List<SalaryPaymentBL> salaryPayments = new List<SalaryPaymentBL>();
 
+        // Constructors
         public EmployeesBL() { }
 
-        public string name
+        public EmployeesBL(int employeeID, LookupBL position, DateTime hireDate, float salary)
         {
-            get { return getUserName(); }
-            set { userName = value; }
-        }
-
-        public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary)
-        {
-            this.employeeID = employeeID;
+            EmployeeID = employeeID;
             Position = position;
-            this.hiredate = hiredate;
-            this.salary = salary;
+            HireDate = hireDate;
+            Salary = salary;
         }
-        public EmployeesBL(int employeeID,string Employeename)
-        {
-            this.UserName = Employeename;
-            this.employeeID = employeeID;
-        }
-        public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, string username, string passwordHash, string email, string name, string phone_number, LookupBL role) : base(username, passwordHash, email, name, phone_number, role)
-        {
 
-            this.employeeID = employeeID;
+        public EmployeesBL(int employeeID, LookupBL position, DateTime hireDate, float salary,
+                           string userName, string passwordHash, string email, string name, string phoneNumber, LookupBL role)
+            : base(userName, passwordHash, email, name, phoneNumber, role)
+        {
+            EmployeeID = employeeID;
             Position = position;
-            this.hiredate = hiredate;
-            this.salary = salary;
-
-        }
-        public EmployeesBL(EmployeesBL employeesBL)
-        {
-            this.employeeID= employeesBL.employeeID;
-            this.PasswordHash = employeesBL.PasswordHash;
-            this.Email = employeesBL.Email;
-            this.hiredate= employeesBL.hiredate;
-            this.phoneNumber = employeesBL.phoneNumber;
-                this.Addresses = employeesBL.Addresses;
-             this.salary= employeesBL.salary;
-            this.UserName= employeesBL.UserName;
-        }
-        public virtual string getName()
-        {
-            return name;
-        }
-               public int getEmployeeID() { return employeeID; }
-        public EmployeesBL(int employeeID, LookupBL position, DateTime hiredate, float salary, List<SalaryPaymentBL> salaryPayment) : this(employeeID, position, hiredate, salary)
-        {
-            this.salaryPayment = salaryPayment;
+            HireDate = hireDate;
+            Salary = salary;
         }
 
-        public EmployeesBL(int EmployeeId,LookupBL position,int userID): base(userID) {
-            this.employeeID = EmployeeId;
-            this.Position = position;
+        public EmployeesBL(int employeeID, string employeeName)
+        {
+            EmployeeID = employeeID;
+            UserName = employeeName;
         }
 
-        public override void setuserID(int userID)
+        public EmployeesBL(EmployeesBL other) : base(other)
         {
-            base.setuserID(userID);
+            EmployeeID = other.EmployeeID;
+            Position = other.Position;
+            HireDate = other.HireDate;
+            Salary = other.Salary;
+            salaryPayments = new List<SalaryPaymentBL>(other.salaryPayments);
         }
-        public LookupBL GetPosition()
-        {
-            return Position;
-        }
-        public string userName
-        {
-            get { return getUserName(); }
-            set { setUserName(value); }
-        }
-        public int Employeeid  // 👈 Must match casing exactly
-        {
-            get { return employeeID; }
-            set { employeeID = value; }
-        }
-        public virtual List<EmployeesBL> loademployee()
-        {
-            List<EmployeesBL> employees = EmployeeDL.LoadAllEmployees();
 
-            return employees;
-        }
-        public LookupBL getposition()
+        public EmployeesBL(int employeeID, LookupBL position, int userID) : base(userID)
         {
-            return Position;
+            EmployeeID = employeeID;
+            Position = position;
+        }
+        public EmployeesBL(int employeeID,LookupBL position,DateTime hireDate,float salary,List<SalaryPayment> salaryPayments)
+        {
+            EmployeeID = employeeID;
+            Position = position;
+            HireDate = hireDate;
+            this.salary=salary;
+            
+           
+        }
+        // Properties
+        public int EmployeeID
+        {
+            get => employeeID;
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("EmployeeID must be positive.");
+                employeeID = value;
+            }
+        }
+
+        public LookupBL Position
+        {
+            get => position;
+            set => position = value ?? throw new ArgumentNullException(nameof(Position));
+        }
+
+        public DateTime HireDate
+        {
+            get => hireDate;
+            set => hireDate = value;
+        }
+
+        public float Salary
+        {
+            get => salary;
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Salary cannot be negative.");
+                salary = value;
+            }
+        }
+
+        public List<SalaryPaymentBL> SalaryPayments
+        {
+            get => salaryPayments;
+            set => salaryPayments = value ?? new List<SalaryPaymentBL>();
+        }
+
+        // 🔁 OVERRIDDEN POLYMORPHIC METHOD
+        public override string GetUserType()
+        {
+            return "Employee";
+        }
+
+        // Optional - to load employees (could also go in a service class)
+        public virtual List<EmployeesBL> LoadAllEmployees()
+        {
+            return DL.EmployeeDL.LoadAllEmployees(); // Ensure DL class exists
         }
     }
 }

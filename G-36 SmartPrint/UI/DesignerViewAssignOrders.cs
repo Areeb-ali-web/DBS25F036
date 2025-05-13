@@ -21,7 +21,7 @@ namespace G_36_SmartPrint.UI
 
 
 
-            List<DesignBL> designs = DesignDL.LoadDesignsByDesignerID(LoginHelpers.currentEmployee.getEmployeeID());
+            List<DesignBL> designs = DesignDL.LoadDesignsByDesignerID(LoginHelpers.currentEmployee.EmployeeID);
 
             foreach(DesignBL db in designs)
             {
@@ -33,7 +33,7 @@ namespace G_36_SmartPrint.UI
                     design.order.getOrderID(),                      // Order ID
                     design.order.getDesignDescription(),            // Design Description
                     design.designFile,                              // Design File
-                    design.approvalstatus.getLookupValue()          // Design Status
+                    design.approvalstatus.LookupValue          // Design Status
                 );
             }
         }

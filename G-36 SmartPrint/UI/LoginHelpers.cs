@@ -12,6 +12,7 @@ namespace G_36_SmartPrint.UI
         public static UserBL currentuser;
         public static CustomersBL currentcustomer;
         public static EmployeesBL currentEmployee;
+        public static OrderBL order;
 
     }
 }

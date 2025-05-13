@@ -11,7 +11,7 @@ namespace G_36_SmartPrint.BL
     {
         public int reqquestid;
         public EmployeesBL employees;
-        public ConsumeableInventoryBL requested_item;
+        public ConsumableInventoryBL requested_item;
         public int quantity;
         public LookupBL approvalstatus;
 

@@ -55,7 +55,7 @@ namespace G_36_SmartPrint.UI
                         order.gettotalAmount().ToString("C"), // Currency formatting based on system locale
                         order.getDesignDescription(),
                         order.allOrders(),
-                        order.getOrderStatus()?.getLookupValue() ?? "Unknown", // ✅ NULL check
+                        order.getOrderStatus()?.LookupValue ?? "Unknown", // ✅ NULL check
                         order.getOrderDate().ToString("yyyy-MM-dd")
                     );
                 }

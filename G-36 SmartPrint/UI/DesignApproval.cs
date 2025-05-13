@@ -98,7 +98,7 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                int customerId = LoginHelpers.currentcustomer.getUserID();
+                int customerId = LoginHelpers.currentcustomer.UserID;
                 orders = OrderDL.LoadOrdersForApprovalByCustomerId(customerId);
 
                 var dt = new DataTable();
@@ -136,7 +136,7 @@ namespace G_36_SmartPrint.UI
                 currentOrder = OrderDL.LoadOrderByOrderId(currentOrder.getOrderID());
                 if (currentOrder == null) return;
 
-                txtCustomerName.Text = LoginHelpers.currentcustomer.getUserName();
+                txtCustomerName.Text = LoginHelpers.currentcustomer.UserName;
                 txtProduct.Text = currentOrder.allOrders();
                 txtQuantity.Text = $"Total Items: {currentOrder.getOrderDetails()?.Sum(od => od.getQuantity()) ?? 0}";
                 txtDescription.Text = currentOrder.getDesignDescription();

@@ -20,7 +20,7 @@ namespace G_36_SmartPrint.UI
         private void InitializeForm()
         {
             // Set current designer ID (you would get this from login or other context)
-            //currentDesignerId = LoginHelpers.currentEmployee.getEmployeeID(); // Example ID, replace with actual logic
+            //currentDesignerId = LoginHelpers.currentEmployee.EmployeeID; // Example ID, replace with actual logic
             currentDesignerId = 2;
 
             LoadDesigns();
@@ -211,7 +211,7 @@ namespace G_36_SmartPrint.UI
                 var selectedDesign = (DesignBL)dgvDesigns.SelectedRows[0].DataBoundItem;
                 txtorderid.Text = selectedDesign.order.OrderID.ToString();
                 txtDesignLink.Text = selectedDesign.designFile;
-                txtDesignerName.Text = selectedDesign.designer.getUserName();
+                txtDesignerName.Text = selectedDesign.designer.UserName;
                 dtpCreatedDate.Value = selectedDesign.createddate;
                 
                 // You might want to load the full description from the order

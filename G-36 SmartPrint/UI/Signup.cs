@@ -26,11 +26,30 @@ namespace G_36_SmartPrint.UI
             string password = TxtPassword.Text;
             string name = TxtName.Text;
             string email = TxtEmail.Text;
+            int roleid;
+            if (cbRole.Text == "Admin") 
+            {
+                roleid = 1;
+                UserDL.UserSignIN(username, password, email, name, 1);
+            }
+            if(cbRole.Text == "Customer")
+            {
+                UserDL.UserSignIN(username, password, email, name, 2);
+            }
+            if (cbRole.Text == "Employee")
+            {
+                UserDL.UserSignIN(username, password, email, name, 18);
+            }
             UserBL userBL = new UserBL(username,password,email,name);
-            UserDL.UserSignIN(username,password,email,name,2);
+            
         }
 
         private void TxtNewUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbRole_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

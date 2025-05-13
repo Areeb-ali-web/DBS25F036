@@ -35,7 +35,7 @@ namespace G_36_SmartPrint.UI
                     if (order.getDeliveryAddress() != null)
                     {
                         var addr = order.getDeliveryAddress();
-                        addressText = $"{addr.getaddressDetail()}, {addr.getcity()}, {addr.getcountry()}, {addr.getpostalcode()}, {addr.getcountry()}";
+                        addressText = $"{addr.AddressDetail}, {addr.City}, {addr.State}, {addr.PostalCode}, {addr.Country}";
                     }
 
                     dgvAssignedOrders.Rows.Add(order.getOrderID(), addressText);
