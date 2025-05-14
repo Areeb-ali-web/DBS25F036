@@ -35,10 +35,10 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvFinancialReport = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgvFinancialData = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panelHeader.SuspendLayout();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFinancialReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFinancialData)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -71,7 +71,7 @@
             // mainPanel
             // 
             this.mainPanel.Controls.Add(this.label1);
-            this.mainPanel.Controls.Add(this.dgvFinancialReport);
+            this.mainPanel.Controls.Add(this.dgvFinancialData);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 123);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -95,17 +95,17 @@
             this.label1.Text = "Report:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dgvFinancialReport
+            // dgvFinancialData
             // 
-            this.dgvFinancialReport.AllowUserToAddRows = false;
-            this.dgvFinancialReport.AllowUserToDeleteRows = false;
-            this.dgvFinancialReport.AllowUserToResizeRows = false;
+            this.dgvFinancialData.AllowUserToAddRows = false;
+            this.dgvFinancialData.AllowUserToDeleteRows = false;
+            this.dgvFinancialData.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvFinancialReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFinancialReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvFinancialData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFinancialData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvFinancialReport.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvFinancialData.BackgroundColor = System.Drawing.Color.SkyBlue;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -113,9 +113,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFinancialReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvFinancialReport.ColumnHeadersHeight = 40;
-            this.dgvFinancialReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvFinancialData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFinancialData.ColumnHeadersHeight = 40;
+            this.dgvFinancialData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -123,38 +123,39 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFinancialReport.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvFinancialReport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvFinancialReport.Location = new System.Drawing.Point(26, 237);
-            this.dgvFinancialReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dgvFinancialReport.Name = "dgvFinancialReport";
-            this.dgvFinancialReport.ReadOnly = true;
-            this.dgvFinancialReport.RowHeadersVisible = false;
-            this.dgvFinancialReport.RowHeadersWidth = 62;
-            this.dgvFinancialReport.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvFinancialReport.Size = new System.Drawing.Size(1140, 237);
-            this.dgvFinancialReport.TabIndex = 0;
-            this.dgvFinancialReport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvFinancialReport.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvFinancialReport.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvFinancialReport.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvFinancialReport.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvFinancialReport.ThemeStyle.BackColor = System.Drawing.Color.SkyBlue;
-            this.dgvFinancialReport.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvFinancialReport.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvFinancialReport.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvFinancialReport.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFinancialReport.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvFinancialReport.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvFinancialReport.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvFinancialReport.ThemeStyle.ReadOnly = true;
-            this.dgvFinancialReport.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvFinancialReport.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvFinancialReport.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dgvFinancialReport.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvFinancialReport.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvFinancialReport.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvFinancialReport.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvFinancialData.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFinancialData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvFinancialData.Location = new System.Drawing.Point(26, 237);
+            this.dgvFinancialData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvFinancialData.Name = "dgvFinancialData";
+            this.dgvFinancialData.ReadOnly = true;
+            this.dgvFinancialData.RowHeadersVisible = false;
+            this.dgvFinancialData.RowHeadersWidth = 62;
+            this.dgvFinancialData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvFinancialData.Size = new System.Drawing.Size(1140, 237);
+            this.dgvFinancialData.TabIndex = 0;
+            this.dgvFinancialData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFinancialData.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvFinancialData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvFinancialData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvFinancialData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvFinancialData.ThemeStyle.BackColor = System.Drawing.Color.SkyBlue;
+            this.dgvFinancialData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvFinancialData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvFinancialData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvFinancialData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFinancialData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvFinancialData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvFinancialData.ThemeStyle.HeaderStyle.Height = 40;
+            this.dgvFinancialData.ThemeStyle.ReadOnly = true;
+            this.dgvFinancialData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFinancialData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvFinancialData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dgvFinancialData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvFinancialData.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvFinancialData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvFinancialData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvFinancialData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFinancialReport_CellContentClick);
             // 
             // ViewFinancialReport
             // 
@@ -170,7 +171,7 @@
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFinancialReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFinancialData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,7 +181,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelHeader;
         private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvFinancialReport;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvFinancialData;
         private System.Windows.Forms.Label label1;
     }
 }

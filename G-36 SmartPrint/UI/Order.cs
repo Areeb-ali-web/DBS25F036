@@ -93,9 +93,9 @@ namespace G_36_SmartPrint.UI
             {
                 displayList.Add(new
                 {
-                    ProductName = order.getproduct().ProductName,
-                    Quantity = order.getQuantity(),
-                    Description = order.getproduct().Description
+                    ProductName = order.Product.ProductName,
+                    Quantity = order.Quantity,
+                    Description = order.Product.Description
                 });
             }
 
@@ -120,7 +120,7 @@ namespace G_36_SmartPrint.UI
             Check checkOut = new Check();
             checkOut.Show();
             OrderBL order = new OrderBL() { };
-            order.setOrderDetail(orders);
+            order.OrderDetails=(orders);
             LoginHelpers.currentcustomer.GetOrders().Add(order);
             LoginHelpers.order = order;
         }

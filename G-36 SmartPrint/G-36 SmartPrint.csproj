@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\AddressBL.cs" />
+    <Compile Include="BL\CartBL.cs" />
     <Compile Include="BL\ConsumableInventoryBL.cs" />
     <Compile Include="BL\CustomersBL.cs" />
     <Compile Include="BL\DesignBL.cs" />

@@ -34,6 +34,7 @@
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtorderid = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvDesigns = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
@@ -47,7 +48,6 @@
             this.lblOrderId = new System.Windows.Forms.Label();
             this.txtDesignerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDesignerName = new System.Windows.Forms.Label();
-            this.txtorderid = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelHeader.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDesigns)).BeginInit();
@@ -103,6 +103,31 @@
             this.mainPanel.Padding = new System.Windows.Forms.Padding(45, 31, 45, 31);
             this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
+            // 
+            // txtorderid
+            // 
+            this.txtorderid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtorderid.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtorderid.BorderRadius = 5;
+            this.txtorderid.BorderThickness = 2;
+            this.txtorderid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtorderid.DefaultText = "";
+            this.txtorderid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtorderid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtorderid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtorderid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtorderid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtorderid.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtorderid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtorderid.Location = new System.Drawing.Point(41, 214);
+            this.txtorderid.Margin = new System.Windows.Forms.Padding(6);
+            this.txtorderid.Name = "txtorderid";
+            this.txtorderid.PlaceholderText = "";
+            this.txtorderid.ReadOnly = true;
+            this.txtorderid.SelectedText = "";
+            this.txtorderid.Size = new System.Drawing.Size(474, 55);
+            this.txtorderid.TabIndex = 14;
             // 
             // dgvDesigns
             // 
@@ -218,6 +243,7 @@
             this.btnAdd.Size = new System.Drawing.Size(180, 55);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // dtpCreatedDate
             // 
@@ -270,7 +296,7 @@
             this.txtDesignLink.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignLink.Location = new System.Drawing.Point(651, 226);
-            this.txtDesignLink.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignLink.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignLink.Name = "txtDesignLink";
             this.txtDesignLink.PlaceholderText = "";
             this.txtDesignLink.SelectedText = "";
@@ -308,7 +334,7 @@
             this.txtDesignDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignDescription.Location = new System.Drawing.Point(45, 365);
-            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignDescription.Multiline = true;
             this.txtDesignDescription.Name = "txtDesignDescription";
             this.txtDesignDescription.PlaceholderText = "";
@@ -363,7 +389,7 @@
             this.txtDesignerName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignerName.Location = new System.Drawing.Point(40, 86);
-            this.txtDesignerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignerName.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignerName.Name = "txtDesignerName";
             this.txtDesignerName.PlaceholderText = "";
             this.txtDesignerName.ReadOnly = true;
@@ -387,31 +413,6 @@
             this.lblDesignerName.Text = "Designer Name:";
             this.lblDesignerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblDesignerName.Click += new System.EventHandler(this.lblDesignerName_Click);
-            // 
-            // txtorderid
-            // 
-            this.txtorderid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtorderid.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtorderid.BorderRadius = 5;
-            this.txtorderid.BorderThickness = 2;
-            this.txtorderid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtorderid.DefaultText = "";
-            this.txtorderid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtorderid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtorderid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtorderid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtorderid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtorderid.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtorderid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtorderid.Location = new System.Drawing.Point(41, 214);
-            this.txtorderid.Margin = new System.Windows.Forms.Padding(6);
-            this.txtorderid.Name = "txtorderid";
-            this.txtorderid.PlaceholderText = "";
-            this.txtorderid.ReadOnly = true;
-            this.txtorderid.SelectedText = "";
-            this.txtorderid.Size = new System.Drawing.Size(474, 55);
-            this.txtorderid.TabIndex = 14;
             // 
             // ManageDesign
             // 

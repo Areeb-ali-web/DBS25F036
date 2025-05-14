@@ -85,12 +85,17 @@ namespace G_36_SmartPrint.DL
                     approvalStatus,
                     Convert.ToInt32(row["OrderID"])
                 );
-                design.designid = Convert.ToInt32(row["DesignID"]);
+                design.DesignID = Convert.ToInt32(row["DesignID"]);
 
                 designs.Add(design);
             }
 
             return designs;
+        }
+        public static void DeleteDesign(int id)
+        {
+            string query = $"delete from design where designid ={id}";
+            SqlHelper.executeDML(query);
         }
         public static List<DesignBL> LoadDesignsByDesignerID(int designerID)
         {
@@ -139,7 +144,11 @@ namespace G_36_SmartPrint.DL
                 LookupBL status = new LookupBL(statusID, statusValue);
 
                 DesignBL design = new DesignBL(file, designer, created, status, Convert.ToInt32(row["OrderID"]));
-                design.designid = Convert.ToInt32(row["DesignID"]);
+                design.DesignID = Convert.ToInt32(row["DesignID"]);
+                int OrderID = Convert.ToInt32(row["OrderID"]);
+                OrderBL order = OrderDL.LoadOrderByOrderId(OrderID);
+                design.Order = order;
+
                 designs.Add(design);
             }
 

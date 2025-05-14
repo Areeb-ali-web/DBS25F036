@@ -25,15 +25,15 @@ namespace G_36_SmartPrint.UI
 
             foreach(DesignBL db in designs)
             {
-                db.order = OrderDL.LoadOrderByOrderId(db.order.getOrderID());
+                db.Order = OrderDL.LoadOrderByOrderId(db.Order.OrderID);
             }
             foreach (var design in designs)
             {
                 dgvAssignedOrders.Rows.Add(
-                    design.order.getOrderID(),                      // Order ID
-                    design.order.getDesignDescription(),            // Design Description
-                    design.designFile,                              // Design File
-                    design.approvalstatus.LookupValue          // Design Status
+                    design.Order.OrderID,                      // Order ID
+                    design.Order.DesignDescription,            // Design Description
+                    design.DesignFile,                              // Design File
+                    design.ApprovalStatus.LookupValue          // Design Status
                 );
             }
         }

@@ -49,7 +49,7 @@ namespace G_36_SmartPrint.BL
             this.paymentMethod = paymentMethod;
             this.payment_date = payment_date;
             this.payment_status = payment_status;
-            this.order.setOrderID(orderid);
+            this.order.OrderID = (orderid);
         }
         public Order_PaymentBL(decimal amount, string paymentMethod, DateTime payment_date, LookupBL payment_status,OrderBL Order)
         {
@@ -72,7 +72,7 @@ namespace G_36_SmartPrint.BL
         public void setPaymentStatus( LookupBL status ) { this.payment_status = status; }
         public void setAmount()
         {
-            amount= gettotalamount();   
+            amount= TotalAmount;   
         }
 
         public virtual void setPaymentMethod( string paymentMethod ) { this.paymentMethod = paymentMethod; }

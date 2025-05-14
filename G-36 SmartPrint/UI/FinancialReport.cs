@@ -21,7 +21,7 @@ namespace G_36_SmartPrint.UI
         private void InitializeForm()
         {
             // Set current manager (you might want to get this from login context)
-            currentManager = ManagerBL.GetManagerByID(1); // Replace with actual manager ID
+            currentManager = ManagerBL.GetManagerByID(LoginHelpers.currentEmployee.EmployeeID); // Replace with actual manager ID
 
             // Configure form
             txtManagerName.Text = currentManager?.UserName ?? "N/A";

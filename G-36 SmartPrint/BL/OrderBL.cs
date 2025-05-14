@@ -1,204 +1,186 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Schema;
+using System.Runtime.CompilerServices;
+using G_36_SmartPrint.BL;
 
 namespace G_36_SmartPrint.BL
 {
     internal class OrderBL
     {
+        // Private fields
         private int orderID;
         private CustomersBL customer;
-        private DateTime Order_date;
-        private bool DeliveryRequired;
-        private AddressBL delivery_address;
+        private DateTime orderDate;
+        private bool deliveryRequired;
+        private AddressBL deliveryAddress;
         private LookupBL orderStatus;
         private decimal totalAmount;
-        protected List<Order_DetailsBL> orderDetails;
-        public List<FeedbackBL> feedback;
-        private string Designdescription;
-        public List<DesignBL> designs;
+        private string designDescription;
+
+        // Associated collections
+        private List<Order_DetailsBL> orderDetails;
+        private List<DesignBL> designs;
+        private List<FeedbackBL> feedback;
+
+        // Public Properties
+        public int OrderID { get => orderID; set => orderID = value; }
+        public CustomersBL Customer { get => customer; set => customer = value; }
+        public DateTime OrderDate { get => orderDate; set => orderDate = value; }
+        public bool DeliveryRequired { get => deliveryRequired; set => deliveryRequired = value; }
+        public AddressBL DeliveryAddress { get => deliveryAddress; set => deliveryAddress = value; }
+        public LookupBL OrderStatus { get => orderStatus; set => orderStatus = value; }
+        public decimal TotalAmount { get => totalAmount; set => totalAmount = value; }
+        public string DesignDescription { get => designDescription; set => designDescription = value; }
+
+        public List<Order_DetailsBL> OrderDetails
+        {
+            get => orderDetails = new List<Order_DetailsBL>();
+            set => orderDetails = value;
+        }
+
+        public List<DesignBL> Designs
+        {
+            get => designs = new List<DesignBL>();
+            set => designs = value;
+        }
+
+        public List<FeedbackBL> Feedback
+        {
+            get => feedback = new List<FeedbackBL>();
+            set => feedback = value;
+        }
+
+        // Constructors
         public OrderBL() { }
-        public OrderBL(int orderid)
+
+        public OrderBL(int orderId)
         {
-            this.orderID = orderid;
-        }
-        public int OrderID
-        {
-            get { return this.orderID; }
-            set { this.orderID = value; }
-        }
-        public OrderBL(int orderid,CustomersBL customer,DateTime orderdate,decimal ammount,string description,List<DesignBL> design)
-        {
-            this.orderID = orderid;
-            this.customer = customer;
-            this.Order_date = orderdate;
-            this.totalAmount = ammount;
-            this.Designdescription = description;
-            this.designs = design;
-            
-        }
-        public OrderBL(int orderID, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, CustomersBL customer)
-        {
-            this.orderID = orderID;
-            this.customer = customer;
-            this.Order_date = orderdate;
-            this.DeliveryRequired = DeliveryRequired;
-            this.delivery_address = delivery_address;
-            this.totalAmount = totalamount;
-            this.orderDetails = orderDetails;
-            this.DeliveryRequired = DeliveryRequired;
+            this.orderID = orderId;
         }
 
-        public OrderBL(int orderID, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, CustomersBL customer,List<FeedbackBL> feedbak)
+        public OrderBL(CustomersBL customer, DateTime orderDate, bool deliveryRequired, AddressBL deliveryAddress,
+                       decimal totalAmount, List<Order_DetailsBL> orderDetails, string designDescription = "", List<DesignBL> designs = null)
         {
-            this.orderID = orderID;
             this.customer = customer;
-            this.Order_date = orderdate;
-            this.DeliveryRequired = DeliveryRequired;
-            this.delivery_address = delivery_address;
-            this.totalAmount = totalamount;
-            this.orderDetails = orderDetails;
-            this.DeliveryRequired = DeliveryRequired;
-            this.feedback = feedbak;
+            this.orderDate = orderDate;
+            this.deliveryRequired = deliveryRequired;
+            this.deliveryAddress = deliveryAddress;
+            this.totalAmount = totalAmount;
+            this.orderDetails = orderDetails ?? new List<Order_DetailsBL>();
+            this.designDescription = designDescription;
+            this.designs = designs ?? new List<DesignBL>();
         }
 
-        public OrderBL(CustomersBL customer, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails)
+        public OrderBL(int orderID, CustomersBL customer, DateTime orderDate, decimal amount, string description, List<DesignBL> designs)
+            : this(customer, orderDate, false, null, amount, null, description, designs)
         {
-            this.Order_date = orderdate;
-            this.DeliveryRequired = DeliveryRequired;
-            this.delivery_address = delivery_address;
-            this.totalAmount = totalamount;
-            this.orderDetails = orderDetails;
-            this.DeliveryRequired = DeliveryRequired;
-            this.customer = customer;
+            this.orderID = orderID;
         }
-        public OrderBL(CustomersBL customer, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, string designdescription)
+
+        public OrderBL(int orderID, DateTime orderDate, bool deliveryRequired, AddressBL deliveryAddress,
+                       decimal totalAmount, List<Order_DetailsBL> orderDetails, CustomersBL customer, List<FeedbackBL> feedback = null)
+            : this(customer, orderDate, deliveryRequired, deliveryAddress, totalAmount, orderDetails)
         {
-            this.Order_date = orderdate;
-            this.DeliveryRequired = DeliveryRequired;
-            this.delivery_address = delivery_address;
-            this.totalAmount = totalamount;
-            this.orderDetails = orderDetails;
-            this.DeliveryRequired = DeliveryRequired;
-            this.customer = customer;
-            this.Designdescription = designdescription;
+            this.orderID = orderID;
+            this.feedback = feedback ?? new List<FeedbackBL>();
         }
-        public OrderBL(CustomersBL customer, DateTime orderdate, bool DeliveryRequired, AddressBL delivery_address, decimal totalamount, List<Order_DetailsBL> orderDetails, string designdescription,List<DesignBL> designs)
+
+        // Methods
+
+        /// <summary>
+        /// Calculates total amount based on order details.
+        /// </summary>
+        public void CalculateTotalAmount()
         {
-            this.Order_date = orderdate;
-            this.DeliveryRequired = DeliveryRequired;
-            this.delivery_address = delivery_address;
-            this.totalAmount = totalamount;
-            this.orderDetails = orderDetails;
-            this.DeliveryRequired = DeliveryRequired;
-            this.customer = customer;
-            this.Designdescription = designdescription;
-            this.designs    = designs;
+            totalAmount = 0;
+            foreach (var detail in OrderDetails)
+            {
+                totalAmount += detail.Product.Price * detail.Quantity;
+            }
         }
-        public void calculateTotalamount()
+
+        /// <summary>
+        /// Sets the design list.
+        /// </summary>
+        public void SetDesigns(List<DesignBL> designList)
         {
+            this.designs = designList ?? new List<DesignBL>();
+        }
+
+        /// <summary>
+        /// Generates a readable summary of all products in the order.
+        /// </summary>
+        public string GetOrderSummary()
+        {
+            var summary = new System.Text.StringBuilder();
+            foreach (var detail in OrderDetails)
+            {
+                summary.Append(detail.Product.ProductName + ", ");
+            }
+
+            if (summary.Length > 2)
+                summary.Length -= 2; // Remove last comma
+
+            summary.Append(" ---- " + totalAmount + "\n");
+            return summary.ToString();
+        }
+
+        /// <summary>
+        /// Adds a single order detail.
+        /// </summary>
+        public void AddOrderDetail(Order_DetailsBL detail)
+        {
+            if (orderDetails == null)
+                orderDetails = new List<Order_DetailsBL>();
+            orderDetails.Add(detail);
+        }
+
+        /// <summary>
+        /// Adds a design to the order.
+        /// </summary>
+        public void AddDesign(DesignBL design)
+        {
+            if (designs == null)
+                designs = new List<DesignBL>();
+            designs.Add(design);
+        }
+
+        /// <summary>
+        /// Adds feedback from a customer.
+        /// </summary>
+        public void AddFeedback(FeedbackBL fb)
+        {
+            if (feedback == null)
+                feedback = new List<FeedbackBL>();
+            feedback.Add(fb);
+        }
+
+        /// <summary>
+        /// Returns whether delivery is required.
+        /// </summary>
+        public bool IsDeliveryRequired()
+        {
+            return deliveryRequired;
+        }
+
+        /// <summary>
+        /// Sets the order status by lookup.
+        /// </summary>
+        public void SetOrderStatusByName(string statusName)
+        {
+            var lookup = new LookupBL();
+            lookup.SetLookupValue(statusName);
+            this.orderStatus = lookup;
+        }
+        public string ToString()
+        {
+            string productDetails = "";
+
             foreach (Order_DetailsBL detail in orderDetails)
             {
-                totalAmount += detail.getproduct().Price * detail.getQuantity();
+                productDetails += detail.Product.ProductName + ",";
             }
-        }
-        public void setDesignDesctiption(string description)
-        {
-            this.Designdescription = description;
-        }
-        public decimal gettotalamount()
-        {
-            return totalAmount;
-        }
-        public bool getDeliveryRequired()
-        {
-            return DeliveryRequired;
-        }
-        public DateTime getOrderDate()
-        {
-            return Order_date;
-        }
-        public int getOrderID()
-        {
-            return orderID;
-        }
-        public void setOrderDetail(List<Order_DetailsBL> detail)
-        {
-            this.orderDetails = detail;
-        }
-        public AddressBL getDeliveryAddress()
-        {
-            return delivery_address;
-        }
-        public LookupBL getOrderStatus()
-        {
-            return orderStatus;
-        }
-        public List<Order_DetailsBL> getOrderDetails()
-        {
-            return orderDetails;
-        }   
-        public void setOrderID(int orderID)
-        {
-            this.orderID = orderID;
-        }
-        public void setOrderDate(DateTime orderdate)
-        {
-            this.Order_date = orderdate;
-        }
-        public void setDeliveryRequired(bool deliveryRequired)
-        {
-            this.DeliveryRequired = deliveryRequired;
-        }
-        public void setDeliveryAddress(AddressBL delivery_address)
-        {
-            this.delivery_address = delivery_address;
-        }
-        public void setOrderStatus(LookupBL orderStatus)
-        {
-            this.orderStatus = orderStatus;
-        }
-        public CustomersBL getCustomer()
-        {
-            return customer;
-        }
-        public void setCustomer(CustomersBL customer)
-        {
-            this.customer = customer;
-        }
-
-     
-        public decimal gettotalAmount()
-        {
-            //foreach(Order_DetailsBL detail in orderDetails)
-            //{
-            //    totalAmount += detail.getproduct().getPrice() * detail.getQuantity();
-            //}
-            return totalAmount;
-        }
-
-        public void setDesigns(List<DesignBL> design)
-        {
-            this.designs= design;
-        }
-        public string getDesignDescription()
-        {
-            return Designdescription;
-        }
-
-        public string allOrders()
-        {
-             string productDetails = "";
-
-            foreach(Order_DetailsBL detail in orderDetails)
-            {
-                productDetails += detail.getproduct().ProductName+",";
-            }
-            productDetails += "----" + totalAmount + "\n";
+            //productDetails += "----" + totalAmount + "\n";
             return productDetails;
         }
     }

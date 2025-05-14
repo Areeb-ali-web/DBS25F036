@@ -110,8 +110,8 @@ namespace G_36_SmartPrint.UI
 
                 foreach (var order in orders)
                 {
-                    string designFile = order.designs?.FirstOrDefault()?.designFile ?? string.Empty;
-                    dt.Rows.Add(order.getOrderID(), order.getOrderDate(), order.gettotalAmount(), order.getDesignDescription(),designFile);
+                    string designFile = order.Designs?.FirstOrDefault()?.DesignFile ?? string.Empty;
+                    dt.Rows.Add(order.OrderID, order.OrderDate, order.TotalAmount, order.DesignDescription,designFile);
                 }
 
                 dvgOrders.DataSource = dt;
@@ -132,14 +132,14 @@ namespace G_36_SmartPrint.UI
             {
                 var row = dvgOrders.Rows[e.RowIndex];
                 int orderId = Convert.ToInt32(row.Cells["OrderID"].Value);
-                currentOrder = orders.FirstOrDefault(o => o.getOrderID() == orderId);
-                currentOrder = OrderDL.LoadOrderByOrderId(currentOrder.getOrderID());
+                currentOrder = orders.FirstOrDefault(o => o.OrderID == orderId);
+                currentOrder = OrderDL.LoadOrderByOrderId(currentOrder.OrderID);
                 if (currentOrder == null) return;
 
                 txtCustomerName.Text = LoginHelpers.currentcustomer.UserName;
-                txtProduct.Text = currentOrder.allOrders();
-                txtQuantity.Text = $"Total Items: {currentOrder.getOrderDetails()?.Sum(od => od.getQuantity()) ?? 0}";
-                txtDescription.Text = currentOrder.getDesignDescription();
+                txtProduct.Text = currentOrder.ToString();
+                txtQuantity.Text = $"Total Items: {currentOrder.OrderDetails?.Sum(od => od.Quantity) ?? 0}";
+                txtDescription.Text = currentOrder.DesignDescription;
 
                 string imagePath = row.Cells["DesignFile"].ToString();
                 if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
@@ -170,11 +170,11 @@ namespace G_36_SmartPrint.UI
             try
             {
 
-                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "Approved");
+                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "Approved");
                 MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "manufactured");
-                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.getOrderID(),22);
+                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "manufactured");
+                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.OrderID,22);
                 MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
@@ -196,10 +196,10 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "being_designed");
+                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "being_designed");
 
-                OrderDL.ChangeOrderStatusByName(currentOrder.getOrderID(), "being_designed");
-                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.getOrderID(), 23);
+                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "being_designed");
+                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.OrderID, 23);
                 MessageBox.Show("Order rejected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadFormData();
             }

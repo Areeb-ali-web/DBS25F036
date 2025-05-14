@@ -9,7 +9,7 @@ namespace G_36_SmartPrint.UI
     public partial class ManageDesign : UserControl
     {
         private List<DesignBL> designsList;
-        private int currentDesignerId; // Assuming you'll set this from login or elsewhere
+        private int currentDesignerId;
 
         public ManageDesign()
         {
@@ -19,8 +19,7 @@ namespace G_36_SmartPrint.UI
 
         private void InitializeForm()
         {
-            // Set current designer ID (you would get this from login or other context)
-            //currentDesignerId = LoginHelpers.currentEmployee.EmployeeID; // Example ID, replace with actual logic
+            // Get current designer ID from login/session (here hardcoded for testing)
             currentDesignerId = 2;
 
             LoadDesigns();
@@ -37,7 +36,7 @@ namespace G_36_SmartPrint.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading designs: {ex.Message}", "Error", 
+                MessageBox.Show($"Error loading designs: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -46,19 +45,16 @@ namespace G_36_SmartPrint.UI
         {
             dgvDesigns.AutoGenerateColumns = false;
             dgvDesigns.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            
-            // Clear existing columns
             dgvDesigns.Columns.Clear();
 
-            // Add columns
             dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "colOrderId",
                 HeaderText = "Order ID",
-                DataPropertyName = "OrderID",
+                DataPropertyName = "Order.OrderID",
                 Width = 100
             });
-            
+
             dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "colDesignFile",
@@ -66,7 +62,7 @@ namespace G_36_SmartPrint.UI
                 DataPropertyName = "DesignFile",
                 Width = 200
             });
-            
+
             dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "colCreatedDate",
@@ -74,20 +70,20 @@ namespace G_36_SmartPrint.UI
                 DataPropertyName = "CreatedDate",
                 Width = 150
             });
-            
+
             dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "colDesigner",
                 HeaderText = "Designer",
-                DataPropertyName = "DesignerName",
+                DataPropertyName = "Designer.UserName",
                 Width = 150
             });
-            
+
             dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "colStatus",
                 HeaderText = "Status",
-                DataPropertyName = "ApprovalStatusValue",
+                DataPropertyName = "ApprovalStatus.LookupValue",
                 Width = 120
             });
         }
@@ -113,20 +109,21 @@ namespace G_36_SmartPrint.UI
             {
                 if (string.IsNullOrWhiteSpace(txtorderid.Text) || !int.TryParse(txtorderid.Text, out int orderId))
                 {
-                    MessageBox.Show("Please enter a valid Order ID", "Validation Error", 
+                    MessageBox.Show("Please enter a valid Order ID", "Validation Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 DesignDL.InsertDesign(orderId, currentDesignerId);
-                LoadDesigns(); // Refresh the list
-                
-                MessageBox.Show("Design added successfully!", "Success", 
+                LoadDesigns();
+
+                MessageBox.Show("Design added successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error adding design: {ex.Message}", "Error", 
+                MessageBox.Show($"Error adding design: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -135,7 +132,7 @@ namespace G_36_SmartPrint.UI
         {
             if (dgvDesigns.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Please select a design to update", "Warning", 
+                MessageBox.Show("Please select a design to update", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -145,27 +142,27 @@ namespace G_36_SmartPrint.UI
                 var selectedDesign = (DesignBL)dgvDesigns.SelectedRows[0].DataBoundItem;
                 string newDesignLink = txtDesignLink.Text.Trim();
 
-                // Update the design file
                 bool success = DesignDL.UpdateDesignFile(
-                    selectedDesign.order.OrderID, 
-                    selectedDesign.designid, // You'll need to add DesignID to your DesignBL class
+                    selectedDesign.Order.OrderID,
+                    selectedDesign.DesignID,
                     newDesignLink);
 
                 if (success)
                 {
-                    LoadDesigns(); // Refresh the list
-                    MessageBox.Show("Design updated successfully!", "Success", 
+                    LoadDesigns();
+                    MessageBox.Show("Design updated successfully!", "Success",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFields();
                 }
                 else
                 {
-                    MessageBox.Show("Failed to update design", "Error", 
+                    MessageBox.Show("Failed to update design", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error updating design: {ex.Message}", "Error", 
+                MessageBox.Show($"Error updating design: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -174,31 +171,35 @@ namespace G_36_SmartPrint.UI
         {
             if (dgvDesigns.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Please select a design to delete", "Warning", 
+                MessageBox.Show("Please select a design to delete", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var result = MessageBox.Show("Are you sure you want to delete this design?", 
+            var result = MessageBox.Show("Are you sure you want to delete this design?",
                 "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            
+
             if (result == DialogResult.Yes)
             {
                 try
                 {
                     var selectedDesign = (DesignBL)dgvDesigns.SelectedRows[0].DataBoundItem;
-                    
-                    // You would need to add a DeleteDesign method to your DL class
-                    // DesignDL.DeleteDesign(selectedDesign.OrderID, selectedDesign.DesignID);
-                    // For now, we'll just show a message
-                    MessageBox.Show("Delete functionality would be implemented here", 
-                        "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    LoadDesigns(); // Refresh the list
+
+                    bool deleted = DesignDL.DeleteDesign(selectedDesign.DesignID);
+                    if (deleted)
+                    {
+                        LoadDesigns();
+                        MessageBox.Show("Design deleted successfully.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete design.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error deleting design: {ex.Message}", "Error", 
+                    MessageBox.Show($"Error deleting design: {ex.Message}", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -209,29 +210,27 @@ namespace G_36_SmartPrint.UI
             if (dgvDesigns.SelectedRows.Count > 0)
             {
                 var selectedDesign = (DesignBL)dgvDesigns.SelectedRows[0].DataBoundItem;
-                txtorderid.Text = selectedDesign.order.OrderID.ToString();
-                txtDesignLink.Text = selectedDesign.designFile;
-                txtDesignerName.Text = selectedDesign.designer.UserName;
-                dtpCreatedDate.Value = selectedDesign.createddate;
-                
-                // You might want to load the full description from the order
-                // txtDesignDescription.Text = ...;
+                txtorderid.Text = selectedDesign.Order.OrderID.ToString();
+                txtDesignLink.Text = selectedDesign.DesignFile;
+                txtDesignerName.Text = selectedDesign.Designer.UserName;
+                dtpCreatedDate.Value = selectedDesign.CreatedDate;
+                txtDesignDescription.Text = selectedDesign.Order.DesignDescription;
             }
         }
 
         private void dgvDesigns_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Handle any specific cell content clicks if needed
+            // Optional: handle clicks on buttons/links inside the DataGridView if needed
         }
 
         private void txtDesignerName_TextChanged(object sender, EventArgs e)
         {
-            // Handle designer name text change if needed
+            // Optional: live filtering or validation
         }
 
         private void lblDesignerName_Click(object sender, EventArgs e)
         {
-            // Handle label click if needed
+            // Optional: UI response
         }
     }
 }

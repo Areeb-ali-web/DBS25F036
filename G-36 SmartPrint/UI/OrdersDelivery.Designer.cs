@@ -222,7 +222,7 @@
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Location = new System.Drawing.Point(630, 323);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(6);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "";
@@ -249,7 +249,7 @@
             this.txtTrackingNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtTrackingNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTrackingNumber.Location = new System.Drawing.Point(624, 215);
-            this.txtTrackingNumber.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTrackingNumber.Margin = new System.Windows.Forms.Padding(6);
             this.txtTrackingNumber.Name = "txtTrackingNumber";
             this.txtTrackingNumber.PlaceholderText = "";
             this.txtTrackingNumber.ReadOnly = true;
@@ -275,7 +275,7 @@
             this.txtCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCustomerName.Location = new System.Drawing.Point(624, 89);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.PlaceholderText = "";
             this.txtCustomerName.ReadOnly = true;
@@ -301,7 +301,7 @@
             this.txtDeliveryMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtDeliveryMan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeliveryMan.Location = new System.Drawing.Point(30, 323);
-            this.txtDeliveryMan.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDeliveryMan.Margin = new System.Windows.Forms.Padding(6);
             this.txtDeliveryMan.Name = "txtDeliveryMan";
             this.txtDeliveryMan.PlaceholderText = "";
             this.txtDeliveryMan.ReadOnly = true;

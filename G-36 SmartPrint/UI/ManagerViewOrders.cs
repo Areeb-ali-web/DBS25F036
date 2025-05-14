@@ -51,12 +51,12 @@ namespace G_36_SmartPrint.UI
                 foreach (var order in orders)
                 {
                     dgvRequests.Rows.Add(
-                        order.getOrderID(),
-                        order.gettotalAmount().ToString("C"), // Currency formatting based on system locale
-                        order.getDesignDescription(),
-                        order.allOrders(),
-                        order.getOrderStatus()?.LookupValue ?? "Unknown", // ✅ NULL check
-                        order.getOrderDate().ToString("yyyy-MM-dd")
+                        order.OrderID,
+                        order.TotalAmount.ToString("C"), // Currency formatting based on system locale
+                        order.DesignDescription,
+                        order.ToString(),
+                        order.OrderStatus?.LookupValue ?? "Unknown", // ✅ NULL check
+                        order.OrderDate.ToString("yyyy-MM-dd")
                     );
                 }
             }

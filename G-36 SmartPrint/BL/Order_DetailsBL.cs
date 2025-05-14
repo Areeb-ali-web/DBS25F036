@@ -1,77 +1,68 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace G_36_SmartPrint.BL
 {
     internal class Order_DetailsBL
     {
-        private int orderdetailID;
-        private ProductBL product;
-        private int quantity;
-        private LookupBL orderStatus;
-     
+        // Fields
+        private int _orderDetailID;
+        private ProductBL _product;
+        private int _quantity;
+        private LookupBL _orderStatus;
 
-        public Order_DetailsBL(int orderdetailID, ProductBL product, int quantity, LookupBL orderStatus)
+        // Properties
+        public int OrderDetailID
         {
-            this.orderdetailID = orderdetailID;
-            this.product = product;
-            this.quantity = quantity;
-            this.orderStatus = orderStatus;
-            
+            get => _orderDetailID;
+            set => _orderDetailID = value;
         }
+
+        public ProductBL Product
+        {
+            get => _product;
+            set => _product = value ?? throw new ArgumentNullException(nameof(Product), "Product cannot be null");
+        }
+
+        public int Quantity
+        {
+            get => _quantity;
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentOutOfRangeException(nameof(Quantity), "Quantity cannot be negative");
+                _quantity = value;
+            }
+        }
+
+        public LookupBL OrderStatus
+        {
+            get => _orderStatus;
+            set => _orderStatus = value;
+        }
+
+        // Constructors
+        public Order_DetailsBL(int orderDetailID, ProductBL product, int quantity, LookupBL orderStatus)
+            : this(product, quantity, orderStatus)
+        {
+            OrderDetailID = orderDetailID;
+        }
+
         public Order_DetailsBL(ProductBL product, int quantity)
+            : this(product, quantity, null)
         {
-            this.product = product;
-            this.quantity = quantity;
-        }
-        public Order_DetailsBL(ProductBL product,int quantity, LookupBL orderStatus)
-        {
-            this.quantity=quantity;
-            this.orderStatus = orderStatus;
-        
-            this.product=product;
         }
 
-        public int getOrderDetailID()
+        public Order_DetailsBL(ProductBL product, int quantity, LookupBL orderStatus)
         {
-            return orderdetailID;
+            Product = product;
+            Quantity = quantity;
+            OrderStatus = orderStatus;
         }
-       
 
-        public LookupBL getOrderStatus() 
+        // Read-only Helper Method
+        public int GetProductID()
         {
-            return orderStatus;
-        }
-        public void setproduct(ProductBL product)
-        {
-            this.product = product;
-        }
-        public void setQuantity(int quantity)
-        {
-            this.quantity = quantity;
-        }
-        public void setDEscription(string description)
-        {
-        
-        }
-        public void setorderStatus(LookupBL orderStatus)
-        {
-            this.orderStatus = orderStatus;
-        }
-        public ProductBL getproduct()
-        {
-            return product;
-        }
-        public int getQuantity()
-        {
-            return quantity;
-        }
-        public int getproductId()
-        {
-            return product.ProductID;
+            return Product?.ProductID ?? -1;
         }
     }
 }

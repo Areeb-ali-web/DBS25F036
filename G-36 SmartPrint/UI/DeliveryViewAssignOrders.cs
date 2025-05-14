@@ -32,13 +32,13 @@ namespace G_36_SmartPrint.UI
                 {
                     string addressText = "N/A";
 
-                    if (order.getDeliveryAddress() != null)
+                    if (order.DeliveryAddress != null)
                     {
-                        var addr = order.getDeliveryAddress();
+                        var addr = order.DeliveryAddress;
                         addressText = $"{addr.AddressDetail}, {addr.City}, {addr.State}, {addr.PostalCode}, {addr.Country}";
                     }
 
-                    dgvAssignedOrders.Rows.Add(order.getOrderID(), addressText);
+                    dgvAssignedOrders.Rows.Add(order.OrderID, addressText);
                 }
             }
             catch (Exception ex)

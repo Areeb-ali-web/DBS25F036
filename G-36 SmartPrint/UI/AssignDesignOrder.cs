@@ -21,7 +21,7 @@ namespace G_36_SmartPrint.UI
         {
             List<EmployeesBL> list = EmployeeDL.LoadEmployeesByPosition(4); // 4 = Designer
             cmbDesigner.DataSource = list;
-            cmbDesigner.DisplayMember = "userName";
+            cmbDesigner.DisplayMember = "UserName";
             cmbDesigner.ValueMember = "Employeeid";
             if (list.Count > 0) cmbDesigner.SelectedIndex = 0;
         }
@@ -59,12 +59,12 @@ namespace G_36_SmartPrint.UI
                 foreach (var order in orders)
                 {
                     dgvDesignOrders.Rows.Add(
-                        order.getOrderID(),
-                        order.gettotalAmount().ToString("C"),
-                        order.getDesignDescription(),
-                        order.allOrders(),
-                        order.getOrderStatus()?.LookupValue?? "Unknown",
-                        order.getOrderDate().ToString("yyyy-MM-dd")
+                        order.OrderID,
+                        order.TotalAmount.ToString("C"),
+                        order.DesignDescription,
+                        order.ToString(),
+                        order.OrderStatus?.LookupValue?? "Unknown",
+                        order.OrderDate.ToString("yyyy-MM-dd")
                     );
                 }
             }
@@ -78,7 +78,7 @@ namespace G_36_SmartPrint.UI
         {
             if (cmbOrder.SelectedItem is OrderBL selectedOrder)
             {
-                txtDesignDescription.Text = selectedOrder.getDesignDescription();
+                txtDesignDescription.Text = selectedOrder.DesignDescription;
             }
         }
 
@@ -89,7 +89,7 @@ namespace G_36_SmartPrint.UI
                 if (cmbDesigner.SelectedItem is EmployeesBL designer && cmbOrder.SelectedItem is OrderBL order)
                 {
                     // Call InsertDesign from DesignDL
-                    DesignDL.InsertDesign(order.getOrderID(), designer.EmployeeID);
+                    DesignDL.InsertDesign(order.OrderID, designer.EmployeeID);
 
                     MessageBox.Show("Design task assigned successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDesignOrders(); // Refresh table
