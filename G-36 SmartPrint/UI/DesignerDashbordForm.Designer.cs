@@ -17,6 +17,7 @@
         {
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.lblCompanyName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelNavigation = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnCompleteOrder = new Guna.UI2.WinForms.Guna2Button();
@@ -26,10 +27,10 @@
             this.btnViewAssignOrders = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnRequestStatus = new Guna.UI2.WinForms.Guna2Button();
             this.panelHeader.SuspendLayout();
-            this.panelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.panelNavigation.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -54,11 +55,24 @@
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = "SMART PRINT: Custom Design and Clothing";
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Image = global::G_36_SmartPrint.Properties.Resources.log_removebg_preview;
+            this.picLogo.ImageRotate = 0F;
+            this.picLogo.Location = new System.Drawing.Point(0, -23);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(265, 164);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
             // panelNavigation
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.DodgerBlue;
             this.panelNavigation.Controls.Add(this.btnLogout);
             this.panelNavigation.Controls.Add(this.btnCompleteOrder);
+            this.panelNavigation.Controls.Add(this.btnRequestStatus);
             this.panelNavigation.Controls.Add(this.btnViewSalary);
             this.panelNavigation.Controls.Add(this.btnRequest);
             this.panelNavigation.Controls.Add(this.btnDesignManagement);
@@ -184,17 +198,20 @@
             this.panelMain.Size = new System.Drawing.Size(980, 587);
             this.panelMain.TabIndex = 2;
             // 
-            // picLogo
+            // btnRequestStatus
             // 
-            this.picLogo.BackColor = System.Drawing.Color.Transparent;
-            this.picLogo.Image = global::G_36_SmartPrint.Properties.Resources.log_removebg_preview;
-            this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(0, -23);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(265, 164);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
+            this.btnRequestStatus.Animated = true;
+            this.btnRequestStatus.BorderRadius = 3;
+            this.btnRequestStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRequestStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnRequestStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRequestStatus.ForeColor = System.Drawing.Color.White;
+            this.btnRequestStatus.Location = new System.Drawing.Point(0, 381);
+            this.btnRequestStatus.Name = "btnRequestStatus";
+            this.btnRequestStatus.Size = new System.Drawing.Size(220, 57);
+            this.btnRequestStatus.TabIndex = 0;
+            this.btnRequestStatus.Text = "View Request Status";
+            this.btnRequestStatus.Click += new System.EventHandler(this.NavigationButton_Click);
             // 
             // DesignerDashbordForm
             // 
@@ -212,8 +229,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            this.panelNavigation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.panelNavigation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -230,5 +247,6 @@
         private Guna.UI2.WinForms.Guna2Button btnRequest;
         private Guna.UI2.WinForms.Guna2Button btnViewSalary;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnRequestStatus;
     }
 }

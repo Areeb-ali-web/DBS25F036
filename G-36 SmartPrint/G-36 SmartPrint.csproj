@@ -405,6 +405,18 @@
     <Compile Include="UI\designerViewAssignedOrders.Designer.cs">
       <DependentUpon>designerViewAssignedOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ViewOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ViewOrders.Designer.cs">
+      <DependentUpon>ViewOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ViewProducts.Designer.cs">
+      <DependentUpon>ViewProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ViewRequestStatus.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -535,6 +547,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\designerViewAssignedOrders.resx">
       <DependentUpon>designerViewAssignedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewOrders.resx">
+      <DependentUpon>ViewOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewProducts.resx">
+      <DependentUpon>ViewProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ViewRequestStatus.resx">
       <DependentUpon>ViewRequestStatus.cs</DependentUpon>

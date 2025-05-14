@@ -47,6 +47,8 @@ namespace G_36_SmartPrint.UI
         {
             btnDashboard.Click += NavigationButton_Click;
             btnOrder.Click += NavigationButton_Click;
+            btnViewOrders.Click += NavigationButton_Click;
+            btnProducts.Click += NavigationButton_Click;
             btnApprove.Click += NavigationButton_Click;
             btnFeedback.Click += NavigationButton_Click;
             btnLogout.Click += btnLogout_Click;
@@ -70,15 +72,18 @@ namespace G_36_SmartPrint.UI
                     case "btnOrder":
                         LoadUserControl(new Order());
                         break;
+                    case "btnProducts":
+                        LoadUserControl(new ViewProducts());
+                        break;
                     case "btnApprove":
                         LoadUserControl(new DesignApproval());
                         break;
                     case "btnFeedback":
                         LoadUserControl(new Feedback());
                         break;
-                    //case "btnView":
-                    //    LoadUserControl(new ViewOrders());
-                    //    break;
+                    case "btnViewOrders":
+                        LoadUserControl(new ViewOrders());
+                        break;
                 }
             }
             finally

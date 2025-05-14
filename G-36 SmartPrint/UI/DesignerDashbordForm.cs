@@ -48,6 +48,7 @@ namespace G_36_SmartPrint.UI
             btnCompleteOrder.Click += NavigationButton_Click;
             btnRequest.Click += NavigationButton_Click;
             btnViewSalary.Click += NavigationButton_Click;
+            btnRequestStatus.Click += NavigationButton_Click;
             btnLogout.Click += btnLogout_Click;
         }
 
@@ -80,6 +81,9 @@ namespace G_36_SmartPrint.UI
                         break;
                     case "btnViewSalary":
                         LoadUserControl(new DeliveryViewSalary());
+                        break;
+                    case "btnRequestStatus":
+                        LoadUserControl(new ViewRequestStatus());
                         break;
                 }
             }

@@ -185,7 +185,8 @@ namespace G_36_SmartPrint.UI
                 {
                     var selectedDesign = (DesignBL)dgvDesigns.SelectedRows[0].DataBoundItem;
 
-                    bool deleted = DesignDL.DeleteDesign(selectedDesign.DesignID);
+                    DesignDL.DeleteDesign(selectedDesign.DesignID);
+                    bool deleted = true;
                     if (deleted)
                     {
                         LoadDesigns();
