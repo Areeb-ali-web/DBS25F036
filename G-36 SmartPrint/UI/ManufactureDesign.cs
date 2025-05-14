@@ -96,6 +96,13 @@ namespace G_36_SmartPrint.UI
                 DataPropertyName = "OrderStatus",
                 Width = 120
             });
+            dgvApprovedDesigns.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colDesignFile",
+                HeaderText = "DesignFile",
+                DataPropertyName = "DesignFile",
+                Width = 120
+            });
         }
 
         private void RefreshDataGridView()
@@ -159,8 +166,16 @@ namespace G_36_SmartPrint.UI
             {
                 var selectedRow = dgvApprovedDesigns.Rows[e.RowIndex];
                 int orderId = Convert.ToInt32(selectedRow.Cells["colOrderId"].Value);
-
+               
                 LoadOrderDetails(orderId);
+                OrderBL order = OrderDL.LoadOrderByOrderId(orderId);
+                txtCustomerName.Text = order.Customer.UserName;
+                txtDesignDescription.Text = order.DesignDescription;
+                txtOrderId.Text =orderId.ToString();
+               
+
+
+                
             }
         }
 
