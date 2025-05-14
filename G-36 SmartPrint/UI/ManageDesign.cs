@@ -233,5 +233,10 @@ namespace G_36_SmartPrint.UI
         {
             // Optional: UI response
         }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

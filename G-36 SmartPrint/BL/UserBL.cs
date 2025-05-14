@@ -57,6 +57,7 @@ namespace G_36_SmartPrint.BL
             PhoneNumber = phoneNumber;
             CreatedDate = createdDate;
             Role = role;
+
         }
 
         public UserBL(UserBL user)
@@ -99,7 +100,7 @@ namespace G_36_SmartPrint.BL
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Username cannot be empty.");
+                    //throw new ArgumentException("Username cannot be empty.");
                 userName = value;
             }
         }
@@ -110,7 +111,7 @@ namespace G_36_SmartPrint.BL
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Password hash cannot be empty.");
+                    //throw new ArgumentException("Password hash cannot be empty.");
                 passwordHash = value;
             }
         }
@@ -121,7 +122,7 @@ namespace G_36_SmartPrint.BL
             set
             {
                 if (string.IsNullOrWhiteSpace(value) || !value.Contains("@"))
-                    throw new ArgumentException("Invalid email address.");
+                    //throw new ArgumentException("Invalid email address.");
                 email = value;
             }
         }
@@ -132,7 +133,7 @@ namespace G_36_SmartPrint.BL
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Name cannot be empty.");
+                    //throw new ArgumentException("Name cannot be empty.");
                 name = value;
             }
         }
@@ -157,7 +158,8 @@ namespace G_36_SmartPrint.BL
         public LookupBL Role
         {
             get => role;
-            set => role = value ?? throw new ArgumentNullException(nameof(Role), "Role cannot be null.");
+            set => role = value;
+            //?? throw new ArgumentNullException(nameof(Role), "Role cannot be null.");
         }
 
         // 🔁 POLYMORPHIC METHODS

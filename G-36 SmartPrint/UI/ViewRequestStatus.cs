@@ -18,13 +18,14 @@ namespace G_36_SmartPrint.UI
         public ViewRequestStatus()
         {
             InitializeComponent();
-        
+        txtDesignerName.Text = LoginHelpers.currentEmployee.UserName;
         LoadRequestData();
         }
 
         private void LoadRequestData()
         {
-            requestList = RequestsDL.LoadAllRequests();
+            int id = LoginHelpers.currentEmployee.EmployeeID;
+            requestList = RequestsDL.LoadAllRequestsbyEmployeeID(id);
             dgvRequests.Rows.Clear();
             dgvRequests.Columns.Clear();
 

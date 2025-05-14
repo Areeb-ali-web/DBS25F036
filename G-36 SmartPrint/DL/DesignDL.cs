@@ -61,7 +61,7 @@ namespace G_36_SmartPrint.DL
                 FROM Designs d
                 INNER JOIN Users des ON d.DesignerID = des.UserID
                 INNER JOIN LookupTable l ON d.ApprovalStatusid = l.LookupID
-                WHERE d.OrderID = {orderId};";
+                WHERE d.OrderID = {orderId} and l.lookupvalue= 'waiting' ;";
 
             DataTable dt = SqlHelper.getDataTable(query);
 

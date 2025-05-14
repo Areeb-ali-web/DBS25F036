@@ -377,3 +377,5 @@ D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Feedback.resou
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.Order.resources
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewOrders.resources
 D:\DBfinal\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewProducts.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewOrders.resources
+C:\Users\User\Desktop\REPOS\DBS25F036\G-36 SmartPrint\obj\Debug\G_36_SmartPrint.UI.ViewProducts.resources

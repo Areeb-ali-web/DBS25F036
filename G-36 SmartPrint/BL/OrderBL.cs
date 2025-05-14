@@ -11,7 +11,7 @@ namespace G_36_SmartPrint.BL
         private int orderID;
         private CustomersBL customer;
         private DateTime orderDate;
-        private bool deliveryRequired;
+        
         private AddressBL deliveryAddress;
         private LookupBL orderStatus;
         private decimal totalAmount;
@@ -26,7 +26,7 @@ namespace G_36_SmartPrint.BL
         public int OrderID { get => orderID; set => orderID = value; }
         public CustomersBL Customer { get => customer; set => customer = value; }
         public DateTime OrderDate { get => orderDate; set => orderDate = value; }
-        public bool DeliveryRequired { get => deliveryRequired; set => deliveryRequired = value; }
+        
         public AddressBL DeliveryAddress { get => deliveryAddress; set => deliveryAddress = value; }
         public LookupBL OrderStatus { get => orderStatus; set => orderStatus = value; }
         public decimal TotalAmount { get => totalAmount; set => totalAmount = value; }
@@ -63,7 +63,7 @@ namespace G_36_SmartPrint.BL
         {
             this.customer = customer;
             this.orderDate = orderDate;
-            this.deliveryRequired = deliveryRequired;
+            
             this.deliveryAddress = deliveryAddress;
             this.totalAmount = totalAmount;
             this.orderDetails = orderDetails ?? new List<Order_DetailsBL>();
@@ -83,6 +83,12 @@ namespace G_36_SmartPrint.BL
         {
             this.orderID = orderID;
             this.feedback = feedback ?? new List<FeedbackBL>();
+            this.deliveryAddress = deliveryAddress;
+            this.totalAmount = totalAmount;
+            this.orderDetails = orderDetails;
+            this.customer = customer;
+
+            
         }
 
         // Methods
@@ -158,10 +164,7 @@ namespace G_36_SmartPrint.BL
         /// <summary>
         /// Returns whether delivery is required.
         /// </summary>
-        public bool IsDeliveryRequired()
-        {
-            return deliveryRequired;
-        }
+
 
         /// <summary>
         /// Sets the order status by lookup.

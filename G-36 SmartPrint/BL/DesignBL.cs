@@ -70,6 +70,12 @@ namespace G_36_SmartPrint.BL
             : this(designFile, designer, createdDate, approvalStatus)
         {
             this.order = new OrderBL(orderID);
+            this.designFile = designFile;
+            this.designer = designer;
+            this.createdDate = createdDate;
+            this.ApprovalStatus = approvalStatus;
+            this.Order = order;
+            this.order.OrderID = orderID;
         }
 
         // Behavior Methods

@@ -20,10 +20,11 @@ namespace G_36_SmartPrint.UI
             InitializeComponent();
             ConfigureDataGridView();
             LoadFormData();
-
+            txtCustomerName.Text = LoginHelpers.currentuser.UserName;
             dvgOrders.CellDoubleClick += DvgOrders_CellDoubleClick;
+            btnApprove.Click += btnApprove_Click;
+            btnReject.Click += btnReject_Click;
         }
-
 
         private void ConfigureDataGridView()
         {
@@ -92,36 +93,37 @@ namespace G_36_SmartPrint.UI
                 DataPropertyName = "DesignDescription",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
+
+            // Hidden column for DesignFile
+            dvgOrders.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "DesignFile",
+                HeaderText = "Design File",
+                DataPropertyName = "DesignFile",
+                Visible = false
+            });
         }
 
         private void LoadFormData()
         {
-            try
+            int customerId = LoginHelpers.currentcustomer.UserID;
+            orders = OrderDL.LoadOrdersForApprovalByCustomerId(customerId);
+
+            var dt = new DataTable();
+            dt.Columns.Add("OrderID", typeof(int));
+            dt.Columns.Add("OrderDate", typeof(DateTime));
+            dt.Columns.Add("TotalAmount", typeof(decimal));
+            dt.Columns.Add("DesignDescription", typeof(string));
+            dt.Columns.Add("DesignFile", typeof(string)); // Hidden for image path
+
+            foreach (var order in orders)
             {
-                int customerId = LoginHelpers.currentcustomer.UserID;
-                orders = OrderDL.LoadOrdersForApprovalByCustomerId(customerId);
-
-                var dt = new DataTable();
-                dt.Columns.Add("OrderID", typeof(int));
-                dt.Columns.Add("OrderDate", typeof(DateTime));
-                dt.Columns.Add("TotalAmount", typeof(decimal));
-                dt.Columns.Add("DesignDescription", typeof(string));
-                dt.Columns.Add("DesignFile", typeof(string)); // For image preview (hidden)
-
-                foreach (var order in orders)
-                {
-                    string designFile = order.Designs?.FirstOrDefault()?.DesignFile ?? string.Empty;
-                    dt.Rows.Add(order.OrderID, order.OrderDate, order.TotalAmount, order.DesignDescription,designFile);
-                }
-
-                dvgOrders.DataSource = dt;
-                //dvgOrders.Columns["DesignFile"].Visible = false; // Optional hidden column
+                List<DesignBL> d= DesignDL.LoadDesignsByOrderId(order.OrderID);
+                string designFile = d[0].DesignFile;
+                dt.Rows.Add(order.OrderID, order.OrderDate, order.TotalAmount, order.DesignDescription, designFile);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading orders: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            dvgOrders.DataSource = dt;
         }
 
         private void DvgOrders_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -141,15 +143,19 @@ namespace G_36_SmartPrint.UI
                 txtQuantity.Text = $"Total Items: {currentOrder.OrderDetails?.Sum(od => od.Quantity) ?? 0}";
                 txtDescription.Text = currentOrder.DesignDescription;
 
-                string imagePath = row.Cells["DesignFile"].ToString();
-                if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+                // ✅ Use DataRowView to safely access hidden column
+                var dataRowView = row.DataBoundItem as DataRowView;
+                string imagePath = dataRowView?["DesignFile"]?.ToString();
+
+                if (!string.IsNullOrEmpty(imagePath))
                 {
                     picDesign.Image = Image.FromFile(imagePath);
+                    MessageBox.Show("behchod immage nai a rahi");
                 }
                 else
                 {
                     picDesign.Image = null;
-                    MessageBox.Show("Design image not found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Design string khali ha", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -169,15 +175,10 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-
-                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "Approved");
-                MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                
                 OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "manufactured");
-                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.OrderID,22);
+                DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.OrderID, 22);
                 MessageBox.Show("Order approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
                 LoadFormData();
             }
             catch (Exception ex)
@@ -196,9 +197,7 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "being_designed");
-
-                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "being_designed");
+                //OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "being_designed");
                 DesignDL.UpdateDesignApprovalStatusByOrderId(currentOrder.OrderID, 23);
                 MessageBox.Show("Order rejected successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadFormData();
@@ -209,24 +208,18 @@ namespace G_36_SmartPrint.UI
             }
         }
 
+        // Optional empty event handlers (if unused, you can remove these)
         private void panelHeader_Paint(object sender, PaintEventArgs e) { }
-
         private void dvgOrders_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
-
         private void panelHeader_Paint_1(object sender, PaintEventArgs e) { }
+        private void btnApprove_Click_1(object sender, EventArgs e) { }
+        private void dvgOrders_CellContentClick_1(object sender, DataGridViewCellEventArgs e) { }
+        private void panelImage_Paint(object sender, PaintEventArgs e) { }
+        private void DesignApproval_Load(object sender, EventArgs e) { }
+        private void dvgOrders_CellContentClick_2(object sender, DataGridViewCellEventArgs e) { }
+        private void btnReject_Click_1(object sender, EventArgs e) { }
 
-
-        private void btnApprove_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dvgOrders_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panelImage_Paint(object sender, PaintEventArgs e)
+        private void btnApprove_Click_2(object sender, EventArgs e)
         {
 
         }

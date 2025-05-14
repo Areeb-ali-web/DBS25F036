@@ -69,8 +69,8 @@ namespace G_36_SmartPrint.UI
             {
                 Name = "colCustomer",
                 HeaderText = "Customer",
-                DataPropertyName = "CustomerName",
-                Width = 150
+                DataPropertyName = "Customer",
+                Width = 100
             });
 
             dgvApprovedDesigns.Columns.Add(new DataGridViewTextBoxColumn()
@@ -115,7 +115,7 @@ namespace G_36_SmartPrint.UI
                 displayList.Add(new
                 {
                     OrderID = order.OrderID,
-                    CustomerName = order.Customer.UserName,
+                    Customer = order.Customer.UserName,
                     OrderDate = order.OrderDate.ToString("yyyy-MM-dd"),
                     DesignDescription = order.DesignDescription,
                     OrderStatus = order.OrderStatus.LookupValue

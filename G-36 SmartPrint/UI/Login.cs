@@ -111,7 +111,7 @@ namespace G_36_SmartPrint.UI
 
             else
             {
-                MessageBox.Show("Role not supported yet.");
+              
 
                 if (role == 19)
                 {
@@ -134,17 +134,17 @@ namespace G_36_SmartPrint.UI
                         Form parentForm = this.FindForm();
                         if (parentForm != null) parentForm.Hide();
                     }
-                    else if (LoginHelpers.currentEmployee.Position.LookupValue == "Delivery")
-                    {
-                        DeliverymanDashboardForm form = new DeliverymanDashboardForm();
-                        form.Show();
-                        Form parentForm = this.FindForm();
-                        if (parentForm != null) parentForm.Hide();
-                    }
+                    //else if (LoginHelpers.currentEmployee.Position.LookupValue == "Delivery")
+                    //{
+                    //    DeliverymanDashboardForm form = new DeliverymanDashboardForm();
+                    //    form.Show();
+                    //    Form parentForm = this.FindForm();
+                    //    if (parentForm != null) parentForm.Hide();
+                    //}
                 }
                 else
                 {
-                    MessageBox.Show("Role not supported yet.");
+                    //MessageBox.Show("Role not supported yet.");
 
 
                 }

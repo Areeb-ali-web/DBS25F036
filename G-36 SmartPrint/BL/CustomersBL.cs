@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using G_36_SmartPrint.DL;
+using G_36_SmartPrint.I;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class CustomersBL : UserBL
+    internal class CustomersBL : UserBL,CustomerI
     {
         private List<OrderBL> orders = new List<OrderBL>();
 
@@ -19,12 +22,35 @@ namespace G_36_SmartPrint.BL
         {
         }
 
-        public CustomersBL(UserBL user) : base(user) { }
+        public CustomersBL(UserBL user) : base(user) 
+        {
+            this.UserID = user.UserID;
+            this.UserName = user.UserName;
+            this.Addresses = user.Addresses;
+            this.PhoneNumber = user.PhoneNumber;
+            this.CreatedDate = user.CreatedDate;
+            this.Email = user.Email;
+        }
 
         public CustomersBL(int userID, string username, string email, string name, string phoneNumber) : base(userID, username, email, name, phoneNumber)
         {
+            this.UserID = userID;
+            this.UserName = username;
+            this.Addresses = new List<AddressBL>();
+            this.Email = email;
+            this.Name = name;
+            this.PhoneNumber = phoneNumber;
+          
         }
 
+        public override static  void PlaceOrder(OrderBL order)
+        {
+            OrderDL.AddOrder(order);
+        }
+        public override static void ProvideFeedback(int productId, string feedback)
+        {
+
+        }
 
         public override string GetUserType()
         {
