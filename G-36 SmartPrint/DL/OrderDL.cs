@@ -100,11 +100,11 @@ namespace G_36_SmartPrint.DL
                         Convert.ToInt32(row["OrderStatusID"]),
                         row["OrderStatusValue"].ToString()
                     );
-                    currentOrder.setOrderStatus(orderStatus);
+                    currentOrder.OrderStatus=(orderStatus);
 
                     // Load and set associated designs
                     List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId);
-                    currentOrder.setDesigns(designs);
+                    currentOrder.Designs=(designs);
 
                     orders.Add(currentOrder);
                     previousOrderId = orderId;
@@ -127,7 +127,7 @@ namespace G_36_SmartPrint.DL
                         null
                     );
 
-                    currentOrder.getOrderDetails().Add(orderDetail);
+                    currentOrder.OrderDetails.Add(orderDetail);
                 }
             }
 
@@ -139,13 +139,13 @@ namespace G_36_SmartPrint.DL
             List<OrderBL> orders = new List<OrderBL>();
 
             // Step 1: Get LookupID for the given status name
-            //string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{statusName}' AND lookupType = 'OrderStatus'";
-            //DataTable statusResult = SqlHelper.getDataTable(lookupQuery);
+            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{statusName}' AND lookupType = 'Order_Status'";
+            DataTable statusResult = SqlHelper.getDataTable(lookupQuery);
 
-            //if (statusResult.Rows.Count == 0)
-            //    throw new Exception("Invalid order status name.");
+            if (statusResult.Rows.Count == 0)
+                throw new Exception("Invalid order status name.");
 
-            //int statusId = Convert.ToInt32(statusResult.Rows[0]["LookupID"]);
+            int statusId = Convert.ToInt32(statusResult.Rows[0]["LookupID"]);
 
             // Step 2: Load orders with the given status
             string query = $@"
@@ -187,7 +187,7 @@ namespace G_36_SmartPrint.DL
         INNER JOIN LookupTable s ON o.order_StatusID = s.LookupID
         LEFT JOIN OrderDetails od ON o.OrderID = od.OrderID
         LEFT JOIN Products p ON od.ProductID = p.ProductID
-        WHERE o.order_StatusID = 11
+        WHERE o.order_StatusID = {statusId}
         ORDER BY o.OrderID;";
 
             DataTable dt = SqlHelper.getDataTable(query);
@@ -239,11 +239,11 @@ namespace G_36_SmartPrint.DL
                         customer,
                         feedback
                     );
-                    currentOrder.setDesignDesctiption(row["DesignDescription"].ToString());
-                    currentOrder.setOrderStatus(orderStatus);
+                    currentOrder.DesignDescription=(row["DesignDescription"].ToString());
+                    currentOrder.OrderStatus=(orderStatus);
 
                     List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId);
-                    currentOrder.setDesigns(designs);
+                    currentOrder.Designs=(designs);
 
                     orders.Add(currentOrder);
                     previousOrderId = orderId;
@@ -266,7 +266,7 @@ namespace G_36_SmartPrint.DL
                         null
                     );
 
-                    currentOrder.getOrderDetails().Add(orderDetail);
+                    currentOrder.OrderDetails.Add(orderDetail);
                 }
             }
 
@@ -369,14 +369,14 @@ namespace G_36_SmartPrint.DL
                         feedback
                     );
 
-                    currentOrder.setDesignDesctiption(row["DesignDescription"].ToString());
-                    currentOrder.setOrderStatus(orderStatus);
+                    currentOrder.DesignDescription=(row["DesignDescription"].ToString());
+                    currentOrder.OrderStatus= (orderStatus);
 
                     // Load only designs made by the specified designer for this order
                     List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId)
-                        .FindAll(d => d.designer != null && d.designer.EmployeeID == designerId);
+                        .FindAll(d => d.Designer != null && d.Designer.EmployeeID == designerId);
 
-                    currentOrder.setDesigns(designs);
+                    currentOrder.Designs = (designs);
 
                     orders.Add(currentOrder);
                     previousOrderId = orderId;
@@ -399,7 +399,7 @@ namespace G_36_SmartPrint.DL
                         null
                     );
 
-                    currentOrder.getOrderDetails().Add(orderDetail);
+                    currentOrder.OrderDetails.Add(orderDetail);
                 }
             }
 
@@ -500,11 +500,11 @@ namespace G_36_SmartPrint.DL
                         Convert.ToInt32(row["OrderStatusID"]),
                         row["OrderStatusValue"].ToString()
                     );
-                    currentOrder.setOrderStatus(orderStatus);
+                    currentOrder.OrderStatus = (orderStatus);
 
                     // Load and set associated designs
                     List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId);
-                    currentOrder.setDesigns(designs);
+                    currentOrder.Designs = (designs);
 
                     orders.Add(currentOrder);
                     previousOrderId = orderId;
@@ -527,7 +527,7 @@ namespace G_36_SmartPrint.DL
                         null
                     );
 
-                    currentOrder.getOrderDetails().Add(orderDetail);
+                    currentOrder.OrderDetails.Add(orderDetail);
                 }
             }
 
@@ -589,10 +589,10 @@ namespace G_36_SmartPrint.DL
             DataTable dt = SqlHelper.getDataTable(query);
             return dt;
         }
-        public static void ChangeOrderStatusByName(int orderId, string newStatusName)
+        public static void  ChangeOrderStatusByName(int orderId, string newStatusName)
         {
             // Step 1: Get LookupID from LookupTable using status name
-            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{newStatusName}' AND lookupType = 'OrderStatus'";
+            string lookupQuery = $"SELECT LookupID FROM LookupTable WHERE LookupValue = '{newStatusName}' AND lookupType = 'Order_Status'";
             DataTable result = SqlHelper.getDataTable(lookupQuery);
 
             if (result.Rows.Count == 0)
@@ -698,11 +698,11 @@ namespace G_36_SmartPrint.DL
                         customer,
                         feedback
                     );
-                    order.setDesignDesctiption(row["DesignDescription"].ToString());
-                    order.setOrderStatus(orderStatus);
+                    order.DesignDescription = (row["DesignDescription"].ToString());
+                    order.OrderStatus = (orderStatus);
 
                     List<DesignBL> designs = DesignDL.LoadDesignsByOrderId(orderId);
-                    order.setDesigns(designs);
+                    order.Designs = (designs);
                 }
 
                 if (row["OrderDetailID"] != DBNull.Value)
@@ -722,7 +722,7 @@ namespace G_36_SmartPrint.DL
                         null
                     );
 
-                    order.getOrderDetails().Add(orderDetail);
+                    order.OrderDetails.Add(orderDetail);
                 }
             }
 
@@ -748,16 +748,16 @@ namespace G_36_SmartPrint.DL
                     MySqlCommand cmd = new MySqlCommand(insertOrderQuery, con, transaction);
                     cmd.Parameters.AddWithValue("@CustomerID", LoginHelpers.currentcustomer.UserID);
                     cmd.Parameters.AddWithValue("@DeliveryRequired", 1); // assuming always true
-                    cmd.Parameters.AddWithValue("@AddressID", order.getDeliveryAddress().AddressID);
+                    cmd.Parameters.AddWithValue("@AddressID", order.DeliveryAddress.AddressID);
                     cmd.Parameters.AddWithValue("@TotalAmount", 0000); // Use actual amount
                     cmd.Parameters.AddWithValue("@OrderStatusID", 7); // default status
-                    cmd.Parameters.AddWithValue("@DesignDescription", order.getDesignDescription());
+                    cmd.Parameters.AddWithValue("@DesignDescription", order.DesignDescription);
 
                     int orderId = Convert.ToInt32(cmd.ExecuteScalar());
-                    order.setOrderID(orderId);
+                    order.OrderID=(orderId);
 
                     // 2. Insert each order detail
-                    foreach (Order_DetailsBL detail in order.getOrderDetails())
+                    foreach (Order_DetailsBL detail in order.OrderDetails)
                     {
                         string insertDetailQuery = @"
                     INSERT INTO OrderDetails (OrderID, ProductID, Quantity)
@@ -765,8 +765,8 @@ namespace G_36_SmartPrint.DL
 
                         MySqlCommand detailCmd = new MySqlCommand(insertDetailQuery, con, transaction);
                         detailCmd.Parameters.AddWithValue("@OrderID", orderId);
-                        detailCmd.Parameters.AddWithValue("@ProductID", detail.getproduct().ProductID);
-                        detailCmd.Parameters.AddWithValue("@Quantity", detail.getQuantity());
+                        detailCmd.Parameters.AddWithValue("@ProductID", detail.Product.ProductID);
+                        detailCmd.Parameters.AddWithValue("@Quantity", detail.Quantity);
 
                         detailCmd.ExecuteNonQuery();
                     }

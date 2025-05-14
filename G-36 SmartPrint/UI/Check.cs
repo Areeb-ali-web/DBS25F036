@@ -44,8 +44,8 @@ namespace G_36_SmartPrint.UI
                 int addressid = AddressDL.GetAddressIdFromAddress(addressBL);
                 addressBL.AddressID = addressid;
                 string designdescription = txtDesignDescription.Text;
-                LoginHelpers.order.setDesignDesctiption(designdescription);
-                LoginHelpers.order.setDeliveryAddress(addressBL);
+                LoginHelpers.order.DesignDescription=(designdescription);
+                LoginHelpers.order.DeliveryAddress=(addressBL);
                 OrderDL.AddOrder(LoginHelpers.order);
                 MessageBox.Show("order has been placed");
                 //Order_PaymentBL op = new
@@ -75,8 +75,8 @@ namespace G_36_SmartPrint.UI
                 int addressid = AddressDL.GetAddressIdFromAddress(addressBL);
                 addressBL.AddressID = addressid;
                 string designdescription = txtDesignDescription.Text;
-                LoginHelpers.order.setDesignDesctiption(designdescription);
-                LoginHelpers.order.setDeliveryAddress(addressBL);
+                LoginHelpers.order.DesignDescription = (designdescription);
+                LoginHelpers.order.DeliveryAddress=(addressBL);
                 OrderDL.AddOrder(LoginHelpers.order);
                 MessageBox.Show("order has been placed");
                 //Order_PaymentBL op = new

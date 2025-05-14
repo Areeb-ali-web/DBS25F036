@@ -61,9 +61,9 @@ namespace G_36_SmartPrint.UI
                 foreach (var design in designs)
                 {
                     // Null checks for all properties
-                    int orderId = design.order?.OrderID ?? 0;
-                    string description = design.order?.getDesignDescription() ?? "N/A";
-                    string status = design.approvalstatus?.LookupValue ?? "waiting";
+                    int orderId = design.Order?.OrderID ?? 0;
+                    string description = design.Order?.DesignDescription ?? "N/A";
+                    string status = design.ApprovalStatus?.LookupValue ?? "waiting";
 
                     dgvAssignedOrders.Rows.Add(orderId, description, status);
                 }

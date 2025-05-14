@@ -41,8 +41,8 @@ namespace G_36_SmartPrint.UI
             // Bind orders to combobox
             var orderDisplayList = LoginHelpers.currentcustomer.GetOrders().Select(o => new
             {
-                OrderID = o.getOrderID(),
-                Display = $"Order #{o.getOrderID()} - {o.getOrderDate():yyyy-MM-dd} - Total: {o.gettotalamount():C}"
+                OrderID = o.OrderID,
+                Display = $"Order #{o.OrderID} - {o.OrderDate:yyyy-MM-dd} - Total: {o.TotalAmount:C}"
             }).ToList();
 
             cbOrder.DataSource = orderDisplayList;

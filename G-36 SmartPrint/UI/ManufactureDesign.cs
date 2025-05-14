@@ -18,6 +18,9 @@ namespace G_36_SmartPrint.UI
         {
             InitializeComponent();
             InitializeForm();
+            dgvApprovedDesigns.CellDoubleClick += DgvApprovedDesigns_CellDoubleClick;
+            btnManufacture.Click += BtnManufacture_Click;
+            btnPending.Click += BtnPending_Click;
         }
 
         private void InitializeForm()
@@ -29,10 +32,11 @@ namespace G_36_SmartPrint.UI
 
         private void LoadApprovedDesigns()
         {
+            
             try
             {
-                // Load orders with approved designs
-                approvedOrders = OrderDL.LoadOrdersByDesignerId(LoginHelpers.currentEmployee.EmployeeID);
+                approvedOrders = OrderDL.LoadOrdersByStatus("pending");
+                //approvedOrders = approvedOrders.FindAll(o => o.OrderStatus.LookupValue == "Approved");
                 RefreshDataGridView();
             }
             catch (Exception ex)
@@ -46,6 +50,8 @@ namespace G_36_SmartPrint.UI
         {
             dgvApprovedDesigns.AutoGenerateColumns = false;
             dgvApprovedDesigns.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvApprovedDesigns.AllowUserToAddRows = false;
+            dgvApprovedDesigns.ReadOnly = true;
 
             // Clear existing columns
             dgvApprovedDesigns.Columns.Clear();
@@ -82,22 +88,30 @@ namespace G_36_SmartPrint.UI
                 DataPropertyName = "DesignDescription",
                 Width = 200
             });
+
+            dgvApprovedDesigns.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colStatus",
+                HeaderText = "Status",
+                DataPropertyName = "OrderStatus",
+                Width = 120
+            });
         }
 
         private void RefreshDataGridView()
         {
             dgvApprovedDesigns.DataSource = null;
 
-            // Create a simplified list for display
             var displayList = new List<dynamic>();
             foreach (var order in approvedOrders)
             {
                 displayList.Add(new
                 {
                     OrderID = order.OrderID,
-                    CustomerName = order.getCustomer().UserName,
-                    OrderDate = order.getOrderDate().ToString("yyyy-MM-dd"),
-                    DesignDescription = order.getDesignDescription()
+                    CustomerName = order.Customer.UserName,
+                    OrderDate = order.OrderDate.ToString("yyyy-MM-dd"),
+                    DesignDescription = order.DesignDescription,
+                    OrderStatus = order.OrderStatus.LookupValue
                 });
             }
 
@@ -112,6 +126,8 @@ namespace G_36_SmartPrint.UI
             txtCustomerName.Text = "";
             dtpCreatedDate.Value = DateTime.Now;
             pbDesignImage.Image = null;
+            currentOrder = null;
+            currentDesign = null;
         }
 
         private void LoadDesignImage(string filePath)
@@ -124,7 +140,7 @@ namespace G_36_SmartPrint.UI
                 }
                 else
                 {
-                    pbDesignImage.Image = Properties.Resources.log_removebg_preview; // Default image
+                    pbDesignImage.Image = Properties.Resources.log_removebg_preview;
                     MessageBox.Show("Design file not found at specified path", "Warning",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -133,99 +149,124 @@ namespace G_36_SmartPrint.UI
             {
                 MessageBox.Show($"Error loading design image: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                pbDesignImage.Image = Properties.Resources.log_removebg_preview; // Default image
+                pbDesignImage.Image = Properties.Resources.log_removebg_preview;
             }
         }
 
-        private void btnManufacture_Click(object sender, EventArgs e)
+        private void DgvApprovedDesigns_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (currentOrder == null || currentDesign == null)
+            if (e.RowIndex >= 0) // Ensure it's not a header row
             {
-                MessageBox.Show("Please select a design to manufacture", "Warning",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                // Update order status to "In Production"
-                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "In Pro");
-
-                MessageBox.Show("Order marked as in production successfully!", "Success",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Refresh the list
-                LoadApprovedDesigns();
-                ClearFields();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error updating order status: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnPending_Click(object sender, EventArgs e)
-        {
-            if (currentOrder == null || currentDesign == null)
-            {
-                MessageBox.Show("Please select a design to mark as pending", "Warning",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                // Update order status to "Pending"
-                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "Pending");
-
-                MessageBox.Show("Order marked as pending successfully!", "Success",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Refresh the list
-                LoadApprovedDesigns();
-                ClearFields();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error updating order status: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void dgvApprovedDesigns_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvApprovedDesigns.SelectedRows.Count > 0)
-            {
-                var selectedRow = dgvApprovedDesigns.SelectedRows[0];
+                var selectedRow = dgvApprovedDesigns.Rows[e.RowIndex];
                 int orderId = Convert.ToInt32(selectedRow.Cells["colOrderId"].Value);
 
-                // Find the order in our list
-                currentOrder = approvedOrders.Find(o => o.OrderID == orderId);
-                if (currentOrder != null && currentOrder.designs != null && currentOrder.designs.Count > 0)
+                LoadOrderDetails(orderId);
+            }
+        }
+
+        private void LoadOrderDetails(int orderId)
+        {
+            currentOrder = approvedOrders.Find(o => o.OrderID == orderId);
+            if (currentOrder != null && currentOrder.Designs != null && currentOrder.Designs.Count > 0)
+            {
+                currentDesign = currentOrder.Designs[0];
+
+                txtOrderId.Text = currentOrder.OrderID.ToString();
+                txtDesignDescription.Text = currentOrder.DesignDescription;
+                txtDesignerName.Text = currentDesign.Designer?.UserName ?? "Unknown Designer";
+                txtCustomerName.Text = currentOrder.Customer.UserName;
+                dtpCreatedDate.Value = currentDesign.CreatedDate;
+
+                if (!string.IsNullOrEmpty(currentDesign.DesignFile))
                 {
-                    // Get the first approved design (you might want to handle multiple designs differently)
-                    currentDesign = currentOrder.designs[0];
-
-                    // Update UI with order/design details
-                    txtOrderId.Text = currentOrder.OrderID.ToString();
-                    txtDesignDescription.Text = currentOrder.getDesignDescription();
-                    txtDesignerName.Text = currentDesign.designer?.UserName ?? "Saad Designer";
-                    txtCustomerName.Text = currentOrder.getCustomer().UserName;
-                    dtpCreatedDate.Value = currentDesign.createddate;
-
-                    // Load design image
-                    if (!string.IsNullOrEmpty(currentDesign.designFile))
-                    {
-                        LoadDesignImage(currentDesign.designFile);
-                    }
+                    LoadDesignImage(currentDesign.DesignFile);
                 }
             }
         }
 
-        private void dgvApprovedDesigns_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BtnManufacture_Click(object sender, EventArgs e)
         {
-            // Handle any specific cell content clicks if needed
+            if (currentOrder == null)
+            {
+                MessageBox.Show("Please select a design first by double-clicking on it", "Warning",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "manufactured");
+                currentOrder.OrderStatus.SetLookupValue("manufactured");
+
+                MessageBox.Show("Order status changed to manufactured'", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                RefreshDataGridView();
+                ClearFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating order status: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnPending_Click(object sender, EventArgs e)
+        {
+            if (currentOrder == null)
+            {
+                MessageBox.Show("Please select a design first by double-clicking on it", "Warning",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                OrderDL.ChangeOrderStatusByName(currentOrder.OrderID, "Pending");
+                currentOrder.OrderStatus.SetLookupValue("Pending");
+
+                MessageBox.Show("Order status changed to 'Pending'", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                RefreshDataGridView();
+                ClearFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating order status: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            // Implement your submit logic here
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            // Implement your update logic here
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void dgvApprovedDesigns_SelectionChanged(object sender, EventArgs e)
+        {
+            // Optional: You can keep this if you want selection change to also load details
+            // But it might be better to rely only on double-click to avoid confusion
+        }
+
+        private void pbDesignImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnManufacture_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,7 +38,7 @@ namespace G_36_SmartPrint.DL
                 );
 
                 OrderBL order = new OrderBL();
-                order.setOrderID(orderId);
+                order.OrderID=(orderId);
 
                 Order_PaymentBL payment = new Order_PaymentBL(
                     Convert.ToInt32(row["PaymentID"]),
@@ -68,7 +68,7 @@ namespace G_36_SmartPrint.DL
             string insertQuery = $@"
                 INSERT INTO Payment (OrderID, Amount, PaymentMethod, PaymentDate, Payment_StatusID)
                 VALUES (
-                    {payment.getOrder().getOrderID()},
+                    {payment.getOrder().OrderID},
                     {payment.getAmount()},
                     '{payment.getPaymentMethod()}',
                     '{payment.getPayment_date().ToString("yyyy-MM-dd HH:mm:ss")}',

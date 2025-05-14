@@ -14,7 +14,7 @@ namespace G_36_SmartPrint.DL
                 UPDATE salarypayment 
                 SET Salary_StatusID = 24, 
                     PaymentDate = @PaymentDate 
-                WHERE EmployeeID = @EmployeeID AND SalaryStatusID = 25";
+                WHERE EmployeeID = @EmployeeID AND Salary_StatusID = 25";
 
             MySqlParameter[] parameters = new MySqlParameter[]
             {
