@@ -48,10 +48,9 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 15, 30, 15);
-            this.panelHeader.Size = new System.Drawing.Size(1200, 126);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panelHeader.Size = new System.Drawing.Size(800, 82);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -61,10 +60,9 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(30, 15);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(20, 10);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(406, 54);
+            this.lblTitle.Size = new System.Drawing.Size(276, 37);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "View Request Status";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -75,11 +73,10 @@
             this.mainPanel.Controls.Add(this.txtDesignerName);
             this.mainPanel.Controls.Add(this.lblDesignerName);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 126);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.mainPanel.Location = new System.Drawing.Point(0, 82);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
-            this.mainPanel.Size = new System.Drawing.Size(1200, 797);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.mainPanel.Size = new System.Drawing.Size(800, 518);
             this.mainPanel.TabIndex = 1;
             // 
             // dgvRequests
@@ -112,14 +109,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRequests.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRequests.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.dgvRequests.Location = new System.Drawing.Point(57, 406);
-            this.dgvRequests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvRequests.Location = new System.Drawing.Point(38, 264);
             this.dgvRequests.Name = "dgvRequests";
             this.dgvRequests.ReadOnly = true;
             this.dgvRequests.RowHeadersVisible = false;
             this.dgvRequests.RowHeadersWidth = 62;
             this.dgvRequests.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvRequests.Size = new System.Drawing.Size(1066, 298);
+            this.dgvRequests.Size = new System.Drawing.Size(711, 194);
             this.dgvRequests.TabIndex = 2;
             this.dgvRequests.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue;
             this.dgvRequests.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
@@ -161,13 +157,13 @@
             this.txtDesignerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignerName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDesignerName.Location = new System.Drawing.Point(78, 295);
-            this.txtDesignerName.Margin = new System.Windows.Forms.Padding(6);
+            this.txtDesignerName.Location = new System.Drawing.Point(52, 192);
+            this.txtDesignerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDesignerName.Name = "txtDesignerName";
             this.txtDesignerName.PlaceholderText = "";
             this.txtDesignerName.ReadOnly = true;
             this.txtDesignerName.SelectedText = "";
-            this.txtDesignerName.Size = new System.Drawing.Size(462, 55);
+            this.txtDesignerName.Size = new System.Drawing.Size(308, 36);
             this.txtDesignerName.TabIndex = 1;
             // 
             // lblDesignerName
@@ -176,24 +172,22 @@
             this.lblDesignerName.BackColor = System.Drawing.Color.Transparent;
             this.lblDesignerName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesignerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDesignerName.Location = new System.Drawing.Point(87, 243);
-            this.lblDesignerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDesignerName.Location = new System.Drawing.Point(58, 158);
             this.lblDesignerName.Name = "lblDesignerName";
-            this.lblDesignerName.Size = new System.Drawing.Size(163, 28);
+            this.lblDesignerName.Size = new System.Drawing.Size(107, 17);
             this.lblDesignerName.TabIndex = 0;
             this.lblDesignerName.Text = "Designer Name:";
             this.lblDesignerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ViewRequestStatus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewRequestStatus";
-            this.Size = new System.Drawing.Size(1200, 923);
+            this.Size = new System.Drawing.Size(800, 600);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);
