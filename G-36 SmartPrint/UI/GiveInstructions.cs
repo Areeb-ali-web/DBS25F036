@@ -24,7 +24,7 @@ namespace G_36_SmartPrint.UI
             List<EmployeesBL> list = EmployeeDL.LoadEmployeesByPosition(3);
             cmbManagerName.Items.Clear();
             cmbManagerName.DataSource = list;
-            cmbManagerName.DisplayMember = "userName";
+            cmbManagerName.DisplayMember = "UserName";
             cmbManagerName.SelectedIndex = 0;
             cmbManagerName.ValueMember = "Employeeid";
 

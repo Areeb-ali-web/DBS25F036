@@ -8,6 +8,6 @@ namespace G_36_SmartPrint.BL
 {
     abstract class CartBL
     {
-
+        
     }
 }

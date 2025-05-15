@@ -277,7 +277,7 @@
             this.txtDesignDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignDescription.Location = new System.Drawing.Point(50, 309);
-            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignDescription.Multiline = true;
             this.txtDesignDescription.Name = "txtDesignDescription";
             this.txtDesignDescription.PlaceholderText = "";
@@ -318,7 +318,7 @@
             this.txtOrderId.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtOrderId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrderId.Location = new System.Drawing.Point(50, 188);
-            this.txtOrderId.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtOrderId.Margin = new System.Windows.Forms.Padding(6);
             this.txtOrderId.Name = "txtOrderId";
             this.txtOrderId.PlaceholderText = "";
             this.txtOrderId.ReadOnly = true;
@@ -388,7 +388,7 @@
             this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCustomerName.Location = new System.Drawing.Point(732, 74);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.PlaceholderText = "";
             this.txtCustomerName.ReadOnly = true;
@@ -428,7 +428,7 @@
             this.txtDesignerName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignerName.Location = new System.Drawing.Point(50, 74);
-            this.txtDesignerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignerName.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignerName.Name = "txtDesignerName";
             this.txtDesignerName.PlaceholderText = "";
             this.txtDesignerName.ReadOnly = true;

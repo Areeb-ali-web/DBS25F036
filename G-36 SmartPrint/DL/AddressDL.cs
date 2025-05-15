@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using G_36_SmartPrint.BL;
 using MySqlConnector;
+using G_36_SmartPrint.I;
 
 namespace G_36_SmartPrint.DL
 {

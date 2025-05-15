@@ -8,5 +8,9 @@ namespace G_36_SmartPrint.I
 {
     internal interface UserI
     {
+        void UserLogin();
+        void UserSignin();
+
+
     }
 }

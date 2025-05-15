@@ -94,7 +94,7 @@ namespace G_36_SmartPrint.DL
         }
         public static void DeleteDesign(int id)
         {
-            string query = $"delete from design where designid ={id}";
+            string query = $"delete from designs where designid ={id}";
             SqlHelper.executeDML(query);
         }
         public static List<DesignBL> LoadDesignsByDesignerID(int designerID)

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using G_36_SmartPrint.DL;
+using G_36_SmartPrint.I;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class UserBL
+    internal class UserBL: UserI
     {
         // Fields - Private to ensure encapsulation
         private int userID;
@@ -72,7 +74,13 @@ namespace G_36_SmartPrint.BL
             Role = user.Role;
             Addresses = new List<AddressBL>(user.Addresses);
         }
-
+        public void UserSignin()
+        {
+            if (this.UserID != null && this.passwordHash != null && this.role != null && this.email != null)
+            {
+                UserDL.UserSignIN(UserName, PasswordHash, Email, Name, role.LookupID);
+            }
+        }
         public UserBL(int userID, string username, string email, string name, string phoneNumber) : this(userID)
         {
         }
@@ -99,7 +107,7 @@ namespace G_36_SmartPrint.BL
             get => userName;
             set
             {
-                if (string.IsNullOrWhiteSpace(value))
+                
                     //throw new ArgumentException("Username cannot be empty.");
                 userName = value;
             }
@@ -110,7 +118,7 @@ namespace G_36_SmartPrint.BL
             get => passwordHash;
             set
             {
-                if (string.IsNullOrWhiteSpace(value))
+                
                     //throw new ArgumentException("Password hash cannot be empty.");
                 passwordHash = value;
             }
@@ -121,7 +129,7 @@ namespace G_36_SmartPrint.BL
             get => email;
             set
             {
-                if (string.IsNullOrWhiteSpace(value) || !value.Contains("@"))
+             
                     //throw new ArgumentException("Invalid email address.");
                 email = value;
             }
@@ -132,7 +140,7 @@ namespace G_36_SmartPrint.BL
             get => name;
             set
             {
-                if (string.IsNullOrWhiteSpace(value))
+                //if (string.IsNullOrWhiteSpace(value))
                     //throw new ArgumentException("Name cannot be empty.");
                 name = value;
             }
@@ -167,7 +175,13 @@ namespace G_36_SmartPrint.BL
         {
             return "User";
         }
-
+        public void UserLogin()
+        {
+            if (this.userName != null && this.passwordHash != null && this.Email != null)
+            {
+                UserDL.UserLogin(UserName,email,passwordHash);
+            }
+        }
         public virtual List<OrderBL> GetOrders()
         {
             return null; // Default for generic users

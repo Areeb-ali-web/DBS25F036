@@ -138,7 +138,7 @@ namespace G_36_SmartPrint.UI
                 currentOrder = OrderDL.LoadOrderByOrderId(currentOrder.OrderID);
                 if (currentOrder == null) return;
 
-                txtCustomerName.Text = LoginHelpers.currentcustomer.UserName;
+                txtCustomerName.Text = LoginHelpers.currentuser.UserName;
                 txtProduct.Text = currentOrder.ToString();
                 txtQuantity.Text = $"Total Items: {currentOrder.OrderDetails?.Sum(od => od.Quantity) ?? 0}";
                 txtDescription.Text = currentOrder.DesignDescription;

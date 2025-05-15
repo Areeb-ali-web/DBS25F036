@@ -21,7 +21,8 @@ namespace G_36_SmartPrint.UI
             dgvApprovedDesigns.CellDoubleClick += DgvApprovedDesigns_CellDoubleClick;
             btnManufacture.Click += BtnManufacture_Click;
             btnPending.Click += BtnPending_Click;
-        }
+            txtDesignerName.Text=LoginHelpers.currentEmployee.UserName;
+                }
 
         private void InitializeForm()
         {
@@ -129,7 +130,7 @@ namespace G_36_SmartPrint.UI
         {
             txtOrderId.Text = "";
             txtDesignDescription.Text = "";
-            txtDesignerName.Text = "";
+            
             txtCustomerName.Text = "";
             dtpCreatedDate.Value = DateTime.Now;
             pbDesignImage.Image = null;
@@ -188,7 +189,7 @@ namespace G_36_SmartPrint.UI
 
                 txtOrderId.Text = currentOrder.OrderID.ToString();
                 txtDesignDescription.Text = currentOrder.DesignDescription;
-                txtDesignerName.Text = currentDesign.Designer?.UserName ?? "Unknown Designer";
+               
                 txtCustomerName.Text = currentOrder.Customer.UserName;
                 dtpCreatedDate.Value = currentDesign.CreatedDate;
 

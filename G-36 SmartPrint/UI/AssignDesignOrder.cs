@@ -15,6 +15,7 @@ namespace G_36_SmartPrint.UI
             InitializeComponent();
             LoadDesigners();
             LoadOrders();
+            
         }
 
         private void LoadDesigners()
@@ -28,7 +29,7 @@ namespace G_36_SmartPrint.UI
 
         private void LoadOrders()
         {
-            List<OrderBL> orders = OrderDL.LoadOrdersByStatus("manufactured");
+            List<OrderBL> orders = OrderDL.LoadOrdersByStatus("waiting");
             cmbOrder.DataSource = orders;
             cmbOrder.DisplayMember = "OrderID";
             cmbOrder.ValueMember = "OrderID";
@@ -44,7 +45,7 @@ namespace G_36_SmartPrint.UI
         {
             try
             {
-                List<OrderBL> orders = OrderDL.LoadOrdersByStatus("pending");
+                List<OrderBL> orders = OrderDL.LoadOrdersByStatus("waiting");
 
                 dgvDesignOrders.Rows.Clear();
                 dgvDesignOrders.Columns.Clear();

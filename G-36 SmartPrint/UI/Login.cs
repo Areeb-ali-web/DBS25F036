@@ -51,8 +51,10 @@ namespace G_36_SmartPrint.UI
 
             if (role == 2) // Customer
             {
-                LoginHelpers.currentcustomer = new CustomersBL(LoginHelpers.currentuser);
 
+                LoginHelpers.currentcustomer = new CustomersBL(LoginHelpers.currentuser);
+                LoginHelpers.currentcustomer.UserName = LoginHelpers.currentuser.UserName;
+               
                 MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.UserName}\nUserID: {LoginHelpers.currentuser.UserID}",
                                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -115,7 +117,8 @@ namespace G_36_SmartPrint.UI
 
                 if (role == 19)
                 {
-                    MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentuser.UserName}\nUserID: {LoginHelpers.currentuser.UserID}",
+                    LoginHelpers.currentEmployee.UserName = LoginHelpers.currentuser.UserName;
+                    MessageBox.Show($"Login successful.\nUsername: {LoginHelpers.currentEmployee.UserName}\nUserID: {LoginHelpers.currentuser.UserID}",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     int employeeid = (int)EmployeeDL.GetEmployeeIDByUserID(LoginHelpers.currentuser.UserID);
 
@@ -156,7 +159,7 @@ namespace G_36_SmartPrint.UI
             string username = TxtUsername.Text.Trim();
             string password = TxtPassword.Text;
             string email = guna2TextBox1.Text.Trim();
-
+            //LoginHelpers.currentuser.UserName = username;
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email))
             {
                 MessageBox.Show("Please fill in all login fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -164,6 +167,8 @@ namespace G_36_SmartPrint.UI
             }
 
             LoginHelpers.currentuser = UserDL.UserLogin(username, email, password);
+           
+          
 
             if (LoginHelpers.currentuser != null && LoginHelpers.currentuser.Role != null)
             {

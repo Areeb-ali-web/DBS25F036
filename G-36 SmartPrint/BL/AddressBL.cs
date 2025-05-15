@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
-
+using G_36_SmartPrint.DL;
+using G_36_SmartPrint.I;
 namespace G_36_SmartPrint.BL
 {
-    internal class AddressBL
+    internal class AddressBL: IAddressDL
     {
         
         public int AddressID { get; set; }
@@ -122,7 +124,34 @@ namespace G_36_SmartPrint.BL
                 Country = this.Country
             };
         }
+        public List<AddressBL> LoadUserAddress(UserBL user)
+        {
+            if (user.UserID == null)
+                throw new InvalidOperationException("Data access layer not initialized. Call SetDataAccessLayer first.");
 
+            return AddressDL.LoaduserAddress(user);
+        }
+
+        public int GetAddressIdFromAddress()
+        {
+            if (this.AddressDetail == null)
+                throw new InvalidOperationException("Data access layer not initialized. Call SetDataAccessLayer first.");
+
+            return AddressDL.GetAddressIdFromAddress(this);
+        }
+        public bool AddAddressIfNotExists(int userId, AddressBL address)
+        {
+
+            return AddressDL.AddAddressIfNotExists(userId, address);
+        }
+
+        public int? GetLastAddressId(int userId)
+        {
+            if (userId == null)
+                throw new InvalidOperationException("Data access layer not initialized. Call SetDataAccessLayer first.");
+
+            return AddressDL.GetLastAddressIdOfUser(userId);
+        }
         // For display/debugging
         public override string ToString()
         {

@@ -48,9 +48,10 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 15, 20, 15);
-            this.panelHeader.Size = new System.Drawing.Size(800, 80);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 23, 30, 23);
+            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -60,9 +61,10 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblTitle.Location = new System.Drawing.Point(30, 23);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(234, 37);
+            this.lblTitle.Size = new System.Drawing.Size(343, 54);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Customer Orders";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -73,11 +75,13 @@
             this.mainPanel.Controls.Add(this.txtCustomerName);
             this.mainPanel.Controls.Add(this.lblDeliveryManName);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 80);
+            this.mainPanel.Location = new System.Drawing.Point(0, 123);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.mainPanel.Size = new System.Drawing.Size(800, 520);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // dgvCustomerOrders
             // 
@@ -109,13 +113,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCustomerOrders.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCustomerOrders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvCustomerOrders.Location = new System.Drawing.Point(42, 192);
+            this.dgvCustomerOrders.Location = new System.Drawing.Point(63, 295);
+            this.dgvCustomerOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvCustomerOrders.Name = "dgvCustomerOrders";
             this.dgvCustomerOrders.ReadOnly = true;
             this.dgvCustomerOrders.RowHeadersVisible = false;
             this.dgvCustomerOrders.RowHeadersWidth = 62;
             this.dgvCustomerOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvCustomerOrders.Size = new System.Drawing.Size(711, 250);
+            this.dgvCustomerOrders.Size = new System.Drawing.Size(1066, 385);
             this.dgvCustomerOrders.TabIndex = 2;
             this.dgvCustomerOrders.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCustomerOrders.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -138,6 +143,7 @@
             this.dgvCustomerOrders.ThemeStyle.RowsStyle.Height = 22;
             this.dgvCustomerOrders.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCustomerOrders.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvCustomerOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomerOrders_CellContentClick);
             // 
             // txtCustomerName
             // 
@@ -156,13 +162,13 @@
             this.txtCustomerName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.txtCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCustomerName.Location = new System.Drawing.Point(57, 116);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCustomerName.Location = new System.Drawing.Point(86, 178);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.PlaceholderText = "";
             this.txtCustomerName.ReadOnly = true;
             this.txtCustomerName.SelectedText = "";
-            this.txtCustomerName.Size = new System.Drawing.Size(267, 43);
+            this.txtCustomerName.Size = new System.Drawing.Size(400, 66);
             this.txtCustomerName.TabIndex = 1;
             // 
             // lblDeliveryManName
@@ -171,22 +177,24 @@
             this.lblDeliveryManName.BackColor = System.Drawing.Color.Transparent;
             this.lblDeliveryManName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeliveryManName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDeliveryManName.Location = new System.Drawing.Point(52, 84);
+            this.lblDeliveryManName.Location = new System.Drawing.Point(78, 129);
+            this.lblDeliveryManName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeliveryManName.Name = "lblDeliveryManName";
-            this.lblDeliveryManName.Size = new System.Drawing.Size(169, 28);
+            this.lblDeliveryManName.Size = new System.Drawing.Size(252, 41);
             this.lblDeliveryManName.TabIndex = 0;
             this.lblDeliveryManName.Text = "Customer Name:";
             this.lblDeliveryManName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ViewOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewOrders";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(1200, 923);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);

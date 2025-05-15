@@ -6,7 +6,7 @@ using G_36_SmartPrint.I;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class CustomersBL : UserBL,CustomerI
+    internal class CustomersBL : UserBL, CustomerI
     {
         private List<OrderBL> orders = new List<OrderBL>();
 
@@ -43,15 +43,15 @@ namespace G_36_SmartPrint.BL
           
         }
 
-        public override static  void PlaceOrder(OrderBL order)
+        private void ProvideFeedback(int productId, string feedback)
+        {
+            OrderDL orderDL = new OrderDL();
+        }
+        
+        public void PlaceOrder(OrderBL order)
         {
             OrderDL.AddOrder(order);
         }
-        public override static void ProvideFeedback(int productId, string feedback)
-        {
-
-        }
-
         public override string GetUserType()
         {
             return "Customer";
@@ -70,6 +70,11 @@ namespace G_36_SmartPrint.BL
         {
             if (order != null)
                 orders.Add(order);
+        }
+
+        void CustomerI.ProvideFeedback(int productId, string feedback)
+        {
+            ProvideFeedback(productId, feedback);
         }
     }
 }

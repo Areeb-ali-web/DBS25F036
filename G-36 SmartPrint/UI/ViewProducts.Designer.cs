@@ -47,9 +47,10 @@
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Padding = new System.Windows.Forms.Padding(20, 15, 20, 15);
-            this.panelHeader.Size = new System.Drawing.Size(800, 80);
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 23, 30, 23);
+            this.panelHeader.Size = new System.Drawing.Size(1200, 123);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
@@ -59,9 +60,10 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblTitle.Location = new System.Drawing.Point(30, 23);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(201, 37);
+            this.lblTitle.Size = new System.Drawing.Size(293, 54);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "View Products";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -71,10 +73,11 @@
             this.mainPanel.Controls.Add(this.dvgProducts);
             this.mainPanel.Controls.Add(this.lblDeliveryManName);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 80);
+            this.mainPanel.Location = new System.Drawing.Point(0, 123);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.mainPanel.Size = new System.Drawing.Size(800, 520);
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(30, 31, 30, 31);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 800);
             this.mainPanel.TabIndex = 1;
             // 
             // dvgProducts
@@ -107,13 +110,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dvgProducts.DefaultCellStyle = dataGridViewCellStyle3;
             this.dvgProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dvgProducts.Location = new System.Drawing.Point(23, 160);
+            this.dvgProducts.Location = new System.Drawing.Point(34, 246);
+            this.dvgProducts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dvgProducts.Name = "dvgProducts";
             this.dvgProducts.ReadOnly = true;
             this.dvgProducts.RowHeadersVisible = false;
             this.dvgProducts.RowHeadersWidth = 62;
             this.dvgProducts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dvgProducts.Size = new System.Drawing.Size(760, 266);
+            this.dvgProducts.Size = new System.Drawing.Size(1140, 409);
             this.dvgProducts.TabIndex = 2;
             this.dvgProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dvgProducts.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -143,22 +147,24 @@
             this.lblDeliveryManName.BackColor = System.Drawing.Color.Transparent;
             this.lblDeliveryManName.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeliveryManName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblDeliveryManName.Location = new System.Drawing.Point(176, 87);
+            this.lblDeliveryManName.Location = new System.Drawing.Point(264, 134);
+            this.lblDeliveryManName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeliveryManName.Name = "lblDeliveryManName";
-            this.lblDeliveryManName.Size = new System.Drawing.Size(450, 47);
+            this.lblDeliveryManName.Size = new System.Drawing.Size(665, 70);
             this.lblDeliveryManName.TabIndex = 0;
             this.lblDeliveryManName.Text = "Available Products Details";
             this.lblDeliveryManName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ViewProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewProducts";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(1200, 923);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.mainPanel.ResumeLayout(false);
