@@ -1,8 +1,10 @@
 ﻿using System;
+using G_36_SmartPrint.DL;
+using G_36_SmartPrint.I;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class ProductBL
+    internal class ProductBL : IProduct
     {
         public int ProductID { get; private set; }
 
@@ -66,6 +68,10 @@ namespace G_36_SmartPrint.BL
             : this(name, description, price, quantityInStock)
         {
             ProductID = productId;
+        }
+        public void UpdateProductStocks()
+        {
+            ProductDL.UpdateProductStock(this.ProductName, this._quantityInStock);
         }
 
         // Validation method

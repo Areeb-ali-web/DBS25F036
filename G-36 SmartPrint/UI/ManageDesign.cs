@@ -19,12 +19,64 @@ namespace G_36_SmartPrint.UI
 
         private void InitializeForm()
         {
-            // Get current designer ID from login/session (here hardcoded for testing)
-            currentDesignerId = 2;
+            currentDesignerId = 2; // Simulated session value
 
-            LoadDesigns();
             ConfigureDataGridView();
+            LoadDesigns();
             ClearFields();
+        }
+
+        private void ConfigureDataGridView()
+        {
+            dgvDesigns.AutoGenerateColumns = false;
+            dgvDesigns.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvDesigns.MultiSelect = false;
+            dgvDesigns.Columns.Clear();
+
+            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colDesignID",
+                HeaderText = "Design ID",
+                Width = 70
+            });
+
+            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colOrderID",
+                HeaderText = "Order ID",
+                Width = 70
+            });
+
+            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colDesignFile",
+                HeaderText = "Design File",
+                Width = 200
+            });
+
+            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colCreatedDate",
+                HeaderText = "Created Date",
+                Width = 150
+            });
+
+            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colDesigner",
+                HeaderText = "Designer",
+                Width = 120
+            });
+
+            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "colStatus",
+                HeaderText = "Status",
+                Width = 120
+            });
+
+            dgvDesigns.CellDoubleClick += dgvDesigns_CellDoubleClick;
+            dgvDesigns.SelectionChanged += dgvDesigns_SelectionChanged;
         }
 
         private void LoadDesigns()
@@ -41,57 +93,22 @@ namespace G_36_SmartPrint.UI
             }
         }
 
-        private void ConfigureDataGridView()
-        {
-            dgvDesigns.AutoGenerateColumns = false;
-            dgvDesigns.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDesigns.Columns.Clear();
-
-            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
-            {
-                Name = "colOrderId",
-                HeaderText = "Order ID",
-                DataPropertyName = "Order.OrderID",
-                Width = 100
-            });
-
-            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
-            {
-                Name = "colDesignFile",
-                HeaderText = "Design File",
-                DataPropertyName = "DesignFile",
-                Width = 200
-            });
-
-            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
-            {
-                Name = "colCreatedDate",
-                HeaderText = "Created Date",
-                DataPropertyName = "CreatedDate",
-                Width = 150
-            });
-
-            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
-            {
-                Name = "colDesigner",
-                HeaderText = "Designer",
-                DataPropertyName = "Designer.UserName",
-                Width = 150
-            });
-
-            dgvDesigns.Columns.Add(new DataGridViewTextBoxColumn()
-            {
-                Name = "colStatus",
-                HeaderText = "Status",
-                DataPropertyName = "ApprovalStatus.LookupValue",
-                Width = 120
-            });
-        }
-
+        // Manual row population method:
         private void RefreshDataGridView()
         {
-            dgvDesigns.DataSource = null;
-            dgvDesigns.DataSource = designsList;
+            dgvDesigns.Rows.Clear();
+
+            foreach (var d in designsList)
+            {
+                dgvDesigns.Rows.Add(
+                    d.DesignID,
+                    d.Order?.OrderID ?? 0,
+                    d.DesignFile,
+                    d.CreatedDate.ToString("yyyy-MM-dd"),
+                    d.Designer?.UserName ?? "",
+                    d.ApprovalStatus?.LookupValue ?? ""
+                );
+            }
         }
 
         private void ClearFields()
@@ -105,15 +122,15 @@ namespace G_36_SmartPrint.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtorderid.Text) || !int.TryParse(txtorderid.Text, out int orderId))
+            {
+                MessageBox.Show("Please enter a valid Order ID", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                if (string.IsNullOrWhiteSpace(txtorderid.Text) || !int.TryParse(txtorderid.Text, out int orderId))
-                {
-                    MessageBox.Show("Please enter a valid Order ID", "Validation Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 DesignDL.InsertDesign(orderId, currentDesignerId);
                 LoadDesigns();
 
@@ -139,7 +156,16 @@ namespace G_36_SmartPrint.UI
 
             try
             {
-                var selectedDesign = (DesignBL)dgvDesigns.SelectedRows[0].DataBoundItem;
+                int selectedDesignID = Convert.ToInt32(dgvDesigns.SelectedRows[0].Cells["colDesignID"].Value);
+                var selectedDesign = designsList.Find(d => d.DesignID == selectedDesignID);
+
+                if (selectedDesign == null)
+                {
+                    MessageBox.Show("Selected design not found.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 string newDesignLink = txtDesignLink.Text.Trim();
 
                 bool success = DesignDL.UpdateDesignFile(
@@ -183,20 +209,21 @@ namespace G_36_SmartPrint.UI
             {
                 try
                 {
-                    var selectedDesign = (DesignBL)dgvDesigns.SelectedRows[0].DataBoundItem;
+                    int selectedDesignID = Convert.ToInt32(dgvDesigns.SelectedRows[0].Cells["colDesignID"].Value);
+                    var selectedDesign = designsList.Find(d => d.DesignID == selectedDesignID);
+
+                    if (selectedDesign == null)
+                    {
+                        MessageBox.Show("Selected design not found.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
                     DesignDL.DeleteDesign(selectedDesign.DesignID);
-                    bool deleted = true;
-                    if (deleted)
-                    {
-                        LoadDesigns();
-                        MessageBox.Show("Design deleted successfully.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to delete design.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    LoadDesigns();
+
+                    MessageBox.Show("Design deleted successfully.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFields();
                 }
                 catch (Exception ex)
                 {
@@ -210,33 +237,35 @@ namespace G_36_SmartPrint.UI
         {
             if (dgvDesigns.SelectedRows.Count > 0)
             {
-                var selectedDesign = (DesignBL)dgvDesigns.SelectedRows[0].DataBoundItem;
-                txtorderid.Text = selectedDesign.Order.OrderID.ToString();
-                txtDesignLink.Text = selectedDesign.DesignFile;
-                txtDesignerName.Text = selectedDesign.Designer.UserName;
-                dtpCreatedDate.Value = selectedDesign.CreatedDate;
-                txtDesignDescription.Text = selectedDesign.Order.DesignDescription;
+                int selectedDesignID = Convert.ToInt32(dgvDesigns.SelectedRows[0].Cells["colDesignID"].Value);
+                var selectedDesign = designsList.Find(d => d.DesignID == selectedDesignID);
+                if (selectedDesign != null)
+                {
+                    PopulateFieldsFromSelection(selectedDesign);
+                }
             }
         }
 
-        private void dgvDesigns_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDesigns_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Optional: handle clicks on buttons/links inside the DataGridView if needed
+            if (e.RowIndex >= 0 && e.RowIndex < dgvDesigns.Rows.Count)
+            {
+                int selectedDesignID = Convert.ToInt32(dgvDesigns.Rows[e.RowIndex].Cells["colDesignID"].Value);
+                var selectedDesign = designsList.Find(d => d.DesignID == selectedDesignID);
+                if (selectedDesign != null)
+                {
+                    PopulateFieldsFromSelection(selectedDesign);
+                }
+            }
         }
 
-        private void txtDesignerName_TextChanged(object sender, EventArgs e)
+        private void PopulateFieldsFromSelection(DesignBL design)
         {
-            // Optional: live filtering or validation
-        }
-
-        private void lblDesignerName_Click(object sender, EventArgs e)
-        {
-            // Optional: UI response
-        }
-
-        private void btnAdd_Click_1(object sender, EventArgs e)
-        {
-
+            txtorderid.Text = design.Order?.OrderID.ToString() ?? "";
+            txtDesignLink.Text = design.DesignFile;
+            txtDesignerName.Text = design.Designer?.UserName ?? "";
+            dtpCreatedDate.Value = design.CreatedDate;
+            txtDesignDescription.Text = design.Order?.DesignDescription ?? "";
         }
     }
 }

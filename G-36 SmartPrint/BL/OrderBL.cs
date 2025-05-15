@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Web.ModelBinding;
 using G_36_SmartPrint.BL;
+using G_36_SmartPrint.I;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class OrderBL
+    internal class OrderBL:IPrice
     {
         // Private fields
         private int orderID;
@@ -88,14 +90,27 @@ namespace G_36_SmartPrint.BL
             this.orderDetails = orderDetails;
             this.customer = customer;
 
-            
+
         }
 
-        // Methods
+        public int GetTotalProducts()
+        { int i = 0;
+            foreach(Order_DetailsBL detail in orderDetails)
+            {
+                i++;
+            }
+            return i;
+        }
 
-        /// <summary>
-        /// Calculates total amount based on order details.
-        /// </summary>
+        public decimal CalculateTotal()
+        {
+            totalAmount = 0;
+            foreach (Order_DetailsBL detail in this.orderDetails) 
+            {
+                totalAmount += totalAmount + detail.CalculateTotal(); 
+            }
+            return totalAmount;
+        }
         public void CalculateTotalAmount()
         {
             totalAmount = 0;
@@ -105,17 +120,12 @@ namespace G_36_SmartPrint.BL
             }
         }
 
-        /// <summary>
-        /// Sets the design list.
-        /// </summary>
         public void SetDesigns(List<DesignBL> designList)
         {
             this.designs = designList ?? new List<DesignBL>();
         }
 
-        /// <summary>
-        /// Generates a readable summary of all products in the order.
-        /// </summary>
+
         public string GetOrderSummary()
         {
             var summary = new System.Text.StringBuilder();

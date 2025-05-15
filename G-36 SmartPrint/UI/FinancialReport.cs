@@ -82,7 +82,7 @@ namespace G_36_SmartPrint.UI
                 }
             }
         }
-
+       
         private void DgvFinancialData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || e.RowIndex >= dgvFinancialData.Rows.Count)

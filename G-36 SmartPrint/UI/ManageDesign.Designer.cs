@@ -121,7 +121,7 @@
             this.txtorderid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtorderid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtorderid.Location = new System.Drawing.Point(40, 214);
-            this.txtorderid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtorderid.Margin = new System.Windows.Forms.Padding(6);
             this.txtorderid.Name = "txtorderid";
             this.txtorderid.PlaceholderText = "";
             this.txtorderid.ReadOnly = true;
@@ -188,7 +188,7 @@
             this.dgvDesigns.ThemeStyle.RowsStyle.Height = 22;
             this.dgvDesigns.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDesigns.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvDesigns.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDesigns_CellContentClick);
+            //this.dgvDesigns.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDesigns_CellContentClick);
             // 
             // btnDelete
             // 
@@ -243,7 +243,7 @@
             this.btnAdd.Size = new System.Drawing.Size(156, 55);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            //this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // dtpCreatedDate
             // 
@@ -296,7 +296,7 @@
             this.txtDesignLink.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignLink.Location = new System.Drawing.Point(720, 214);
-            this.txtDesignLink.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignLink.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignLink.Name = "txtDesignLink";
             this.txtDesignLink.PlaceholderText = "";
             this.txtDesignLink.SelectedText = "";
@@ -334,7 +334,7 @@
             this.txtDesignDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignDescription.Location = new System.Drawing.Point(36, 346);
-            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignDescription.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignDescription.Multiline = true;
             this.txtDesignDescription.Name = "txtDesignDescription";
             this.txtDesignDescription.PlaceholderText = "";
@@ -389,14 +389,14 @@
             this.txtDesignerName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDesignerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDesignerName.Location = new System.Drawing.Point(40, 86);
-            this.txtDesignerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDesignerName.Margin = new System.Windows.Forms.Padding(6);
             this.txtDesignerName.Name = "txtDesignerName";
             this.txtDesignerName.PlaceholderText = "";
             this.txtDesignerName.ReadOnly = true;
             this.txtDesignerName.SelectedText = "";
             this.txtDesignerName.Size = new System.Drawing.Size(474, 55);
             this.txtDesignerName.TabIndex = 1;
-            this.txtDesignerName.TextChanged += new System.EventHandler(this.txtDesignerName_TextChanged);
+            //this.txtDesignerName.TextChanged += new System.EventHandler(this.txtDesignerName_TextChanged);
             // 
             // lblDesignerName
             // 
@@ -412,7 +412,7 @@
             this.lblDesignerName.TabIndex = 0;
             this.lblDesignerName.Text = "Designer Name:";
             this.lblDesignerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDesignerName.Click += new System.EventHandler(this.lblDesignerName_Click);
+            //this.lblDesignerName.Click += new System.EventHandler(this.lblDesignerName_Click);
             // 
             // ManageDesign
             // 

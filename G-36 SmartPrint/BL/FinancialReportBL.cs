@@ -17,7 +17,11 @@ namespace G_36_SmartPrint.BL
         public decimal totalRevinue {  get; set; }
         public decimal totalexpenses {  get; set; }
         public decimal totalprofit {  get; set; }
-
+        
+        public decimal CalculateTotal()
+        {
+            return totalRevinue- totalexpenses;
+        }
         public FinancialReportBL(int finance_id, ManagerBL manager, DateTime date, decimal totalRevinue, decimal totalexpenses, decimal totalprofit)
 
         {

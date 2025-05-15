@@ -18,7 +18,7 @@ namespace G_36_SmartPrint.UI
         public Check()
         {
             InitializeComponent();
-            txtPayment.Text = "50000";
+            txtPayment.Text = LoginHelpers.order.CalculateTotal().ToString();
         }
 
 
@@ -79,7 +79,11 @@ namespace G_36_SmartPrint.UI
                 LoginHelpers.order.DeliveryAddress=(addressBL);
                 OrderDL.AddOrder(LoginHelpers.order);
                 MessageBox.Show("order has been placed");
-                //Order_PaymentBL op = new
+                foreach( Order_DetailsBL od in LoginHelpers.order.OrderDetails)
+                {
+                    od.Product.QuantityInStock = od.Product.QuantityInStock - od.Quantity;
+                    od.Product.UpdateProductStocks();
+                }
 
 
             }

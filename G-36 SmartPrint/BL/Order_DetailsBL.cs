@@ -1,14 +1,15 @@
 ﻿using System;
+using G_36_SmartPrint.I;
 
 namespace G_36_SmartPrint.BL
 {
-    internal class Order_DetailsBL
+    internal class Order_DetailsBL:CartBL,IPrice
     {
         // Fields
-        private int _orderDetailID;
-        private ProductBL _product;
-        private int _quantity;
-        private LookupBL _orderStatus;
+        //private int _orderDetailID;
+        //private ProductBL _product;
+        //private int _quantity;
+        //private LookupBL _orderStatus;
 
         // Properties
         public int OrderDetailID
@@ -16,7 +17,10 @@ namespace G_36_SmartPrint.BL
             get => _orderDetailID;
             set => _orderDetailID = value;
         }
-
+        public override decimal CalculateTotal()
+        {
+            return _quantity*_product.Price;
+        }
         public ProductBL Product
         {
             get => _product;
@@ -60,7 +64,7 @@ namespace G_36_SmartPrint.BL
         }
 
         // Read-only Helper Method
-        public int GetProductID()
+        public override int GetProductID()
         {
             return Product?.ProductID ?? -1;
         }

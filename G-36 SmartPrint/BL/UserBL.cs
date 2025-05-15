@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using G_36_SmartPrint.DL;
 using G_36_SmartPrint.I;
 
@@ -156,7 +158,32 @@ namespace G_36_SmartPrint.BL
                 phoneNumber = value;
             }
         }
+        public bool IsValidEmail(string email)
+        {
+            // Basic email pattern
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
 
+        // Password Validation
+
+        public bool IsValidPassword(string password)
+        {
+            // Must contain at least one letter and one number
+            string pattern = @"^(?=.*[A-Za-z])(?=.*\d).+$";
+            return Regex.IsMatch(password, pattern);
+        }
+
+
+        // Name Validation: At least 2 words
+        public bool IsValidName(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name)) return false;
+
+            string[] parts = name.Trim().Split(' ');
+            return parts.Length >= 2 && parts.All(p => p.Length > 0);
+
+        }
         public DateTime CreatedDate
         {
             get => createdDate;
