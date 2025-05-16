@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\g-36 smartprint\\bl\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\installer1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\installer1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\component1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\component1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\classdiagram1.cd||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\classdiagram1.cd||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\bl\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\bl\\orderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\managedesign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\ui\\managedesign.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\g-36 smartprint\\ui\\managedesign.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\managedesign.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -39,7 +51,7 @@
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\managedesign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\ui\\assigndesignorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\g-36 smartprint\\ui\\assigndesignorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\assigndesignorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -55,7 +67,7 @@
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\assigndesignorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\i\\iprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\g-36 smartprint\\i\\iprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\i\\iprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -75,7 +87,7 @@
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\i\\useri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\g-36 smartprint\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -99,7 +111,7 @@
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\dl\\orderdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\i\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\g-36 smartprint\\i\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\i\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -111,7 +123,7 @@
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|c:\\users\\user\\desktop\\repos\\dbs25f036\\g-36 smartprint\\ui\\viewproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\g-36 smartprint\\ui\\viewproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2116DEC-0DA0-49EB-AEB8-5BF5CEFAD7E0}|G-36 SmartPrint\\G-36 SmartPrint.csproj|solutionrelative:g-36 smartprint\\ui\\viewproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -614,24 +626,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "ViewRequestStatus.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewRequestStatus.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewRequestStatus.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewRequestStatus.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewRequestStatus.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewRequestStatus.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewRequestStatus.cs*",
               "ViewState": "AgIAADMAAAAAAAAAAAAYwB8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.759Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "OrderDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\OrderDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\OrderDL.cs",
@@ -645,7 +658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "DesignApproval.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignApproval.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DesignApproval.cs",
@@ -653,11 +666,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignApproval.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.724Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "DesignApproval.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignApproval.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DesignApproval.cs",
@@ -666,11 +680,12 @@
               "ViewState": "AgIAAMgAAAAAAAAAAAAAwOMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.757Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "CustomersBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\CustomersBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\CustomersBL.cs",
@@ -679,11 +694,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.785Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "CustomerI.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\I\\CustomerI.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\I\\CustomerI.cs",
@@ -692,24 +708,26 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T16:56:49.077Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "ViewOrders.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewOrders.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewOrders.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewOrders.cs*",
               "ViewState": "AgIAABgAAAAAAAAAAAAywCwAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T04:32:02.079Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "AddressBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\AddressBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\AddressBL.cs",
@@ -718,11 +736,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.795Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "IAddressDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\I\\IAddressDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\I\\IAddressDL.cs",
@@ -731,11 +750,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T06:05:06.301Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Order_DetailsBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\Order_DetailsBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\Order_DetailsBL.cs",
@@ -749,7 +769,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "CartBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\CartBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\CartBL.cs",
@@ -763,12 +783,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "AssignDesignOrder.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\AssignDesignOrder.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\AssignDesignOrder.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\AssignDesignOrder.cs*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T07:45:40.508Z",
@@ -777,12 +797,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "ViewProducts.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewProducts.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewProducts.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewProducts.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewProducts.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewProducts.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewProducts.cs*",
               "ViewState": "AgIAAAsAAAAAAAAAAAAowBQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T14:43:27.689Z",
@@ -791,7 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "Check.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Check.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Check.cs",
@@ -805,7 +825,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "FinancialReportBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\FinancialReportBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\FinancialReportBL.cs",
@@ -819,12 +839,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "AssignDesignOrder.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\AssignDesignOrder.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\AssignDesignOrder.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\AssignDesignOrder.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.763Z",
               "IsPinned": true,
@@ -832,16 +852,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ManageDesign.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageDesign.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDesign.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDesign.cs*",
               "ViewState": "AgIAAOYAAAAAAAAAAAAqwA8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T15:18:26.187Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Installer1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Installer1.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\Installer1.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Installer1.cs [Design]",
+              "RelativeToolTip": "G-36 SmartPrint\\Installer1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T04:30:35.397Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Component1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Component1.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\Component1.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Component1.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\Component1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T04:24:25.899Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\ClassDiagram1.cd",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\ClassDiagram1.cd",
+              "RelativeToolTip": "G-36 SmartPrint\\ClassDiagram1.cd",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2025-05-16T04:23:25.154Z",
               "EditorCaption": ""
             },
             {
@@ -853,38 +910,8 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ManageDesign.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.Designer.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageDesign.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDesign.Designer.cs",
-              "ViewState": "AgIAAIgBAAAAAAAAAAAwwJ4BAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T16:53:35.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FinancialReport.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\FinancialReport.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\FinancialReport.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\FinancialReport.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\FinancialReport.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "OrderBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\OrderBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\OrderBL.cs",
@@ -896,8 +923,38 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
+              "Title": "ManageDesign.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageDesign.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDesign.Designer.cs*",
+              "ViewState": "AgIAAIgBAAAAAAAAAAAwwJ4BAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T16:53:35.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FinancialReport.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\FinancialReport.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\FinancialReport.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\FinancialReport.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\FinancialReport.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Program.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\Program.cs",
@@ -910,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EmployeesBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\EmployeesBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\EmployeesBL.cs",
@@ -927,7 +984,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "DesignBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\DesignBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\DesignBL.cs",
@@ -940,24 +997,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "ManageDesign.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageDesign.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDesign.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesign.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDesign.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T15:18:24.145Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "AssignDesignOrder.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\AssignDesignOrder.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\AssignDesignOrder.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\AssignDesignOrder.Designer.cs*",
               "ViewState": "AgIAAOIAAAAAAAAAAAAjwPQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.81Z",
@@ -965,12 +1022,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ViewInstructions.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewInstructions.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewInstructions.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewInstructions.cs*",
               "ViewState": "AgIAAAUAAAAAAAAAAIAwwBwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.784Z",
@@ -978,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "ManageProducts.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageProducts.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageProducts.cs",
@@ -990,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "IPrice.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\I\\IPrice.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\I\\IPrice.cs",
@@ -1003,7 +1060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "UserI.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\I\\UserI.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\I\\UserI.cs",
@@ -1016,7 +1073,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "UserBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\UserBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\UserBL.cs",
@@ -1029,7 +1086,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Validation.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Validation.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\Validation.cs",
@@ -1042,7 +1099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "UserDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\UserDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\UserDL.cs",
@@ -1055,7 +1112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "CheckOut.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CheckOut.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CheckOut.cs",
@@ -1067,19 +1124,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "ViewProducts.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewProducts.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewProducts.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewProducts.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewProducts.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewProducts.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewProducts.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.754Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "ProductBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\ProductBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\ProductBL.cs",
@@ -1092,7 +1149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "IProduct.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\I\\IProduct.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\I\\IProduct.cs",
@@ -1105,7 +1162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "ManageProducts.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageProducts.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageProducts.cs",
@@ -1118,7 +1175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "DesignDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\DesignDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\DesignDL.cs",
@@ -1126,34 +1183,37 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\DesignDL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.769Z"
+              "WhenOpened": "2025-05-14T14:35:48.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "ManufactureDesign.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManufactureDesign.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManufactureDesign.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManufactureDesign.cs*",
               "ViewState": "AgIAAKEAAAAAAAAAAAAvwBcAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:54:40.554Z"
+              "WhenOpened": "2025-05-14T14:54:40.554Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "ManufactureDesign.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManufactureDesign.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManufactureDesign.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManufactureDesign.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:54:36.339Z"
+              "WhenOpened": "2025-05-14T14:54:36.339Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Login.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Login.cs",
@@ -1161,22 +1221,24 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Login.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.785Z"
+              "WhenOpened": "2025-05-14T14:35:48.785Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Login.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Login.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Login.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.798Z"
+              "WhenOpened": "2025-05-14T14:35:48.798Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "LoginHelpers.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\LoginHelpers.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\LoginHelpers.cs",
@@ -1189,18 +1251,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "GiveInstructions.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\GiveInstructions.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\GiveInstructions.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\GiveInstructions.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\GiveInstructions.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.783Z"
+              "WhenOpened": "2025-05-14T14:35:48.783Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "GiveInstructions.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\GiveInstructions.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\GiveInstructions.cs",
@@ -1208,11 +1271,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\GiveInstructions.cs",
               "ViewState": "AgIAAHAAAAAAAAAAAAAwwIQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.765Z"
+              "WhenOpened": "2025-05-14T14:35:48.765Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "AddressDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\AddressDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\AddressDL.cs",
@@ -1220,11 +1284,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\AddressDL.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.786Z"
+              "WhenOpened": "2025-05-14T14:35:48.786Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "ManagerBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\ManagerBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\ManagerBL.cs",
@@ -1232,11 +1297,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\ManagerBL.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAwwDcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.78Z"
+              "WhenOpened": "2025-05-14T14:35:48.78Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "EmployeeDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\EmployeeDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\EmployeeDL.cs",
@@ -1244,137 +1310,148 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\EmployeeDL.cs",
               "ViewState": "AgIAAKUAAAAAAAAAAAAowAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.778Z"
+              "WhenOpened": "2025-05-14T14:35:48.778Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "ViewInstructions.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewInstructions.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewInstructions.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewInstructions.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.817Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "ViewOrders.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewOrders.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewOrders.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewOrders.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ManagerViewOrders.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "ManagerViewOrders.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewOrders.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "ViewFinancialReport.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.Designer.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFinancialReport.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFinancialReport.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T04:33:42.877Z"
+              "WhenOpened": "2025-05-14T14:35:48.756Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 51,
-              "Title": "ViewFinancialReport.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAnwEIAAAAAAAAAAAAAAA==",
+              "Title": "ManagerViewOrders.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewOrders.cs*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T04:33:39.82Z"
+              "WhenOpened": "2025-05-14T14:35:48.774Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 52,
-              "Title": "ViewFinancialReport.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFinancialReport.cs [Design]",
+              "Title": "ManagerViewOrders.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewOrders.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewOrders.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T04:33:38.516Z"
+              "WhenOpened": "2025-05-14T14:35:48.8Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 53,
-              "Title": "CustomerBoard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CustomerBoard.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerBoard.cs [Design]",
+              "Title": "ViewFinancialReport.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFinancialReport.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFinancialReport.Designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.821Z"
+              "WhenOpened": "2025-05-15T04:33:42.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 54,
-              "Title": "ApproveRequest.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ApproveRequest.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ApproveRequest.cs [Design]",
+              "Title": "ViewFinancialReport.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFinancialReport.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAnwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T15:26:56.961Z"
+              "WhenOpened": "2025-05-15T04:33:39.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ViewFinancialReport.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFinancialReport.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFinancialReport.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFinancialReport.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T04:33:38.516Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "CustomerBoard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CustomerBoard.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerBoard.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.821Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 57,
+              "Title": "ApproveRequest.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ApproveRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ApproveRequest.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:26:56.961Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
               "Title": "ApproveRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ApproveRequest.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ApproveRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ApproveRequest.cs*",
               "ViewState": "AgIAAAcAAAAAAAAAAAArwFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T15:26:59.465Z"
+              "WhenOpened": "2025-05-14T15:26:59.465Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "ViewRequestStatus.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewRequestStatus.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewRequestStatus.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewRequestStatus.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewRequestStatus.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewRequestStatus.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewRequestStatus.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T15:05:35.646Z"
+              "WhenOpened": "2025-05-14T15:05:35.646Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "RequestsDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\RequestsDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\RequestsDL.cs",
@@ -1382,32 +1459,36 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\RequestsDL.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAqwEIAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.792Z"
+              "WhenOpened": "2025-05-14T14:35:48.792Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "ManageDesigner.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesigner.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageDesigner.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDesigner.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDesigner.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.749Z"
+              "WhenOpened": "2025-05-14T14:35:48.749Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": "Feedback.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Feedback.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Feedback.cs",
-              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\Feedback.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.751Z"
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Feedback.cs [Design]",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\Feedback.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.751Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "SqlHelper.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\SqlHelper.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\SqlHelper.cs",
@@ -1415,57 +1496,63 @@
               "RelativeToolTip": "G-36 SmartPrint\\SqlHelper.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAEwDwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.795Z"
+              "WhenOpened": "2025-05-14T14:35:48.795Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "ManufactureDesign.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManufactureDesign.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManufactureDesign.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManufactureDesign.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManufactureDesign.Designer.cs*",
               "ViewState": "AgIAAGMAAAAAAAAAAAAuwHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.774Z"
+              "WhenOpened": "2025-05-14T14:35:48.774Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "CustomerDashboardForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerDashboardForm.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CustomerDashboardForm.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerDashboardForm.cs",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerDashboardForm.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAAwFAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2025-05-14T14:35:48.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "CustomerDashboardForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerDashboardForm.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CustomerDashboardForm.cs",
-              "ToolTip": "D:\\DBfinal\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerDashboardForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2025-05-14T14:35:48.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "ViewOrders.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.Designer.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewOrders.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewOrders.Designer.cs",
-              "ViewState": "AgIAALAAAAAAAAAAAAAuwM8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.758Z"
+              "WhenOpened": "2025-05-14T14:35:48.753Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 67,
+              "Title": "CustomerDashboardForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerDashboardForm.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CustomerDashboardForm.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerDashboardForm.cs [Design]",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerDashboardForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.757Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "ViewOrders.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewOrders.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewOrders.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewOrders.Designer.cs*",
+              "ViewState": "AgIAALAAAAAAAAAAAAAuwM8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
               "Title": "ViewProducts.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewProducts.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewProducts.Designer.cs",
@@ -1478,19 +1565,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "DeliveryViewSalary.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewSalary.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DeliveryViewSalary.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewSalary.Designer.cs",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliveryViewSalary.Designer.cs",
               "ViewState": "AgIAALIAAAAAAAAAAAAuwNEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
-              "WhenOpened": "2025-05-14T14:35:48.76Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.76Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "DesignApproval.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignApproval.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DesignApproval.Designer.cs",
@@ -1498,46 +1586,50 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignApproval.Designer.cs",
               "ViewState": "AgIAAAUBAAAAAAAAAAAewBUBAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 82,
-              "Title": "ManageConsumables.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageConsumables.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageConsumables.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageConsumables.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageConsumables.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAIwNEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.761Z"
+              "WhenOpened": "2025-05-14T14:35:48.761Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 85,
-              "Title": "ManageConsumables.cs [Design]",
+              "Title": "ManageConsumables.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageConsumables.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageConsumables.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageConsumables.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageConsumables.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.762Z"
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageConsumables.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageConsumables.cs*",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAIwNEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.761Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 88,
+              "Title": "ManageConsumables.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageConsumables.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageConsumables.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageConsumables.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageConsumables.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.762Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Order.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Order.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Order.cs",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Order.cs",
               "ViewState": "AgIAAGwAAAAAAAAAAAAuwHoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.764Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 81,
               "Title": "CheckOut.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CheckOut.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CheckOut.cs",
@@ -1550,31 +1642,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "DesignerViewAssignOrders.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.77Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.77Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "designerViewAssignedOrders.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\designerViewAssignedOrders.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\designerViewAssignedOrders.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\designerViewAssignedOrders.cs",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\designerViewAssignedOrders.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAiwEEAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.771Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "ConsumableInventoryBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\ConsumableInventoryBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\ConsumableInventoryBL.cs",
@@ -1582,22 +1676,24 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\ConsumableInventoryBL.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAuwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.772Z"
+              "WhenOpened": "2025-05-14T14:35:48.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 76,
               "Title": "RequestDesigner.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\RequestDesigner.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\RequestDesigner.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\RequestDesigner.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\RequestDesigner.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.772Z"
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\RequestDesigner.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\RequestDesigner.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.772Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "ConsumeableInventoryDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\ConsumeableInventoryDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\ConsumeableInventoryDL.cs",
@@ -1605,11 +1701,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\ConsumeableInventoryDL.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwAoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.773Z"
+              "WhenOpened": "2025-05-14T14:35:48.773Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "Salary_PaymentDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\Salary_PaymentDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\Salary_PaymentDL.cs",
@@ -1617,11 +1714,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\Salary_PaymentDL.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAcwBAAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.773Z"
+              "WhenOpened": "2025-05-14T14:35:48.773Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "Order_PaymentBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\Order_PaymentBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\Order_PaymentBL.cs",
@@ -1629,23 +1727,25 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\Order_PaymentBL.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAkwDMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.775Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "DeliveryViewAssignOrders.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.775Z"
+              "WhenOpened": "2025-05-14T14:35:48.775Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 80,
+              "Title": "DeliveryViewAssignOrders.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
               "Title": "PaymentDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\PaymentDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\PaymentDL.cs",
@@ -1653,45 +1753,48 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\PaymentDL.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAQwCgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.777Z"
+              "WhenOpened": "2025-05-14T14:35:48.777Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 84,
               "Title": "Order.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Order.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Order.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Order.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Order.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.777Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.777Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 86,
               "Title": "FinancialReport.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\FinancialReport.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\FinancialReport.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\FinancialReport.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\FinancialReport.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\FinancialReport.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\FinancialReport.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T14:35:48.778Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 87,
               "Title": "OrdersDelivery.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\OrdersDelivery.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\OrdersDelivery.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\OrdersDelivery.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\OrdersDelivery.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.778Z"
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\OrdersDelivery.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\OrdersDelivery.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.778Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 89,
               "Title": "Signup.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Signup.cs",
@@ -1699,11 +1802,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Signup.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAIwCoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.781Z"
+              "WhenOpened": "2025-05-14T14:35:48.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 90,
               "Title": "DesignerBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\DesignerBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\DesignerBL.cs",
@@ -1711,11 +1815,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\DesignerBL.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAwCoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.781Z"
+              "WhenOpened": "2025-05-14T14:35:48.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 91,
               "Title": "FinancialReportDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\FinancialReportDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\FinancialReportDL.cs",
@@ -1723,35 +1828,38 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\FinancialReportDL.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAD4v18AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.782Z"
+              "WhenOpened": "2025-05-14T14:35:48.782Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 92,
               "Title": "ManagerViewSalary.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewSalary.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewSalary.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewSalary.cs*",
               "ViewState": "AgIAABIAAAAAAAAAAAAEwDkAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.783Z"
+              "WhenOpened": "2025-05-14T14:35:48.783Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 93,
               "Title": "SalaryPayment.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\SalaryPayment.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\SalaryPayment.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\SalaryPayment.cs*",
               "ViewState": "AgIAAC0AAAAAAAAAAAAuwDsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.784Z"
+              "WhenOpened": "2025-05-14T14:35:48.784Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 94,
               "Title": "InstructionDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\InstructionDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\InstructionDL.cs",
@@ -1759,35 +1867,38 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\InstructionDL.cs",
               "ViewState": "AgIAAGsAAAAAAAAAAAAAwDwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.785Z"
+              "WhenOpened": "2025-05-14T14:35:48.785Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 95,
               "Title": "CustomerBoard.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CustomerBoard.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerBoard.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerBoard.cs*",
               "ViewState": "AgIAABQAAAAAAAAAAAAAABQAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.786Z"
+              "WhenOpened": "2025-05-14T14:35:48.786Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 97,
               "Title": "ViewFeedback.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFeedback.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFeedback.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFeedback.cs*",
               "ViewState": "AgIAADcAAAAAAAAAAAAAADcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.787Z"
+              "WhenOpened": "2025-05-14T14:35:48.787Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 96,
               "Title": "InstructionBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\InstructionBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\InstructionBL.cs",
@@ -1795,23 +1906,25 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\InstructionBL.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAqwEwAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.787Z"
+              "WhenOpened": "2025-05-14T14:35:48.787Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 98,
               "Title": "OrdersDelivery.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\OrdersDelivery.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\OrdersDelivery.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\OrdersDelivery.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\OrdersDelivery.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\OrdersDelivery.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\OrdersDelivery.cs*",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwAwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.788Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.788Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 99,
               "Title": "DeliverymanDashboardForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliverymanDashboardForm.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DeliverymanDashboardForm.cs",
@@ -1819,11 +1932,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliverymanDashboardForm.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAowEMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.789Z"
+              "WhenOpened": "2025-05-14T14:35:48.789Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 101,
               "Title": "ManagerDashboardForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerDashboardForm.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerDashboardForm.cs",
@@ -1831,33 +1945,36 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerDashboardForm.cs",
               "ViewState": "AgIAAJ4AAAAAAAAAAAAhwCsAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.789Z"
+              "WhenOpened": "2025-05-14T14:35:48.789Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 100,
               "Title": "ManageDeliveryMan.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDeliveryMan.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageDeliveryMan.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDeliveryMan.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDeliveryMan.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDeliveryMan.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDeliveryMan.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.789Z"
+              "WhenOpened": "2025-05-14T14:35:48.789Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 102,
               "Title": "ManagerDashboardForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerDashboardForm.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerDashboardForm.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerDashboardForm.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerDashboardForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.79Z"
+              "WhenOpened": "2025-05-14T14:35:48.79Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 103,
               "Title": "AdminDashboardForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AdminDashboardForm.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\AdminDashboardForm.cs",
@@ -1865,11 +1982,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\AdminDashboardForm.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAArwKYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.79Z"
+              "WhenOpened": "2025-05-14T14:35:48.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 105,
               "Title": "FeedbackBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\FeedbackBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\FeedbackBL.cs",
@@ -1877,22 +1995,24 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\FeedbackBL.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.791Z"
+              "WhenOpened": "2025-05-14T14:35:48.791Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 104,
               "Title": "AdminDashboardForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AdminDashboardForm.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\AdminDashboardForm.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AdminDashboardForm.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\AdminDashboardForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.792Z"
+              "WhenOpened": "2025-05-14T14:35:48.792Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 106,
               "Title": "requestsBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\requestsBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\requestsBL.cs",
@@ -1900,11 +2020,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\requestsBL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.793Z"
+              "WhenOpened": "2025-05-14T14:35:48.793Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 107,
               "Title": "LookupBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\LookupBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\LookupBL.cs",
@@ -1912,11 +2033,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\LookupBL.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAQwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.793Z"
+              "WhenOpened": "2025-05-14T14:35:48.793Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 108,
               "Title": "ProductDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\ProductDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\ProductDL.cs",
@@ -1924,11 +2046,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\ProductDL.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAALsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.794Z"
+              "WhenOpened": "2025-05-14T14:35:48.794Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 111,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Form1.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\Form1.cs",
@@ -1936,11 +2059,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\Form1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAPMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.796Z"
+              "WhenOpened": "2025-05-14T14:35:48.796Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 109,
               "Title": "Check.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Check.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Check.Designer.cs",
@@ -1953,86 +2077,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 110,
               "Title": "Order.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Order.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Order.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Order.Designer.cs",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Order.Designer.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAlwGUAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
-              "WhenOpened": "2025-05-14T14:35:48.797Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.797Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 112,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Form1.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\Form1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Form1.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.797Z"
+              "WhenOpened": "2025-05-14T14:35:48.797Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 113,
               "Title": "Signup.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Signup.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Signup.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.799Z"
+              "WhenOpened": "2025-05-14T14:35:48.799Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 114,
               "Title": "ManageManager.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageManager.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageManager.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageManager.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.799Z"
+              "WhenOpened": "2025-05-14T14:35:48.799Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 115,
               "Title": "designerViewAssignedOrders.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\designerViewAssignedOrders.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\designerViewAssignedOrders.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\designerViewAssignedOrders.cs [Design]",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\designerViewAssignedOrders.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.8Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.8Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 117,
               "Title": "DeliveryViewAssignOrders.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.801Z"
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.801Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 116,
               "Title": "designerViewAssignedOrders.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\designerViewAssignedOrders.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\designerViewAssignedOrders.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\designerViewAssignedOrders.Designer.cs",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\designerViewAssignedOrders.Designer.cs",
               "ViewState": "AgIAAHwAAAAAAAAAAAAlwIoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
-              "WhenOpened": "2025-05-14T14:35:48.801Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.801Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 118,
               "Title": "FinancialReport.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\FinancialReport.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\FinancialReport.Designer.cs",
@@ -2045,7 +2176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 119,
               "Title": "FeedbackDL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\DL\\FeedbackDL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\DL\\FeedbackDL.cs",
@@ -2053,11 +2184,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\DL\\FeedbackDL.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAqwKcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.804Z"
+              "WhenOpened": "2025-05-14T14:35:48.804Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 120,
               "Title": "ManageProducts.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageProducts.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageProducts.Designer.cs",
@@ -2070,7 +2202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 122,
               "Title": "GiveInstructions.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\GiveInstructions.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\GiveInstructions.Designer.cs",
@@ -2078,69 +2210,75 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\GiveInstructions.Designer.cs",
               "ViewState": "AgIAAKkCAAAAAAAAAAAcwMMCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.805Z"
+              "WhenOpened": "2025-05-14T14:35:48.805Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 123,
               "Title": "ViewFeedback.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFeedback.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFeedback.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFeedback.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.805Z"
+              "WhenOpened": "2025-05-14T14:35:48.805Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 121,
               "Title": "SalaryPayment.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\SalaryPayment.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\SalaryPayment.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\SalaryPayment.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.806Z"
+              "WhenOpened": "2025-05-14T14:35:48.806Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 125,
               "Title": "DesignerDashbordForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerDashbordForm.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DesignerDashbordForm.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerDashbordForm.Designer.cs",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignerDashbordForm.Designer.cs",
               "ViewState": "AgIAAKYAAAAAAAAAAAD4v68AAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
-              "WhenOpened": "2025-05-14T14:35:48.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 121,
-              "Title": "DesignerViewAssignOrders.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.Designer.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.Designer.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAABRwAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
-              "WhenOpened": "2025-05-14T14:35:48.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 123,
-              "Title": "DeliveryViewAssignOrders.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.Designer.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAMBUwAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
-              "WhenOpened": "2025-05-14T14:35:48.807Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.806Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 124,
+              "Title": "DesignerViewAssignOrders.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.Designer.cs*",
+              "ViewState": "AgIAAAcAAAAAAAAAAABRwAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 126,
+              "Title": "DeliveryViewAssignOrders.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliveryViewAssignOrders.Designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAMBUwAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 127,
               "Title": "DeliverymanDashboardForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DeliverymanDashboardForm.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DeliverymanDashboardForm.Designer.cs",
@@ -2148,35 +2286,38 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\DeliverymanDashboardForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.808Z"
+              "WhenOpened": "2025-05-14T14:35:48.808Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 128,
               "Title": "CustomerDashboardForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerDashboardForm.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CustomerDashboardForm.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerDashboardForm.Designer.cs",
               "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerDashboardForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
-              "WhenOpened": "2025-05-14T14:35:48.808Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.808Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 129,
               "Title": "CustomerBoard.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CustomerBoard.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerBoard.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CustomerBoard.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\CustomerBoard.Designer.cs*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.809Z"
+              "WhenOpened": "2025-05-14T14:35:48.809Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 130,
               "Title": "CheckOut.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\CheckOut.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\CheckOut.Designer.cs",
@@ -2189,7 +2330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 132,
               "Title": "AdminDashboardForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AdminDashboardForm.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\AdminDashboardForm.Designer.cs",
@@ -2197,23 +2338,25 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\AdminDashboardForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.81Z"
+              "WhenOpened": "2025-05-14T14:35:48.81Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 131,
               "Title": "ApproveRequest.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ApproveRequest.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ApproveRequest.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ApproveRequest.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ApproveRequest.Designer.cs*",
               "ViewState": "AgIAAAUAAAAAAAAAAABhwAwAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.811Z"
+              "WhenOpened": "2025-05-14T14:35:48.811Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 133,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\Form1.Designer.cs",
@@ -2221,11 +2364,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\Form1.Designer.cs",
               "ViewState": "AgIAALYAAAAAAAAAAAAiwMYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.811Z"
+              "WhenOpened": "2025-05-14T14:35:48.811Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 134,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\packages.config",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\packages.config",
@@ -2233,11 +2377,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\packages.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-14T14:35:48.812Z"
+              "WhenOpened": "2025-05-14T14:35:48.812Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 135,
               "Title": "Login.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Login.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Login.Designer.cs",
@@ -2245,23 +2390,25 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Login.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.812Z"
+              "WhenOpened": "2025-05-14T14:35:48.812Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 136,
               "Title": "ManageDeliveryMan.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDeliveryMan.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageDeliveryMan.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDeliveryMan.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDeliveryMan.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageDeliveryMan.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageDeliveryMan.Designer.cs*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.813Z"
+              "WhenOpened": "2025-05-14T14:35:48.813Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 137,
               "Title": "ManageManager.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageManager.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageManager.Designer.cs",
@@ -2269,11 +2416,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageManager.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.813Z"
+              "WhenOpened": "2025-05-14T14:35:48.813Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 138,
               "Title": "ManagerDashboardForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerDashboardForm.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerDashboardForm.Designer.cs",
@@ -2281,47 +2429,51 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerDashboardForm.Designer.cs",
               "ViewState": "AgIAAAIBAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 136,
-              "Title": "ManagerViewOrders.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.Designer.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewOrders.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewOrders.Designer.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 137,
-              "Title": "ManagerViewSalary.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.Designer.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewSalary.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewSalary.Designer.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 138,
-              "Title": "SalaryPayment.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.Designer.cs",
-              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\SalaryPayment.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\SalaryPayment.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.815Z"
+              "WhenOpened": "2025-05-14T14:35:48.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 139,
+              "Title": "ManagerViewOrders.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewOrders.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewOrders.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewOrders.Designer.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 140,
+              "Title": "ManagerViewSalary.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewSalary.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewSalary.Designer.cs*",
+              "ViewState": "AgIAANMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 141,
+              "Title": "SalaryPayment.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.Designer.cs",
+              "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\SalaryPayment.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\SalaryPayment.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\SalaryPayment.Designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 142,
               "Title": "Signup.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\Signup.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\Signup.Designer.cs",
@@ -2329,23 +2481,25 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\Signup.Designer.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.816Z"
+              "WhenOpened": "2025-05-14T14:35:48.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 143,
               "Title": "ViewFeedback.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewFeedback.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.Designer.cs",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFeedback.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewFeedback.Designer.cs*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewFeedback.Designer.cs*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.816Z"
+              "WhenOpened": "2025-05-14T14:35:48.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 144,
               "Title": "ViewInstructions.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewInstructions.Designer.cs",
@@ -2358,19 +2512,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 145,
               "Title": "ViewInstructions.resx",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.resx",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ViewInstructions.resx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.resx",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewInstructions.resx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ViewInstructions.resx*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ViewInstructions.resx*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-05-14T14:35:48.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 146,
               "Title": "SalaryPaymentBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\BL\\SalaryPaymentBL.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\BL\\SalaryPaymentBL.cs",
@@ -2378,22 +2532,24 @@
               "RelativeToolTip": "G-36 SmartPrint\\BL\\SalaryPaymentBL.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAqwAoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.818Z"
+              "WhenOpened": "2025-05-14T14:35:48.818Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 147,
               "Title": "ManagerViewSalary.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManagerViewSalary.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewSalary.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManagerViewSalary.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\ManagerViewSalary.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.819Z"
+              "WhenOpened": "2025-05-14T14:35:48.819Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 148,
               "Title": "GenerateReports.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\GenerateReports.Designer.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\GenerateReports.Designer.cs",
@@ -2401,11 +2557,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\GenerateReports.Designer.cs",
               "ViewState": "AgIAALkAAAAAAAAAAAAAAMEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.819Z"
+              "WhenOpened": "2025-05-14T14:35:48.819Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
+              "DocumentIndex": 149,
               "Title": "ManageManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageManager.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageManager.cs",
@@ -2413,11 +2570,12 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\ManageManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.82Z"
+              "WhenOpened": "2025-05-14T14:35:48.82Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 147,
+              "DocumentIndex": 150,
               "Title": "ManageProducts.resx",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\ManageProducts.resx",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\ManageProducts.resx",
@@ -2429,19 +2587,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 148,
+              "DocumentIndex": 151,
               "Title": "AssignDesignOrder.resx",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.resx",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\AssignDesignOrder.resx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.resx",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\AssignDesignOrder.resx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\AssignDesignOrder.resx*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\AssignDesignOrder.resx*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-05-14T14:35:48.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 149,
+              "DocumentIndex": 152,
               "Title": "GenerateReports.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\GenerateReports.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\GenerateReports.cs",
@@ -2449,18 +2607,20 @@
               "RelativeToolTip": "G-36 SmartPrint\\UI\\GenerateReports.cs",
               "ViewState": "AgIAAG4AAAAAAAAAAAAAAGwAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T14:35:48.822Z"
+              "WhenOpened": "2025-05-14T14:35:48.822Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 150,
+              "DocumentIndex": 153,
               "Title": "DesignerViewAssignOrders.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs",
               "RelativeDocumentMoniker": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs [Design]",
-              "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-14T14:35:48.822Z"
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\DBS25F036\\G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs [Design]*",
+              "RelativeToolTip": "G-36 SmartPrint\\UI\\DesignerViewAssignOrders.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:35:48.822Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
